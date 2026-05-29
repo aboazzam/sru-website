@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>University Services | Sulaiman Al-Rajhi University</title>
+  <meta name="description" content="Explore SRU's comprehensive student services — housing, transportation, the Hajj trip programme, and financial aid & scholarships — all accessible through your student portal." />
+  <meta property="og:title" content="University Services | Sulaiman Al-Rajhi University" />
+  <meta property="og:description" content="SRU student services — housing, transportation, Hajj programme, financial aid and scholarships, all in one portal." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#3D1F6E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/pages.css" />
+  <link rel="stylesheet" id="rtl-stylesheet" href="styles/rtl.css" disabled />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="SRU Home">
+      <div class="logo-mark">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+          <circle cx="22" cy="22" r="22" fill="#3D1F6E"/>
+          <path d="M10 30 L22 10 L34 30 Z" fill="none" stroke="#00B4C8" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M14 30 L22 16 L30 30" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="22" cy="10" r="2.5" fill="#00B4C8"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-en">Sulaiman Al-Rajhi University</span>
+        <span class="logo-ar">جامعة سليمان الراجحي</span>
+        <span class="logo-abbr">SRU</span>
+      </div>
+    </a>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html"              class="nav-link"        data-ar="الرئيسية"        data-en="Home">Home</a></li>
+        <li><a href="student-journey.html"  class="nav-link"        data-ar="رحلة الطالب"     data-en="Student Journey">Student Journey</a></li>
+        <li><a href="admissions.html"       class="nav-link"        data-ar="القبول"           data-en="Admissions">Admissions</a></li>
+        <li><a href="campus-life.html"      class="nav-link"        data-ar="الحياة الجامعية" data-en="Campus Life">Campus Life</a></li>
+        <li><a href="services.html"         class="nav-link active" data-ar="الخدمات"          data-en="Services">Services</a></li>
+        <li><a href="digital-experience.html" class="nav-link"      data-ar="الرقمي"           data-en="Digital">Digital</a></li>
+        <li><a href="alumni.html"           class="nav-link"        data-ar="الخريجون"         data-en="Alumni">Alumni</a></li>
+        <li><a href="community.html"        class="nav-link"        data-ar="المجتمع"          data-en="Community">Community</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
+        <span class="lang-label" id="lang-label">العربية</span>
+      </button>
+      <a href="admissions.html#apply" class="btn btn-primary btn-sm" data-ar="قدّم الآن" data-en="Apply Now">Apply Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-overlay" id="nav-overlay"></div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     PAGE HERO
+══════════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="page-breadcrumb">
+      <a href="index.html" data-ar="الرئيسية" data-en="Home">Home</a>
+      <span class="page-breadcrumb-sep">›</span>
+      <span class="page-breadcrumb-current" data-ar="الخدمات الجامعية" data-en="University Services">University Services</span>
+    </div>
+    <h1 class="page-hero-title reveal">
+      <span data-ar="خدمات جامعية" data-en="Student Services">Student Services</span>
+      <br />
+      <span><span data-ar="تُيسّر حياتك في SRU" data-en="Designed for Your Success">Designed for Your <span>Success</span></span></span>
+    </h1>
+    <p class="page-hero-sub reveal" data-ar="من السكن والمواصلات إلى المنح الدراسية ورحلة الحج — جامعة سليمان الراجحي توفّر كل ما تحتاجه، وكل الخدمات في متناول يدك عبر بوابتك الإلكترونية." data-en="From housing and transportation to scholarships and the Hajj programme — SRU provides everything you need, all accessible through your personal student portal.">
+      From housing and transportation to scholarships and the Hajj programme — SRU provides everything you need, all accessible through your personal student portal.
+    </p>
+    <div class="page-hero-actions reveal">
+      <a href="#portal"    class="btn btn-white"        data-ar="بوابة الطالب"     data-en="Student Portal">Student Portal</a>
+      <a href="#housing"   class="btn btn-outline-white" data-ar="استكشف الخدمات"  data-en="Explore Services">Explore Services</a>
+    </div>
+  </div>
+  <div class="page-hero-wave" aria-hidden="true"></div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     IN-PAGE TABS
+══════════════════════════════════════════ -->
+<nav class="page-tabs" aria-label="Services sections">
+  <div class="container page-tabs-inner">
+    <a href="#housing"      class="page-tab active" data-ar="السكن"         data-en="Housing">Housing</a>
+    <a href="#transport"    class="page-tab"        data-ar="المواصلات"     data-en="Transportation">Transportation</a>
+    <a href="#hajj"         class="page-tab"        data-ar="رحلة الحج"    data-en="Hajj Trip">Hajj Trip</a>
+    <a href="#financial-aid" class="page-tab"       data-ar="الدعم المالي" data-en="Financial Aid">Financial Aid</a>
+    <a href="#portal"       class="page-tab"        data-ar="البوابة الإلكترونية" data-en="Student Portal">Student Portal</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     QUICK-NAV CARDS
+══════════════════════════════════════════ -->
+<div class="container">
+  <div class="services-nav-grid reveal">
+
+    <a href="#housing" class="service-nav-card">
+      <div class="snc-icon" style="background:rgba(61,31,110,.1);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <span class="snc-title" data-ar="السكن الجامعي" data-en="University Housing">University Housing</span>
+      <span class="snc-arrow">↓</span>
+    </a>
+
+    <a href="#transport" class="service-nav-card">
+      <div class="snc-icon" style="background:rgba(0,180,200,.1);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#00829A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="3" width="15" height="13" rx="2"/>
+          <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+          <circle cx="5.5" cy="18.5" r="2.5"/>
+          <circle cx="18.5" cy="18.5" r="2.5"/>
+        </svg>
+      </div>
+      <span class="snc-title" data-ar="خدمة المواصلات" data-en="Transportation">Transportation</span>
+      <span class="snc-arrow">↓</span>
+    </a>
+
+    <a href="#hajj" class="service-nav-card">
+      <div class="snc-icon" style="background:rgba(39,103,73,.1);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#276749" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+        </svg>
+      </div>
+      <span class="snc-title" data-ar="رحلة الحج" data-en="Hajj Programme">Hajj Programme</span>
+      <span class="snc-arrow">↓</span>
+    </a>
+
+    <a href="#financial-aid" class="service-nav-card">
+      <div class="snc-icon" style="background:rgba(180,130,0,.1);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#9A7000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="1" x2="12" y2="23"/>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+        </svg>
+      </div>
+      <span class="snc-title" data-ar="المنح والدعم المالي" data-en="Financial Aid">Financial Aid</span>
+      <span class="snc-arrow">↓</span>
+    </a>
+
+    <a href="#portal" class="service-nav-card">
+      <div class="snc-icon" style="background:rgba(61,31,110,.1);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+      </div>
+      <span class="snc-title" data-ar="البوابة الإلكترونية" data-en="Student Portal">Student Portal</span>
+      <span class="snc-arrow">↓</span>
+    </a>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     HOUSING
+══════════════════════════════════════════ -->
+<section class="service-section" id="housing">
+  <div class="container">
+    <div class="service-inner">
+
+      <!-- Content column -->
+      <div class="service-content-col">
+        <div class="service-icon-header">
+          <div class="service-big-icon" style="background:rgba(61,31,110,.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:36px;height:36px;">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="service-title-block">
+            <div class="service-section-sub" data-ar="السكن الجامعي" data-en="University Housing">University Housing</div>
+            <h2 class="service-section-title" data-ar="سكن آمن ومريح داخل الحرم الجامعي" data-en="Safe & Comfortable On-Campus Living">Safe &amp; Comfortable On-Campus Living</h2>
+          </div>
+        </div>
+
+        <p class="service-description" data-ar="توفّر الجامعة وحدات سكنية متكاملة داخل الحرم الجامعي للطلاب المقيمين من خارج المنطقة، مزوّدة بكافة الخدمات والمرافق اللازمة لضمان بيئة دراسية مريحة وآمنة." data-en="SRU provides fully serviced residential units on campus for students from outside the region, equipped with all the facilities needed for a comfortable and safe academic environment.">
+          SRU provides fully serviced residential units on campus for students from outside the region, equipped with all the facilities needed for a comfortable and safe academic environment.
+        </p>
+
+        <div class="eligibility-block">
+          <div class="eligibility-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span data-ar="شروط الأهلية" data-en="Eligibility Criteria">Eligibility Criteria</span>
+          </div>
+          <div class="eligibility-list">
+            <div class="eligibility-item" data-ar="طالب مسجّل في برنامج دراسي بدوام كامل" data-en="Enrolled full-time in a degree programme">Enrolled full-time in a degree programme</div>
+            <div class="eligibility-item" data-ar="يقيم على بُعد أكثر من 100 كم من الجامعة" data-en="Residing more than 100 km from campus">Residing more than 100 km from campus</div>
+            <div class="eligibility-item" data-ar="تقديم الطلب قبل بداية الفصل الدراسي بـ 30 يوماً على الأقل" data-en="Applying at least 30 days before semester start">Applying at least 30 days before semester start</div>
+            <div class="eligibility-item" data-ar="الالتزام باللوائح والأنظمة الداخلية للسكن الجامعي" data-en="Committing to residential rules and regulations">Committing to residential rules and regulations</div>
+          </div>
+        </div>
+
+        <div class="how-to-apply">
+          <button class="hta-toggle" aria-expanded="false" id="housing-hta-btn">
+            <span data-ar="كيفية التقديم" data-en="How to Apply">How to Apply</span>
+            <svg class="hta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="hta-body" id="housing-hta-body">
+            <div class="hta-steps">
+              <div class="hta-step" data-ar="سجّل الدخول إلى بوابتك الإلكترونية على student.sru.edu.sa" data-en="Log in to your student portal at student.sru.edu.sa">Log in to your student portal at <strong>student.sru.edu.sa</strong></div>
+              <div class="hta-step" data-ar="اختر 'الخدمات الطلابية' ثم 'طلب سكن'" data-en="Select 'Student Services' then 'Housing Request'">Select <strong>'Student Services'</strong> then <strong>'Housing Request'</strong></div>
+              <div class="hta-step" data-ar="اختر نوع الغرفة المناسب وحدد الفصل الدراسي" data-en="Choose your preferred room type and select the academic term">Choose your preferred room type and select the academic term</div>
+              <div class="hta-step" data-ar="ارفق الوثائق المطلوبة (الهوية الوطنية، خطاب القبول)" data-en="Attach required documents (National ID, acceptance letter)">Attach required documents (National ID, acceptance letter)</div>
+              <div class="hta-step" data-ar="أتمّ الدفع الإلكتروني وسيتم تأكيد حجزك فور المراجعة" data-en="Complete the online payment — your booking is confirmed upon review">Complete the online payment — your booking is confirmed upon review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-portal-cta">
+          <a href="#portal" class="btn btn-primary" data-ar="قدّم طلب السكن" data-en="Apply for Housing">Apply for Housing</a>
+          <a href="mailto:housing@sru.edu.sa" class="btn btn-outline-purple" data-ar="تواصل مع الإدارة" data-en="Contact Housing Office">Contact Housing Office</a>
+        </div>
+      </div>
+
+      <!-- Visual / Info column -->
+      <div class="service-visual-col">
+        <div class="service-info-panel">
+          <div class="service-info-panel-header" style="background:linear-gradient(135deg,#3D1F6E,#5A2D99);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="2" width="22" height="22"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <div>
+              <h4 data-ar="تفاصيل السكن" data-en="Housing Details">Housing Details</h4>
+              <span data-ar="العام الدراسي 2026–2027" data-en="Academic Year 2026–2027">Academic Year 2026–2027</span>
+            </div>
+          </div>
+          <div class="service-info-rows">
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg><span data-ar="إجمالي الوحدات السكنية" data-en="Total Residential Units">Total Residential Units</span></span>
+              <span class="sir-value">1,200</span>
+            </div>
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ar="مدة الإقامة" data-en="Stay Duration">Stay Duration</span></span>
+              <span class="sir-value" data-ar="فصل كامل / سنة كاملة" data-en="Per semester / Full year">Per semester / Full year</span>
+            </div>
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg><span data-ar="الموقع" data-en="Location">Location</span></span>
+              <span class="sir-value" data-ar="داخل الحرم الجامعي" data-en="On-Campus">On-Campus</span>
+            </div>
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.92z"/></svg><span data-ar="الدعم الفني" data-en="Support Hotline">Support Hotline</span></span>
+              <span class="sir-value" dir="ltr">+966 16 583 0210</span>
+            </div>
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span data-ar="البريد الإلكتروني" data-en="Email">Email</span></span>
+              <span class="sir-value">housing@sru.edu.sa</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room type cards -->
+        <div class="room-types-grid" style="margin-top:var(--space-6);">
+
+          <div class="room-type-card">
+            <div class="room-type-name" data-ar="غرفة فردية" data-en="Single Room">Single Room</div>
+            <div class="room-type-price">1,800 <span style="font-size:var(--text-sm);font-weight:500;color:var(--color-gray);" data-ar="ريال" data-en="SAR">SAR</span></div>
+            <div class="room-type-period" data-ar="/ الفصل الدراسي" data-en="/ semester">/ semester</div>
+            <div class="room-type-features">
+              <div class="room-feature" data-ar="واي فاي مجاني" data-en="Free Wi-Fi">Free Wi-Fi</div>
+              <div class="room-feature" data-ar="تكييف مركزي" data-en="Central A/C">Central A/C</div>
+              <div class="room-feature" data-ar="مكتب ووحدة تخزين" data-en="Desk & storage unit">Desk &amp; storage unit</div>
+              <div class="room-feature" data-ar="حمام خاص" data-en="Private bathroom">Private bathroom</div>
+            </div>
+          </div>
+
+          <div class="room-type-card">
+            <div class="room-type-name" data-ar="غرفة مزدوجة" data-en="Double Room">Double Room</div>
+            <div class="room-type-price">1,100 <span style="font-size:var(--text-sm);font-weight:500;color:var(--color-gray);" data-ar="ريال" data-en="SAR">SAR</span></div>
+            <div class="room-type-period" data-ar="/ الفصل الدراسي" data-en="/ semester">/ semester</div>
+            <div class="room-type-features">
+              <div class="room-feature" data-ar="واي فاي مجاني" data-en="Free Wi-Fi">Free Wi-Fi</div>
+              <div class="room-feature" data-ar="تكييف مركزي" data-en="Central A/C">Central A/C</div>
+              <div class="room-feature" data-ar="مكتبان وخزانتان" data-en="2 desks & 2 wardrobes">2 desks &amp; 2 wardrobes</div>
+              <div class="room-feature" data-ar="حمام مشترك" data-en="Shared bathroom">Shared bathroom</div>
+            </div>
+          </div>
+
+          <div class="room-type-card">
+            <div class="room-type-name" data-ar="وحدة الاستوديو" data-en="Studio Unit">Studio Unit</div>
+            <div class="room-type-price">2,600 <span style="font-size:var(--text-sm);font-weight:500;color:var(--color-gray);" data-ar="ريال" data-en="SAR">SAR</span></div>
+            <div class="room-type-period" data-ar="/ الفصل الدراسي" data-en="/ semester">/ semester</div>
+            <div class="room-type-features">
+              <div class="room-feature" data-ar="مطبخ صغير مجهّز" data-en="Kitchenette">Kitchenette</div>
+              <div class="room-feature" data-ar="غرفة جلوس خاصة" data-en="Private lounge area">Private lounge area</div>
+              <div class="room-feature" data-ar="حمام خاص" data-en="Private bathroom">Private bathroom</div>
+              <div class="room-feature" data-ar="مساحة عمل موسّعة" data-en="Extended workspace">Extended workspace</div>
+            </div>
+          </div>
+
+          <div class="room-type-card">
+            <div class="room-type-name" data-ar="وحدة العائلة" data-en="Family Unit">Family Unit</div>
+            <div class="room-type-price">3,500 <span style="font-size:var(--text-sm);font-weight:500;color:var(--color-gray);" data-ar="ريال" data-en="SAR">SAR</span></div>
+            <div class="room-type-period" data-ar="/ الفصل الدراسي" data-en="/ semester">/ semester</div>
+            <div class="room-type-features">
+              <div class="room-feature" data-ar="غرفتا نوم" data-en="2 bedrooms">2 bedrooms</div>
+              <div class="room-feature" data-ar="مطبخ مجهّز بالكامل" data-en="Fully equipped kitchen">Fully equipped kitchen</div>
+              <div class="room-feature" data-ar="صالة مستقلة" data-en="Independent living room">Independent living room</div>
+              <div class="room-feature" data-ar="مخصصة للطلاب المتزوجين" data-en="For married students">For married students</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     TRANSPORTATION
+══════════════════════════════════════════ -->
+<section class="service-section service-section-alt" id="transport">
+  <div class="container">
+    <div class="service-inner reverse">
+
+      <!-- Visual column -->
+      <div class="service-visual-col">
+        <div class="service-info-panel">
+          <div class="service-info-panel-header" style="background:linear-gradient(135deg,#00829A,#00B4C8);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.85)" stroke-width="2" width="22" height="22"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <div>
+              <h4 data-ar="خطوط النقل الطلابي" data-en="Student Bus Routes">Student Bus Routes</h4>
+              <span data-ar="تسيير يومي خلال الفصل الدراسي" data-en="Daily service during academic term">Daily service during academic term</span>
+            </div>
+          </div>
+          <div class="service-info-rows">
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span data-ar="عدد الخطوط النشطة" data-en="Active Routes">Active Routes</span></span>
+              <span class="sir-value">12</span>
+            </div>
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ar="أوقات التشغيل" data-en="Operating Hours">Operating Hours</span></span>
+              <span class="sir-value" dir="ltr">6:00 AM – 10:00 PM</span>
+            </div>
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span data-ar="رسوم الاشتراك الشهري" data-en="Monthly Subscription">Monthly Subscription</span></span>
+              <span class="sir-value" data-ar="120 ريال / شهر" data-en="120 SAR / month">120 SAR / month</span>
+            </div>
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.92z"/></svg><span data-ar="مركز المعلومات" data-en="Info Centre">Info Centre</span></span>
+              <span class="sir-value" dir="ltr">+966 16 583 0220</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Routes -->
+        <div class="transport-routes" style="margin-top:var(--space-6);">
+          <div class="route-card">
+            <div class="route-num">01</div>
+            <div class="route-info">
+              <div class="route-name" data-ar="الحرم الجامعي ← حي الملك عبدالله" data-en="Campus ← King Abdullah District">Campus ← King Abdullah District</div>
+              <div class="route-stops" data-ar="8 محطات | يومي" data-en="8 stops | Daily">8 stops | Daily</div>
+            </div>
+            <div class="route-time">20 min</div>
+          </div>
+          <div class="route-card">
+            <div class="route-num">02</div>
+            <div class="route-info">
+              <div class="route-name" data-ar="الحرم الجامعي ← وسط المدينة" data-en="Campus ← City Centre">Campus ← City Centre</div>
+              <div class="route-stops" data-ar="12 محطة | يومي" data-en="12 stops | Daily">12 stops | Daily</div>
+            </div>
+            <div class="route-time">35 min</div>
+          </div>
+          <div class="route-card">
+            <div class="route-num">03</div>
+            <div class="route-info">
+              <div class="route-name" data-ar="الحرم الجامعي ← حي السلام" data-en="Campus ← Al-Salam District">Campus ← Al-Salam District</div>
+              <div class="route-stops" data-ar="10 محطات | يومي" data-en="10 stops | Daily">10 stops | Daily</div>
+            </div>
+            <div class="route-time">28 min</div>
+          </div>
+          <div class="route-card">
+            <div class="route-num">04</div>
+            <div class="route-info">
+              <div class="route-name" data-ar="الحرم الجامعي ← مطار القصيم" data-en="Campus ← Qassim Airport">Campus ← Qassim Airport</div>
+              <div class="route-stops" data-ar="4 محطات | أيام الأحد" data-en="4 stops | Sundays only">4 stops | Sundays only</div>
+            </div>
+            <div class="route-time">50 min</div>
+          </div>
+          <div class="route-card">
+            <div class="route-num">05</div>
+            <div class="route-info">
+              <div class="route-name" data-ar="الحرم الجامعي ← حي النرجس" data-en="Campus ← Al-Narjis District">Campus ← Al-Narjis District</div>
+              <div class="route-stops" data-ar="7 محطات | يومي" data-en="7 stops | Daily">7 stops | Daily</div>
+            </div>
+            <div class="route-time">22 min</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content column -->
+      <div class="service-content-col">
+        <div class="service-icon-header">
+          <div class="service-big-icon" style="background:rgba(0,180,200,.12);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00829A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:36px;height:36px;"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <div class="service-title-block">
+            <div class="service-section-sub" data-ar="خدمة المواصلات" data-en="Transportation Service">Transportation Service</div>
+            <h2 class="service-section-title" data-ar="أسطول حافلات متطور يربطك بكل مكان" data-en="A Modern Fleet Connecting You Everywhere">A Modern Fleet Connecting You Everywhere</h2>
+          </div>
+        </div>
+
+        <p class="service-description" data-ar="يوفّر قسم المواصلات بالجامعة أسطولاً من الحافلات الحديثة المكيّفة تعمل طوال أيام الأسبوع خلال الفصل الدراسي، وتخدم أحياء المدينة الرئيسية والمطار والمرافق القريبة من الحرم الجامعي." data-en="The university's Transportation Department operates a fleet of modern air-conditioned buses throughout the week during the academic term, serving the city's main districts, the airport, and facilities near campus.">
+          The university's Transportation Department operates a fleet of modern air-conditioned buses throughout the week during the academic term, serving the city's main districts, the airport, and facilities near campus.
+        </p>
+
+        <div class="eligibility-block">
+          <div class="eligibility-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span data-ar="شروط الاشتراك" data-en="Subscription Requirements">Subscription Requirements</span>
+          </div>
+          <div class="eligibility-list">
+            <div class="eligibility-item" data-ar="الطلاب المسجّلون في الفصل الدراسي الحالي" data-en="Students enrolled in the current semester">Students enrolled in the current semester</div>
+            <div class="eligibility-item" data-ar="إبراز بطاقة الطالب لدى الركوب في كل رحلة" data-en="Presenting student ID card on every trip">Presenting student ID card on every trip</div>
+            <div class="eligibility-item" data-ar="الاشتراك عبر البوابة الإلكترونية قبل أسبوع من بدء الخدمة" data-en="Subscribing via portal at least one week before service start">Subscribing via portal at least one week before service start</div>
+          </div>
+        </div>
+
+        <div class="how-to-apply">
+          <button class="hta-toggle" aria-expanded="false" id="transport-hta-btn">
+            <span data-ar="كيفية الاشتراك في الخدمة" data-en="How to Subscribe">How to Subscribe</span>
+            <svg class="hta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="hta-body" id="transport-hta-body">
+            <div class="hta-steps">
+              <div class="hta-step" data-ar="افتح البوابة الإلكترونية وانتقل إلى قسم 'خدمة المواصلات'" data-en="Open the student portal and navigate to 'Transportation Service'">Open the student portal and navigate to <strong>'Transportation Service'</strong></div>
+              <div class="hta-step" data-ar="اختر الخط أو الخطوط المناسبة لموقع سكنك" data-en="Select the route(s) closest to your residence">Select the route(s) closest to your residence</div>
+              <div class="hta-step" data-ar="حدّد نوع الاشتراك (شهري أو فصلي)" data-en="Choose your subscription type (monthly or per semester)">Choose your subscription type (monthly or per semester)</div>
+              <div class="hta-step" data-ar="أتمّ الدفع إلكترونياً واستلم بطاقة الاشتراك من مكتب المواصلات" data-en="Complete payment online, then collect your transit card from the Transport Office">Complete payment online, then collect your transit card from the Transport Office</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-portal-cta">
+          <a href="#portal" class="btn btn-cyan" data-ar="اشترك في الخدمة" data-en="Subscribe Now">Subscribe Now</a>
+          <a href="mailto:transport@sru.edu.sa" class="btn btn-outline-purple" data-ar="استفسار عن الخطوط" data-en="Route Enquiry">Route Enquiry</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     HAJJ TRIP SERVICE
+══════════════════════════════════════════ -->
+<section class="service-section hajj-section" id="hajj">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="service-inner">
+
+      <!-- Content column -->
+      <div class="service-content-col">
+        <div class="hajj-emblem">
+          <div class="hajj-emblem-ring">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="service-icon-header">
+          <div class="service-title-block">
+            <div class="service-section-sub" data-ar="وحدة المسؤولية الدينية" data-en="Religious Responsibility Unit">Religious Responsibility Unit</div>
+            <h2 class="service-section-title" data-ar="رحلة الحج الجامعية المدعومة" data-en="Supported University Hajj Programme">Supported University Hajj Programme</h2>
+          </div>
+        </div>
+
+        <p class="service-description" data-ar="تُنظّم جامعة سليمان الراجحي سنوياً رحلة الحج للطلاب المستحقين بالتنسيق مع وزارة الحج والعمرة، شاملةً النقل والإقامة والإشراف الديني الكامل، تجسيداً لقيم الجامعة الإسلامية وحرصها على النمو الروحي لطلابها." data-en="Sulaiman Al-Rajhi University organises an annual Hajj trip for eligible students in coordination with the Ministry of Hajj and Umrah, covering transportation, accommodation, and full religious supervision — a reflection of the university's Islamic values and commitment to students' spiritual growth.">
+          Sulaiman Al-Rajhi University organises an annual Hajj trip for eligible students in coordination with the Ministry of Hajj and Umrah, covering transportation, accommodation, and full religious supervision — a reflection of the university's Islamic values and commitment to students' spiritual growth.
+        </p>
+
+        <div class="eligibility-block">
+          <div class="eligibility-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span data-ar="شروط الاستحقاق" data-en="Eligibility Criteria">Eligibility Criteria</span>
+          </div>
+          <div class="eligibility-list">
+            <div class="eligibility-item" data-ar="أداء فريضة الحج أوّل مرة (لم يؤدِّ الحج من قبل)" data-en="Performing Hajj for the first time (not previously performed)">Performing Hajj for the first time (not previously performed)</div>
+            <div class="eligibility-item" data-ar="طالب مسجّل في الجامعة ولم يُجرَ عليه أي إجراء تأديبي" data-en="Enrolled student with no active disciplinary record">Enrolled student with no active disciplinary record</div>
+            <div class="eligibility-item" data-ar="إتمام ما لا يقل عن فصلين دراسيين بالجامعة" data-en="Completed at least two semesters at the university">Completed at least two semesters at the university</div>
+            <div class="eligibility-item" data-ar="التفرّغ التام لبرنامج الحج خلال فترته" data-en="Full availability for the duration of the Hajj programme">Full availability for the duration of the Hajj programme</div>
+            <div class="eligibility-item" data-ar="تقديم الطلب خلال نافذة القبول المحددة قبل موسم الحج" data-en="Submitting application within the designated window before the Hajj season">Submitting application within the designated window before the Hajj season</div>
+          </div>
+        </div>
+
+        <div class="how-to-apply">
+          <button class="hta-toggle" aria-expanded="false" id="hajj-hta-btn">
+            <span data-ar="كيفية التسجيل" data-en="How to Register">How to Register</span>
+            <svg class="hta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="hta-body" id="hajj-hta-body">
+            <div class="hta-steps">
+              <div class="hta-step" data-ar="تابع إعلان فتح التسجيل عبر البوابة الإلكترونية والبريد الجامعي" data-en="Watch for the registration announcement via the student portal and university email">Watch for the registration announcement via the student portal and university email</div>
+              <div class="hta-step" data-ar="قدّم استمارة الطلب الإلكترونية مع إرفاق صورة الهوية الوطنية" data-en="Submit the online application form with a copy of your National ID">Submit the online application form with a copy of your National ID</div>
+              <div class="hta-step" data-ar="تُراجع لجنة الاستحقاق الطلبات وتُعلن قوائم المقبولين" data-en="The eligibility committee reviews applications and announces accepted lists">The eligibility committee reviews applications and announces accepted lists</div>
+              <div class="hta-step" data-ar="يُستكمل بعد القبول: التوقيع على إقرار الالتزام وتسليم وثائق السفر" data-en="Upon acceptance: sign the commitment declaration and submit travel documents">Upon acceptance: sign the commitment declaration and submit travel documents</div>
+              <div class="hta-step" data-ar="حضور التوجيه الإلزامي قبيل السفر بأسبوع واحد" data-en="Attend the mandatory orientation one week before departure">Attend the mandatory orientation one week before departure</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-portal-cta">
+          <a href="#portal" class="btn btn-white" data-ar="سجّل عبر البوابة" data-en="Register via Portal">Register via Portal</a>
+          <a href="mailto:hajj@sru.edu.sa" class="btn btn-outline-white" data-ar="تواصل مع الوحدة الدينية" data-en="Contact Religious Unit">Contact Religious Unit</a>
+        </div>
+      </div>
+
+      <!-- Info panel -->
+      <div class="service-visual-col">
+        <div class="service-info-panel">
+          <div class="service-info-panel-header" style="background:linear-gradient(135deg,#276749,#38A169);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.85)" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+            <div>
+              <h4 data-ar="تفاصيل رحلة الحج" data-en="Hajj Programme Details">Hajj Programme Details</h4>
+              <span data-ar="موسم 1447 هـ" data-en="Season 1447 AH">Season 1447 AH</span>
+            </div>
+          </div>
+          <div class="service-info-rows">
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-ar="إجمالي المقاعد السنوية" data-en="Annual Seats Available">Annual Seats Available</span></span>
+              <span class="sir-value">150</span>
+            </div>
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span data-ar="موعد التسجيل" data-en="Registration Window">Registration Window</span></span>
+              <span class="sir-value" data-ar="رمضان من كل عام" data-en="Ramadan each year">Ramadan each year</span>
+            </div>
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span data-ar="الرسوم على الطالب" data-en="Student Fee">Student Fee</span></span>
+              <span class="sir-value" data-ar="مدعومة بالكامل" data-en="Fully subsidised">Fully subsidised</span>
+            </div>
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span data-ar="البريد الإلكتروني" data-en="Email">Email</span></span>
+              <span class="sir-value">hajj@sru.edu.sa</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- What's included panel -->
+        <div class="eligibility-block" style="margin-top:var(--space-6);">
+          <div class="eligibility-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span data-ar="ما تشمله الرحلة" data-en="What's Included">What's Included</span>
+          </div>
+          <div class="eligibility-list">
+            <div class="eligibility-item" data-ar="النقل ذهاباً وإياباً من الجامعة إلى مكة المكرمة" data-en="Round-trip transport from campus to Makkah Al-Mukarramah">Round-trip transport from campus to Makkah Al-Mukarramah</div>
+            <div class="eligibility-item" data-ar="الإقامة في منى وعرفات والمشاعر المقدسة" data-en="Accommodation in Mina, Arafat and the holy sites">Accommodation in Mina, Arafat and the holy sites</div>
+            <div class="eligibility-item" data-ar="إشراف ديني متخصص من علماء الجامعة" data-en="Specialist religious supervision by university scholars">Specialist religious supervision by university scholars</div>
+            <div class="eligibility-item" data-ar="برامج توجيهية قبل السفر وجلسات الإعداد الروحي" data-en="Pre-departure orientation and spiritual preparation sessions">Pre-departure orientation and spiritual preparation sessions</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FINANCIAL AID & SCHOLARSHIPS
+══════════════════════════════════════════ -->
+<section class="service-section" id="financial-aid">
+  <div class="container">
+    <div class="service-inner">
+
+      <!-- Content column -->
+      <div class="service-content-col">
+        <div class="service-icon-header">
+          <div class="service-big-icon" style="background:rgba(180,130,0,.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#9A7000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:36px;height:36px;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="service-title-block">
+            <div class="service-section-sub" data-ar="مكتب المنح والدعم المالي" data-en="Financial Aid & Scholarships Office">Financial Aid &amp; Scholarships Office</div>
+            <h2 class="service-section-title" data-ar="لا تجعل المال عائقاً أمام تميّزك" data-en="Don't Let Finances Hold Back Your Excellence">Don't Let Finances Hold Back Your Excellence</h2>
+          </div>
+        </div>
+
+        <p class="service-description" data-ar="يوفّر مكتب المنح والدعم المالي في SRU حزمة متنوعة من المنح والإعفاءات والقروض الميسّرة التي تضمن حصول كل طالب مؤهَّل على الدعم المناسب لإكمال مسيرته الأكاديمية بدون قلق." data-en="SRU's Financial Aid & Scholarships Office offers a diverse range of grants, fee waivers and interest-free loans, ensuring every eligible student receives the right support to complete their academic journey without financial worry.">
+          SRU's Financial Aid &amp; Scholarships Office offers a diverse range of grants, fee waivers and interest-free loans, ensuring every eligible student receives the right support to complete their academic journey without financial worry.
+        </p>
+
+        <div class="eligibility-block">
+          <div class="eligibility-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span data-ar="متطلبات التقديم العامة" data-en="General Application Requirements">General Application Requirements</span>
+          </div>
+          <div class="eligibility-list">
+            <div class="eligibility-item" data-ar="طالب مسجّل بوضع أكاديمي جيد (GPA ≥ 2.0)" data-en="Enrolled student in good academic standing (GPA ≥ 2.0)">Enrolled student in good academic standing (GPA ≥ 2.0)</div>
+            <div class="eligibility-item" data-ar="تقديم وثائق إثبات الاحتياج المالي (للدعم المالي)" data-en="Submitting proof of financial need documents (for need-based aid)">Submitting proof of financial need documents (for need-based aid)</div>
+            <div class="eligibility-item" data-ar="عدم الحصول على منحة دراسية حكومية مزدوجة" data-en="Not receiving a duplicate government scholarship">Not receiving a duplicate government scholarship</div>
+            <div class="eligibility-item" data-ar="التجديد السنوي مع استمرار استيفاء معايير الاستحقاق" data-en="Annual renewal with continued eligibility compliance">Annual renewal with continued eligibility compliance</div>
+          </div>
+        </div>
+
+        <div class="how-to-apply">
+          <button class="hta-toggle" aria-expanded="false" id="financial-hta-btn">
+            <span data-ar="كيفية التقديم على المنح" data-en="How to Apply for Aid">How to Apply for Aid</span>
+            <svg class="hta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="hta-body" id="financial-hta-body">
+            <div class="hta-steps">
+              <div class="hta-step" data-ar="سجّل الدخول إلى بوابتك الإلكترونية وانتقل إلى 'المنح والدعم المالي'" data-en="Log in to the student portal and go to 'Financial Aid & Scholarships'">Log in to the student portal and go to <strong>'Financial Aid &amp; Scholarships'</strong></div>
+              <div class="hta-step" data-ar="اختر نوع الدعم المناسب (منحة تفوّق / دعم مالي / إعفاء)" data-en="Choose the appropriate support type (merit grant / financial aid / fee waiver)">Choose the appropriate support type (merit grant / financial aid / fee waiver)</div>
+              <div class="hta-step" data-ar="أكمل الاستمارة الإلكترونية وارفق كافة الوثائق المطلوبة" data-en="Complete the online form and attach all required documents">Complete the online form and attach all required documents</div>
+              <div class="hta-step" data-ar="ستتلقّى رسالة بريد إلكتروني بنتيجة الطلب خلال 10 أيام عمل" data-en="You will receive an email with the decision within 10 working days">You will receive an email with the decision within 10 working days</div>
+              <div class="hta-step" data-ar="يُودَع مبلغ الدعم في حسابك الجامعي عند الموافقة" data-en="Approved aid is credited directly to your university account">Approved aid is credited directly to your university account</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-portal-cta">
+          <a href="#portal" class="btn btn-primary" data-ar="قدّم الآن" data-en="Apply Now">Apply Now</a>
+          <a href="mailto:financialaid@sru.edu.sa" class="btn btn-outline-purple" data-ar="استفسار" data-en="Enquiry">Enquiry</a>
+        </div>
+      </div>
+
+      <!-- Scholarship types panel -->
+      <div class="service-visual-col">
+        <div class="service-info-panel">
+          <div class="service-info-panel-header" style="background:linear-gradient(135deg,#744210,#B7791F);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.85)" stroke-width="2" width="22" height="22"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <div>
+              <h4 data-ar="الدعم المتاح" data-en="Available Support">Available Support</h4>
+              <span data-ar="العام الدراسي 2026–2027" data-en="Academic Year 2026–2027">Academic Year 2026–2027</span>
+            </div>
+          </div>
+          <div class="service-info-rows">
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span data-ar="منح التفوّق الأكاديمي" data-en="Merit Scholarships">Merit Scholarships</span></span>
+              <span class="sir-value" data-ar="25%–100% إعفاء" data-en="25%–100% waiver">25%–100% waiver</span>
+            </div>
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span data-ar="منح الاحتياج المالي" data-en="Need-Based Aid">Need-Based Aid</span></span>
+              <span class="sir-value" data-ar="حسب تقييم الحالة" data-en="Case-assessed">Case-assessed</span>
+            </div>
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg><span data-ar="منح الطلاب الدوليين" data-en="International Students">International Students</span></span>
+              <span class="sir-value" data-ar="متاحة" data-en="Available">Available</span>
+            </div>
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span data-ar="القروض الميسّرة" data-en="Interest-Free Loans">Interest-Free Loans</span></span>
+              <span class="sir-value" data-ar="حتى 15,000 ريال" data-en="Up to 15,000 SAR">Up to 15,000 SAR</span>
+            </div>
+            <div class="service-info-row">
+              <span class="sir-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ar="مدة معالجة الطلب" data-en="Processing Time">Processing Time</span></span>
+              <span class="sir-value" data-ar="10 أيام عمل" data-en="10 working days">10 working days</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats strip -->
+        <div class="journey-stats reveal" style="margin-top:var(--space-6);border-radius:var(--radius-xl);overflow:hidden;">
+          <div class="journey-stat">
+            <div class="j-stat-num">800+</div>
+            <div class="j-stat-label" data-ar="طالب مستفيد سنوياً" data-en="Students Aided Annually">Students Aided Annually</div>
+          </div>
+          <div class="journey-stat">
+            <div class="j-stat-num">40M+</div>
+            <div class="j-stat-label" data-ar="ريال دعم سنوي" data-en="SAR in Annual Aid">SAR in Annual Aid</div>
+          </div>
+          <div class="journey-stat">
+            <div class="j-stat-num">6</div>
+            <div class="j-stat-label" data-ar="أنواع دعم مختلفة" data-en="Types of Support">Types of Support</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     STUDENT PORTAL CTA BAND
+══════════════════════════════════════════ -->
+<section class="portal-band" id="portal">
+  <div class="container portal-band-inner reveal">
+    <div class="portal-band-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2"/>
+        <line x1="8" y1="21" x2="16" y2="21"/>
+        <line x1="12" y1="17" x2="12" y2="21"/>
+      </svg>
+    </div>
+    <h2 data-ar="كل خدماتك في مكان واحد" data-en="All Your Services. One Place.">All Your Services. One Place.</h2>
+    <p data-ar="بوابة الطالب الإلكترونية هي مركز تحكّمك الشامل — من طلب السكن والاشتراك في المواصلات، إلى تسجيل رحلة الحج والتقدّم للمنح الدراسية، كل ذلك بضغطة زر." data-en="The student portal is your complete control centre — housing applications, transport subscriptions, Hajj registration, and scholarship applications, all at the click of a button.">
+      The student portal is your complete control centre — housing applications, transport subscriptions, Hajj registration, and scholarship applications, all at the click of a button.
+    </p>
+    <div class="portal-band-btns">
+      <a href="https://student.sru.edu.sa" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-ar="الدخول إلى البوابة" data-en="Access Student Portal">Access Student Portal</a>
+      <a href="admissions.html" class="btn btn-outline-purple btn-lg" data-ar="سجّل الآن" data-en="Register Now">Register Now</a>
+    </div>
+    <!-- Feature chips -->
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-3);margin-top:var(--space-10);">
+      <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(61,31,110,.08);border-radius:var(--radius-full);padding:6px 16px;font-size:var(--text-xs);font-weight:700;color:var(--color-purple);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+        <span data-ar="تسجيل دخول بالهوية الجامعية" data-en="University ID Login">University ID Login</span>
+      </span>
+      <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(0,180,200,.08);border-radius:var(--radius-full);padding:6px 16px;font-size:var(--text-xs);font-weight:700;color:var(--color-cyan-dark);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+        <span data-ar="دفع إلكتروني آمن" data-en="Secure Online Payment">Secure Online Payment</span>
+      </span>
+      <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(61,31,110,.08);border-radius:var(--radius-full);padding:6px 16px;font-size:var(--text-xs);font-weight:700;color:var(--color-purple);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+        <span data-ar="إشعارات فورية" data-en="Real-Time Notifications">Real-Time Notifications</span>
+      </span>
+      <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(0,180,200,.08);border-radius:var(--radius-full);padding:6px 16px;font-size:var(--text-xs);font-weight:700;color:var(--color-cyan-dark);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+        <span data-ar="متاح على الجوّال" data-en="Mobile Friendly">Mobile Friendly</span>
+      </span>
+      <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(61,31,110,.08);border-radius:var(--radius-full);padding:6px 16px;font-size:var(--text-xs);font-weight:700;color:var(--color-purple);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><polyline points="20 6 9 17 4 12"/></svg>
+        <span data-ar="متابعة حالة الطلبات" data-en="Application Status Tracking">Application Status Tracking</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CTA
+══════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="cta-pattern"></div>
+  <div class="container cta-inner reveal">
+    <div class="cta-text">
+      <h2 class="cta-title" data-ar="جاهز تبدأ رحلتك في SRU؟" data-en="Ready to Begin Your SRU Journey?">Ready to Begin Your SRU Journey?</h2>
+      <p data-ar="قدّم طلب قبولك اليوم واستفد من كامل الخدمات الجامعية التي تضمن تجربة دراسية متكاملة وممتعة." data-en="Submit your admission application today and unlock the full range of university services designed for your success.">Submit your admission application today and unlock the full range of university services designed for your success.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="admissions.html" class="btn btn-cyan btn-lg"      data-ar="قدّم الآن"       data-en="Apply Now">Apply Now</a>
+      <a href="campus-life.html" class="btn btn-outline-white btn-lg" data-ar="الحياة الجامعية" data-en="Campus Life">Campus Life</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">
+        <svg width="40" height="40" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="22" fill="#3D1F6E"/><path d="M10 30 L22 10 L34 30 Z" fill="none" stroke="#00B4C8" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 30 L22 16 L30 30" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/><circle cx="22" cy="10" r="2.5" fill="#00B4C8"/></svg>
+        <span>SRU</span>
+      </a>
+      <p class="footer-tagline" data-ar="نبني قادة الغد بتميز أكاديمي وقيم إسلامية راسخة." data-en="Building tomorrow's leaders with academic excellence and deep Islamic values.">Building tomorrow's leaders with academic excellence and deep Islamic values.</p>
+      <div class="social-icons">
+        <a href="#" class="social-icon" aria-label="Twitter/X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="الخدمات" data-en="Services">Services</h4>
+      <ul class="footer-links">
+        <li><a href="#housing"      data-ar="السكن الجامعي"       data-en="University Housing">University Housing</a></li>
+        <li><a href="#transport"    data-ar="خدمة المواصلات"      data-en="Transportation">Transportation</a></li>
+        <li><a href="#hajj"         data-ar="رحلة الحج"           data-en="Hajj Programme">Hajj Programme</a></li>
+        <li><a href="#financial-aid" data-ar="المنح والدعم المالي" data-en="Financial Aid">Financial Aid</a></li>
+        <li><a href="#portal"       data-ar="بوابة الطالب"        data-en="Student Portal">Student Portal</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="روابط سريعة" data-en="Quick Links">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html"           data-ar="الرئيسية"        data-en="Home">Home</a></li>
+        <li><a href="admissions.html"      data-ar="القبول"           data-en="Admissions">Admissions</a></li>
+        <li><a href="student-journey.html" data-ar="رحلة الطالب"     data-en="Student Journey">Student Journey</a></li>
+        <li><a href="campus-life.html"     data-ar="الحياة الجامعية" data-en="Campus Life">Campus Life</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="تواصل معنا" data-en="Contact Us">Contact Us</h4>
+      <address class="footer-contact">
+        <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>services@sru.edu.sa</span></div>
+        <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.6a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+966 16 583 0200</span></div>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p class="copyright" data-ar="© 2026 جامعة سليمان الراجحي. جميع الحقوق محفوظة." data-en="© 2026 Sulaiman Al-Rajhi University. All rights reserved.">© 2026 Sulaiman Al-Rajhi University. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#" data-ar="سياسة الخصوصية" data-en="Privacy Policy">Privacy Policy</a>
+        <a href="#" data-ar="شروط الاستخدام" data-en="Terms of Use">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/services.js"></script>
+</body>
+</html>

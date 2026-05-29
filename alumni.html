@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alumni | Sulaiman Al-Rajhi University</title>
+  <meta name="description" content="Join the SRU alumni network — career services, continuing education, exclusive benefits, success stories, and your alumni portal." />
+  <meta property="og:title" content="Alumni | Sulaiman Al-Rajhi University" />
+  <meta property="og:description" content="Join the SRU alumni network — career services, continuing education, exclusive benefits, and your alumni portal." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#3D1F6E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/pages.css" />
+  <link rel="stylesheet" id="rtl-stylesheet" href="styles/rtl.css" disabled />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="SRU Home">
+      <div class="logo-mark">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+          <circle cx="22" cy="22" r="22" fill="#3D1F6E"/>
+          <path d="M10 30 L22 10 L34 30 Z" fill="none" stroke="#00B4C8" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M14 30 L22 16 L30 30" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="22" cy="10" r="2.5" fill="#00B4C8"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-en">Sulaiman Al-Rajhi University</span>
+        <span class="logo-ar">جامعة سليمان الراجحي</span>
+        <span class="logo-abbr">SRU</span>
+      </div>
+    </a>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html"              class="nav-link" data-ar="الرئيسية"          data-en="Home">Home</a></li>
+        <li><a href="student-journey.html"    class="nav-link" data-ar="رحلة الطالب"       data-en="Student Journey">Student Journey</a></li>
+        <li><a href="admissions.html"         class="nav-link" data-ar="القبول"             data-en="Admissions">Admissions</a></li>
+        <li><a href="campus-life.html"        class="nav-link" data-ar="الحياة الجامعية"   data-en="Campus Life">Campus Life</a></li>
+        <li><a href="services.html"           class="nav-link" data-ar="الخدمات"            data-en="Services">Services</a></li>
+        <li><a href="digital-experience.html" class="nav-link" data-ar="التجربة الرقمية"   data-en="Digital">Digital</a></li>
+        <li><a href="alumni.html"             class="nav-link active" data-ar="الخريجون"   data-en="Alumni">Alumni</a></li>
+        <li><a href="community.html"          class="nav-link" data-ar="المجتمع"           data-en="Community">Community</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
+        <span class="lang-label" id="lang-label">العربية</span>
+      </button>
+      <a href="#alumni-portal" class="btn btn-primary btn-sm" data-ar="بوابة الخريجين" data-en="Alumni Portal">Alumni Portal</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-overlay" id="nav-overlay"></div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     PAGE HERO
+══════════════════════════════════════════ -->
+<section class="page-hero page-hero--alumni">
+  <div class="container page-hero-inner">
+    <div class="page-breadcrumb">
+      <a href="index.html" data-ar="الرئيسية" data-en="Home">Home</a>
+      <span class="page-breadcrumb-sep">›</span>
+      <span class="page-breadcrumb-current" data-ar="الخريجون" data-en="Alumni">Alumni</span>
+    </div>
+    <h1 class="page-hero-title reveal">
+      <span data-ar="خريجو SRU —" data-en="SRU Alumni —">SRU Alumni —</span><br />
+      <span><span data-ar="قادة يُغيّرون العالم" data-en="Leaders Changing the World">Leaders <span>Changing the World</span></span></span>
+    </h1>
+    <p class="page-hero-sub reveal" data-ar="انتهت مرحلة الدراسة وبدأت رحلة التأثير — شبكة خريجي SRU تمتد عبر أكثر من 40 دولة، وكل خريج هو سفير للتميز والقيم الراسخة التي تزوّد بها في جامعتك." data-en="Your studies are complete and your impact journey begins — the SRU alumni network spans more than 40 countries, and every graduate is an ambassador of the excellence and values you were equipped with at your university.">
+      Your studies are complete and your impact journey begins — the SRU alumni network spans more than 40 countries, and every graduate is an ambassador of the excellence and values you were equipped with at your university.
+    </p>
+    <div class="page-hero-actions reveal">
+      <a href="#alumni-portal" class="btn btn-white"        data-ar="سجّل الدخول"       data-en="Log In to Portal">Log In to Portal</a>
+      <a href="#network"       class="btn btn-outline-white" data-ar="استكشف الشبكة"    data-en="Explore Network">Explore Network</a>
+    </div>
+  </div>
+  <div class="page-hero-wave" aria-hidden="true"></div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     IN-PAGE TABS
+══════════════════════════════════════════ -->
+<nav class="page-tabs" aria-label="Alumni sections">
+  <div class="container page-tabs-inner">
+    <a href="#network"       class="page-tab active" data-ar="الشبكة"             data-en="Network">Network</a>
+    <a href="#careers"       class="page-tab"        data-ar="الخدمات المهنية"    data-en="Career Services">Career Services</a>
+    <a href="#education"     class="page-tab"        data-ar="التعليم المستمر"    data-en="Continuing Ed.">Continuing Ed.</a>
+    <a href="#benefits"      class="page-tab"        data-ar="المزايا"             data-en="Benefits">Benefits</a>
+    <a href="#stories"       class="page-tab"        data-ar="قصص النجاح"        data-en="Success Stories">Success Stories</a>
+    <a href="#alumni-portal" class="page-tab"        data-ar="بوابة الخريجين"    data-en="Alumni Portal">Alumni Portal</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     ALUMNI NETWORK
+══════════════════════════════════════════ -->
+<section class="alumni-section" id="network">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow" data-ar="شبكة الخريجين" data-en="Alumni Network">Alumni Network</span>
+      <h2 class="section-title" data-ar="أكثر من 15,000 خريج حول العالم" data-en="More Than 15,000 Graduates Worldwide">More Than 15,000 Graduates Worldwide</h2>
+      <p class="section-sub" data-ar="خريجو SRU يتركون بصمتهم في قطاعات الطب، الهندسة، الأعمال، التعليم، والتقنية في المملكة العربية السعودية وخارجها. انضم إلى هذه الشبكة القوية وكن جزءاً من مجتمع يصنع الفارق." data-en="SRU graduates leave their mark in medicine, engineering, business, education, and technology across Saudi Arabia and beyond. Join this powerful network and be part of a community that makes a difference.">
+        SRU graduates leave their mark in medicine, engineering, business, education, and technology across Saudi Arabia and beyond. Join this powerful network and be part of a community that makes a difference.
+      </p>
+    </div>
+
+    <!-- Network stats -->
+    <div class="journey-stats reveal" style="margin-top:var(--space-12);border-radius:var(--radius-xl);overflow:hidden;">
+      <div class="journey-stat">
+        <div class="j-stat-num">15,000+</div>
+        <div class="j-stat-label" data-ar="خريج حول العالم" data-en="Graduates Worldwide">Graduates Worldwide</div>
+      </div>
+      <div class="journey-stat">
+        <div class="j-stat-num">40+</div>
+        <div class="j-stat-label" data-ar="دولة تضم خريجينا" data-en="Countries">Countries</div>
+      </div>
+      <div class="journey-stat">
+        <div class="j-stat-num">92%</div>
+        <div class="j-stat-label" data-ar="معدل التوظيف خلال 6 أشهر" data-en="Employed within 6 months">Employed within 6 months</div>
+      </div>
+      <div class="journey-stat">
+        <div class="j-stat-num">500+</div>
+        <div class="j-stat-label" data-ar="شركة شريكة توظيف" data-en="Partner Employers">Partner Employers</div>
+      </div>
+    </div>
+
+    <!-- Network CTA -->
+    <div class="reveal" style="margin-top:var(--space-12);background:var(--color-purple-faint);border-radius:var(--radius-xl);padding:var(--space-10) var(--space-10);display:flex;align-items:center;justify-content:space-between;gap:var(--space-8);flex-wrap:wrap;">
+      <div>
+        <h3 style="font-size:var(--text-2xl);font-weight:800;color:var(--color-text);margin-bottom:var(--space-2);" data-ar="لم تنتهِ علاقتك بـ SRU — إنها تبدأ من جديد" data-en="Your relationship with SRU doesn't end — it begins again">Your relationship with SRU doesn't end — it begins again</h3>
+        <p style="font-size:var(--text-base);color:var(--color-gray);max-width:55ch;line-height:1.7;" data-ar="انضم إلى شبكة الخريجين، احصل على أحدث الفرص المهنية، وابقَ على تواصل مع جامعتك وزملائك." data-en="Join the alumni network, access the latest career opportunities, and stay connected with your university and peers.">Join the alumni network, access the latest career opportunities, and stay connected with your university and peers.</p>
+      </div>
+      <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;flex-shrink:0;">
+        <a href="#alumni-portal" class="btn btn-primary" data-ar="انضم الآن" data-en="Join Now">Join Now</a>
+        <a href="mailto:alumni@sru.edu.sa" class="btn btn-outline-purple" data-ar="تواصل معنا" data-en="Contact Us">Contact Us</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CAREER SERVICES
+══════════════════════════════════════════ -->
+<section class="alumni-section-alt" id="careers">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow" data-ar="الخدمات المهنية" data-en="Career Services">Career Services</span>
+      <h2 class="section-title" data-ar="ندعمك في بناء مسيرتك المهنية" data-en="We Support Your Professional Journey">We Support Your Professional Journey</h2>
+      <p class="section-sub" data-ar="مركز التوظيف والخدمات المهنية في SRU يواصل دعمه لك ما بعد التخرج، عبر شبكة واسعة من الشركاء وبرامج تطوير متخصصة." data-en="SRU's Career Services Centre continues to support you after graduation through an extensive partner network and specialised development programmes.">
+        SRU's Career Services Centre continues to support you after graduation through an extensive partner network and specialised development programmes.
+      </p>
+    </div>
+
+    <div class="career-grid">
+
+      <div class="career-card reveal">
+        <div class="career-card-header">
+          <div class="career-card-icon" style="background:rgba(61,31,110,.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div class="career-card-title" data-ar="فرص التوظيف المباشر" data-en="Direct Job Placement">Direct Job Placement</div>
+        </div>
+        <div class="career-card-body">
+          <p class="career-card-desc" data-ar="بوابة الوظائف الحصرية لخريجي SRU توفّر عروضاً وظيفية مباشرة من أبرز الشركات الكبرى والجهات الحكومية في المملكة." data-en="SRU graduates' exclusive jobs portal provides direct vacancies from top companies and government bodies across the Kingdom.">SRU graduates' exclusive jobs portal provides direct vacancies from top companies and government bodies across the Kingdom.</p>
+          <div class="career-stat-row">
+            <div class="c-stat">
+              <span class="c-stat-num">500+</span>
+              <span class="c-stat-label" data-ar="شركة شريكة" data-en="Partner Companies">Partner Companies</span>
+            </div>
+            <div class="c-stat">
+              <span class="c-stat-num">2,000+</span>
+              <span class="c-stat-label" data-ar="وظيفة منشورة" data-en="Posted Jobs">Posted Jobs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="career-card reveal">
+        <div class="career-card-header">
+          <div class="career-card-icon" style="background:rgba(0,180,200,.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00829A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="career-card-title" data-ar="الإرشاد المهني الشخصي" data-en="Personal Career Coaching">Personal Career Coaching</div>
+        </div>
+        <div class="career-card-body">
+          <p class="career-card-desc" data-ar="احجز جلسات إرشاد فردية مع متخصصي التطوير المهني لمراجعة سيرتك الذاتية، التحضير للمقابلات، وتصميم مسارك الوظيفي." data-en="Book one-on-one coaching sessions with career development specialists to review your CV, prepare for interviews, and design your career path.">Book one-on-one coaching sessions with career development specialists to review your CV, prepare for interviews, and design your career path.</p>
+          <div class="career-stat-row">
+            <div class="c-stat">
+              <span class="c-stat-num">20+</span>
+              <span class="c-stat-label" data-ar="مستشار مهني" data-en="Career Coaches">Career Coaches</span>
+            </div>
+            <div class="c-stat">
+              <span class="c-stat-num">Free</span>
+              <span class="c-stat-label" data-ar="لجميع الخريجين" data-en="For all alumni">For all alumni</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="career-card reveal">
+        <div class="career-card-header">
+          <div class="career-card-icon" style="background:rgba(39,103,73,.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#276749" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="career-card-title" data-ar="ملتقى التوظيف السنوي" data-en="Annual Career Fair">Annual Career Fair</div>
+        </div>
+        <div class="career-card-body">
+          <p class="career-card-desc" data-ar="الملتقى السنوي يجمع أكثر من 80 جهة توظيفية في يوم واحد مع فرص للمقابلات الفورية، التواصل المهني، وورش التطوير." data-en="The annual fair brings together 80+ employers in a single day with opportunities for on-the-spot interviews, professional networking, and development workshops.">The annual fair brings together 80+ employers in a single day with opportunities for on-the-spot interviews, professional networking, and development workshops.</p>
+          <div class="career-stat-row">
+            <div class="c-stat">
+              <span class="c-stat-num">80+</span>
+              <span class="c-stat-label" data-ar="جهة توظيف" data-en="Employers">Employers</span>
+            </div>
+            <div class="c-stat">
+              <span class="c-stat-num">Aug</span>
+              <span class="c-stat-label" data-ar="كل عام — أغسطس" data-en="Every year">Every year</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Employer logos -->
+    <div class="companies-strip reveal">
+      <div class="companies-label" data-ar="من بين أبرز الشركاء التوظيفيين" data-en="Among our top hiring partners">Among our top hiring partners</div>
+      <div class="companies-logos">
+        <div class="company-logo">ARAMCO</div>
+        <div class="company-logo">STC</div>
+        <div class="company-logo">SABIC</div>
+        <div class="company-logo">NEOM</div>
+        <div class="company-logo">PIF</div>
+        <div class="company-logo">MOH</div>
+        <div class="company-logo">NCBE</div>
+        <div class="company-logo">KAUST</div>
+        <div class="company-logo">STCPAY</div>
+        <div class="company-logo">ACWA</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CONTINUING EDUCATION
+══════════════════════════════════════════ -->
+<section class="alumni-section" id="education">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow" data-ar="التعليم المستمر" data-en="Continuing Education">Continuing Education</span>
+      <h2 class="section-title" data-ar="تطوّر لا يتوقف — فرص تعليمية حصرية لخريجي SRU" data-en="Never Stop Growing — Exclusive Learning for SRU Alumni">Never Stop Growing — Exclusive Learning for SRU Alumni</h2>
+      <p class="section-sub" data-ar="كخريج لجامعة SRU، تحصل على وصول تفضيلي لبرامج التعليم المستمر، الدراسات العليا، والشهادات المهنية بأسعار مخفّضة." data-en="As an SRU graduate, you receive preferential access to continuing education programmes, postgraduate studies, and professional certifications at discounted rates.">
+        As an SRU graduate, you receive preferential access to continuing education programmes, postgraduate studies, and professional certifications at discounted rates.
+      </p>
+    </div>
+
+    <div class="edu-grid">
+
+      <div class="edu-card reveal">
+        <div class="edu-card-top" style="background:linear-gradient(135deg,#3D1F6E,#6B46C1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div class="edu-card-body">
+          <div class="edu-card-label" style="color:#3D1F6E;" data-ar="برامج الدراسات العليا" data-en="Postgraduate">Postgraduate</div>
+          <div class="edu-card-title" data-ar="الماجستير والدكتوراه لخريجي SRU" data-en="Masters & PhD for SRU Graduates">Masters &amp; PhD for SRU Graduates</div>
+          <div class="edu-card-desc" data-ar="قدّم بسهولة لبرامج الدراسات العليا في SRU مع أولوية في القبول وخصم 20% على الرسوم الدراسية لخريجي الجامعة." data-en="Apply easily to SRU postgraduate programmes with admission priority and a 20% tuition discount for university graduates.">Apply easily to SRU postgraduate programmes with admission priority and a 20% tuition discount for university graduates.</div>
+          <div class="edu-card-meta">
+            <span class="edu-meta-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ar="مدة: 2-4 سنوات" data-en="Duration: 2–4 years">Duration: 2–4 years</span></span>
+            <span class="edu-meta-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span data-ar="خصم 20%" data-en="20% discount">20% discount</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-card reveal">
+        <div class="edu-card-top" style="background:linear-gradient(135deg,#00829A,#00B4C8);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <div class="edu-card-body">
+          <div class="edu-card-label" style="color:#00829A;" data-ar="شهادات مهنية معتمدة" data-en="Professional Certifications">Professional Certifications</div>
+          <div class="edu-card-title" data-ar="برامج التطوير المهني المعتمدة" data-en="Accredited Professional Development">Accredited Professional Development</div>
+          <div class="edu-card-desc" data-ar="اكتسب شهادات مهنية معترفاً بها في مجالات الإدارة، تحليل البيانات، التسويق الرقمي، وإدارة المشاريع." data-en="Earn recognised professional certificates in management, data analytics, digital marketing, and project management.">Earn recognised professional certificates in management, data analytics, digital marketing, and project management.</div>
+          <div class="edu-card-meta">
+            <span class="edu-meta-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ar="3–12 شهراً" data-en="3–12 months">3–12 months</span></span>
+            <span class="edu-meta-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span data-ar="حضوري وعن بُعد" data-en="On-site & Online">On-site &amp; Online</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-card reveal">
+        <div class="edu-card-top" style="background:linear-gradient(135deg,#276749,#38A169);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="edu-card-body">
+          <div class="edu-card-label" style="color:#276749;" data-ar="دورات قصيرة مكثّفة" data-en="Short Intensive Courses">Short Intensive Courses</div>
+          <div class="edu-card-title" data-ar="دورات وورش العمل المكثّفة" data-en="Intensive Workshops & Bootcamps">Intensive Workshops &amp; Bootcamps</div>
+          <div class="edu-card-desc" data-ar="دورات مكثّفة تتراوح بين يومين وأسبوعين في مهارات الذكاء الاصطناعي، ريادة الأعمال، القيادة، والتحدث العلني." data-en="Intensive sessions ranging from two days to two weeks in AI skills, entrepreneurship, leadership, and public speaking.">Intensive sessions ranging from two days to two weeks in AI skills, entrepreneurship, leadership, and public speaking.</div>
+          <div class="edu-card-meta">
+            <span class="edu-meta-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ar="يومان – أسبوعان" data-en="2 days – 2 weeks">2 days – 2 weeks</span></span>
+            <span class="edu-meta-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span data-ar="خصم خريجين 30%" data-en="30% alumni discount">30% alumni discount</span></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="reveal" style="text-align:center;margin-top:var(--space-10);">
+      <a href="#alumni-portal" class="btn btn-primary btn-lg" data-ar="استكشف كل البرامج" data-en="Explore All Programmes">Explore All Programmes</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     ALUMNI BENEFITS
+══════════════════════════════════════════ -->
+<section class="alumni-section-alt" id="benefits">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow" data-ar="مزايا الخريجين" data-en="Alumni Benefits">Alumni Benefits</span>
+      <h2 class="section-title" data-ar="شارة SRU — مزايا تدوم مدى الحياة" data-en="Your SRU Badge — Lifelong Privileges">Your SRU Badge — Lifelong Privileges</h2>
+      <p class="section-sub" data-ar="تخرّجك من SRU ليس نهاية علاقتك بالجامعة — بل هو بداية سلسلة من المزايا والامتيازات الحصرية المصممة لدعم مسيرتك مدى الحياة." data-en="Graduating from SRU isn't the end of your relationship with the university — it's the start of a series of exclusive privileges designed to support you for life.">
+        Graduating from SRU isn't the end of your relationship with the university — it's the start of a series of exclusive privileges designed to support you for life.
+      </p>
+    </div>
+
+    <div class="benefits-grid">
+
+      <div class="benefit-item reveal">
+        <div class="benefit-icon" style="background:rgba(61,31,110,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <div class="benefit-text">
+          <div class="benefit-title" data-ar="وصول دائم للمكتبة الرقمية" data-en="Lifetime Digital Library Access">Lifetime Digital Library Access</div>
+          <div class="benefit-desc" data-ar="احتفظ بوصول كامل لأكثر من 500,000 مصدر في المكتبة الرقمية للجامعة مدى الحياة بوصفك خريجاً." data-en="Retain full access to over 500,000 resources in the university's digital library for life as an alumnus.">Retain full access to over 500,000 resources in the university's digital library for life as an alumnus.</div>
+        </div>
+      </div>
+
+      <div class="benefit-item reveal">
+        <div class="benefit-icon" style="background:rgba(0,180,200,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00829A" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <div class="benefit-text">
+          <div class="benefit-title" data-ar="خصم 20% على برامج الدراسات العليا" data-en="20% Postgraduate Tuition Discount">20% Postgraduate Tuition Discount</div>
+          <div class="benefit-desc" data-ar="قدّم لأي برنامج ماجستير أو دكتوراه في SRU وانتفع بخصم 20% على الرسوم الدراسية حصراً للخريجين." data-en="Apply to any Masters or PhD programme at SRU and enjoy a 20% tuition discount exclusively for alumni.">Apply to any Masters or PhD programme at SRU and enjoy a 20% tuition discount exclusively for alumni.</div>
+        </div>
+      </div>
+
+      <div class="benefit-item reveal">
+        <div class="benefit-icon" style="background:rgba(39,103,73,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#276749" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="benefit-text">
+          <div class="benefit-title" data-ar="شبكة التواصل المهني الحصرية" data-en="Exclusive Professional Network">Exclusive Professional Network</div>
+          <div class="benefit-desc" data-ar="تواصل مع أكثر من 15,000 خريج عبر منصة الشبكة المهنية الخاصة بخريجي SRU، واستفد من فرص الشراكة والتعاون." data-en="Connect with 15,000+ alumni through SRU's exclusive professional networking platform and benefit from partnership and collaboration opportunities.">Connect with 15,000+ alumni through SRU's exclusive professional networking platform and benefit from partnership and collaboration opportunities.</div>
+        </div>
+      </div>
+
+      <div class="benefit-item reveal">
+        <div class="benefit-icon" style="background:rgba(180,83,9,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="benefit-text">
+          <div class="benefit-title" data-ar="إرشاد مهني مجاني مدى الحياة" data-en="Free Lifelong Career Coaching">Free Lifelong Career Coaching</div>
+          <div class="benefit-desc" data-ar="احجز جلسات الإرشاد المهني المجانية مع متخصصينا في أي وقت خلال مسيرتك، حتى بعد سنوات من تخرّجك." data-en="Book free career coaching sessions with our specialists at any point in your journey, even years after graduation.">Book free career coaching sessions with our specialists at any point in your journey, even years after graduation.</div>
+        </div>
+      </div>
+
+      <div class="benefit-item reveal">
+        <div class="benefit-icon" style="background:rgba(85,60,154,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#553C9A" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <div class="benefit-text">
+          <div class="benefit-title" data-ar="أولوية في فعاليات وأحداث الجامعة" data-en="Priority Access to University Events">Priority Access to University Events</div>
+          <div class="benefit-desc" data-ar="احصل على دعوات مبكرة وأسبقية في الحجز لجميع فعاليات الجامعة، المؤتمرات، وحفلات التخرج." data-en="Receive early invitations and booking priority for all university events, conferences, and graduation ceremonies.">Receive early invitations and booking priority for all university events, conferences, and graduation ceremonies.</div>
+        </div>
+      </div>
+
+      <div class="benefit-item reveal">
+        <div class="benefit-icon" style="background:rgba(0,180,200,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00829A" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="benefit-text">
+          <div class="benefit-title" data-ar="استخدام مرافق الحرم الجامعي" data-en="Campus Facilities Access">Campus Facilities Access</div>
+          <div class="benefit-desc" data-ar="استمتع باستخدام مرافق الجامعة كالمكتبة، المختبرات، والملاعب الرياضية بعد التخرج بأسعار مخفّضة لأعضاء الشبكة." data-en="Enjoy access to university facilities — library, labs, and sports courts — after graduation at discounted rates for network members.">Enjoy access to university facilities — library, labs, and sports courts — after graduation at discounted rates for network members.</div>
+        </div>
+      </div>
+
+      <div class="benefit-item reveal">
+        <div class="benefit-icon" style="background:rgba(61,31,110,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="benefit-text">
+          <div class="benefit-title" data-ar="النشرة الإخبارية الحصرية للخريجين" data-en="Exclusive Alumni Newsletter">Exclusive Alumni Newsletter</div>
+          <div class="benefit-desc" data-ar="تلقّ نشرة شهرية مخصصة تضم آخر أخبار الجامعة، فرص العمل، ونجاحات أبرز الخريجين حول العالم." data-en="Receive a monthly dedicated newsletter with the latest university news, job opportunities, and highlights from top alumni worldwide.">Receive a monthly dedicated newsletter with the latest university news, job opportunities, and highlights from top alumni worldwide.</div>
+        </div>
+      </div>
+
+      <div class="benefit-item reveal">
+        <div class="benefit-icon" style="background:rgba(39,103,73,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#276749" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="benefit-text">
+          <div class="benefit-title" data-ar="جوائز التميز السنوية للخريجين" data-en="Annual Alumni Excellence Awards">Annual Alumni Excellence Awards</div>
+          <div class="benefit-desc" data-ar="جائزة سنوية تُكرّم خريجي SRU المتميزين في مجالات التميز المهني، ريادة الأعمال، والمسؤولية المجتمعية." data-en="An annual award honouring distinguished SRU graduates in professional excellence, entrepreneurship, and community responsibility.">An annual award honouring distinguished SRU graduates in professional excellence, entrepreneurship, and community responsibility.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SUCCESS STORIES
+══════════════════════════════════════════ -->
+<section class="alumni-section" id="stories">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow" data-ar="قصص النجاح" data-en="Success Stories">Success Stories</span>
+      <h2 class="section-title" data-ar="خريجونا — إلهام يتجاوز حدود الحرم الجامعي" data-en="Our Graduates — Inspiration Beyond Campus Walls">Our Graduates — Inspiration Beyond Campus Walls</h2>
+      <p class="section-sub" data-ar="قصص حقيقية من خريجين غيّروا مساراتهم وأثّروا في مجتمعاتهم، تحمل كل قصة شعلة من شعلات التميز الذي بدأ في SRU." data-en="Real stories from graduates who changed their trajectories and impacted their communities — each story carries a spark of excellence that began at SRU.">
+        Real stories from graduates who changed their trajectories and impacted their communities — each story carries a spark of excellence that began at SRU.
+      </p>
+    </div>
+
+    <div class="stories-grid">
+
+      <div class="story-card reveal">
+        <div class="story-avatar" style="background:linear-gradient(135deg,#3D1F6E,#00B4C8);">
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.25);border:3px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;font-size:var(--text-xl);font-weight:800;color:var(--color-white);">ع.ر</div>
+        </div>
+        <div class="story-body">
+          <p class="story-quote" data-ar='"جامعة SRU لم تمنحني شهادة فقط — منحتني منهجية تفكير ورؤية جعلتني أؤسس شركتي التقنية الأولى وعمري 26 عاماً."' data-en='"SRU didn't just give me a degree — it gave me a thinking methodology and vision that helped me found my first tech company at age 26."'>"SRU didn't just give me a degree — it gave me a thinking methodology and vision that helped me found my first tech company at age 26."</p>
+          <div class="story-meta">
+            <strong data-ar="عبدالرحمن السليمان" data-en="Abdulrahman Al-Sulaiman">Abdulrahman Al-Sulaiman</strong>
+            <span data-ar="مؤسس شركة تقنية — خريج هندسة برمجيات 2021" data-en="Tech Startup Founder — Software Engineering 2021">Tech Startup Founder — Software Engineering 2021</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-card reveal">
+        <div class="story-avatar" style="background:linear-gradient(135deg,#276749,#00B4C8);">
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.25);border:3px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:function:center;justify-content:center;font-size:var(--text-xl);font-weight:800;color:var(--color-white);">ن.م</div>
+        </div>
+        <div class="story-body">
+          <p class="story-quote" data-ar='"التعليم الذي تلقّيته في SRU أهّلني للعمل في أرامكو والمشاركة في مشاريع طاقة عملاقة تخدم ملايين الأشخاص."' data-en='"The education I received at SRU qualified me to work at Aramco and participate in giant energy projects serving millions of people."'>"The education I received at SRU qualified me to work at Aramco and participate in giant energy projects serving millions of people."</p>
+          <div class="story-meta">
+            <strong data-ar="نورة المطيري" data-en="Noura Al-Mutairi">Noura Al-Mutairi</strong>
+            <span data-ar="مهندسة طاقة في أرامكو — خريجة هندسة كيميائية 2020" data-en="Energy Engineer at Aramco — Chemical Engineering 2020">Energy Engineer at Aramco — Chemical Engineering 2020</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-card reveal">
+        <div class="story-avatar" style="background:linear-gradient(135deg,#744210,#B7791F);">
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.25);border:3px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;font-size:var(--text-xl);font-weight:800;color:var(--color-white);">م.ع</div>
+        </div>
+        <div class="story-body">
+          <p class="story-quote" data-ar='"شبكة خريجي SRU فتحت لي أبواباً لم أتوقعها — من خلالها انضممت إلى مجلس الشباب السعودي وصنعت مشاريع ذات تأثير حقيقي."' data-en='"The SRU alumni network opened doors I never expected — through it I joined the Saudi Youth Council and built truly impactful projects."'>"The SRU alumni network opened doors I never expected — through it I joined the Saudi Youth Council and built truly impactful projects."</p>
+          <div class="story-meta">
+            <strong data-ar="محمد العمري" data-en="Mohammed Al-Omari">Mohammed Al-Omari</strong>
+            <span data-ar="عضو مجلس الشباب السعودي — خريج إدارة أعمال 2019" data-en="Saudi Youth Council Member — Business Administration 2019">Saudi Youth Council Member — Business Administration 2019</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="reveal" style="text-align:center;margin-top:var(--space-10);">
+      <a href="#alumni-portal" class="btn btn-outline-purple btn-lg" data-ar="شارك قصتك" data-en="Share Your Story">Share Your Story</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     ALUMNI PORTAL LOGIN
+══════════════════════════════════════════ -->
+<section class="alumni-portal-section" id="alumni-portal">
+  <div class="container alumni-portal-inner">
+
+    <!-- Left text -->
+    <div class="alumni-portal-text reveal">
+      <h2 data-ar="بوابة الخريجين — ابقَ متصلاً بجامعتك" data-en="Alumni Portal — Stay Connected with Your University">Alumni Portal — Stay Connected with Your University</h2>
+      <p data-ar="سجّل دخولك إلى بوابة الخريجين الإلكترونية للوصول إلى كل مزاياك — فرص العمل، برامج التطوير، شبكة التواصل، وجميع الخدمات المتاحة لخريجي SRU." data-en="Log in to the alumni portal to access all your privileges — job opportunities, development programmes, the alumni network, and all services available to SRU graduates.">Log in to the alumni portal to access all your privileges — job opportunities, development programmes, the alumni network, and all services available to SRU graduates.</p>
+      <div class="alumni-portal-perks">
+        <div class="apk-item">
+          <div class="apk-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <span data-ar="بوابة وظائف حصرية لخريجي SRU" data-en="Exclusive SRU graduates jobs portal">Exclusive SRU graduates jobs portal</span>
+        </div>
+        <div class="apk-item">
+          <div class="apk-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <span data-ar="وصول للمكتبة الرقمية مدى الحياة" data-en="Lifetime digital library access">Lifetime digital library access</span>
+        </div>
+        <div class="apk-item">
+          <div class="apk-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <span data-ar="التواصل مع شبكة الخريجين العالمية" data-en="Connect with the global alumni network">Connect with the global alumni network</span>
+        </div>
+        <div class="apk-item">
+          <div class="apk-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <span data-ar="التسجيل في برامج التعليم المستمر" data-en="Enrol in continuing education programmes">Enrol in continuing education programmes</span>
+        </div>
+        <div class="apk-item">
+          <div class="apk-check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2,6 5,9 10,3"/></svg></div>
+          <span data-ar="مشاركة قصة نجاحك مع مجتمع SRU" data-en="Share your success story with the SRU community">Share your success story with the SRU community</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login card -->
+    <div class="alumni-login-card reveal">
+      <h3 data-ar="تسجيل الدخول" data-en="Sign In">Sign In</h3>
+      <p data-ar="استخدم بريدك الجامعي أو رقم تسجيلك السابق للدخول." data-en="Use your university email or previous student ID to sign in.">Use your university email or previous student ID to sign in.</p>
+
+      <form onsubmit="return false;" novalidate>
+        <input type="email" class="login-input" placeholder="alumni@sru.edu.sa" aria-label="Email address" autocomplete="email" />
+        <input type="password" class="login-input" placeholder="••••••••" aria-label="Password" autocomplete="current-password" />
+        <a href="#" style="display:block;text-align:right;font-size:var(--text-xs);color:var(--color-purple);font-weight:700;margin-top:calc(-1 * var(--space-2));margin-bottom:var(--space-5);" data-ar="نسيت كلمة المرور؟" data-en="Forgot password?">Forgot password?</a>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:var(--text-base);padding:var(--space-4);" data-ar="الدخول إلى البوابة" data-en="Access Alumni Portal">Access Alumni Portal</button>
+      </form>
+
+      <div class="login-divider" data-ar="خريج جديد في الشبكة؟" data-en="New to the network?">New to the network?</div>
+
+      <div class="login-two-col">
+        <input type="text" class="login-input" placeholder="Student ID" aria-label="Student ID" style="margin-bottom:0;" autocomplete="off" />
+        <input type="text" class="login-input" placeholder="Grad. Year" aria-label="Graduation year" style="margin-bottom:0;" autocomplete="off" />
+      </div>
+      <button type="button" class="btn btn-outline-purple" style="width:100%;justify-content:center;margin-top:var(--space-4);" data-ar="أنشئ حساب الخريج" data-en="Create Alumni Account">Create Alumni Account</button>
+
+      <p class="login-footer-note">
+        <span data-ar="تحتاج مساعدة؟" data-en="Need help?">Need help?</span>
+        <a href="mailto:alumni@sru.edu.sa" data-ar="تواصل مع فريق دعم الخريجين" data-en="Contact alumni support">Contact alumni support</a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CTA
+══════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="cta-pattern"></div>
+  <div class="container cta-inner reveal">
+    <div class="cta-text">
+      <h2 class="cta-title" data-ar="مسيرتك بدأت في SRU — واستمرارها معنا" data-en="Your Journey Started at SRU — Continue It With Us">Your Journey Started at SRU — Continue It With Us</h2>
+      <p data-ar="انضم إلى شبكة الخريجين واستفد من كل المزايا، أو ابدأ رحلتك الجامعية معنا اليوم إذا لم تكن قد التحقت بعد." data-en="Join the alumni network and unlock all your privileges, or start your university journey with us today if you haven't yet enrolled.">Join the alumni network and unlock all your privileges, or start your university journey with us today if you haven't yet enrolled.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="#alumni-portal" class="btn btn-cyan btn-lg"       data-ar="انضم لشبكة الخريجين" data-en="Join Alumni Network">Join Alumni Network</a>
+      <a href="admissions.html" class="btn btn-outline-white btn-lg" data-ar="التقديم الآن"         data-en="Apply Now">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">
+        <svg width="40" height="40" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="22" fill="#3D1F6E"/><path d="M10 30 L22 10 L34 30 Z" fill="none" stroke="#00B4C8" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 30 L22 16 L30 30" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/><circle cx="22" cy="10" r="2.5" fill="#00B4C8"/></svg>
+        <span>SRU</span>
+      </a>
+      <p class="footer-tagline" data-ar="نبني قادة الغد بتميز أكاديمي وقيم إسلامية راسخة." data-en="Building tomorrow's leaders with academic excellence and deep Islamic values.">Building tomorrow's leaders with academic excellence and deep Islamic values.</p>
+      <div class="social-icons">
+        <a href="#" class="social-icon" aria-label="Twitter/X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="الخريجون" data-en="Alumni">Alumni</h4>
+      <ul class="footer-links">
+        <li><a href="#network"       data-ar="شبكة الخريجين"    data-en="Alumni Network">Alumni Network</a></li>
+        <li><a href="#careers"       data-ar="الخدمات المهنية"  data-en="Career Services">Career Services</a></li>
+        <li><a href="#education"     data-ar="التعليم المستمر"  data-en="Continuing Education">Continuing Education</a></li>
+        <li><a href="#benefits"      data-ar="المزايا"           data-en="Benefits">Benefits</a></li>
+        <li><a href="#alumni-portal" data-ar="بوابة الخريجين"  data-en="Alumni Portal">Alumni Portal</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="روابط سريعة" data-en="Quick Links">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html"              data-ar="الرئيسية"        data-en="Home">Home</a></li>
+        <li><a href="admissions.html"         data-ar="القبول"           data-en="Admissions">Admissions</a></li>
+        <li><a href="services.html"           data-ar="الخدمات"          data-en="Services">Services</a></li>
+        <li><a href="digital-experience.html" data-ar="التجربة الرقمية" data-en="Digital">Digital</a></li>
+        <li><a href="campus-life.html"        data-ar="الحياة الجامعية" data-en="Campus Life">Campus Life</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="تواصل معنا" data-en="Contact Us">Contact Us</h4>
+      <address class="footer-contact">
+        <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>alumni@sru.edu.sa</span></div>
+        <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.6a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span dir="ltr">+966 16 583 0400</span></div>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p class="copyright" data-ar="© 2026 جامعة سليمان الراجحي. جميع الحقوق محفوظة." data-en="© 2026 Sulaiman Al-Rajhi University. All rights reserved.">© 2026 Sulaiman Al-Rajhi University. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#" data-ar="سياسة الخصوصية" data-en="Privacy Policy">Privacy Policy</a>
+        <a href="#" data-ar="شروط الاستخدام" data-en="Terms of Use">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/alumni.js"></script>
+</body>
+</html>

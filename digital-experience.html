@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Experience | Sulaiman Al-Rajhi University</title>
+  <meta name="description" content="Explore SRU's integrated digital ecosystem — student portal, academic systems, mobile app, connected services, and 24/7 IT support." />
+  <meta property="og:title" content="Digital Experience | Sulaiman Al-Rajhi University" />
+  <meta property="og:description" content="SRU's integrated digital ecosystem — student portal, academic systems, mobile app, connected services, and 24/7 IT support." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#3D1F6E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/pages.css" />
+  <link rel="stylesheet" id="rtl-stylesheet" href="styles/rtl.css" disabled />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="SRU Home">
+      <div class="logo-mark">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+          <circle cx="22" cy="22" r="22" fill="#3D1F6E"/>
+          <path d="M10 30 L22 10 L34 30 Z" fill="none" stroke="#00B4C8" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M14 30 L22 16 L30 30" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="22" cy="10" r="2.5" fill="#00B4C8"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-en">Sulaiman Al-Rajhi University</span>
+        <span class="logo-ar">جامعة سليمان الراجحي</span>
+        <span class="logo-abbr">SRU</span>
+      </div>
+    </a>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html"                class="nav-link" data-ar="الرئيسية"          data-en="Home">Home</a></li>
+        <li><a href="student-journey.html"      class="nav-link" data-ar="رحلة الطالب"       data-en="Student Journey">Student Journey</a></li>
+        <li><a href="admissions.html"           class="nav-link" data-ar="القبول"             data-en="Admissions">Admissions</a></li>
+        <li><a href="campus-life.html"          class="nav-link" data-ar="الحياة الجامعية"   data-en="Campus Life">Campus Life</a></li>
+        <li><a href="services.html"             class="nav-link" data-ar="الخدمات"            data-en="Services">Services</a></li>
+        <li><a href="digital-experience.html"   class="nav-link active" data-ar="التجربة الرقمية" data-en="Digital">Digital</a></li>
+        <li><a href="alumni.html"               class="nav-link" data-ar="الخريجون"           data-en="Alumni">Alumni</a></li>
+        <li><a href="community.html"            class="nav-link" data-ar="المجتمع"            data-en="Community">Community</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
+        <span class="lang-label" id="lang-label">العربية</span>
+      </button>
+      <a href="admissions.html#apply" class="btn btn-primary btn-sm" data-ar="قدّم الآن" data-en="Apply Now">Apply Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-overlay" id="nav-overlay"></div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     PAGE HERO
+══════════════════════════════════════════ -->
+<section class="page-hero page-hero--digital">
+  <div class="container page-hero-inner">
+    <div class="page-breadcrumb">
+      <a href="index.html" data-ar="الرئيسية" data-en="Home">Home</a>
+      <span class="page-breadcrumb-sep">›</span>
+      <span class="page-breadcrumb-current" data-ar="التجربة الرقمية" data-en="Digital Experience">Digital Experience</span>
+    </div>
+    <h1 class="page-hero-title reveal">
+      <span data-ar="تجربة رقمية" data-en="Your University,">Your University,</span><br />
+      <span><span data-ar="متكاملة وذكية في SRU" data-en="Fully Digital at SRU">Fully Digital at <span>SRU</span></span></span>
+    </h1>
+    <p class="page-hero-sub reveal" data-ar="كل ما تحتاجه — من التسجيل والدرجات إلى الخدمات والدعم — متاح على أطراف أصابعك عبر منظومة رقمية متكاملة مصممة لتجربة طلابية استثنائية." data-en="Everything you need — from registration and grades to services and support — available at your fingertips through a fully integrated digital ecosystem designed for an exceptional student experience.">
+      Everything you need — from registration and grades to services and support — available at your fingertips through a fully integrated digital ecosystem designed for an exceptional student experience.
+    </p>
+    <div class="page-hero-actions reveal">
+      <a href="https://student.sru.edu.sa" target="_blank" rel="noopener" class="btn btn-white" data-ar="بوابة الطالب" data-en="Student Portal">Student Portal</a>
+      <a href="#mobile-app" class="btn btn-outline-white" data-ar="تحميل التطبيق" data-en="Download App">Download App</a>
+    </div>
+  </div>
+  <div class="page-hero-wave" aria-hidden="true"></div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     IN-PAGE TABS
+══════════════════════════════════════════ -->
+<nav class="page-tabs" aria-label="Digital experience sections">
+  <div class="container page-tabs-inner">
+    <a href="#portal-features" class="page-tab active" data-ar="ميزات البوابة"      data-en="Portal Features">Portal Features</a>
+    <a href="#academic-systems" class="page-tab"       data-ar="الأنظمة الأكاديمية" data-en="Academic Systems">Academic Systems</a>
+    <a href="#connected"        class="page-tab"       data-ar="الخدمات المتكاملة"   data-en="Connected Services">Connected Services</a>
+    <a href="#mobile-app"       class="page-tab"       data-ar="تطبيق الجوّال"      data-en="Mobile App">Mobile App</a>
+    <a href="#it-support"       class="page-tab"       data-ar="الدعم التقني"        data-en="IT Support">IT Support</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     TECH STATS STRIP
+══════════════════════════════════════════ -->
+<div class="container">
+  <div class="tech-stats reveal">
+    <div class="tech-stat">
+      <div class="tech-stat-num">20,000+</div>
+      <div class="tech-stat-label" data-ar="مستخدم نشط يومياً" data-en="Daily Active Users">Daily Active Users</div>
+    </div>
+    <div class="tech-stat">
+      <div class="tech-stat-num">99.9%</div>
+      <div class="tech-stat-label" data-ar="وقت تشغيل الأنظمة" data-en="System Uptime">System Uptime</div>
+    </div>
+    <div class="tech-stat">
+      <div class="tech-stat-num">15+</div>
+      <div class="tech-stat-label" data-ar="نظام متكامل ومرتبط" data-en="Integrated Systems">Integrated Systems</div>
+    </div>
+    <div class="tech-stat">
+      <div class="tech-stat-num">&lt;2 min</div>
+      <div class="tech-stat-label" data-ar="متوسط وقت استجابة الدعم" data-en="Avg. Support Response">Avg. Support Response</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PORTAL FEATURES
+══════════════════════════════════════════ -->
+<section class="page-section" id="portal-features">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow" data-ar="بوابة الطالب" data-en="Student Portal">Student Portal</span>
+      <h2 class="section-title" data-ar="مركز تحكّمك الرقمي الشامل" data-en="Your Complete Digital Control Centre">Your Complete Digital Control Centre</h2>
+      <p class="section-sub" data-ar="بوابة الطالب في SRU هي نقطة وصولك لكل شيء — مصممة بواجهة بسيطة وتجربة سلسة تجعل إدارة حياتك الأكاديمية أمراً يسيراً." data-en="SRU's student portal is your gateway to everything — designed with a clean interface and seamless experience that makes managing your academic life effortless.">
+        SRU's student portal is your gateway to everything — designed with a clean interface and seamless experience that makes managing your academic life effortless.
+      </p>
+    </div>
+
+    <div class="features-grid">
+
+      <div class="feature-card reveal">
+        <div class="feature-card-icon" style="background:rgba(61,31,110,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="feature-card-title" data-ar="لوحة التحكم الشخصية" data-en="Personal Dashboard">Personal Dashboard</div>
+        <div class="feature-card-desc" data-ar="عرض شامل لجدولك الدراسي، درجاتك، إشعاراتك، وكل ما يخصك في صفحة واحدة مخصصة." data-en="A full view of your schedule, grades, notifications, and everything personal — all on one customised page.">A full view of your schedule, grades, notifications, and everything personal — all on one customised page.</div>
+        <div class="feature-chips">
+          <span class="feature-chip" data-ar="مخصّص" data-en="Personalised">Personalised</span>
+          <span class="feature-chip" data-ar="لحظي" data-en="Real-Time">Real-Time</span>
+        </div>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-card-icon" style="background:rgba(0,180,200,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00829A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="feature-card-title" data-ar="تسجيل المقررات" data-en="Course Registration">Course Registration</div>
+        <div class="feature-card-desc" data-ar="سجّل مقرراتك بسهولة، اطّلع على الخطة الدراسية، وادر إضافة/حذف المواد خلال فترة التعديل." data-en="Register your courses easily, view your study plan, and manage add/drop within the adjustment window.">Register your courses easily, view your study plan, and manage add/drop within the adjustment window.</div>
+        <div class="feature-chips">
+          <span class="feature-chip" data-ar="خطة دراسية" data-en="Study Plan">Study Plan</span>
+          <span class="feature-chip" data-ar="إضافة/حذف" data-en="Add/Drop">Add/Drop</span>
+        </div>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-card-icon" style="background:rgba(39,103,73,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#276749" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="feature-card-title" data-ar="متابعة الدرجات والأداء" data-en="Grades & Performance Tracking">Grades &amp; Performance Tracking</div>
+        <div class="feature-card-desc" data-ar="اطّلع على درجاتك بشكل فوري بعد رصدها، تتبّع المعدل التراكمي، وشاهد تقدّمك عبر الفصول الدراسية." data-en="View your grades instantly once recorded, track your GPA, and see your progress across all semesters.">View your grades instantly once recorded, track your GPA, and see your progress across all semesters.</div>
+        <div class="feature-chips">
+          <span class="feature-chip" data-ar="المعدل الفوري" data-en="Live GPA">Live GPA</span>
+          <span class="feature-chip" data-ar="رسوم بيانية" data-en="Charts">Charts</span>
+        </div>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-card-icon" style="background:rgba(180,83,9,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <div class="feature-card-title" data-ar="المدفوعات الإلكترونية" data-en="Electronic Payments">Electronic Payments</div>
+        <div class="feature-card-desc" data-ar="ادفع الرسوم الدراسية والخدمات بشكل آمن عبر بوابة الدفع الإلكتروني، مع سجل كامل لكل معاملاتك المالية." data-en="Pay tuition and service fees securely through the payment gateway, with a full record of all your financial transactions.">Pay tuition and service fees securely through the payment gateway, with a full record of all your financial transactions.</div>
+        <div class="feature-chips">
+          <span class="feature-chip" data-ar="مدى / فيزا" data-en="Mada / Visa">Mada / Visa</span>
+          <span class="feature-chip" data-ar="إيصالات فورية" data-en="Instant Receipts">Instant Receipts</span>
+        </div>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-card-icon" style="background:rgba(61,31,110,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="feature-card-title" data-ar="الإشعارات والتواصل" data-en="Notifications & Messaging">Notifications &amp; Messaging</div>
+        <div class="feature-card-desc" data-ar="تلقّ إشعارات فورية من الأساتذة والإدارة، وتواصل عبر نظام الرسائل الداخلي المدمج في البوابة." data-en="Receive instant notifications from faculty and administration, and communicate through the integrated internal messaging system.">Receive instant notifications from faculty and administration, and communicate through the integrated internal messaging system.</div>
+        <div class="feature-chips">
+          <span class="feature-chip" data-ar="إشعارات فورية" data-en="Push Alerts">Push Alerts</span>
+          <span class="feature-chip" data-ar="بريد داخلي" data-en="Internal Mail">Internal Mail</span>
+        </div>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="feature-card-icon" style="background:rgba(0,180,200,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00829A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="feature-card-title" data-ar="الطلبات والمعاملات الإلكترونية" data-en="Digital Requests & Transactions">Digital Requests &amp; Transactions</div>
+        <div class="feature-card-desc" data-ar="قدّم طلباتك الإدارية إلكترونياً — شهادات، وثائق رسمية، إجازات، وطلبات التخرج — دون الحاجة لزيارة الإدارة." data-en="Submit administrative requests electronically — certificates, official documents, leave, and graduation requests — without visiting the admin office.">Submit administrative requests electronically — certificates, official documents, leave, and graduation requests — without visiting the admin office.</div>
+        <div class="feature-chips">
+          <span class="feature-chip" data-ar="بدون ورق" data-en="Paperless">Paperless</span>
+          <span class="feature-chip" data-ar="تتبّع الطلب" data-en="Track Status">Track Status</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     ACADEMIC SYSTEMS
+══════════════════════════════════════════ -->
+<section class="page-section-alt" id="academic-systems">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow" data-ar="الأنظمة الأكاديمية" data-en="Academic Systems">Academic Systems</span>
+      <h2 class="section-title" data-ar="أنظمة متكاملة لكل احتياجاتك الأكاديمية" data-en="Integrated Systems for Every Academic Need">Integrated Systems for Every Academic Need</h2>
+      <p class="section-sub" data-ar="منظومة متطورة من الأنظمة الأكاديمية المترابطة توفّر تجربة تعليمية رقمية متكاملة وسلسة." data-en="A sophisticated suite of interconnected academic systems delivering a seamless and complete digital learning experience.">
+        A sophisticated suite of interconnected academic systems delivering a seamless and complete digital learning experience.
+      </p>
+    </div>
+
+    <div class="systems-grid">
+
+      <div class="system-card reveal">
+        <div class="system-card-bar" style="background:linear-gradient(to right,#3D1F6E,#6B46C1);"></div>
+        <div class="system-card-body">
+          <div class="system-card-icon" style="background:rgba(61,31,110,.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="system-card-info">
+            <div class="system-card-title" data-ar="نظام إدارة التعلّم (Blackboard)" data-en="Learning Management System (LMS)">Learning Management System (LMS)</div>
+            <div class="system-card-desc" data-ar="وصول كامل للمحاضرات، المواد، الواجبات، والاختبارات الإلكترونية عبر منصة Blackboard المتكاملة مع البوابة." data-en="Full access to lectures, materials, assignments, and online exams through Blackboard, fully integrated with the student portal.">Full access to lectures, materials, assignments, and online exams through Blackboard, fully integrated with the student portal.</div>
+            <a href="https://lms.sru.edu.sa" target="_blank" rel="noopener" class="system-card-link" data-ar="الدخول إلى المنصة ←" data-en="Access LMS →">Access LMS →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="system-card reveal">
+        <div class="system-card-bar" style="background:linear-gradient(to right,#00829A,#00B4C8);"></div>
+        <div class="system-card-body">
+          <div class="system-card-icon" style="background:rgba(0,180,200,.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00829A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="system-card-info">
+            <div class="system-card-title" data-ar="نظام التسجيل والجداول" data-en="Registration & Scheduling System">Registration &amp; Scheduling System</div>
+            <div class="system-card-desc" data-ar="تسجيل المقررات، مشاهدة الجداول الأسبوعية، وإدارة التعارضات بذكاء مع توصيات تلائم خطتك الدراسية." data-en="Course registration, weekly schedule view, and intelligent conflict management with recommendations tailored to your study plan.">Course registration, weekly schedule view, and intelligent conflict management with recommendations tailored to your study plan.</div>
+            <a href="https://student.sru.edu.sa/registration" target="_blank" rel="noopener" class="system-card-link" data-ar="التسجيل الآن ←" data-en="Register Now →">Register Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="system-card reveal">
+        <div class="system-card-bar" style="background:linear-gradient(to right,#276749,#38A169);"></div>
+        <div class="system-card-body">
+          <div class="system-card-icon" style="background:rgba(39,103,73,.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#276749" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="system-card-info">
+            <div class="system-card-title" data-ar="نظام الدرجات والمعدلات" data-en="Grades & GPA System">Grades &amp; GPA System</div>
+            <div class="system-card-desc" data-ar="عرض الدرجات بعد رصدها فوراً، حساب المعدل التراكمي والفصلي، ومتابعة حالة التخرج والمتطلبات المتبقية." data-en="View grades instantly after recording, calculate cumulative and semester GPA, and track graduation status and remaining requirements.">View grades instantly after recording, calculate cumulative and semester GPA, and track graduation status and remaining requirements.</div>
+            <a href="https://student.sru.edu.sa/grades" target="_blank" rel="noopener" class="system-card-link" data-ar="عرض الدرجات ←" data-en="View Grades →">View Grades →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="system-card reveal">
+        <div class="system-card-bar" style="background:linear-gradient(to right,#744210,#B7791F);"></div>
+        <div class="system-card-body">
+          <div class="system-card-icon" style="background:rgba(180,130,0,.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#9A7000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="system-card-info">
+            <div class="system-card-title" data-ar="المكتبة الرقمية" data-en="Digital Library">Digital Library</div>
+            <div class="system-card-desc" data-ar="وصول إلى أكثر من 500,000 مصدر رقمي — كتب، مجلات علمية، أبحاث، وقواعد بيانات أكاديمية عالمية." data-en="Access to over 500,000 digital resources — books, scientific journals, research papers, and global academic databases.">Access to over 500,000 digital resources — books, scientific journals, research papers, and global academic databases.</div>
+            <a href="https://library.sru.edu.sa" target="_blank" rel="noopener" class="system-card-link" data-ar="استكشف المكتبة ←" data-en="Explore Library →">Explore Library →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="system-card reveal">
+        <div class="system-card-bar" style="background:linear-gradient(to right,#553C9A,#805AD5);"></div>
+        <div class="system-card-body">
+          <div class="system-card-icon" style="background:rgba(85,60,154,.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#553C9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="system-card-info">
+            <div class="system-card-title" data-ar="نظام الإرشاد الأكاديمي" data-en="Academic Advising System">Academic Advising System</div>
+            <div class="system-card-desc" data-ar="احجز جلسات الإرشاد مع مرشدك الأكاديمي، وتلقّ توصيات ذكية لاختيار المقررات والمسار الوظيفي." data-en="Book advising sessions with your academic advisor and receive intelligent recommendations for course and career pathway selection.">Book advising sessions with your academic advisor and receive intelligent recommendations for course and career pathway selection.</div>
+            <a href="https://student.sru.edu.sa/advising" target="_blank" rel="noopener" class="system-card-link" data-ar="احجز جلسة ←" data-en="Book Session →">Book Session →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="system-card reveal">
+        <div class="system-card-bar" style="background:linear-gradient(to right,#2B6CB0,#3182CE);"></div>
+        <div class="system-card-body">
+          <div class="system-card-icon" style="background:rgba(43,108,176,.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2B6CB0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="system-card-info">
+            <div class="system-card-title" data-ar="نظام التقييم والاختبارات الإلكترونية" data-en="Assessment & E-Exam System">Assessment &amp; E-Exam System</div>
+            <div class="system-card-desc" data-ar="أدِّ اختباراتك الإلكترونية بأمان عبر منصة مقاومة للغش، مع جدولة آلية وظهور فوري للنتائج." data-en="Take your electronic exams securely via an anti-cheat-resistant platform, with automated scheduling and instant result display.">Take your electronic exams securely via an anti-cheat-resistant platform, with automated scheduling and instant result display.</div>
+            <a href="https://lms.sru.edu.sa/exams" target="_blank" rel="noopener" class="system-card-link" data-ar="الدخول للاختبارات ←" data-en="Access Exams →">Access Exams →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CONNECTED SERVICES
+══════════════════════════════════════════ -->
+<section class="connected-section" id="connected">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow" data-ar="خدمات متكاملة" data-en="All Connected">All Connected</span>
+      <h2 class="section-title" data-ar="حساب واحد — كل شيء مربوط" data-en="One Account — Everything Connected">One Account — Everything Connected</h2>
+      <p class="section-sub" data-ar="حسابك الجامعي الموحّد هو مفتاح كل الأنظمة والخدمات. تسجيل دخول واحد يمنحك وصولاً سلساً لأكثر من 15 نظاماً ومنصةً." data-en="Your unified university account is the key to every system and service. One login gives you seamless access to more than 15 platforms and systems.">
+        Your unified university account is the key to every system and service. One login gives you seamless access to more than 15 platforms and systems.
+      </p>
+    </div>
+
+    <div class="connected-grid">
+
+      <div class="conn-item reveal">
+        <div class="conn-item-icon" style="background:rgba(61,31,110,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <div class="conn-item-name" data-ar="منصة التعلّم (LMS)" data-en="LMS / Blackboard">LMS / Blackboard</div>
+        <div class="conn-item-status" data-ar="مرتبط" data-en="Connected">Connected</div>
+      </div>
+
+      <div class="conn-item reveal">
+        <div class="conn-item-icon" style="background:rgba(0,180,200,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00829A" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="conn-item-name" data-ar="التسجيل والجداول" data-en="Registration">Registration</div>
+        <div class="conn-item-status" data-ar="مرتبط" data-en="Connected">Connected</div>
+      </div>
+
+      <div class="conn-item reveal">
+        <div class="conn-item-icon" style="background:rgba(39,103,73,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#276749" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="conn-item-name" data-ar="المدفوعات والرسوم" data-en="Payments">Payments</div>
+        <div class="conn-item-status" data-ar="مرتبط" data-en="Connected">Connected</div>
+      </div>
+
+      <div class="conn-item reveal">
+        <div class="conn-item-icon" style="background:rgba(180,83,9,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="conn-item-name" data-ar="السكن الجامعي" data-en="Housing">Housing</div>
+        <div class="conn-item-status" data-ar="مرتبط" data-en="Connected">Connected</div>
+      </div>
+
+      <div class="conn-item reveal">
+        <div class="conn-item-icon" style="background:rgba(61,31,110,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="conn-item-name" data-ar="خدمة المواصلات" data-en="Transportation">Transportation</div>
+        <div class="conn-item-status" data-ar="مرتبط" data-en="Connected">Connected</div>
+      </div>
+
+      <div class="conn-item reveal">
+        <div class="conn-item-icon" style="background:rgba(0,180,200,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00829A" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <div class="conn-item-name" data-ar="المكتبة الرقمية" data-en="Digital Library">Digital Library</div>
+        <div class="conn-item-status" data-ar="مرتبط" data-en="Connected">Connected</div>
+      </div>
+
+      <div class="conn-item reveal">
+        <div class="conn-item-icon" style="background:rgba(85,60,154,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#553C9A" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        </div>
+        <div class="conn-item-name" data-ar="الإرشاد الأكاديمي" data-en="Academic Advising">Academic Advising</div>
+        <div class="conn-item-status" data-ar="مرتبط" data-en="Connected">Connected</div>
+      </div>
+
+      <div class="conn-item reveal">
+        <div class="conn-item-icon" style="background:rgba(39,103,73,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#276749" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+        </div>
+        <div class="conn-item-name" data-ar="رحلة الحج" data-en="Hajj Programme">Hajj Programme</div>
+        <div class="conn-item-status" data-ar="مرتبط" data-en="Connected">Connected</div>
+      </div>
+
+      <div class="conn-item reveal">
+        <div class="conn-item-icon" style="background:rgba(180,130,0,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#9A7000" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="conn-item-name" data-ar="المنح والدعم المالي" data-en="Financial Aid">Financial Aid</div>
+        <div class="conn-item-status" data-ar="مرتبط" data-en="Connected">Connected</div>
+      </div>
+
+      <div class="conn-item reveal">
+        <div class="conn-item-icon" style="background:rgba(43,108,176,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2B6CB0" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.92z"/></svg>
+        </div>
+        <div class="conn-item-name" data-ar="الدعم النفسي والإرشاد" data-en="Counselling">Counselling</div>
+        <div class="conn-item-status" data-ar="مرتبط" data-en="Connected">Connected</div>
+      </div>
+
+      <div class="conn-item reveal">
+        <div class="conn-item-icon" style="background:rgba(61,31,110,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="conn-item-name" data-ar="الأندية الطلابية" data-en="Student Clubs">Student Clubs</div>
+        <div class="conn-item-status" data-ar="مرتبط" data-en="Connected">Connected</div>
+      </div>
+
+      <div class="conn-item reveal">
+        <div class="conn-item-icon" style="background:rgba(0,180,200,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00829A" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <div class="conn-item-name" data-ar="فرص العمل والتدريب" data-en="Jobs & Internships">Jobs &amp; Internships</div>
+        <div class="conn-item-status" data-ar="مرتبط" data-en="Connected">Connected</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     MOBILE APP
+══════════════════════════════════════════ -->
+<section class="app-section" id="mobile-app">
+  <div class="container">
+    <div class="app-inner">
+
+      <!-- Text / feature list side -->
+      <div>
+        <span class="eyebrow" data-ar="تطبيق SRU" data-en="SRU Mobile App">SRU Mobile App</span>
+        <h2 class="section-title reveal" data-ar="جامعتك في جيبك — أينما كنت" data-en="Your University in Your Pocket — Anywhere">Your University in Your Pocket — Anywhere</h2>
+        <p class="section-sub reveal" data-ar="تطبيق SRU الجامعي يمنحك وصولاً سريعاً لكل ما تحتاجه في أي وقت وأي مكان، بتصميم سلس وتجربة استخدام متميزة." data-en="The SRU mobile app gives you quick access to everything you need, anywhere and anytime, with a smooth design and exceptional user experience.">
+          The SRU mobile app gives you quick access to everything you need, anywhere and anytime, with a smooth design and exceptional user experience.
+        </p>
+
+        <div class="app-feature-list">
+
+          <div class="app-feature-item reveal">
+            <div class="app-feature-icon" style="background:rgba(61,31,110,.1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="app-feature-text">
+              <div class="app-feature-title" data-ar="الجدول والمواعيد" data-en="Schedule & Timetable">Schedule &amp; Timetable</div>
+              <div class="app-feature-desc" data-ar="اعرض جدولك اليومي والأسبوعي، مع تنبيهات ذكية قبل كل محاضرة." data-en="View your daily and weekly timetable with smart alerts before every lecture.">View your daily and weekly timetable with smart alerts before every lecture.</div>
+            </div>
+          </div>
+
+          <div class="app-feature-item reveal">
+            <div class="app-feature-icon" style="background:rgba(0,180,200,.1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#00829A" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="app-feature-text">
+              <div class="app-feature-title" data-ar="الدرجات والمعدل الفوري" data-en="Live Grades & GPA">Live Grades &amp; GPA</div>
+              <div class="app-feature-desc" data-ar="درجاتك تظهر فور رصدها، مع مؤشر تفاعلي للمعدل التراكمي." data-en="Grades appear the moment they're recorded, with an interactive cumulative GPA indicator.">Grades appear the moment they're recorded, with an interactive cumulative GPA indicator.</div>
+            </div>
+          </div>
+
+          <div class="app-feature-item reveal">
+            <div class="app-feature-icon" style="background:rgba(39,103,73,.1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#276749" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="app-feature-text">
+              <div class="app-feature-title" data-ar="الإشعارات الفورية" data-en="Push Notifications">Push Notifications</div>
+              <div class="app-feature-desc" data-ar="لا تفوّتك أي رسالة من أستاذك أو الإدارة — إشعارات فورية قابلة للتخصيص." data-en="Never miss a message from faculty or administration — customisable instant push notifications.">Never miss a message from faculty or administration — customisable instant push notifications.</div>
+            </div>
+          </div>
+
+          <div class="app-feature-item reveal">
+            <div class="app-feature-icon" style="background:rgba(180,83,9,.1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <div class="app-feature-text">
+              <div class="app-feature-title" data-ar="الدفع الإلكتروني" data-en="Mobile Payments">Mobile Payments</div>
+              <div class="app-feature-desc" data-ar="ادفع رسومك وطلباتك مباشرة من التطبيق بأمان تام عبر مدى وبطاقات الائتمان." data-en="Pay your fees and requests directly from the app securely via Mada and credit cards.">Pay your fees and requests directly from the app securely via Mada and credit cards.</div>
+            </div>
+          </div>
+
+          <div class="app-feature-item reveal">
+            <div class="app-feature-icon" style="background:rgba(85,60,154,.1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#553C9A" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="app-feature-text">
+              <div class="app-feature-title" data-ar="خريطة الحرم الجامعي" data-en="Campus Map & Navigation">Campus Map &amp; Navigation</div>
+              <div class="app-feature-desc" data-ar="خريطة تفاعلية للحرم الجامعي مع توجيه ذكي لإيجاد القاعات، المكاتب، والمرافق." data-en="An interactive campus map with smart navigation to find lecture halls, offices, and facilities.">An interactive campus map with smart navigation to find lecture halls, offices, and facilities.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="app-badges reveal">
+          <a href="#" class="app-badge" aria-label="Download on App Store">
+            <svg class="app-badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <div class="app-badge-text">
+              <span class="app-badge-sub" data-ar="متاح على" data-en="Download on the">Download on the</span>
+              <span class="app-badge-title">App Store</span>
+            </div>
+          </a>
+          <a href="#" class="app-badge" aria-label="Get it on Google Play">
+            <svg class="app-badge-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.31.17.65.24 1 .21l12.57-7.25-2.83-2.83-10.74 9.87zm-1.39-20.9A2 2 0 0 0 1.5 4.5v15a2 2 0 0 0 .29 1.04l.09.1 8.4-8.4v-.2L1.88 3.69l-.09.17zm18.6 8.54-2.7-1.56-3.15 3.15 3.15 3.14 2.72-1.57a2 2 0 0 0 0-3.16zM4.18.24A2 2 0 0 1 5.5.45l14.02 8.08-3.14 3.14L4.18.24z"/></svg>
+            <div class="app-badge-text">
+              <span class="app-badge-sub" data-ar="متاح على" data-en="Get it on">Get it on</span>
+              <span class="app-badge-title">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone mockup side -->
+      <div class="phone-mockup" aria-hidden="true">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-status-bar">
+              <span class="phone-time">9:41</span>
+              <div class="phone-icons">
+                <span style="width:16px;height:8px;border-radius:2px;"></span>
+                <span style="width:10px;height:8px;border-radius:2px;"></span>
+                <span style="width:12px;height:8px;border-radius:50%;"></span>
+              </div>
+            </div>
+            <div class="phone-app-header">SRU UNIVERSITY</div>
+            <div class="phone-greeting">مرحباً، أحمد 👋<br/><span style="font-size:10px;font-weight:500;color:rgba(255,255,255,.6);">الفصل الثاني — 2026</span></div>
+            <div class="phone-card">
+              <div class="phone-card-dot" style="background:rgba(0,180,200,.5);"></div>
+              <div>
+                <span class="phone-card-label">المعدل التراكمي</span>
+                <span class="phone-card-value">3.87 / 4.00</span>
+              </div>
+            </div>
+            <div class="phone-card">
+              <div class="phone-card-dot" style="background:rgba(61,31,110,.6);"></div>
+              <div>
+                <span class="phone-card-label">المحاضرة القادمة</span>
+                <span class="phone-card-value">هندسة البرمجيات — 10:00</span>
+              </div>
+            </div>
+            <div class="phone-quick-actions">
+              <div class="phone-action"><div class="phone-action-icon" style="background:rgba(0,180,200,.3);"></div><div class="phone-action-label">الدرجات</div></div>
+              <div class="phone-action"><div class="phone-action-icon" style="background:rgba(61,31,110,.3);"></div><div class="phone-action-label">التسجيل</div></div>
+              <div class="phone-action"><div class="phone-action-icon" style="background:rgba(39,103,73,.3);"></div><div class="phone-action-label">المكتبة</div></div>
+              <div class="phone-action"><div class="phone-action-icon" style="background:rgba(180,83,9,.3);"></div><div class="phone-action-label">الدفع</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     IT SUPPORT
+══════════════════════════════════════════ -->
+<section class="it-section" id="it-support">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow" data-ar="الدعم التقني" data-en="IT Support">IT Support</span>
+      <h2 class="section-title" data-ar="فريق دعم تقني على مدار الساعة" data-en="Round-the-Clock Technical Support Team">Round-the-Clock Technical Support Team</h2>
+      <p class="section-sub" data-ar="مهما واجهت من مشكلات تقنية، فريق الدعم في SRU جاهز للمساعدة عبر قنوات متعددة تضمن حل مشكلتك في أقصر وقت ممكن." data-en="Whatever technical issues you face, SRU's support team is ready to help through multiple channels, ensuring your issue is resolved in the shortest possible time.">
+        Whatever technical issues you face, SRU's support team is ready to help through multiple channels, ensuring your issue is resolved in the shortest possible time.
+      </p>
+    </div>
+
+    <div class="it-grid">
+
+      <div class="it-card reveal">
+        <div class="it-card-icon" style="background:rgba(61,31,110,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.92z"/></svg>
+        </div>
+        <div class="it-card-title" data-ar="مكتب المساعدة" data-en="Help Desk">Help Desk</div>
+        <div class="it-card-desc" data-ar="تواصل مباشرة مع فريق الدعم التقني عبر الهاتف أو الزيارة الشخصية لمكتب الدعم داخل الحرم الجامعي." data-en="Connect directly with the technical support team by phone or in person at the Support Desk inside campus.">Connect directly with the technical support team by phone or in person at the Support Desk inside campus.</div>
+        <div class="it-contact-list">
+          <div class="it-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.92z"/></svg>
+            <span dir="ltr">+966 16 583 0300</span>
+          </div>
+          <div class="it-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span data-ar="7 أيام في الأسبوع، 24 ساعة" data-en="24/7, 7 days a week">24/7, 7 days a week</span>
+          </div>
+        </div>
+        <a href="tel:+966165830300" class="btn btn-primary" style="width:100%;justify-content:center;" data-ar="اتصل الآن" data-en="Call Now">Call Now</a>
+      </div>
+
+      <div class="it-card reveal">
+        <div class="it-card-icon" style="background:rgba(0,180,200,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00829A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div class="it-card-title" data-ar="الدردشة المباشرة" data-en="Live Chat">Live Chat</div>
+        <div class="it-card-desc" data-ar="تحدّث مع موظف دعم تقني في الوقت الفعلي عبر نظام الدردشة المدمج في البوابة الإلكترونية أو التطبيق." data-en="Chat with a technical support agent in real time through the integrated chat system in the portal or app.">Chat with a technical support agent in real time through the integrated chat system in the portal or app.</div>
+        <div class="it-contact-list">
+          <div class="it-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span data-ar="متوسط الانتظار أقل من دقيقتين" data-en="Avg. wait under 2 minutes">Avg. wait under 2 minutes</span>
+          </div>
+          <div class="it-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>it-chat@sru.edu.sa</span>
+          </div>
+        </div>
+        <a href="https://student.sru.edu.sa/support" target="_blank" rel="noopener" class="btn btn-cyan" style="width:100%;justify-content:center;" data-ar="ابدأ المحادثة" data-en="Start Chat">Start Chat</a>
+      </div>
+
+      <div class="it-card reveal">
+        <div class="it-card-icon" style="background:rgba(39,103,73,.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#276749" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div class="it-card-title" data-ar="قاعدة المعرفة" data-en="Knowledge Base">Knowledge Base</div>
+        <div class="it-card-desc" data-ar="أكثر من 500 مقالة ودليل تفصيلي لحل المشكلات الشائعة بنفسك — متاح 24/7 دون الحاجة للانتظار." data-en="Over 500 articles and detailed guides for self-resolving common issues — available 24/7 without any waiting.">Over 500 articles and detailed guides for self-resolving common issues — available 24/7 without any waiting.</div>
+        <div class="it-contact-list">
+          <div class="it-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <span data-ar="+500 مقالة" data-en="500+ Articles">500+ Articles</span>
+          </div>
+          <div class="it-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <span data-ar="بحث ذكي" data-en="Smart Search">Smart Search</span>
+          </div>
+        </div>
+        <a href="https://it.sru.edu.sa/kb" target="_blank" rel="noopener" class="btn btn-outline-purple" style="width:100%;justify-content:center;" data-ar="استكشف الدليل" data-en="Browse Knowledge Base">Browse Knowledge Base</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CTA
+══════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="cta-pattern"></div>
+  <div class="container cta-inner reveal">
+    <div class="cta-text">
+      <h2 class="cta-title" data-ar="ابدأ تجربتك الرقمية في SRU اليوم" data-en="Start Your SRU Digital Experience Today">Start Your SRU Digital Experience Today</h2>
+      <p data-ar="سجّل الدخول إلى بوابتك الإلكترونية أو حمّل التطبيق وتحكّم في كل جانب من جوانب مسيرتك الأكاديمية بضغطة زر." data-en="Log in to your student portal or download the app and take control of every aspect of your academic journey at the touch of a button.">Log in to your student portal or download the app and take control of every aspect of your academic journey at the touch of a button.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="https://student.sru.edu.sa" target="_blank" rel="noopener" class="btn btn-cyan btn-lg" data-ar="الدخول للبوابة" data-en="Access Portal">Access Portal</a>
+      <a href="#mobile-app" class="btn btn-outline-white btn-lg" data-ar="تحميل التطبيق" data-en="Download App">Download App</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">
+        <svg width="40" height="40" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="22" fill="#3D1F6E"/><path d="M10 30 L22 10 L34 30 Z" fill="none" stroke="#00B4C8" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 30 L22 16 L30 30" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/><circle cx="22" cy="10" r="2.5" fill="#00B4C8"/></svg>
+        <span>SRU</span>
+      </a>
+      <p class="footer-tagline" data-ar="نبني قادة الغد بتميز أكاديمي وقيم إسلامية راسخة." data-en="Building tomorrow's leaders with academic excellence and deep Islamic values.">Building tomorrow's leaders with academic excellence and deep Islamic values.</p>
+      <div class="social-icons">
+        <a href="#" class="social-icon" aria-label="Twitter/X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="التجربة الرقمية" data-en="Digital Experience">Digital Experience</h4>
+      <ul class="footer-links">
+        <li><a href="#portal-features"  data-ar="ميزات البوابة"      data-en="Portal Features">Portal Features</a></li>
+        <li><a href="#academic-systems" data-ar="الأنظمة الأكاديمية" data-en="Academic Systems">Academic Systems</a></li>
+        <li><a href="#mobile-app"       data-ar="تطبيق الجوّال"      data-en="Mobile App">Mobile App</a></li>
+        <li><a href="#it-support"       data-ar="الدعم التقني"        data-en="IT Support">IT Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="روابط سريعة" data-en="Quick Links">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html"           data-ar="الرئيسية"         data-en="Home">Home</a></li>
+        <li><a href="admissions.html"      data-ar="القبول"            data-en="Admissions">Admissions</a></li>
+        <li><a href="services.html"        data-ar="الخدمات"           data-en="Services">Services</a></li>
+        <li><a href="campus-life.html"     data-ar="الحياة الجامعية"  data-en="Campus Life">Campus Life</a></li>
+        <li><a href="alumni.html"          data-ar="الخريجون"          data-en="Alumni">Alumni</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="تواصل معنا" data-en="Contact Us">Contact Us</h4>
+      <address class="footer-contact">
+        <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>it-support@sru.edu.sa</span></div>
+        <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.6a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span dir="ltr">+966 16 583 0300</span></div>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p class="copyright" data-ar="© 2026 جامعة سليمان الراجحي. جميع الحقوق محفوظة." data-en="© 2026 Sulaiman Al-Rajhi University. All rights reserved.">© 2026 Sulaiman Al-Rajhi University. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#" data-ar="سياسة الخصوصية" data-en="Privacy Policy">Privacy Policy</a>
+        <a href="#" data-ar="شروط الاستخدام" data-en="Terms of Use">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/digital-experience.js"></script>
+</body>
+</html>

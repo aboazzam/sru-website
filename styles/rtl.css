@@ -1,0 +1,256 @@
+/* ═══════════════════════════════════════════════════════════════
+   SRU University — RTL / Arabic Support Stylesheet
+   Applied when <html dir="rtl" lang="ar"> is set
+═══════════════════════════════════════════════════════════════ */
+
+/* ─── Arabic Font ─────────────────────────────────────────────── */
+html[dir="rtl"] body {
+  font-family: 'Noto Kufi Arabic', 'Inter', system-ui, sans-serif;
+}
+
+/* ─── Global Direction Helpers ────────────────────────────────── */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+/* ─── Header ──────────────────────────────────────────────────── */
+
+/* Flip the header inner layout */
+html[dir="rtl"] .header-inner {
+  direction: rtl;
+}
+
+/* Logo mark stays visually the same, text flips naturally */
+html[dir="rtl"] .logo {
+  flex-direction: row-reverse;
+}
+
+/* Nav items: right to left */
+html[dir="rtl"] .nav-list {
+  flex-direction: row-reverse;
+}
+
+/* Underline accent mirrors to RTL */
+html[dir="rtl"] .nav-link::after {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%) scaleX(0);
+}
+
+html[dir="rtl"] .nav-link:hover::after,
+html[dir="rtl"] .nav-link.active::after {
+  transform: translateX(50%) scaleX(1);
+}
+
+/* Header actions reverse order */
+html[dir="rtl"] .header-actions {
+  flex-direction: row-reverse;
+}
+
+/* Mobile nav drawer: open from left instead of right */
+@media (max-width: 768px) {
+  html[dir="rtl"] .primary-nav {
+    inset-inline-end: auto;
+    inset-inline-start: -320px;
+    right: auto;
+    left: -320px;
+  }
+
+  html[dir="rtl"] .nav-open .primary-nav {
+    inset-inline-start: 0;
+    left: 0;
+  }
+}
+
+/* ─── Hero ────────────────────────────────────────────────────── */
+html[dir="rtl"] .hero-content {
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-badge {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .hero-actions {
+  flex-direction: row-reverse;
+}
+
+/* ─── About Band ──────────────────────────────────────────────── */
+html[dir="rtl"] .about-inner {
+  direction: rtl;
+}
+
+html[dir="rtl"] .about-badge {
+  right: auto;
+  left: var(--space-6);
+}
+
+/* ─── Program Cards ───────────────────────────────────────────── */
+html[dir="rtl"] .program-card {
+  text-align: right;
+}
+
+/* Accent bar: flip to right side */
+html[dir="rtl"] .program-card::before {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+html[dir="rtl"] .card-meta {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+html[dir="rtl"] .card-link {
+  flex-direction: row-reverse;
+}
+
+/* ─── News Cards ──────────────────────────────────────────────── */
+html[dir="rtl"] .news-body {
+  text-align: right;
+}
+
+html[dir="rtl"] .news-date {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+/* ─── Research Band ───────────────────────────────────────────── */
+html[dir="rtl"] .research-content {
+  text-align: right;
+}
+
+html[dir="rtl"] .research-inner {
+  direction: rtl;
+}
+
+/* ─── CTA ─────────────────────────────────────────────────────── */
+html[dir="rtl"] .cta-text {
+  text-align: right;
+}
+
+html[dir="rtl"] .cta-inner {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 900px) {
+  html[dir="rtl"] .cta-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  html[dir="rtl"] .cta-text {
+    text-align: center;
+  }
+}
+
+/* ─── Stats ───────────────────────────────────────────────────── */
+html[dir="rtl"] .stats-grid {
+  direction: rtl;
+}
+
+/* ─── Footer ──────────────────────────────────────────────────── */
+html[dir="rtl"] .site-footer {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-logo {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .social-icons {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .footer-links a:hover {
+  padding-inline-start: 0;
+  padding-inline-end: var(--space-2);
+}
+
+html[dir="rtl"] .contact-item {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .footer-bottom-inner {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .footer-legal {
+  flex-direction: row-reverse;
+}
+
+/* ─── Section Headers ─────────────────────────────────────────── */
+html[dir="rtl"] .section-header {
+  text-align: center; /* keep centered for section headers */
+}
+
+html[dir="rtl"] .about-text {
+  text-align: right;
+}
+
+/* ─── Arabic Number Style (Eastern Arabic optional) ───────────── */
+/* Uncomment below to use Eastern Arabic-Indic numerals for stat numbers */
+/*
+html[dir="rtl"] .stat-number,
+html[dir="rtl"] .r-num {
+  font-feature-settings: "locl";
+}
+*/
+
+/* ─── Scroll Reveal: preserve center for RTL sections ────────── */
+html[dir="rtl"] .hero-title {
+  align-items: flex-end;
+}
+
+/* ─── Typography Adjustments for Arabic ──────────────────────── */
+html[dir="rtl"] .hero-sub {
+  line-height: 1.9; /* Arabic text needs extra line height */
+}
+
+html[dir="rtl"] .card-desc {
+  line-height: 1.85;
+}
+
+html[dir="rtl"] .news-excerpt {
+  line-height: 1.85;
+}
+
+html[dir="rtl"] p {
+  line-height: 1.85;
+}
+
+/* ─── Section title alignment for about band ──────────────────── */
+html[dir="rtl"] .about-text .section-title {
+  text-align: right;
+}
+
+/* ─── Button icon arrows: flip for RTL ───────────────────────── */
+html[dir="rtl"] .card-link,
+html[dir="rtl"] .news-link {
+  flex-direction: row-reverse;
+}
+
+/* Ensure the logo abbr stays on correct side */
+html[dir="rtl"] .logo-text {
+  align-items: flex-end;
+}
+
+/* ─── Mobile Nav RTL Hamburger ────────────────────────────────── */
+@media (max-width: 768px) {
+  html[dir="rtl"] .nav-list {
+    align-items: stretch;
+    text-align: right;
+  }
+}
+
+/* ─── Research band grid RTL ──────────────────────────────────── */
+@media (max-width: 1200px) {
+  html[dir="rtl"] .research-stats {
+    flex-direction: row-reverse;
+  }
+
+  html[dir="rtl"] .r-stat {
+    text-align: right;
+  }
+}

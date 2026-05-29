@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Life | Sulaiman Al-Rajhi University</title>
+  <meta name="description" content="Explore vibrant campus life at SRU — student clubs, volunteering, sports events, and comprehensive student support services." />
+  <meta property="og:title" content="Campus Life | Sulaiman Al-Rajhi University" />
+  <meta property="og:description" content="Explore vibrant campus life at SRU — student clubs, volunteering, sports events, and comprehensive student support services." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#3D1F6E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/pages.css" />
+  <link rel="stylesheet" id="rtl-stylesheet" href="styles/rtl.css" disabled />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════ -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="SRU Home">
+      <div class="logo-mark">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+          <circle cx="22" cy="22" r="22" fill="#3D1F6E"/>
+          <path d="M10 30 L22 10 L34 30 Z" fill="none" stroke="#00B4C8" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M14 30 L22 16 L30 30" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="22" cy="10" r="2.5" fill="#00B4C8"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-en">Sulaiman Al-Rajhi University</span>
+        <span class="logo-ar">جامعة سليمان الراجحي</span>
+        <span class="logo-abbr">SRU</span>
+      </div>
+    </a>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html"              class="nav-link"        data-ar="الرئيسية"        data-en="Home">Home</a></li>
+        <li><a href="student-journey.html"  class="nav-link"        data-ar="رحلة الطالب"     data-en="Student Journey">Student Journey</a></li>
+        <li><a href="admissions.html"       class="nav-link"        data-ar="القبول"           data-en="Admissions">Admissions</a></li>
+        <li><a href="campus-life.html"      class="nav-link active" data-ar="الحياة الجامعية" data-en="Campus Life">Campus Life</a></li>
+        <li><a href="services.html"         class="nav-link"        data-ar="الخدمات"          data-en="Services">Services</a></li>
+        <li><a href="digital-experience.html" class="nav-link"      data-ar="الرقمي"           data-en="Digital">Digital</a></li>
+        <li><a href="alumni.html"           class="nav-link"        data-ar="الخريجون"         data-en="Alumni">Alumni</a></li>
+        <li><a href="community.html"        class="nav-link"        data-ar="المجتمع"          data-en="Community">Community</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
+        <span class="lang-label" id="lang-label">العربية</span>
+      </button>
+      <a href="admissions.html#apply" class="btn btn-primary btn-sm" data-ar="قدّم الآن" data-en="Apply Now">Apply Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-overlay" id="nav-overlay"></div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     PAGE HERO
+══════════════════════════════════════════ -->
+<section class="page-hero page-hero--campus">
+  <div class="container page-hero-inner">
+    <div class="page-breadcrumb">
+      <a href="index.html" data-ar="الرئيسية" data-en="Home">Home</a>
+      <span class="page-breadcrumb-sep">›</span>
+      <span class="page-breadcrumb-current" data-ar="الحياة الجامعية" data-en="Campus Life">Campus Life</span>
+    </div>
+    <h1 class="page-hero-title reveal">
+      <span data-ar="اكتشف" data-en="Discover Your">Discover Your</span>
+      <span data-ar="حياتك الجامعية المتكاملة" data-en=""> </span>
+      <span><span data-ar="في SRU" data-en="Campus Life at SRU">Campus Life at <span>SRU</span></span></span>
+    </h1>
+    <p class="page-hero-sub reveal" data-ar="الحياة الجامعية في جامعة سليمان الراجحي تتجاوز حدود القاعة الدراسية — أندية متنوعة، فعاليات ثقافية ورياضية، برامج تطوعية، ودعم شامل يرافقك في كل خطوة." data-en="Campus life at SRU extends far beyond the classroom — diverse clubs, cultural and sports events, volunteer programs, and comprehensive support every step of the way.">
+      Campus life at SRU extends far beyond the classroom — diverse clubs, cultural and sports events, volunteer programs, and comprehensive support every step of the way.
+    </p>
+    <div class="page-hero-actions reveal">
+      <a href="#clubs"   class="btn btn-white"        data-ar="استكشف الأندية"   data-en="Explore Clubs">Explore Clubs</a>
+      <a href="#support" class="btn btn-outline-white" data-ar="خدمات الدعم"      data-en="Student Support">Student Support</a>
+    </div>
+  </div>
+  <div class="page-hero-wave" aria-hidden="true"></div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     IN-PAGE TABS
+══════════════════════════════════════════ -->
+<nav class="page-tabs" aria-label="Campus life sections">
+  <div class="container page-tabs-inner">
+    <a href="#clubs"     class="page-tab active" data-ar="الأندية الطلابية" data-en="Student Clubs">Student Clubs</a>
+    <a href="#volunteer" class="page-tab"        data-ar="العمل التطوعي"    data-en="Volunteering">Volunteering</a>
+    <a href="#events"    class="page-tab"        data-ar="الفعاليات"        data-en="Events">Events</a>
+    <a href="#support"   class="page-tab"        data-ar="دعم الطلاب"      data-en="Student Support">Student Support</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     CAMPUS HIGHLIGHTS (visual mosaic)
+══════════════════════════════════════════ -->
+<section class="page-section" style="padding-block: var(--space-16);">
+  <div class="container">
+    <div class="highlights-grid reveal">
+
+      <div class="highlight-card">
+        <div class="highlight-bg" style="background: linear-gradient(135deg,#3D1F6E 0%,#00829A 100%);"></div>
+        <div class="highlight-overlay"></div>
+        <div class="highlight-content">
+          <div class="highlight-label" data-ar="الحياة الجامعية" data-en="Campus Life">Campus Life</div>
+          <div class="highlight-title" data-ar="بيئة ملهمة تنمّي إبداعك وتُطوّر مهاراتك" data-en="An inspiring environment that grows your creativity and sharpens your skills">An inspiring environment that grows your creativity and sharpens your skills</div>
+        </div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-bg" style="background: linear-gradient(135deg,#00B4C8 0%,#3D1F6E 100%);"></div>
+        <div class="highlight-overlay"></div>
+        <div class="highlight-content">
+          <div class="highlight-label" data-ar="الأندية" data-en="Clubs">Clubs</div>
+          <div class="highlight-title" data-ar="+40 نادي طلابي" data-en="40+ Student Clubs">40+ Student Clubs</div>
+        </div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-bg" style="background: linear-gradient(135deg,#276749 0%,#38A169 100%);"></div>
+        <div class="highlight-overlay"></div>
+        <div class="highlight-content">
+          <div class="highlight-label" data-ar="التطوع" data-en="Volunteering">Volunteering</div>
+          <div class="highlight-title" data-ar="+5,000 ساعة تطوعية سنويًا" data-en="5,000+ volunteer hours yearly">5,000+ volunteer hours yearly</div>
+        </div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-bg" style="background: linear-gradient(135deg,#C05621 0%,#DD6B20 100%);"></div>
+        <div class="highlight-overlay"></div>
+        <div class="highlight-content">
+          <div class="highlight-label" data-ar="الرياضة" data-en="Sports">Sports</div>
+          <div class="highlight-title" data-ar="15 ملعب رياضي" data-en="15 Sports Facilities">15 Sports Facilities</div>
+        </div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-bg" style="background: linear-gradient(135deg,#553C9A 0%,#805AD5 100%);"></div>
+        <div class="highlight-overlay"></div>
+        <div class="highlight-content">
+          <div class="highlight-label" data-ar="الفعاليات" data-en="Events">Events</div>
+          <div class="highlight-title" data-ar="+100 فعالية سنويًا" data-en="100+ events per year">100+ events per year</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     STUDENT CLUBS
+══════════════════════════════════════════ -->
+<section class="page-section" id="clubs">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow" data-ar="الأندية الطلابية" data-en="Student Clubs">Student Clubs</span>
+      <h2 class="section-title" data-ar="اكتشف اهتماماتك — انضم إلى ناديك" data-en="Discover Your Passion — Join a Club">Discover Your Passion — Join a Club</h2>
+      <p class="section-sub" data-ar="يضم الحرم الجامعي أكثر من 40 نادياً طلابياً في مجالات متعددة. اكتشف مجتمعاً يشاركك اهتماماتك." data-en="The SRU campus hosts 40+ student clubs across diverse fields. Find a community that shares your interests.">
+        The SRU campus hosts 40+ student clubs across diverse fields. Find a community that shares your interests.
+      </p>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="filter-bar reveal" id="club-filters" role="group" aria-label="Filter clubs by category">
+      <button class="filter-btn active" data-filter="all">
+        <span data-ar="الكل" data-en="All">All</span>
+        <span class="filter-count">12</span>
+      </button>
+      <button class="filter-btn" data-filter="academic">
+        <span data-ar="أكاديمي" data-en="Academic">Academic</span>
+        <span class="filter-count">4</span>
+      </button>
+      <button class="filter-btn" data-filter="sports">
+        <span data-ar="رياضي" data-en="Sports">Sports</span>
+        <span class="filter-count">3</span>
+      </button>
+      <button class="filter-btn" data-filter="arts">
+        <span data-ar="فنون وثقافة" data-en="Arts & Culture">Arts & Culture</span>
+        <span class="filter-count">3</span>
+      </button>
+      <button class="filter-btn" data-filter="tech">
+        <span data-ar="تقنية" data-en="Technology">Technology</span>
+        <span class="filter-count">2</span>
+      </button>
+    </div>
+
+    <div class="clubs-grid" id="clubs-grid">
+
+      <!-- Academic Clubs -->
+      <article class="club-card reveal" data-category="academic">
+        <div class="club-card-banner" style="background:linear-gradient(135deg,#3D1F6E,#6B46C1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <div class="club-card-body">
+          <span class="club-category-tag" style="color:#6B46C1;" data-ar="أكاديمي" data-en="Academic">Academic</span>
+          <h3 class="club-card-title" data-ar="نادي البحث العلمي" data-en="Scientific Research Club">Scientific Research Club</h3>
+          <p class="club-card-desc" data-ar="منصة لطلاب الدراسات العليا والبكالوريوس للتعاون في المشاريع البحثية ونشر الدراسات في المجلات العلمية." data-en="A platform for undergraduate and postgraduate students to collaborate on research projects and publish in scientific journals.">A platform for undergraduate and postgraduate students to collaborate on research projects and publish in scientific journals.</p>
+        </div>
+        <div class="club-card-footer">
+          <div class="club-members"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-ar="142 عضو" data-en="142 members">142 members</span></div>
+          <button class="club-join-btn" data-ar="انضم" data-en="Join">Join</button>
+        </div>
+      </article>
+
+      <article class="club-card reveal" data-category="academic">
+        <div class="club-card-banner" style="background:linear-gradient(135deg,#00829A,#00B4C8);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="club-card-body">
+          <span class="club-category-tag" style="color:#00829A;" data-ar="أكاديمي" data-en="Academic">Academic</span>
+          <h3 class="club-card-title" data-ar="نادي اللغات والترجمة" data-en="Languages & Translation Club">Languages & Translation Club</h3>
+          <p class="club-card-desc" data-ar="تعلّم لغات جديدة، مارس الترجمة، وتواصل مع طلاب من حول العالم في بيئة تعليمية ترفيهية." data-en="Learn new languages, practise translation, and connect with students worldwide in a fun educational environment.">Learn new languages, practise translation, and connect with students worldwide in a fun educational environment.</p>
+        </div>
+        <div class="club-card-footer">
+          <div class="club-members"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-ar="218 عضو" data-en="218 members">218 members</span></div>
+          <button class="club-join-btn" data-ar="انضم" data-en="Join">Join</button>
+        </div>
+      </article>
+
+      <article class="club-card reveal" data-category="academic">
+        <div class="club-card-banner" style="background:linear-gradient(135deg,#744210,#D69E2E);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="club-card-body">
+          <span class="club-category-tag" style="color:#C05621;" data-ar="أكاديمي" data-en="Academic">Academic</span>
+          <h3 class="club-card-title" data-ar="نادي ريادة الأعمال" data-en="Entrepreneurship Club">Entrepreneurship Club</h3>
+          <p class="club-card-desc" data-ar="تطوير المهارات الريادية وبناء شبكة من العلاقات مع رواد الأعمال والمستثمرين من خلال ورش العمل والمسابقات." data-en="Develop entrepreneurial skills and build networks with founders and investors through workshops and competitions.">Develop entrepreneurial skills and build networks with founders and investors through workshops and competitions.</p>
+        </div>
+        <div class="club-card-footer">
+          <div class="club-members"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-ar="315 عضو" data-en="315 members">315 members</span></div>
+          <button class="club-join-btn" data-ar="انضم" data-en="Join">Join</button>
+        </div>
+      </article>
+
+      <article class="club-card reveal" data-category="academic">
+        <div class="club-card-banner" style="background:linear-gradient(135deg,#2C1650,#3D1F6E);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="club-card-body">
+          <span class="club-category-tag" style="color:#3D1F6E;" data-ar="أكاديمي" data-en="Academic">Academic</span>
+          <h3 class="club-card-title" data-ar="نادي الطب والصحة" data-en="Medicine & Health Club">Medicine & Health Club</h3>
+          <p class="club-card-desc" data-ar="يجمع طلاب الطب والعلوم الصحية لتبادل المعرفة وتنظيم حملات توعوية صحية داخل الحرم الجامعي والمجتمع." data-en="Brings together medical and health sciences students to share knowledge and organise health awareness campaigns on campus and in the community.">Brings together medical and health sciences students to share knowledge and organise health awareness campaigns on campus and in the community.</p>
+        </div>
+        <div class="club-card-footer">
+          <div class="club-members"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-ar="274 عضو" data-en="274 members">274 members</span></div>
+          <button class="club-join-btn" data-ar="انضم" data-en="Join">Join</button>
+        </div>
+      </article>
+
+      <!-- Sports Clubs -->
+      <article class="club-card reveal" data-category="sports">
+        <div class="club-card-banner" style="background:linear-gradient(135deg,#276749,#38A169);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M19.07 4.93l-4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>
+        </div>
+        <div class="club-card-body">
+          <span class="club-category-tag" style="color:#276749;" data-ar="رياضي" data-en="Sports">Sports</span>
+          <h3 class="club-card-title" data-ar="نادي كرة القدم" data-en="Football Club">Football Club</h3>
+          <p class="club-card-desc" data-ar="فريق الجامعة يشارك في دوري الجامعات السعودية بنتائج متميزة. تدريبات يومية تحت إشراف مدربين محترفين." data-en="The university team competes in the Saudi Universities League with distinguished results. Daily training under professional coaches.">The university team competes in the Saudi Universities League with distinguished results. Daily training under professional coaches.</p>
+        </div>
+        <div class="club-card-footer">
+          <div class="club-members"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-ar="89 عضو" data-en="89 members">89 members</span></div>
+          <button class="club-join-btn" data-ar="انضم" data-en="Join">Join</button>
+        </div>
+      </article>
+
+      <article class="club-card reveal" data-category="sports">
+        <div class="club-card-banner" style="background:linear-gradient(135deg,#C05621,#DD6B20);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+        </div>
+        <div class="club-card-body">
+          <span class="club-category-tag" style="color:#C05621;" data-ar="رياضي" data-en="Sports">Sports</span>
+          <h3 class="club-card-title" data-ar="نادي السباحة واللياقة" data-en="Swimming & Fitness Club">Swimming & Fitness Club</h3>
+          <p class="club-card-desc" data-ar="احصل على لياقة بدنية متكاملة في مسبحنا الأولمبي وصالة الألعاب الرياضية المجهّزة بأحدث الأجهزة." data-en="Achieve complete physical fitness in our Olympic-size pool and fully-equipped gym with the latest facilities.">Achieve complete physical fitness in our Olympic-size pool and fully-equipped gym with the latest facilities.</p>
+        </div>
+        <div class="club-card-footer">
+          <div class="club-members"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-ar="163 عضو" data-en="163 members">163 members</span></div>
+          <button class="club-join-btn" data-ar="انضم" data-en="Join">Join</button>
+        </div>
+      </article>
+
+      <article class="club-card reveal" data-category="sports">
+        <div class="club-card-banner" style="background:linear-gradient(135deg,#2B6CB0,#4299E1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div class="club-card-body">
+          <span class="club-category-tag" style="color:#2B6CB0;" data-ar="رياضي" data-en="Sports">Sports</span>
+          <h3 class="club-card-title" data-ar="نادي التنس والرياضات الفردية" data-en="Tennis & Individual Sports Club">Tennis & Individual Sports Club</h3>
+          <p class="club-card-desc" data-ar="لعشاق التنس والبادمينتون وألعاب القوى — ملاعب حديثة ومدربون متخصصون يساعدونك على الارتقاء بمستواك." data-en="For tennis, badminton and athletics enthusiasts — modern courts and specialist coaches to take your game to the next level.">For tennis, badminton and athletics enthusiasts — modern courts and specialist coaches to take your game to the next level.</p>
+        </div>
+        <div class="club-card-footer">
+          <div class="club-members"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-ar="97 عضو" data-en="97 members">97 members</span></div>
+          <button class="club-join-btn" data-ar="انضم" data-en="Join">Join</button>
+        </div>
+      </article>
+
+      <!-- Arts & Culture Clubs -->
+      <article class="club-card reveal" data-category="arts">
+        <div class="club-card-banner" style="background:linear-gradient(135deg,#702459,#B83280);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+        </div>
+        <div class="club-card-body">
+          <span class="club-category-tag" style="color:#B83280;" data-ar="فنون وثقافة" data-en="Arts & Culture">Arts & Culture</span>
+          <h3 class="club-card-title" data-ar="نادي المسرح والفنون" data-en="Theatre & Arts Club">Theatre & Arts Club</h3>
+          <p class="club-card-desc" data-ar="اصنع، عبّر، وألهم — نادي يجمع محبي الفنون البصرية، المسرح، والتصوير الفوتوغرافي في مساحة إبداعية ملهمة." data-en="Create, express, and inspire — a club uniting lovers of visual arts, theatre, and photography in an inspiring creative space.">Create, express, and inspire — a club uniting lovers of visual arts, theatre, and photography in an inspiring creative space.</p>
+        </div>
+        <div class="club-card-footer">
+          <div class="club-members"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-ar="187 عضو" data-en="187 members">187 members</span></div>
+          <button class="club-join-btn" data-ar="انضم" data-en="Join">Join</button>
+        </div>
+      </article>
+
+      <article class="club-card reveal" data-category="arts">
+        <div class="club-card-banner" style="background:linear-gradient(135deg,#553C9A,#805AD5);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <div class="club-card-body">
+          <span class="club-category-tag" style="color:#553C9A;" data-ar="فنون وثقافة" data-en="Arts & Culture">Arts & Culture</span>
+          <h3 class="club-card-title" data-ar="نادي الموسيقى والأناشيد" data-en="Music & Nasheed Club">Music & Nasheed Club</h3>
+          <p class="club-card-desc" data-ar="يجمع نادي الموسيقى الطلاب المتميزين في أداء الأناشيد الإسلامية والموسيقى الهادفة في الفعاليات الجامعية." data-en="The Music Club brings together talented students for nasheed performances and purposeful music at university events.">The Music Club brings together talented students for nasheed performances and purposeful music at university events.</p>
+        </div>
+        <div class="club-card-footer">
+          <div class="club-members"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-ar="124 عضو" data-en="124 members">124 members</span></div>
+          <button class="club-join-btn" data-ar="انضم" data-en="Join">Join</button>
+        </div>
+      </article>
+
+      <article class="club-card reveal" data-category="arts">
+        <div class="club-card-banner" style="background:linear-gradient(135deg,#744210,#F6AD55);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        </div>
+        <div class="club-card-body">
+          <span class="club-category-tag" style="color:#C05621;" data-ar="فنون وثقافة" data-en="Arts & Culture">Arts & Culture</span>
+          <h3 class="club-card-title" data-ar="نادي الإعلام والإنتاج" data-en="Media & Production Club">Media & Production Club</h3>
+          <p class="club-card-desc" data-ar="تعلّم صناعة المحتوى الرقمي، التصوير، المونتاج، والبث الإذاعي في استوديو مجهّز بأحدث التقنيات." data-en="Learn digital content creation, filming, editing, and broadcasting in a studio equipped with the latest technology.">Learn digital content creation, filming, editing, and broadcasting in a studio equipped with the latest technology.</p>
+        </div>
+        <div class="club-card-footer">
+          <div class="club-members"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-ar="209 عضو" data-en="209 members">209 members</span></div>
+          <button class="club-join-btn" data-ar="انضم" data-en="Join">Join</button>
+        </div>
+      </article>
+
+      <!-- Tech Clubs -->
+      <article class="club-card reveal" data-category="tech">
+        <div class="club-card-banner" style="background:linear-gradient(135deg,#1a365d,#2B6CB0);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="club-card-body">
+          <span class="club-category-tag" style="color:#2B6CB0;" data-ar="تقنية" data-en="Technology">Technology</span>
+          <h3 class="club-card-title" data-ar="نادي البرمجة والتطوير" data-en="Programming & Dev Club">Programming & Dev Club</h3>
+          <p class="club-card-desc" data-ar="للمبرمجين والمطورين — هاكاثونات، مشاريع مفتوحة المصدر، وورش تعليمية في أحدث لغات البرمجة والتقنيات." data-en="For programmers and developers — hackathons, open-source projects, and workshops in the latest languages and technologies.">For programmers and developers — hackathons, open-source projects, and workshops in the latest languages and technologies.</p>
+        </div>
+        <div class="club-card-footer">
+          <div class="club-members"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-ar="392 عضو" data-en="392 members">392 members</span></div>
+          <button class="club-join-btn" data-ar="انضم" data-en="Join">Join</button>
+        </div>
+      </article>
+
+      <article class="club-card reveal" data-category="tech">
+        <div class="club-card-banner" style="background:linear-gradient(135deg,#1a0a3d,#3D1F6E);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="club-card-body">
+          <span class="club-category-tag" style="color:#3D1F6E;" data-ar="تقنية" data-en="Technology">Technology</span>
+          <h3 class="club-card-title" data-ar="نادي الذكاء الاصطناعي والروبوتات" data-en="AI & Robotics Club">AI & Robotics Club</h3>
+          <p class="club-card-desc" data-ar="استكشف عالم الذكاء الاصطناعي وتعلّم تصميم الروبوتات وبرمجتها في مختبرات متخصصة مع خبراء في المجال." data-en="Explore the world of AI and learn to design and program robots in specialised labs with field experts.">Explore the world of AI and learn to design and program robots in specialised labs with field experts.</p>
+        </div>
+        <div class="club-card-footer">
+          <div class="club-members"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span data-ar="278 عضو" data-en="278 members">278 members</span></div>
+          <button class="club-join-btn" data-ar="انضم" data-en="Join">Join</button>
+        </div>
+      </article>
+
+    </div><!-- /clubs-grid -->
+
+    <div class="programs-footer reveal" style="text-align:center;margin-top:var(--space-10);">
+      <a href="#" class="btn btn-outline-purple" data-ar="عرض جميع الأندية (40+)" data-en="View All Clubs (40+)">View All Clubs (40+)</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     VOLUNTEER / COMMUNITY RESPONSIBILITY
+══════════════════════════════════════════ -->
+<section class="volunteer-section" id="volunteer">
+  <div class="container volunteer-inner">
+
+    <div class="volunteer-content reveal">
+      <span class="eyebrow eyebrow-light" data-ar="إدارة المسؤولية المجتمعية" data-en="Community Responsibility Dept.">Community Responsibility Dept.</span>
+      <h2 class="section-title section-title-white" data-ar="العطاء يصنع الفرق" data-en="Giving Makes the Difference">Giving Makes the Difference</h2>
+      <p data-ar="تؤمن جامعة سليمان الراجحي بدور الطالب كعنصر فاعل في المجتمع. من خلال إدارة المسؤولية المجتمعية، يشارك طلابنا في مئات المبادرات التطوعية سنوياً تخدم المجتمع المحيط." data-en="SRU believes in the student's role as an active community contributor. Through the Community Responsibility Department, our students participate in hundreds of volunteer initiatives each year serving the surrounding community.">
+        SRU believes in the student's role as an active community contributor. Through the Community Responsibility Department, our students participate in hundreds of volunteer initiatives each year serving the surrounding community.
+      </p>
+      <div class="volunteer-stats">
+        <div class="v-stat">
+          <div class="v-stat-num">5,000+</div>
+          <div class="v-stat-label" data-ar="ساعة تطوع سنوياً" data-en="Volunteer hours/yr">Volunteer hours/yr</div>
+        </div>
+        <div class="v-stat">
+          <div class="v-stat-num">120+</div>
+          <div class="v-stat-label" data-ar="مبادرة مجتمعية" data-en="Community initiatives">Community initiatives</div>
+        </div>
+        <div class="v-stat">
+          <div class="v-stat-num">30+</div>
+          <div class="v-stat-label" data-ar="شراكة مجتمعية" data-en="Community partnerships">Community partnerships</div>
+        </div>
+      </div>
+      <a href="#" class="btn btn-cyan" data-ar="سجّل كمتطوع" data-en="Register as Volunteer">Register as Volunteer</a>
+    </div>
+
+    <div class="volunteer-activities reveal">
+
+      <div class="volunteer-activity">
+        <div class="va-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="va-text">
+          <strong data-ar="الحملات الصحية التطوعية" data-en="Voluntary Health Campaigns">Voluntary Health Campaigns</strong>
+          <span data-ar="فحوصات مجانية وتوعية صحية في المجتمعات المجاورة بالتعاون مع كلية الطب." data-en="Free screenings and health awareness in neighbouring communities in partnership with the College of Medicine.">Free screenings and health awareness in neighbouring communities in partnership with the College of Medicine.</span>
+        </div>
+      </div>
+
+      <div class="volunteer-activity">
+        <div class="va-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <div class="va-text">
+          <strong data-ar="التعليم والمحو الأمية" data-en="Education & Literacy Programs">Education & Literacy Programs</strong>
+          <span data-ar="برامج تعليمية وتعليم القراءة والكتابة للفئات المحتاجة في المناطق المجاورة." data-en="Educational programs and literacy teaching for those in need in surrounding areas.">Educational programs and literacy teaching for those in need in surrounding areas.</span>
+        </div>
+      </div>
+
+      <div class="volunteer-activity">
+        <div class="va-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="va-text">
+          <strong data-ar="الزيارات الميدانية والمشاريع المجتمعية" data-en="Field Visits & Community Projects">Field Visits & Community Projects</strong>
+          <span data-ar="زيارة دور الرعاية الاجتماعية وتنفيذ مشاريع تطوير البيئة والبنية التحتية." data-en="Visiting social welfare centres and implementing environmental and infrastructure development projects.">Visiting social welfare centres and implementing environmental and infrastructure development projects.</span>
+        </div>
+      </div>
+
+      <div class="volunteer-activity">
+        <div class="va-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="va-text">
+          <strong data-ar="برنامج التوجيه والإرشاد للطلاب الجدد" data-en="New Student Mentoring Program">New Student Mentoring Program</strong>
+          <span data-ar="يساعد المتطوعون من الطلاب القدامى الطلابَ الجدد على الاندماج والتأقلم في البيئة الجامعية." data-en="Senior student volunteers help new students integrate and adapt to the university environment.">Senior student volunteers help new students integrate and adapt to the university environment.</span>
+        </div>
+      </div>
+
+      <div class="volunteer-activity">
+        <div class="va-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="va-text">
+          <strong data-ar="مبادرات البيئة والاستدامة" data-en="Environment & Sustainability Initiatives">Environment & Sustainability Initiatives</strong>
+          <span data-ar="حملات التشجير، تنظيف المناطق العامة، وتوعية المجتمع بأهمية الحفاظ على البيئة." data-en="Tree-planting drives, public area clean-up campaigns, and community awareness about environmental conservation.">Tree-planting drives, public area clean-up campaigns, and community awareness about environmental conservation.</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SPORTS & CULTURAL EVENTS
+══════════════════════════════════════════ -->
+<section class="events-section" id="events">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow" data-ar="الفعاليات والأنشطة" data-en="Events & Activities">Events & Activities</span>
+      <h2 class="section-title" data-ar="فعاليات لا تُنسى على مدار العام" data-en="Unforgettable Events Throughout the Year">Unforgettable Events Throughout the Year</h2>
+      <p class="section-sub" data-ar="اشترك في أكثر من 100 فعالية رياضية وثقافية وترفيهية تُنظَّم سنوياً داخل الحرم الجامعي وخارجه." data-en="Participate in 100+ sports, cultural, and recreational events organised annually on and off campus.">
+        Participate in 100+ sports, cultural, and recreational events organised annually on and off campus.
+      </p>
+    </div>
+
+    <!-- Event type tabs -->
+    <div class="events-tabs reveal" role="tablist">
+      <button class="event-tab-btn active" role="tab" data-tab="sports" aria-selected="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M19.07 4.93l-4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>
+        <span data-ar="الفعاليات الرياضية" data-en="Sports Events">Sports Events</span>
+      </button>
+      <button class="event-tab-btn" role="tab" data-tab="cultural" aria-selected="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span data-ar="الفعاليات الثقافية" data-en="Cultural Events">Cultural Events</span>
+      </button>
+      <button class="event-tab-btn" role="tab" data-tab="academic-events" aria-selected="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        <span data-ar="الفعاليات الأكاديمية" data-en="Academic Events">Academic Events</span>
+      </button>
+    </div>
+
+    <!-- Sports Events Panel -->
+    <div class="events-panel active events-grid" id="tab-sports" role="tabpanel">
+
+      <article class="event-card reveal">
+        <div class="event-card-header">
+          <div class="event-date-block" style="background:var(--color-purple);">
+            <div class="event-date-day">14</div>
+            <div class="event-date-month" data-ar="يون" data-en="Jun">Jun</div>
+          </div>
+          <div class="event-card-meta">
+            <span class="event-type-chip" style="color:var(--color-purple);" data-ar="رياضي" data-en="Sports">Sports</span>
+            <h3 class="event-card-title" data-ar="بطولة كرة القدم بين الكليات" data-en="Inter-College Football Championship">Inter-College Football Championship</h3>
+          </div>
+        </div>
+        <div class="event-card-body">
+          <p class="event-card-desc" data-ar="بطولة سنوية تجمع فرق كليات الجامعة في منافسة شريفة بروح رياضية عالية." data-en="Annual tournament bringing together university college teams in fair competition with high sportsmanship.">Annual tournament bringing together university college teams in fair competition with high sportsmanship.</p>
+          <div class="event-card-info">
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-ar="ملعب كرة القدم الرئيسي" data-en="Main Football Pitch">Main Football Pitch</span></span>
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ar="3 أيام" data-en="3 days">3 days</span></span>
+          </div>
+        </div>
+        <div class="event-card-footer">
+          <span class="event-spots" data-ar="150 مقعد متبقٍ" data-en="150 spots left">150 spots left</span>
+          <a href="services.html#portal" class="event-register-btn" data-ar="سجّل" data-en="Register">Register</a>
+        </div>
+      </article>
+
+      <article class="event-card reveal">
+        <div class="event-card-header">
+          <div class="event-date-block" style="background:#C05621;">
+            <div class="event-date-day">28</div>
+            <div class="event-date-month" data-ar="يون" data-en="Jun">Jun</div>
+          </div>
+          <div class="event-card-meta">
+            <span class="event-type-chip" style="color:#C05621;" data-ar="رياضي" data-en="Sports">Sports</span>
+            <h3 class="event-card-title" data-ar="بطولة السباحة الجامعية السنوية" data-en="Annual University Swimming Championship">Annual University Swimming Championship</h3>
+          </div>
+        </div>
+        <div class="event-card-body">
+          <p class="event-card-desc" data-ar="منافسة سباحة على مستوى الجامعة في المسبح الأولمبي — مفتوحة لجميع الطلاب." data-en="University-level swimming competition at the Olympic pool — open to all students.">University-level swimming competition at the Olympic pool — open to all students.</p>
+          <div class="event-card-info">
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-ar="المسبح الأولمبي" data-en="Olympic Pool">Olympic Pool</span></span>
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ar="يوم واحد" data-en="1 day">1 day</span></span>
+          </div>
+        </div>
+        <div class="event-card-footer">
+          <span class="event-spots" data-ar="80 مقعد متبقٍ" data-en="80 spots left">80 spots left</span>
+          <a href="services.html#portal" class="event-register-btn" data-ar="سجّل" data-en="Register">Register</a>
+        </div>
+      </article>
+
+      <article class="event-card reveal">
+        <div class="event-card-header">
+          <div class="event-date-block" style="background:#2B6CB0;">
+            <div class="event-date-day">10</div>
+            <div class="event-date-month" data-ar="يول" data-en="Jul">Jul</div>
+          </div>
+          <div class="event-card-meta">
+            <span class="event-type-chip" style="color:#2B6CB0;" data-ar="رياضي" data-en="Sports">Sports</span>
+            <h3 class="event-card-title" data-ar="يوم الرياضة الجامعي" data-en="University Sports Day">University Sports Day</h3>
+          </div>
+        </div>
+        <div class="event-card-body">
+          <p class="event-card-desc" data-ar="يوم مفتوح يجمع الطلاب في ألعاب جماعية وفردية بأجواء احتفالية مع جوائز وشهادات تقديرية." data-en="An open day gathering students in team and individual games in a festive atmosphere with prizes and certificates.">An open day gathering students in team and individual games in a festive atmosphere with prizes and certificates.</p>
+          <div class="event-card-info">
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-ar="الملاعب الرياضية" data-en="Sports Complex">Sports Complex</span></span>
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ar="يوم واحد" data-en="1 day">1 day</span></span>
+          </div>
+        </div>
+        <div class="event-card-footer">
+          <span class="event-spots" data-ar="مفتوح للجميع" data-en="Open to all">Open to all</span>
+          <a href="services.html#portal" class="event-register-btn" data-ar="سجّل" data-en="Register">Register</a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Cultural Events Panel -->
+    <div class="events-panel events-grid" id="tab-cultural" role="tabpanel">
+
+      <article class="event-card reveal">
+        <div class="event-card-header">
+          <div class="event-date-block" style="background:#553C9A;">
+            <div class="event-date-day">20</div>
+            <div class="event-date-month" data-ar="يون" data-en="Jun">Jun</div>
+          </div>
+          <div class="event-card-meta">
+            <span class="event-type-chip" style="color:#553C9A;" data-ar="ثقافي" data-en="Cultural">Cultural</span>
+            <h3 class="event-card-title" data-ar="مهرجان التراث والهوية" data-en="Heritage & Identity Festival">Heritage & Identity Festival</h3>
+          </div>
+        </div>
+        <div class="event-card-body">
+          <p class="event-card-desc" data-ar="احتفاء بالهوية السعودية والتراث العربي الأصيل من خلال العروض الشعبية والمعارض الحضارية." data-en="A celebration of Saudi identity and authentic Arab heritage through folk performances and civilisational exhibitions.">A celebration of Saudi identity and authentic Arab heritage through folk performances and civilisational exhibitions.</p>
+          <div class="event-card-info">
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-ar="المسرح الرئيسي" data-en="Main Theatre">Main Theatre</span></span>
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ar="يومان" data-en="2 days">2 days</span></span>
+          </div>
+        </div>
+        <div class="event-card-footer">
+          <span class="event-spots" data-ar="مفتوح للجميع" data-en="Open to all">Open to all</span>
+          <a href="services.html#portal" class="event-register-btn" data-ar="سجّل" data-en="Register">Register</a>
+        </div>
+      </article>
+
+      <article class="event-card reveal">
+        <div class="event-card-header">
+          <div class="event-date-block" style="background:#B83280;">
+            <div class="event-date-day">05</div>
+            <div class="event-date-month" data-ar="يول" data-en="Jul">Jul</div>
+          </div>
+          <div class="event-card-meta">
+            <span class="event-type-chip" style="color:#B83280;" data-ar="ثقافي" data-en="Cultural">Cultural</span>
+            <h3 class="event-card-title" data-ar="معرض الفنون الطلابي السنوي" data-en="Annual Student Arts Exhibition">Annual Student Arts Exhibition</h3>
+          </div>
+        </div>
+        <div class="event-card-body">
+          <p class="event-card-desc" data-ar="فرصة لإبداع الطلاب في الفن التشكيلي، التصوير، والفنون الرقمية أمام المجتمع الجامعي والزوار." data-en="An opportunity for students to showcase their creativity in visual arts, photography, and digital arts before the university community and visitors.">An opportunity for students to showcase their creativity in visual arts, photography, and digital arts before the university community and visitors.</p>
+          <div class="event-card-info">
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-ar="قاعة المعارض" data-en="Exhibition Hall">Exhibition Hall</span></span>
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ar="3 أيام" data-en="3 days">3 days</span></span>
+          </div>
+        </div>
+        <div class="event-card-footer">
+          <span class="event-spots" data-ar="200 مقعد" data-en="200 spots">200 spots</span>
+          <a href="services.html#portal" class="event-register-btn" data-ar="سجّل" data-en="Register">Register</a>
+        </div>
+      </article>
+
+      <article class="event-card reveal">
+        <div class="event-card-header">
+          <div class="event-date-block" style="background:#276749;">
+            <div class="event-date-day">18</div>
+            <div class="event-date-month" data-ar="أغس" data-en="Aug">Aug</div>
+          </div>
+          <div class="event-card-meta">
+            <span class="event-type-chip" style="color:#276749;" data-ar="ثقافي" data-en="Cultural">Cultural</span>
+            <h3 class="event-card-title" data-ar="أمسية شعرية وأدبية" data-en="Poetry & Literature Evening">Poetry & Literature Evening</h3>
+          </div>
+        </div>
+        <div class="event-card-body">
+          <p class="event-card-desc" data-ar="أمسية تجمع طلاب الأدب والشعر لتقديم أعمالهم الإبداعية في جلسة ثقافية راقية." data-en="An evening gathering literature and poetry students to present their creative works in a refined cultural session.">An evening gathering literature and poetry students to present their creative works in a refined cultural session.</p>
+          <div class="event-card-info">
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-ar="القاعة الثقافية" data-en="Cultural Hall">Cultural Hall</span></span>
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ar="مساء واحد" data-en="One evening">One evening</span></span>
+          </div>
+        </div>
+        <div class="event-card-footer">
+          <span class="event-spots" data-ar="120 مقعد" data-en="120 spots">120 spots</span>
+          <a href="services.html#portal" class="event-register-btn" data-ar="سجّل" data-en="Register">Register</a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Academic Events Panel -->
+    <div class="events-panel events-grid" id="tab-academic-events" role="tabpanel">
+
+      <article class="event-card reveal">
+        <div class="event-card-header">
+          <div class="event-date-block" style="background:var(--color-cyan-dark);">
+            <div class="event-date-day">25</div>
+            <div class="event-date-month" data-ar="يون" data-en="Jun">Jun</div>
+          </div>
+          <div class="event-card-meta">
+            <span class="event-type-chip" style="color:var(--color-cyan-dark);" data-ar="أكاديمي" data-en="Academic">Academic</span>
+            <h3 class="event-card-title" data-ar="معرض مشاريع التخرج" data-en="Graduation Projects Exhibition">Graduation Projects Exhibition</h3>
+          </div>
+        </div>
+        <div class="event-card-body">
+          <p class="event-card-desc" data-ar="عرض مشاريع طلاب السنة النهائية أمام لجنة أكاديمية وممثلين من القطاع الصناعي والخاص." data-en="Final-year students present their projects before an academic panel and representatives from the industrial and private sector.">Final-year students present their projects before an academic panel and representatives from the industrial and private sector.</p>
+          <div class="event-card-info">
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-ar="قاعة المؤتمرات" data-en="Conference Hall">Conference Hall</span></span>
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ar="يومان" data-en="2 days">2 days</span></span>
+          </div>
+        </div>
+        <div class="event-card-footer">
+          <span class="event-spots" data-ar="مفتوح للجميع" data-en="Open to all">Open to all</span>
+          <a href="services.html#portal" class="event-register-btn" data-ar="سجّل" data-en="Register">Register</a>
+        </div>
+      </article>
+
+      <article class="event-card reveal">
+        <div class="event-card-header">
+          <div class="event-date-block" style="background:#744210;">
+            <div class="event-date-day">08</div>
+            <div class="event-date-month" data-ar="يول" data-en="Jul">Jul</div>
+          </div>
+          <div class="event-card-meta">
+            <span class="event-type-chip" style="color:#744210;" data-ar="أكاديمي" data-en="Academic">Academic</span>
+            <h3 class="event-card-title" data-ar="هاكاثون الابتكار والتقنية" data-en="Innovation & Tech Hackathon">Innovation & Tech Hackathon</h3>
+          </div>
+        </div>
+        <div class="event-card-body">
+          <p class="event-card-desc" data-ar="48 ساعة من الابتكار المتواصل — فرق متعددة التخصصات تتنافس لتقديم حلول إبداعية لتحديات حقيقية." data-en="48 hours of continuous innovation — multidisciplinary teams compete to deliver creative solutions to real-world challenges.">48 hours of continuous innovation — multidisciplinary teams compete to deliver creative solutions to real-world challenges.</p>
+          <div class="event-card-info">
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-ar="مختبر الابتكار" data-en="Innovation Lab">Innovation Lab</span></span>
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>48h</span></span>
+          </div>
+        </div>
+        <div class="event-card-footer">
+          <span class="event-spots" data-ar="50 فريق فقط" data-en="50 teams only">50 teams only</span>
+          <a href="services.html#portal" class="event-register-btn" data-ar="سجّل" data-en="Register">Register</a>
+        </div>
+      </article>
+
+      <article class="event-card reveal">
+        <div class="event-card-header">
+          <div class="event-date-block" style="background:#3D1F6E;">
+            <div class="event-date-day">22</div>
+            <div class="event-date-month" data-ar="أغس" data-en="Aug">Aug</div>
+          </div>
+          <div class="event-card-meta">
+            <span class="event-type-chip" style="color:#3D1F6E;" data-ar="أكاديمي" data-en="Academic">Academic</span>
+            <h3 class="event-card-title" data-ar="ملتقى الخريجين والتوظيف" data-en="Graduates & Career Fair">Graduates & Career Fair</h3>
+          </div>
+        </div>
+        <div class="event-card-body">
+          <p class="event-card-desc" data-ar="يجمع ملتقى التوظيف السنوي أكثر من 80 شركة وجهة حكومية لاستقطاب خريجي الجامعة الكفوئين." data-en="The annual career fair brings together 80+ companies and government entities to attract qualified SRU graduates.">The annual career fair brings together 80+ companies and government entities to attract qualified SRU graduates.</p>
+          <div class="event-card-info">
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-ar="القاعة الكبرى" data-en="Grand Hall">Grand Hall</span></span>
+            <span class="event-info-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-ar="يومان" data-en="2 days">2 days</span></span>
+          </div>
+        </div>
+        <div class="event-card-footer">
+          <span class="event-spots" data-ar="مفتوح للخريجين" data-en="Open to graduates">Open to graduates</span>
+          <a href="services.html#portal" class="event-register-btn" data-ar="سجّل" data-en="Register">Register</a>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     STUDENT SUPPORT
+══════════════════════════════════════════ -->
+<section class="support-section" id="support">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="eyebrow" data-ar="دعم الطلاب" data-en="Student Support">Student Support</span>
+      <h2 class="section-title" data-ar="نحن معك في كل خطوة" data-en="We Are With You Every Step">We Are With You Every Step</h2>
+      <p class="section-sub" data-ar="يوفّر مركز دعم الطلاب في جامعة سليمان الراجحي خدمات متكاملة للإرشاد الأكاديمي والدعم النفسي." data-en="SRU's Student Support Centre provides comprehensive academic advising and psychological support services.">
+        SRU's Student Support Centre provides comprehensive academic advising and psychological support services.
+      </p>
+    </div>
+
+    <div class="support-grid">
+
+      <!-- Academic Counselling -->
+      <div class="support-card reveal">
+        <div class="support-card-header">
+          <div class="support-icon-wrap" style="background:rgba(61,31,110,0.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="support-header-text">
+            <h3 class="support-card-title" data-ar="الإرشاد الأكاديمي" data-en="Academic Counselling">Academic Counselling</h3>
+            <p class="support-card-sub" data-ar="توجيه أكاديمي متخصص لمساعدتك على التميز في مسيرتك الدراسية" data-en="Specialist academic guidance to help you excel in your educational journey">Specialist academic guidance to help you excel in your educational journey</p>
+          </div>
+        </div>
+        <div class="support-card-body">
+          <div class="support-services-list">
+            <div class="support-service-item">
+              <div class="ssi-dot" style="background:#3D1F6E;"></div>
+              <span class="ssi-text" data-ar="التخطيط الأكاديمي وتحديد المسار" data-en="Academic planning & pathway selection">Academic planning & pathway selection</span>
+              <span class="ssi-badge" style="background:rgba(61,31,110,.1);color:#3D1F6E;" data-ar="متاح" data-en="Available">Available</span>
+            </div>
+            <div class="support-service-item">
+              <div class="ssi-dot" style="background:#3D1F6E;"></div>
+              <span class="ssi-text" data-ar="التسجيل في المقررات واختيار التخصص" data-en="Course registration & major selection">Course registration & major selection</span>
+              <span class="ssi-badge" style="background:rgba(61,31,110,.1);color:#3D1F6E;" data-ar="متاح" data-en="Available">Available</span>
+            </div>
+            <div class="support-service-item">
+              <div class="ssi-dot" style="background:#3D1F6E;"></div>
+              <span class="ssi-text" data-ar="الإرشاد للطلاب ذوي الظروف الخاصة" data-en="Support for students with special circumstances">Support for students with special circumstances</span>
+              <span class="ssi-badge" style="background:rgba(61,31,110,.1);color:#3D1F6E;" data-ar="متاح" data-en="Available">Available</span>
+            </div>
+            <div class="support-service-item">
+              <div class="ssi-dot" style="background:#3D1F6E;"></div>
+              <span class="ssi-text" data-ar="الاستعداد للدراسات العليا والبعثات" data-en="Graduate studies & scholarship prep">Graduate studies & scholarship prep</span>
+              <span class="ssi-badge" style="background:rgba(61,31,110,.1);color:#3D1F6E;" data-ar="متاح" data-en="Available">Available</span>
+            </div>
+            <div class="support-service-item">
+              <div class="ssi-dot" style="background:#3D1F6E;"></div>
+              <span class="ssi-text" data-ar="ورش تطوير مهارات الدراسة والبحث" data-en="Study skills & research workshops">Study skills & research workshops</span>
+              <span class="ssi-badge" style="background:rgba(0,180,200,.1);color:#00829A;" data-ar="حجز مسبق" data-en="Book ahead">Book ahead</span>
+            </div>
+          </div>
+        </div>
+        <div class="support-card-footer">
+          <a href="services.html#portal" class="btn btn-primary" data-ar="احجز موعداً" data-en="Book Appointment">Book Appointment</a>
+          <a href="#" class="btn btn-outline-purple" data-ar="تعرّف أكثر" data-en="Learn More">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Psychological Support -->
+      <div class="support-card reveal">
+        <div class="support-card-header">
+          <div class="support-icon-wrap" style="background:rgba(0,180,200,0.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00B4C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="support-header-text">
+            <h3 class="support-card-title" data-ar="الدعم النفسي والإرشادي" data-en="Psychological Counselling">Psychological Counselling</h3>
+            <p class="support-card-sub" data-ar="بيئة آمنة وسرية لدعمك نفسياً وعاطفياً طوال مسيرتك الجامعية" data-en="A safe, confidential environment to support you emotionally throughout your university journey">A safe, confidential environment to support you emotionally throughout your university journey</p>
+          </div>
+        </div>
+        <div class="support-card-body">
+          <div class="support-services-list">
+            <div class="support-service-item">
+              <div class="ssi-dot" style="background:#00B4C8;"></div>
+              <span class="ssi-text" data-ar="الإرشاد الفردي السري مع متخصص" data-en="Private one-on-one counselling">Private one-on-one counselling</span>
+              <span class="ssi-badge" style="background:rgba(0,180,200,.1);color:#00829A;" data-ar="سري" data-en="Confidential">Confidential</span>
+            </div>
+            <div class="support-service-item">
+              <div class="ssi-dot" style="background:#00B4C8;"></div>
+              <span class="ssi-text" data-ar="إدارة ضغوط الدراسة والقلق" data-en="Academic stress & anxiety management">Academic stress & anxiety management</span>
+              <span class="ssi-badge" style="background:rgba(0,180,200,.1);color:#00829A;" data-ar="متاح" data-en="Available">Available</span>
+            </div>
+            <div class="support-service-item">
+              <div class="ssi-dot" style="background:#00B4C8;"></div>
+              <span class="ssi-text" data-ar="مجموعات الدعم النفسي للطلاب" data-en="Student peer support groups">Student peer support groups</span>
+              <span class="ssi-badge" style="background:rgba(0,180,200,.1);color:#00829A;" data-ar="متاح" data-en="Available">Available</span>
+            </div>
+            <div class="support-service-item">
+              <div class="ssi-dot" style="background:#00B4C8;"></div>
+              <span class="ssi-text" data-ar="ورش التنمية الذاتية وبناء الشخصية" data-en="Self-development & personality workshops">Self-development & personality workshops</span>
+              <span class="ssi-badge" style="background:rgba(61,31,110,.1);color:#3D1F6E;" data-ar="أسبوعي" data-en="Weekly">Weekly</span>
+            </div>
+            <div class="support-service-item">
+              <div class="ssi-dot" style="background:#00B4C8;"></div>
+              <span class="ssi-text" data-ar="دعم الطوارئ النفسية على مدار الساعة" data-en="24/7 psychological emergency support">24/7 psychological emergency support</span>
+              <span class="ssi-badge" style="background:rgba(229,62,62,.1);color:#C53030;" data-ar="طوارئ" data-en="Emergency">Emergency</span>
+            </div>
+          </div>
+        </div>
+        <div class="support-card-footer">
+          <a href="services.html#portal" class="btn btn-cyan" data-ar="احجز جلسة" data-en="Book a Session">Book a Session</a>
+          <a href="#" class="btn btn-outline-purple" data-ar="تعرّف أكثر" data-en="Learn More">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Support info strip -->
+    <div class="journey-stats reveal" style="margin-top:var(--space-10);">
+      <div class="journey-stat">
+        <div class="j-stat-num">25+</div>
+        <div class="j-stat-label" data-ar="مرشد أكاديمي" data-en="Academic Advisors">Academic Advisors</div>
+      </div>
+      <div class="journey-stat">
+        <div class="j-stat-num">10+</div>
+        <div class="j-stat-label" data-ar="معالج نفسي متخصص" data-en="Specialist Counsellors">Specialist Counsellors</div>
+      </div>
+      <div class="journey-stat">
+        <div class="j-stat-num">24/7</div>
+        <div class="j-stat-label" data-ar="دعم طارئ متاح" data-en="Emergency Support">Emergency Support</div>
+      </div>
+      <div class="journey-stat">
+        <div class="j-stat-num">100%</div>
+        <div class="j-stat-label" data-ar="سرية تامة" data-en="Full Confidentiality">Full Confidentiality</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CTA
+══════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="cta-pattern"></div>
+  <div class="container cta-inner reveal">
+    <div class="cta-text">
+      <h2 class="cta-title" data-ar="كن جزءاً من مجتمعنا الجامعي" data-en="Become Part of Our University Community">Become Part of Our University Community</h2>
+      <p data-ar="الحياة الجامعية في SRU ليست مجرد دراسة — إنها تجربة متكاملة تصنع شخصيتك وتفتح آفاق مستقبلك." data-en="Campus life at SRU isn't just about studying — it's a complete experience that shapes your character and opens your future horizons.">Campus life at SRU isn't just about studying — it's a complete experience that shapes your character and opens your future horizons.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="admissions.html" class="btn btn-cyan btn-lg" data-ar="ابدأ رحلتك" data-en="Begin Your Journey">Begin Your Journey</a>
+      <a href="services.html"   class="btn btn-outline-white btn-lg" data-ar="استكشف الخدمات" data-en="Explore Services">Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">
+        <svg width="40" height="40" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="22" fill="#3D1F6E"/><path d="M10 30 L22 10 L34 30 Z" fill="none" stroke="#00B4C8" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 30 L22 16 L30 30" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/><circle cx="22" cy="10" r="2.5" fill="#00B4C8"/></svg>
+        <span>SRU</span>
+      </a>
+      <p class="footer-tagline" data-ar="نبني قادة الغد بتميز أكاديمي وقيم إسلامية راسخة." data-en="Building tomorrow's leaders with academic excellence and deep Islamic values.">Building tomorrow's leaders with academic excellence and deep Islamic values.</p>
+      <div class="social-icons">
+        <a href="#" class="social-icon" aria-label="Twitter/X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="الحياة الجامعية" data-en="Campus Life">Campus Life</h4>
+      <ul class="footer-links">
+        <li><a href="#clubs"     data-ar="الأندية الطلابية"  data-en="Student Clubs">Student Clubs</a></li>
+        <li><a href="#volunteer" data-ar="العمل التطوعي"     data-en="Volunteering">Volunteering</a></li>
+        <li><a href="#events"    data-ar="الفعاليات"         data-en="Events">Events</a></li>
+        <li><a href="#support"   data-ar="دعم الطلاب"        data-en="Student Support">Student Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="روابط سريعة" data-en="Quick Links">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html"           data-ar="الرئيسية"        data-en="Home">Home</a></li>
+        <li><a href="admissions.html"      data-ar="القبول"           data-en="Admissions">Admissions</a></li>
+        <li><a href="student-journey.html" data-ar="رحلة الطالب"     data-en="Student Journey">Student Journey</a></li>
+        <li><a href="services.html"        data-ar="الخدمات"          data-en="Services">Services</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-heading" data-ar="تواصل معنا" data-en="Contact Us">Contact Us</h4>
+      <address class="footer-contact">
+        <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>studentlife@sru.edu.sa</span></div>
+        <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.6a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+966 16 583 0200</span></div>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p class="copyright" data-ar="© 2026 جامعة سليمان الراجحي. جميع الحقوق محفوظة." data-en="© 2026 Sulaiman Al-Rajhi University. All rights reserved.">© 2026 Sulaiman Al-Rajhi University. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#" data-ar="سياسة الخصوصية" data-en="Privacy Policy">Privacy Policy</a>
+        <a href="#" data-ar="شروط الاستخدام" data-en="Terms of Use">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/campus-life.js"></script>
+</body>
+</html>
