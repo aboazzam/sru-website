@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(winget --version 2>&1)",
+      "PowerShell(git config --global user.name 2>&1)",
+      "PowerShell(git config --global user.email 2>&1)",
+      "PowerShell($gh = \"C:\\\\Users\\\\malmo\\\\AppData\\\\Local\\\\Temp\\\\gh_portable\\\\bin\\\\gh.exe\"; & $gh auth status 2>&1)"
+    ]
+  }
+}
