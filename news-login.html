@@ -38,51 +38,23 @@
         اسم المستخدم أو كلمة المرور غير صحيحة
       </div>
 
-      <form id="login-form" class="space-y-5">
+      <form onsubmit="handleLogin(event)">
+  <div class="space-y-4">
+    <div>
+      <label class="block text-sm mb-1">اسم المستخدم</label>
+      <input id="username" type="text" class="input-class" placeholder="أدخل اسم المستخدم">
+    </div>
 
-        <!-- Username -->
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-2">اسم المستخدم</label>
-          <input
-            type="text"
-            id="username"
-            placeholder="أدخل اسم المستخدم"
-            class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-[#3D1F6E] focus:ring-2 focus:ring-[#3D1F6E]/10 transition"
-            required
-          />
-        </div>
+    <div>
+      <label class="block text-sm mb-1">كلمة المرور</label>
+      <input id="password" type="password" class="input-class" placeholder="أدخل كلمة المرور">
+    </div>
+  </div>
 
-        <!-- Password -->
-        <div>
-          <label class="block text-sm font-semibold text-gray-700 mb-2">كلمة المرور</label>
-          <div class="relative">
-            <input
-              type="password"
-              id="password"
-              placeholder="أدخل كلمة المرور"
-              class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-[#3D1F6E] focus:ring-2 focus:ring-[#3D1F6E]/10 transition"
-              required
-            />
-            <button type="button" id="toggle-pass" class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
-              <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- Submit -->
-        <button
-          type="submit"
-          id="submit-btn"
-          class="w-full bg-[#3D1F6E] hover:bg-[#2d1752] text-white font-semibold py-3 rounded-xl transition text-sm"
-        >
-          دخول
-        </button>
-
-      </form>
-
+  <button type="submit" class="btn-class w-full mt-6">
+    دخول
+  </button>
+</form>
     </div>
 
     <p class="text-center text-white/40 text-xs mt-6">
