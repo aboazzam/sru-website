@@ -158,7 +158,8 @@ textarea{resize:vertical;min-height:85px}
 
 <script>
 // Auth check (comment out for preview)
-if (sessionStorage.getItem('news_auth') !== '1') {
+console.log('AUTH IN EDITOR:', sessionStorage.getItem('news_auth'));
+  if (sessionStorage.getItem('news_auth') !== '1') {
   window.location.href = '/news-login.html';   // أو '/news-login'
 }
 
