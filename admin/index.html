@@ -4,19 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sulaiman Al-Rajhi University | جامعة سليمان الراجحي</title>
-  <meta name="description" content="Sulaiman Al-Rajhi University — Building leaders for tomorrow." />
+  <meta name="description" content="Sulaiman Al-Rajhi University — Building leaders for tomorrow. جامعة سليمان الراجحي — نبني قادة الغد." />
+  <meta name="keywords" content="Sulaiman Al-Rajhi University, SRU, Saudi Arabia, higher education, Al-Qassim, admissions, undergraduate, graduate" />
+  <meta property="og:title" content="Sulaiman Al-Rajhi University | جامعة سليمان الراجحي" />
+  <meta property="og:description" content="A leading Saudi university committed to academic excellence, Islamic values, and community development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.sru.edu.sa/" />
   <meta name="theme-color" content="#3D1F6E" />
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
+  <!-- Styles -->
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/pages.css" />
   <link rel="stylesheet" id="rtl-stylesheet" href="styles/rtl.css" disabled />
-
-  <!-- Netlify Identity Widget -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -25,9 +29,11 @@
 ═══════════════════════════════════════════ -->
 <header class="site-header" id="site-header">
   <div class="container header-inner">
+
+    <!-- Logo -->
     <a href="index.html" class="logo" aria-label="SRU Home">
       <div class="logo-mark">
-        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <circle cx="22" cy="22" r="22" fill="#3D1F6E"/>
           <path d="M10 30 L22 10 L34 30 Z" fill="none" stroke="#00B4C8" stroke-width="2.5" stroke-linejoin="round"/>
           <path d="M14 30 L22 16 L30 30" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/>
@@ -41,6 +47,7 @@
       </div>
     </a>
 
+    <!-- Primary Nav -->
     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
       <ul class="nav-list">
         <li><a href="index.html"              class="nav-link active" data-ar="الرئيسية"        data-en="Home">Home</a></li>
@@ -54,6 +61,7 @@
       </ul>
     </nav>
 
+    <!-- Header Actions -->
     <div class="header-actions">
       <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
         <span class="lang-label" id="lang-label">العربية</span>
@@ -63,7 +71,9 @@
         <span></span><span></span><span></span>
       </button>
     </div>
+
   </div>
+  <!-- Mobile overlay -->
   <div class="nav-overlay" id="nav-overlay"></div>
 </header>
 
@@ -77,13 +87,13 @@
   </div>
   <div class="container hero-content">
     <div class="hero-badge reveal">
-      <span id="hero-badge">A Leading Academic Institution</span>
+      <span data-ar="مؤسسة أكاديمية رائدة" data-en="A Leading Academic Institution">A Leading Academic Institution</span>
     </div>
     <h1 class="hero-title reveal">
-      <span class="title-line" id="hero-title">Building Leaders</span>
-      <span class="title-line title-accent" id="hero-title-accent">for Tomorrow</span>
+      <span class="title-line" data-ar="بناء القادة" data-en="Building Leaders">Building Leaders</span>
+      <span class="title-line title-accent" data-ar="لمستقبل أفضل" data-en="for Tomorrow">for Tomorrow</span>
     </h1>
-    <p class="hero-sub reveal" id="hero-sub">
+    <p class="hero-sub reveal" data-ar="جامعة سليمان الراجحي تلتزم بتقديم تعليم عالي الجودة يجمع بين التميز الأكاديمي والقيم الإسلامية الأصيلة." data-en="Sulaiman Al-Rajhi University is committed to delivering world-class education that blends academic excellence with authentic Islamic values.">
       Sulaiman Al-Rajhi University is committed to delivering world-class education that blends academic excellence with authentic Islamic values.
     </p>
     <div class="hero-actions reveal">
@@ -101,8 +111,21 @@
 ═══════════════════════════════════════════ -->
 <section class="stats-section" id="stats">
   <div class="container">
-    <div class="stats-grid" id="stats-grid">
-      <!-- يُملأ من home.json -->
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="20000" data-suffix="+">0</div>
+        <div class="stat-label" data-ar="طالب وطالبة" data-en="Students">Students</div>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="80" data-suffix="+">0</div>
+        <div class="stat-label" data-ar="برنامج أكاديمي" data-en="Academic Programs">Academic Programs</div>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="15" data-suffix="+">0</div>
+        <div class="stat-label" data-ar="سنة من التميز" data-en="Years of Excellence">Years of Excellence</div>
+      </div>
     </div>
   </div>
 </section>
@@ -113,10 +136,12 @@
 <section class="about-band" id="about">
   <div class="container about-inner">
     <div class="about-text reveal">
-      <span class="eyebrow" id="about-eyebrow">Who We Are</span>
-      <h2 class="section-title" id="about-title">A Comprehensive Vision for Higher Education</h2>
-      <p id="about-body">
-        Founded to be a distinguished academic institution in Saudi Arabia, SRU bridges scientific advancement with authentic Islamic identity.
+      <span class="eyebrow" data-ar="من نحن" data-en="Who We Are">Who We Are</span>
+      <h2 class="section-title" data-ar="رؤية شاملة للتعليم العالي" data-en="A Comprehensive Vision for Higher Education">
+        A Comprehensive Vision for Higher Education
+      </h2>
+      <p data-ar="تأسست جامعة سليمان الراجحي لتكون صرحًا أكاديميًا متميزًا في المملكة العربية السعودية، تجمع بين التقدم العلمي والهوية الإسلامية الأصيلة، وتسعى إلى تخريج كوادر مؤهلة تقود مسيرة التنمية الوطنية." data-en="Founded to be a distinguished academic institution in Saudi Arabia, SRU bridges scientific advancement with authentic Islamic identity, preparing qualified graduates who lead national development.">
+        Founded to be a distinguished academic institution in Saudi Arabia, SRU bridges scientific advancement with authentic Islamic identity, preparing qualified graduates who lead national development.
       </p>
       <a href="#about" class="btn btn-primary" data-ar="اعرف أكثر" data-en="Learn More">Learn More</a>
     </div>
@@ -129,6 +154,24 @@
             <rect x="180" y="120" width="120" height="160" rx="4" fill="#3D1F6E" opacity="0.25"/>
             <rect x="320" y="150" width="120" height="130" rx="4" fill="#3D1F6E" opacity="0.15"/>
             <rect x="40" y="280" width="400" height="8" rx="4" fill="#3D1F6E" opacity="0.3"/>
+            <!-- Windows -->
+            <rect x="60" y="200" width="20" height="25" rx="2" fill="#00B4C8" opacity="0.5"/>
+            <rect x="100" y="200" width="20" height="25" rx="2" fill="#00B4C8" opacity="0.5"/>
+            <rect x="200" y="140" width="20" height="25" rx="2" fill="#00B4C8" opacity="0.7"/>
+            <rect x="240" y="140" width="20" height="25" rx="2" fill="#00B4C8" opacity="0.7"/>
+            <rect x="200" y="185" width="20" height="25" rx="2" fill="#00B4C8" opacity="0.7"/>
+            <rect x="240" y="185" width="20" height="25" rx="2" fill="#00B4C8" opacity="0.7"/>
+            <rect x="340" y="170" width="20" height="25" rx="2" fill="#00B4C8" opacity="0.5"/>
+            <rect x="380" y="170" width="20" height="25" rx="2" fill="#00B4C8" opacity="0.5"/>
+            <!-- Dome -->
+            <ellipse cx="240" cy="120" rx="35" ry="20" fill="#3D1F6E" opacity="0.4"/>
+            <rect x="225" y="100" width="30" height="22" fill="#3D1F6E" opacity="0.3"/>
+            <!-- Palm trees -->
+            <rect x="160" y="240" width="6" height="40" rx="3" fill="#6B7280" opacity="0.4"/>
+            <ellipse cx="163" cy="235" rx="18" ry="12" fill="#6B7280" opacity="0.3"/>
+            <rect x="310" y="245" width="6" height="35" rx="3" fill="#6B7280" opacity="0.4"/>
+            <ellipse cx="313" cy="240" rx="18" ry="12" fill="#6B7280" opacity="0.3"/>
+            <!-- Sun -->
             <circle cx="420" cy="60" r="30" fill="#FFD700" opacity="0.2"/>
           </svg>
         </div>
@@ -145,73 +188,116 @@
 </section>
 
 <!-- ═══════════════════════════════════════════
-     FEATURED PROGRAMS (ثابت - لا يتغير)
+     FEATURED PROGRAMS
 ═══════════════════════════════════════════ -->
 <section class="programs-section" id="programs">
   <div class="container">
     <div class="section-header reveal">
       <span class="eyebrow" data-ar="الكليات الأكاديمية" data-en="Academic Colleges">Academic Colleges</span>
-      <h2 class="section-title" data-ar="استكشف برامجنا الأكاديمية" data-en="Explore Our Academic Programs">Explore Our Academic Programs</h2>
-      <p class="section-sub" data-ar="نقدم برامج أكاديمية متنوعة تلبي طموحات الطلاب." data-en="We offer diverse academic programs that meet student ambitions.">
-        We offer diverse academic programs that meet student ambitions.
+      <h2 class="section-title" data-ar="استكشف برامجنا الأكاديمية" data-en="Explore Our Academic Programs">
+        Explore Our Academic Programs
+      </h2>
+      <p class="section-sub" data-ar="نقدم برامج أكاديمية متنوعة تلبي طموحات الطلاب وتواكب متطلبات سوق العمل." data-en="We offer diverse academic programs that meet student ambitions and align with labour market demands.">
+        We offer diverse academic programs that meet student ambitions and align with labour market demands.
       </p>
     </div>
+
     <div class="programs-grid">
+
+      <!-- College of Medicine -->
       <article class="program-card reveal" style="--accent:#E53E3E;">
         <div class="card-icon" style="background:rgba(229,62,62,0.08);">
-          <svg viewBox="0 0 48 48" fill="none"><rect x="18" y="6" width="12" height="36" rx="3" fill="#E53E3E" opacity="0.9"/><rect x="6" y="18" width="36" height="12" rx="3" fill="#E53E3E" opacity="0.9"/></svg>
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="18" y="6" width="12" height="36" rx="3" fill="#E53E3E" opacity="0.9"/>
+            <rect x="6" y="18" width="36" height="12" rx="3" fill="#E53E3E" opacity="0.9"/>
+          </svg>
         </div>
         <div class="card-body">
           <h3 class="card-title" data-ar="كلية الطب" data-en="College of Medicine">College of Medicine</h3>
-          <p class="card-desc" data-ar="برامج طبية متكاملة." data-en="Comprehensive medical programs.">Comprehensive medical programs.</p>
+          <p class="card-desc" data-ar="برامج طبية متكاملة تمزج بين العلوم الأساسية والتدريب السريري المتقدم." data-en="Comprehensive medical programs blending foundational sciences with advanced clinical training.">
+            Comprehensive medical programs blending foundational sciences with advanced clinical training.
+          </p>
           <div class="card-meta">
             <span class="card-tag" data-ar="دكتوراه الطب" data-en="MD Program">MD Program</span>
+            <span class="card-tag" data-ar="بكالوريوس" data-en="Bachelor's">Bachelor's</span>
           </div>
         </div>
         <a href="#" class="card-link" data-ar="اكتشف البرنامج ←" data-en="Explore Program →">Explore Program →</a>
       </article>
+
+      <!-- College of Engineering -->
       <article class="program-card reveal" style="--accent:#3D1F6E;">
         <div class="card-icon" style="background:rgba(61,31,110,0.08);">
-          <svg viewBox="0 0 48 48" fill="none"><path d="M8 40 L8 20 L16 12 L32 12 L40 20 L40 40 Z" stroke="#3D1F6E" stroke-width="2.5" fill="none"/><rect x="18" y="28" width="12" height="12" rx="1" stroke="#3D1F6E" stroke-width="2" fill="none"/></svg>
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 40 L8 20 L16 12 L32 12 L40 20 L40 40 Z" stroke="#3D1F6E" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+            <rect x="18" y="28" width="12" height="12" rx="1" stroke="#3D1F6E" stroke-width="2" fill="none"/>
+            <path d="M16 12 L16 8 M32 12 L32 8" stroke="#3D1F6E" stroke-width="2" stroke-linecap="round"/>
+            <path d="M24 20 L24 24" stroke="#00B4C8" stroke-width="2" stroke-linecap="round"/>
+          </svg>
         </div>
         <div class="card-body">
           <h3 class="card-title" data-ar="كلية الهندسة" data-en="College of Engineering">College of Engineering</h3>
-          <p class="card-desc" data-ar="برامج هندسية متطورة." data-en="Advanced engineering programs.">Advanced engineering programs.</p>
+          <p class="card-desc" data-ar="برامج هندسية متطورة تشمل الهندسة المدنية والكهربائية والميكانيكية وتقنية المعلومات." data-en="Advanced engineering programs spanning civil, electrical, mechanical, and information technology.">
+            Advanced engineering programs spanning civil, electrical, mechanical, and information technology.
+          </p>
           <div class="card-meta">
             <span class="card-tag" data-ar="هندسة مدنية" data-en="Civil">Civil</span>
+            <span class="card-tag" data-ar="هندسة كهربائية" data-en="Electrical">Electrical</span>
             <span class="card-tag" data-ar="تقنية المعلومات" data-en="IT">IT</span>
           </div>
         </div>
         <a href="#" class="card-link" data-ar="اكتشف البرنامج ←" data-en="Explore Program →">Explore Program →</a>
       </article>
+
+      <!-- College of Business -->
       <article class="program-card reveal" style="--accent:#00B4C8;">
         <div class="card-icon" style="background:rgba(0,180,200,0.08);">
-          <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="22" width="8" height="18" rx="2" fill="#00B4C8" opacity="0.8"/><rect x="20" y="14" width="8" height="26" rx="2" fill="#00B4C8"/><rect x="34" y="8" width="8" height="32" rx="2" fill="#00B4C8"/></svg>
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="22" width="8" height="18" rx="2" fill="#00B4C8" opacity="0.8"/>
+            <rect x="20" y="14" width="8" height="26" rx="2" fill="#00B4C8" opacity="0.9"/>
+            <rect x="34" y="8" width="8" height="32" rx="2" fill="#00B4C8"/>
+            <path d="M8 18 L22 12 L36 6" stroke="#3D1F6E" stroke-width="2" stroke-linecap="round"/>
+          </svg>
         </div>
         <div class="card-body">
           <h3 class="card-title" data-ar="كلية إدارة الأعمال" data-en="College of Business">College of Business</h3>
-          <p class="card-desc" data-ar="إعداد قادة الأعمال." data-en="Preparing future business leaders.">Preparing future business leaders.</p>
+          <p class="card-desc" data-ar="إعداد قادة الأعمال المستقبليين من خلال برامج الإدارة والتسويق والمالية الإسلامية." data-en="Preparing future business leaders through programs in management, marketing, and Islamic finance.">
+            Preparing future business leaders through programs in management, marketing, and Islamic finance.
+          </p>
           <div class="card-meta">
             <span class="card-tag" data-ar="إدارة الأعمال" data-en="MBA">MBA</span>
+            <span class="card-tag" data-ar="تسويق" data-en="Marketing">Marketing</span>
           </div>
         </div>
         <a href="#" class="card-link" data-ar="اكتشف البرنامج ←" data-en="Explore Program →">Explore Program →</a>
       </article>
+
+      <!-- College of Sciences -->
       <article class="program-card reveal" style="--accent:#38A169;">
         <div class="card-icon" style="background:rgba(56,161,105,0.08);">
-          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="8" stroke="#38A169" stroke-width="2.5" fill="none"/><ellipse cx="24" cy="24" rx="8" ry="20" stroke="#38A169" stroke-width="2" fill="none" opacity="0.5"/><ellipse cx="24" cy="24" rx="20" ry="8" stroke="#38A169" stroke-width="2" fill="none" opacity="0.5"/></svg>
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="8" stroke="#38A169" stroke-width="2.5" fill="none"/>
+            <ellipse cx="24" cy="24" rx="8" ry="20" stroke="#38A169" stroke-width="2" fill="none" opacity="0.5"/>
+            <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#38A169" stroke-width="2" fill="none" opacity="0.5"/>
+            <circle cx="24" cy="24" r="2.5" fill="#38A169"/>
+          </svg>
         </div>
         <div class="card-body">
           <h3 class="card-title" data-ar="كلية العلوم" data-en="College of Sciences">College of Sciences</h3>
-          <p class="card-desc" data-ar="برامج علمية متقدمة." data-en="Advanced scientific programs.">Advanced scientific programs.</p>
+          <p class="card-desc" data-ar="برامج علمية متقدمة في الكيمياء والأحياء والفيزياء وعلوم الحاسب والرياضيات." data-en="Advanced scientific programs in chemistry, biology, physics, computer science, and mathematics.">
+            Advanced scientific programs in chemistry, biology, physics, computer science, and mathematics.
+          </p>
           <div class="card-meta">
             <span class="card-tag" data-ar="أحياء" data-en="Biology">Biology</span>
             <span class="card-tag" data-ar="حاسب" data-en="CS">CS</span>
+            <span class="card-tag" data-ar="رياضيات" data-en="Math">Math</span>
           </div>
         </div>
         <a href="#" class="card-link" data-ar="اكتشف البرنامج ←" data-en="Explore Program →">Explore Program →</a>
       </article>
+
     </div>
+
     <div class="programs-footer reveal">
       <a href="#programs" class="btn btn-outline-purple" data-ar="عرض جميع الكليات" data-en="View All Colleges">View All Colleges</a>
     </div>
@@ -219,17 +305,81 @@
 </section>
 
 <!-- ═══════════════════════════════════════════
-     NEWS & EVENTS — يُملأ من home.json
+     NEWS & EVENTS
 ═══════════════════════════════════════════ -->
 <section class="news-section" id="news">
   <div class="container">
     <div class="section-header reveal">
       <span class="eyebrow" data-ar="آخر الأخبار والفعاليات" data-en="Latest News & Events">Latest News & Events</span>
-      <h2 class="section-title" data-ar="أخبار وفعاليات الجامعة" data-en="University News & Events">University News & Events</h2>
+      <h2 class="section-title" data-ar="أخبار وفعاليات الجامعة" data-en="University News & Events">
+        University News & Events
+      </h2>
     </div>
-    <div class="news-grid" id="news-grid">
-      <!-- يُملأ من home.json -->
+
+    <div class="news-grid">
+
+      <!-- News Card 1 -->
+      <article class="news-card reveal">
+        <div class="news-img" style="background: linear-gradient(135deg, #3D1F6E 0%, #6B46C1 100%);">
+          <span class="news-type" data-ar="أخبار" data-en="News">News</span>
+        </div>
+        <div class="news-body">
+          <div class="news-date">
+            <span class="date-day">15</span>
+            <span class="date-month" data-ar="مايو" data-en="May">May</span>
+          </div>
+          <h3 class="news-title" data-ar="جامعة سليمان الراجحي تحصل على اعتماد أكاديمي دولي في خمسة برامج" data-en="SRU Achieves International Accreditation for Five Academic Programs">
+            SRU Achieves International Accreditation for Five Academic Programs
+          </h3>
+          <p class="news-excerpt" data-ar="أعلنت الجامعة حصولها على اعتماد أكاديمي دولي معتمد من هيئات دولية مرموقة لخمسة برامج أكاديمية." data-en="The university announced achieving international academic accreditation from prestigious global bodies for five academic programs.">
+            The university announced achieving international academic accreditation from prestigious global bodies for five academic programs.
+          </p>
+          <a href="#" class="news-link" data-ar="اقرأ المزيد ←" data-en="Read More →">Read More →</a>
+        </div>
+      </article>
+
+      <!-- News Card 2 -->
+      <article class="news-card reveal">
+        <div class="news-img" style="background: linear-gradient(135deg, #00B4C8 0%, #0077A8 100%);">
+          <span class="news-type" data-ar="فعالية" data-en="Event">Event</span>
+        </div>
+        <div class="news-body">
+          <div class="news-date">
+            <span class="date-day">28</span>
+            <span class="date-month" data-ar="مايو" data-en="May">May</span>
+          </div>
+          <h3 class="news-title" data-ar="مؤتمر الابتكار وريادة الأعمال الثالث يفتح أبوابه في الجامعة" data-en="Third Innovation & Entrepreneurship Conference Opens at SRU">
+            Third Innovation & Entrepreneurship Conference Opens at SRU
+          </h3>
+          <p class="news-excerpt" data-ar="ينعقد المؤتمر السنوي الثالث للابتكار وريادة الأعمال بمشاركة نخبة من رواد الأعمال والأكاديميين." data-en="The third annual Innovation & Entrepreneurship conference convenes with leading entrepreneurs and academics in attendance.">
+            The third annual Innovation & Entrepreneurship conference convenes with leading entrepreneurs and academics in attendance.
+          </p>
+          <a href="#" class="news-link" data-ar="اقرأ المزيد ←" data-en="Read More →">Read More →</a>
+        </div>
+      </article>
+
+      <!-- News Card 3 -->
+      <article class="news-card reveal">
+        <div class="news-img" style="background: linear-gradient(135deg, #38A169 0%, #276749 100%);">
+          <span class="news-type" data-ar="إنجاز" data-en="Achievement">Achievement</span>
+        </div>
+        <div class="news-body">
+          <div class="news-date">
+            <span class="date-day">03</span>
+            <span class="date-month" data-ar="يونيو" data-en="Jun">Jun</span>
+          </div>
+          <h3 class="news-title" data-ar="طلاب كلية الهندسة يفوزون بجائزة التميز في مسابقة هندسية خليجية" data-en="Engineering Students Win Excellence Award at GCC Engineering Competition">
+            Engineering Students Win Excellence Award at GCC Engineering Competition
+          </h3>
+          <p class="news-excerpt" data-ar="حقق طلاب كلية الهندسة المركز الأول في مسابقة الهندسة الإبداعية على مستوى دول الخليج العربي." data-en="Engineering faculty students claimed first place in the Creative Engineering Competition at the GCC level.">
+            Engineering faculty students claimed first place in the Creative Engineering Competition at the GCC level.
+          </p>
+          <a href="#" class="news-link" data-ar="اقرأ المزيد ←" data-en="Read More →">Read More →</a>
+        </div>
+      </article>
+
     </div>
+
     <div class="news-footer reveal">
       <a href="#news" class="btn btn-outline-purple" data-ar="جميع الأخبار" data-en="All News & Events">All News & Events</a>
     </div>
@@ -243,25 +393,44 @@
   <div class="container research-inner">
     <div class="research-content reveal">
       <span class="eyebrow eyebrow-light" data-ar="البحث والابتكار" data-en="Research & Innovation">Research & Innovation</span>
-      <h2 class="section-title section-title-white" id="research-title">Leading Scientific Research Toward New Horizons</h2>
-      <p id="research-body">SRU's Research & Development Center houses elite researchers working on pioneering projects.</p>
+      <h2 class="section-title section-title-white" data-ar="نقود البحث العلمي نحو آفاق جديدة" data-en="Leading Scientific Research Toward New Horizons">
+        Leading Scientific Research Toward New Horizons
+      </h2>
+      <p data-ar="يضم مركز البحث والتطوير في جامعة سليمان الراجحي نخبة من الباحثين المتميزين الذين يعملون على مشاريع بحثية رائدة في مختلف المجالات العلمية." data-en="SRU's Research & Development Center houses elite researchers working on pioneering projects across scientific disciplines.">
+        SRU's Research & Development Center houses elite researchers working on pioneering projects across scientific disciplines.
+      </p>
       <a href="#research" class="btn btn-cyan" data-ar="استكشف الأبحاث" data-en="Explore Research">Explore Research</a>
     </div>
-    <div class="research-stats reveal" id="research-stats">
-      <!-- يُملأ من home.json -->
+    <div class="research-stats reveal">
+      <div class="r-stat">
+        <div class="r-num">350+</div>
+        <div class="r-label" data-ar="بحث منشور" data-en="Published Papers">Published Papers</div>
+      </div>
+      <div class="r-stat">
+        <div class="r-num">40+</div>
+        <div class="r-label" data-ar="مركز بحثي" data-en="Research Centers">Research Centers</div>
+      </div>
+      <div class="r-stat">
+        <div class="r-num">120+</div>
+        <div class="r-label" data-ar="شراكة دولية" data-en="Global Partnerships">Global Partnerships</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════
-     CALL TO ACTION
+     CALL TO ACTION — APPLY
 ═══════════════════════════════════════════ -->
 <section class="cta-section" id="apply">
   <div class="cta-pattern"></div>
   <div class="container cta-inner reveal">
     <div class="cta-text">
-      <h2 class="cta-title" data-ar="ابدأ رحلتك الأكاديمية اليوم" data-en="Start Your Academic Journey Today">Start Your Academic Journey Today</h2>
-      <p data-ar="انضم إلى مجتمع أكاديمي متميز." data-en="Join a distinguished academic community.">Join a distinguished academic community.</p>
+      <h2 class="cta-title" data-ar="ابدأ رحلتك الأكاديمية اليوم" data-en="Start Your Academic Journey Today">
+        Start Your Academic Journey Today
+      </h2>
+      <p data-ar="انضم إلى مجتمع أكاديمي متميز يجمع بين التفوق العلمي والقيم الإسلامية في بيئة تعليمية ملهمة." data-en="Join a distinguished academic community that unites scientific excellence and Islamic values in an inspiring learning environment.">
+        Join a distinguished academic community that unites scientific excellence and Islamic values in an inspiring learning environment.
+      </p>
     </div>
     <div class="cta-actions">
       <a href="admissions.html#apply" class="btn btn-cyan btn-lg" data-ar="تقديم الطلب الآن" data-en="Apply Now">Apply Now</a>
@@ -275,6 +444,8 @@
 ═══════════════════════════════════════════ -->
 <footer class="site-footer" id="contact">
   <div class="container footer-grid">
+
+    <!-- Brand -->
     <div class="footer-brand">
       <a href="index.html" class="footer-logo" aria-label="SRU">
         <svg width="40" height="40" viewBox="0 0 44 44" fill="none">
@@ -285,23 +456,30 @@
         </svg>
         <span>SRU</span>
       </a>
-      <p class="footer-tagline" data-ar="نبني قادة الغد." data-en="Building tomorrow's leaders.">Building tomorrow's leaders.</p>
+      <p class="footer-tagline" data-ar="نبني قادة الغد بتميز أكاديمي وقيم إسلامية راسخة." data-en="Building tomorrow's leaders with academic excellence and deep Islamic values.">
+        Building tomorrow's leaders with academic excellence and deep Islamic values.
+      </p>
       <div class="social-icons">
+        <!-- Twitter/X -->
         <a href="#" class="social-icon" aria-label="Twitter/X">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </a>
+        <!-- LinkedIn -->
         <a href="#" class="social-icon" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
+        <!-- YouTube -->
         <a href="#" class="social-icon" aria-label="YouTube">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
         </a>
+        <!-- Instagram -->
         <a href="#" class="social-icon" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
         </a>
       </div>
     </div>
 
+    <!-- Quick Links -->
     <div class="footer-col">
       <h4 class="footer-heading" data-ar="روابط سريعة" data-en="Quick Links">Quick Links</h4>
       <ul class="footer-links">
@@ -313,17 +491,19 @@
       </ul>
     </div>
 
+    <!-- Academics -->
     <div class="footer-col">
       <h4 class="footer-heading" data-ar="المجتمع والخريجون" data-en="Community & Alumni">Community & Alumni</h4>
       <ul class="footer-links">
-        <li><a href="alumni.html"              data-ar="شبكة الخريجين"       data-en="Alumni Network">Alumni Network</a></li>
-        <li><a href="alumni.html#career"       data-ar="خدمات التوظيف"       data-en="Career Services">Career Services</a></li>
-        <li><a href="community.html"           data-ar="المسؤولية المجتمعية" data-en="Community Responsibility">Community Responsibility</a></li>
-        <li><a href="community.html#volunteer" data-ar="برامج التطوع"        data-en="Volunteer Programs">Volunteer Programs</a></li>
-        <li><a href="community.html#events"    data-ar="الفعاليات"           data-en="Events">Events</a></li>
+        <li><a href="alumni.html"              data-ar="شبكة الخريجين"        data-en="Alumni Network">Alumni Network</a></li>
+        <li><a href="alumni.html#career"       data-ar="خدمات التوظيف"        data-en="Career Services">Career Services</a></li>
+        <li><a href="community.html"           data-ar="المسؤولية المجتمعية"  data-en="Community Responsibility">Community Responsibility</a></li>
+        <li><a href="community.html#volunteer" data-ar="برامج التطوع"         data-en="Volunteer Programs">Volunteer Programs</a></li>
+        <li><a href="community.html#events"    data-ar="الفعاليات"            data-en="Events">Events</a></li>
       </ul>
     </div>
 
+    <!-- Contact -->
     <div class="footer-col">
       <h4 class="footer-heading" data-ar="تواصل معنا" data-en="Contact Us">Contact Us</h4>
       <address class="footer-contact">
@@ -341,8 +521,10 @@
         </div>
       </address>
     </div>
+
   </div>
 
+  <!-- Footer Bottom -->
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">
       <p class="copyright" data-ar="© 2026 جامعة سليمان الراجحي. جميع الحقوق محفوظة." data-en="© 2026 Sulaiman Al-Rajhi University. All rights reserved.">
@@ -359,106 +541,5 @@
 
 <!-- Scripts -->
 <script src="js/main.js"></script>
-
-<!-- ═══════════════════════════════════════════
-     JSON LOADER — يقرأ home.json ويملأ الصفحة
-═══════════════════════════════════════════ -->
-<script>
-(function () {
-  // تحديد اللغة الحالية
-  function getLang() {
-    return document.documentElement.lang === 'ar' ? 'ar' : 'en';
-  }
-
-  // تحديث النص حسب اللغة
-  function t(obj, key) {
-    const lang = getLang();
-    return obj[key + '_' + lang] || obj[key + '_en'] || '';
-  }
-
-  // بناء بطاقة خبر
-  function buildNewsCard(item) {
-    const lang = getLang();
-    const imgContent = item.image
-      ? `<img src="${item.image}" alt="${t(item,'title')}" style="width:100%;height:100%;object-fit:cover;" />`
-      : `<span class="news-type">${t(item,'type')}</span>`;
-
-    return `
-      <article class="news-card reveal">
-        <div class="news-img" style="background:${item.color};">
-          ${imgContent}
-        </div>
-        <div class="news-body">
-          <div class="news-date">
-            <span class="date-day">${item.day}</span>
-            <span class="date-month">${t(item,'month')}</span>
-          </div>
-          <h3 class="news-title">${t(item,'title')}</h3>
-          <p class="news-excerpt">${t(item,'excerpt')}</p>
-          <a href="${item.url || '#'}" class="news-link">${lang === 'ar' ? 'اقرأ المزيد ←' : 'Read More →'}</a>
-        </div>
-      </article>`;
-  }
-
-  // بناء عنصر إحصائية
-  function buildStat(item, index, total) {
-    const lang = getLang();
-    const divider = index < total - 1
-      ? '<div class="stat-divider" aria-hidden="true"></div>'
-      : '';
-    return `
-      <div class="stat-item reveal">
-        <div class="stat-number" data-target="${item.value}" data-suffix="${item.suffix || ''}">${item.value}${item.suffix || ''}</div>
-        <div class="stat-label">${t(item,'label')}</div>
-      </div>${divider}`;
-  }
-
-  // تحميل home.json وملء الصفحة
-  fetch('admin/data/home.json')
-    .then(r => r.json())
-    .then(data => {
-
-      // ── Hero ──
-      const h = data.hero;
-      document.getElementById('hero-badge').textContent      = t(h, 'badge');
-      document.getElementById('hero-title').textContent      = t(h, 'title');
-      document.getElementById('hero-title-accent').textContent = t(h, 'title_accent');
-      document.getElementById('hero-sub').textContent        = t(h, 'subtitle');
-
-      // ── Stats ──
-      const sg = document.getElementById('stats-grid');
-      if (sg && data.stats) {
-        sg.innerHTML = data.stats.map((s, i) => buildStat(s, i, data.stats.length)).join('');
-      }
-
-      // ── About ──
-      const a = data.about;
-      document.getElementById('about-eyebrow').textContent = t(a, 'eyebrow');
-      document.getElementById('about-title').textContent   = t(a, 'title');
-      document.getElementById('about-body').textContent    = t(a, 'body');
-
-      // ── News ──
-      const ng = document.getElementById('news-grid');
-      if (ng && data.news) {
-        ng.innerHTML = data.news.map(buildNewsCard).join('');
-      }
-
-      // ── Research ──
-      const r = data.research;
-      document.getElementById('research-title').textContent = t(r, 'title');
-      document.getElementById('research-body').textContent  = t(r, 'body');
-      const rs = document.getElementById('research-stats');
-      if (rs && r.stats) {
-        rs.innerHTML = r.stats.map(s => `
-          <div class="r-stat">
-            <div class="r-num">${s.value}</div>
-            <div class="r-label">${t(s,'label')}</div>
-          </div>`).join('');
-      }
-    })
-    .catch(err => console.warn('home.json load failed:', err));
-})();
-</script>
-
 </body>
 </html>
