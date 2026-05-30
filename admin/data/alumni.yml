@@ -1,0 +1,199 @@
+page: alumni
+
+hero:
+  breadcrumb: "Home > Alumni"
+  title: "Welcome Back, SRU Alumni"
+  description: "You are part of a proud and growing community of over 10,000 graduates making a difference across every field and every corner of the Kingdom and beyond."
+  buttons:
+    - label: "Join Alumni Network"
+      style: primary
+    - label: "Alumni Portal"
+      style: outline
+
+navigation_tabs:
+  - label: "Alumni Network"
+    active: true
+  - label: "Success Stories"
+  - label: "Career Services"
+  - label: "Events"
+  - label: "Give Back"
+
+stats:
+  - value: "10,000+"
+    label: "Registered Alumni"
+  - value: "45+"
+    label: "Countries Represented"
+  - value: "98%"
+    label: "Employment Rate"
+  - value: "500+"
+    label: "Alumni Events Held"
+
+alumni_network:
+  section_label: "ALUMNI NETWORK"
+  title: "Stay Connected with Your SRU Family"
+  description: "The SRU Alumni Network is your lifelong connection to the university, your peers, and a powerful professional community spanning every industry."
+  benefits:
+    - icon: "network"
+      title: "Professional Networking"
+      description: "Connect with fellow graduates across industries through our exclusive alumni directory and networking events."
+    - icon: "briefcase"
+      title: "Career Opportunities"
+      description: "Access job postings, referrals, and career advancement opportunities shared exclusively within the alumni network."
+    - icon: "graduation"
+      title: "Continuing Education"
+      description: "Exclusive discounts on postgraduate programs, professional development courses, and executive education at SRU."
+    - icon: "library"
+      title: "Library & Resource Access"
+      description: "Retain access to SRU's digital library and academic databases for continued learning and research."
+    - icon: "calendar"
+      title: "Alumni Events"
+      description: "Invitations to reunions, industry forums, guest lectures, and exclusive alumni-only gatherings."
+    - icon: "mentor"
+      title: "Mentorship Program"
+      description: "Give back by mentoring current students, or connect with senior alumni for your own career guidance."
+  cta:
+    label: "Register in the Network"
+    style: primary
+
+success_stories:
+  section_label: "SUCCESS STORIES"
+  title: "SRU Graduates Leading Change"
+  description: "Our alumni are making exceptional contributions across medicine, engineering, business, technology, and public service."
+  graduates:
+    - name: "Dr. Sarah Al-Mansour"
+      field: "Medicine Graduate · 2020"
+      role: "Founder, MedTech Startup"
+      quote: "SRU gave me the scientific foundation and human values that empowered me to found my medical startup, now serving patients across three regions."
+      achievement: "Forbes 30 Under 30 — Healthcare"
+    - name: "Eng. Khalid Al-Harbi"
+      field: "Engineering Graduate · 2018"
+      role: "CEO, Green Energy Solutions"
+      quote: "The engineering education at SRU was the bedrock of my renewable energy projects, which today employ 300+ people across the Kingdom."
+      achievement: "Saudi Green Initiative Award 2024"
+    - name: "Noura Al-Otaibi"
+      field: "Business Graduate · 2019"
+      role: "Investment Portfolio Manager"
+      quote: "SRU taught me to think like an entrepreneur. Today I manage a 50M SAR investment portfolio and mentor the next generation of business leaders."
+      achievement: "Top 40 Under 40 — Saudi Business"
+    - name: "Dr. Faisal Al-Zahrani"
+      field: "Computer Science Graduate · 2017"
+      role: "AI Research Lead, KACST"
+      quote: "The research culture at SRU inspired me to pursue AI. My work today contributes directly to national digital transformation goals."
+      achievement: "National Innovation Prize 2025"
+
+career_services:
+  section_label: "CAREER SERVICES"
+  title: "Your Career Journey Continues at SRU"
+  description: "SRU's Career Services Centre supports alumni at every stage of their professional journey — from first job to executive leadership."
+  services:
+    - icon: "search"
+      title: "Job Board"
+      description: "Exclusive access to curated job postings from SRU's network of 200+ employer partners across all industries."
+      cta: "Browse Jobs"
+    - icon: "cv"
+      title: "CV & Profile Review"
+      description: "Free CV review and LinkedIn profile optimisation sessions with career advisors."
+      cta: "Book Session"
+    - icon: "handshake"
+      title: "Employer Connections"
+      description: "Direct introductions to hiring managers and HR leads at top Saudi and international companies."
+      cta: "Connect Now"
+    - icon: "chart"
+      title: "Career Coaching"
+      description: "One-on-one career coaching sessions covering career transitions, promotions, and leadership development."
+      cta: "Get Coaching"
+    - icon: "certificate"
+      title: "Professional Certifications"
+      description: "Subsidised access to professional certification programs in partnership with global accreditation bodies."
+      cta: "View Certifications"
+    - icon: "startup"
+      title: "Entrepreneurship Support"
+      description: "Access to SRU's incubator, seed funding connections, and mentorship for alumni launching startups."
+      cta: "Start Your Venture"
+
+events:
+  section_label: "ALUMNI EVENTS"
+  title: "Come Back, Reconnect, Inspire"
+  description: "From annual reunions to industry-specific forums, SRU hosts a rich calendar of alumni events throughout the year."
+  featured_events:
+    - month: "Oct 2026"
+      title: "Annual Alumni Reunion"
+      description: "The flagship alumni gathering bringing together graduates from all years for networking, celebration, and reconnection."
+      location: "SRU Main Campus"
+      type: "Reunion"
+    - month: "Nov 2026"
+      title: "Alumni Career Forum"
+      description: "A full-day career and professional development forum featuring alumni speakers, workshops, and employer exhibitions."
+      location: "Business & Innovation Center"
+      type: "Career"
+    - month: "Jan 2027"
+      title: "Alumni Mentorship Launch"
+      description: "Kick-off event for the annual alumni mentorship program, matching senior graduates with current final-year students."
+      location: "Virtual & On-Campus"
+      type: "Mentorship"
+    - month: "Mar 2027"
+      title: "Entrepreneurship Showcase"
+      description: "Alumni entrepreneurs present their ventures to investors, partners, and the wider SRU community."
+      location: "Innovation Lab, University"
+      type: "Entrepreneurship"
+
+give_back:
+  section_label: "GIVE BACK"
+  title: "Shape the Next Generation"
+  description: "Your experience and success are invaluable to the students who walk the same halls you once did. Give back to SRU and help build the leaders of tomorrow."
+  ways_to_give:
+    - icon: "mentor"
+      title: "Become a Mentor"
+      description: "Volunteer as a mentor for current students, sharing your career journey and professional insights."
+      cta: "Apply to Mentor"
+    - icon: "lecture"
+      title: "Guest Lecturer"
+      description: "Share your expertise by delivering a guest lecture or workshop to students in your field."
+      cta: "Propose a Session"
+    - icon: "scholarship"
+      title: "Fund a Scholarship"
+      description: "Contribute to the SRU scholarship fund and directly enable a deserving student to pursue their education."
+      cta: "Donate Now"
+    - icon: "internship"
+      title: "Offer Internships"
+      description: "Partner with SRU to offer internship and training opportunities to current students at your organisation."
+      cta: "Partner With Us"
+
+cta:
+  title: "Stay Connected with SRU"
+  description: "Register in the alumni network today and stay part of the SRU family — wherever your journey takes you."
+  buttons:
+    - label: "Join Alumni Network"
+      style: primary
+    - label: "Contact Alumni Office"
+      style: outline
+
+footer:
+  logo: "SRU"
+  tagline: "Building tomorrow's leaders with academic excellence and deep Islamic values."
+  social_links:
+    - "X"
+    - "LinkedIn"
+    - "YouTube"
+    - "Instagram"
+  columns:
+    - title: "ALUMNI"
+      links:
+        - "Alumni Network"
+        - "Success Stories"
+        - "Career Services"
+        - "Events"
+        - "Give Back"
+    - title: "QUICK LINKS"
+      links:
+        - "Home"
+        - "Admissions"
+        - "Student Journey"
+        - "Campus Life"
+    - title: "CONTACT US"
+      email: "alumni@sru.edu.sa"
+      phone: "+966 16 583 0500"
+  copyright: "© 2026 Sulaiman Al-Rajhi University. All rights reserved."
+  legal_links:
+    - "Privacy Policy"
+    - "Terms of Use"

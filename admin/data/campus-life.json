@@ -1,0 +1,241 @@
+{
+  "hero": {
+    "badge": "Campus Life",
+    "title": "Discover Your Campus Life at SRU",
+    "subtitle": "Campus life at SRU extends far beyond the classroom — diverse clubs, cultural and sports events, volunteer programs, and comprehensive support every step of the way.",
+    "buttons": [
+      { "label": "Explore Clubs", "style": "primary" ,
+  "cta": {
+    "title": "Become Part of Our University Community",
+    "description": "Campus life at SRU isn't just about studying — it's a complete experience that shapes your character and opens your future horizons.",
+    "buttons": [
+      { "label": "Begin Your Journey", "style": "primary" },
+      { "label": "Explore Services", "style": "secondary" }
+    ]
+  },
+  "footer": {
+    "tagline": "Building tomorrow's leaders with academic excellence and deep Islamic values.",
+    "columns": [
+      {
+        "title": "CAMPUS LIFE",
+        "links": ["Student Clubs", "Volunteering", "Events", "Student Support"]
+      },
+      {
+        "title": "QUICK LINKS",
+        "links": ["Home", "Admissions", "Student Journey", "Services"]
+      },
+      {
+        "title": "CONTACT US",
+        "email": "studentlife@sru.edu.sa",
+        "phone": "+966 16 583 0200"
+      }
+    ],
+    "copyright": "© 2026 Sulaiman Al-Rajhi University. All rights reserved.",
+    "legal": ["Privacy Policy", "Terms of Use"]
+  }
+},
+      { "label": "Student Support", "style": "outline" }
+    ]
+  },
+
+  "highlights": [
+    { "category": "CAMPUS LIFE", "stat": "An inspiring environment that grows your creativity and sharpens your skills" },
+    { "category": "CLUBS", "stat": "40+ Student Clubs" },
+    { "category": "VOLUNTEERING", "stat": "5,000+ volunteer hours yearly" },
+    { "category": "SPORTS", "stat": "15 Sports Facilities" },
+    { "category": "EVENTS", "stat": "100+ events per year" }
+  ],
+
+  "clubs": {
+    "section_label": "Student Clubs",
+    "title": "Discover Your Passion — Join a Club",
+    "subtitle": "The SRU campus hosts 40+ student clubs across diverse fields. Find a community that shares your interests.",
+    "categories": ["All 12", "Academic 4", "Sports 3", "Arts & Culture 3", "Technology 2"],
+    "list": [
+      {
+        "category": "ACADEMIC",
+        "name": "Scientific Research Club",
+        "description": "A platform for undergraduate and postgraduate students to collaborate on research projects and publish in scientific journals.",
+        "members": 142
+      },
+      {
+        "category": "ACADEMIC",
+        "name": "Languages & Translation Club",
+        "description": "Learn new languages, practise translation, and connect with students worldwide in a fun educational environment.",
+        "members": 218
+      },
+      {
+        "category": "ACADEMIC",
+        "name": "Entrepreneurship Club",
+        "description": "Develop entrepreneurial skills and build networks with founders and investors through workshops and competitions.",
+        "members": 315
+      },
+      {
+        "category": "ACADEMIC",
+        "name": "Medicine & Health Club",
+        "description": "Brings together medical and health sciences students to share knowledge and organise health awareness campaigns on campus and in the community.",
+        "members": 274
+      },
+      {
+        "category": "SPORTS",
+        "name": "Football Club",
+        "description": "The university team competes in the Saudi Universities League with distinguished results. Daily training under professional coaches.",
+        "members": 89
+      },
+      {
+        "category": "SPORTS",
+        "name": "Swimming & Fitness Club",
+        "description": "Achieve complete physical fitness in our Olympic-size pool and fully-equipped gym with the latest facilities.",
+        "members": 163
+      },
+      {
+        "category": "SPORTS",
+        "name": "Tennis & Individual Sports Club",
+        "description": "For tennis, badminton and athletics enthusiasts — modern courts and specialist coaches to take your game to the next level.",
+        "members": 97
+      },
+      {
+        "category": "ARTS & CULTURE",
+        "name": "Theatre & Arts Club",
+        "description": "Create, express, and inspire — a club uniting lovers of visual arts, theatre, and photography in an inspiring creative space.",
+        "members": 187
+      },
+      {
+        "category": "ARTS & CULTURE",
+        "name": "Music & Nasheed Club",
+        "description": "The Music Club brings together talented students for nasheed performances and purposeful music at university events.",
+        "members": 124
+      },
+      {
+        "category": "ARTS & CULTURE",
+        "name": "Media & Production Club",
+        "description": "Learn digital content creation, filming, editing, and broadcasting in a studio equipped with the latest technology.",
+        "members": 209
+      },
+      {
+        "category": "TECHNOLOGY",
+        "name": "Programming & Dev Club",
+        "description": "For programmers and developers — hackathons, open-source projects, and workshops in the latest languages and technologies.",
+        "members": 392
+      },
+      {
+        "category": "TECHNOLOGY",
+        "name": "AI & Robotics Club",
+        "description": "Explore the world of AI and learn to design and program robots in specialised labs with field experts.",
+        "members": 278
+      }
+    ],
+    "cta": "View All Clubs (40+)"
+  },
+
+  "volunteering": {
+    "section_label": "COMMUNITY RESPONSIBILITY DEPT.",
+    "title": "Giving Makes the Difference",
+    "description": "SRU believes in the student's role as an active community contributor. Through the Community Responsibility Department, our students participate in hundreds of volunteer initiatives each year serving the surrounding community.",
+    "stats": [
+      { "value": "5,000+", "label": "VOLUNTEER HOURS/YR" },
+      { "value": "120+", "label": "COMMUNITY INITIATIVES" },
+      { "value": "30+", "label": "COMMUNITY PARTNERSHIPS" }
+    ],
+    "cta": "Register as Volunteer",
+    "initiatives": [
+      {
+        "title": "Voluntary Health Campaigns",
+        "description": "Free screenings and health awareness in neighbouring communities in partnership with the College of Medicine."
+      },
+      {
+        "title": "Education & Literacy Programs",
+        "description": "Educational programs and literacy teaching for those in need in surrounding areas."
+      },
+      {
+        "title": "Field Visits & Community Projects",
+        "description": "Visiting social welfare centres and implementing environmental and infrastructure development projects."
+      },
+      {
+        "title": "New Student Mentoring Program",
+        "description": "Senior student volunteers help new students integrate and adapt to the university environment."
+      },
+      {
+        "title": "Environment & Sustainability Initiatives",
+        "description": "Tree-planting drives, public area clean-up campaigns, and community awareness about environmental conservation."
+      }
+    ]
+  },
+
+  "events": {
+    "section_label": "EVENTS & ACTIVITIES",
+    "title": "Unforgettable Events Throughout the Year",
+    "subtitle": "Participate in 100+ sports, cultural, and recreational events organised annually on and off campus.",
+    "tabs": ["Sports Events", "Cultural Events", "Academic Events"],
+    "sports_events": [
+      {
+        "day": "14",
+        "month": "JUN",
+        "category": "SPORTS",
+        "title": "Inter-College Football Championship",
+        "description": "Annual tournament bringing together university college teams in fair competition with high sportsmanship.",
+        "location": "Main Football Pitch",
+        "duration": "3 days",
+        "spots": "150 spots left"
+      },
+      {
+        "day": "28",
+        "month": "JUN",
+        "category": "SPORTS",
+        "title": "Annual University Swimming Championship",
+        "description": "University-level swimming competition at the Olympic pool — open to all students.",
+        "location": "Olympic Pool",
+        "duration": "1 day",
+        "spots": "80 spots left"
+      },
+      {
+        "day": "10",
+        "month": "JUL",
+        "category": "SPORTS",
+        "title": "University Sports Day",
+        "description": "An open day gathering students in team and individual games in a festive atmosphere with prizes and certificates.",
+        "location": "Sports Complex",
+        "duration": "1 day",
+        "spots": "Open to all"
+      }
+    ]
+  },
+
+  "student_support": {
+    "section_label": "STUDENT SUPPORT",
+    "title": "We Are With You Every Step",
+    "subtitle": "SRU's Student Support Centre provides comprehensive academic advising and psychological support services.",
+    "services": [
+      {
+        "title": "Academic Counselling",
+        "description": "Specialist academic guidance to help you excel in your educational journey",
+        "items": [
+          { "label": "Academic planning & pathway selection", "status": "Available" },
+          { "label": "Course registration & major selection", "status": "Available" },
+          { "label": "Support for students with special circumstances", "status": "Available" },
+          { "label": "Graduate studies & scholarship prep", "status": "Available" },
+          { "label": "Study skills & research workshops", "status": "Book ahead" }
+        ],
+        "buttons": ["Book Appointment", "Learn More"]
+      },
+      {
+        "title": "Psychological Counselling",
+        "description": "A safe, confidential environment to support you emotionally throughout your university journey",
+        "items": [
+          { "label": "Private one-on-one counselling", "status": "Confidential" },
+          { "label": "Academic stress & anxiety management", "status": "Available" },
+          { "label": "Student peer support groups", "status": "Available" },
+          { "label": "Self-development & personality workshops", "status": "Weekly" },
+          { "label": "24/7 psychological emergency support", "status": "Emergency" }
+        ],
+        "buttons": ["Book a Session", "Learn More"]
+      }
+    ],
+    "stats": [
+      { "value": "25+", "label": "Academic Advisors" },
+      { "value": "10+", "label": "Specialist Counsellors" },
+      { "value": "24/7", "label": "Emergency Support" },
+      { "value": "100%", "label": "Full Confidentiality" }
+    ]
+  }
+}

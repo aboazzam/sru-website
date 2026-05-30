@@ -1,0 +1,167 @@
+{
+  "hero": {
+    "badge": "ADMISSIONS 2026",
+    "title": "Begin Your Journey at SRU",
+    "subtitle": "Your path to academic excellence starts here. Discover our straightforward admissions process designed to welcome outstanding students.",
+    "buttons": [
+      { "label": "Apply Now", "type": "primary" },
+      { "label": "Download Guide", "type": "secondary" }
+    ],
+    "stats": [
+      { "value": "2,500+", "label": "Students Enrolled" },
+      { "value": "80+", "label": "Academic Programs" },
+      { "value": "14", "label": "Days Response Time" },
+      { "value": "98%", "label": "Satisfaction Rate" }
+    ]
+  },
+
+  "steps": {
+    "badge": "HOW TO APPLY",
+    "title": "Your Path to Admission",
+    "subtitle": "Follow these simple steps to complete your application and secure your place at SRU.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Create Your Account",
+        "description": "Register on the SRU Admissions Portal with your email address and personal details to get started."
+      },
+      {
+        "number": "02",
+        "title": "Choose Your Program",
+        "description": "Browse our 80+ academic programs and select the college and major that aligns with your goals."
+      },
+      {
+        "number": "03",
+        "title": "Submit Documents",
+        "description": "Upload all required documents including transcripts, certificates, and identification through the secure portal."
+      },
+      {
+        "number": "04",
+        "title": "Receive Decision",
+        "description": "Our admissions team will review your application and notify you within 14 business days."
+      }
+    ]
+  },
+
+  "documents": {
+    "badge": "REQUIRED DOCUMENTS",
+    "title": "Documents Checklist",
+    "subtitle": "Prepare the following documents before starting your application to ensure a smooth process.",
+    "categories": [
+      {
+        "title": "Academic Documents",
+        "items": [
+          { "label": "High School Certificate (Tawjihi / General Secondary)", "status": "Required" },
+          { "label": "Official Academic Transcripts", "status": "Required" },
+          { "label": "Standardised Test Scores (Qiyas / SAT)", "status": "Required" },
+          { "label": "Previous University Transcripts (Transfer students)", "status": "If applicable" }
+        ]
+      },
+      {
+        "title": "Personal Documents",
+        "items": [
+          { "label": "National ID (Saudi nationals)", "status": "Required" },
+          { "label": "Passport (International students)", "status": "Required" },
+          { "label": "Personal Photograph (passport size)", "status": "Required" },
+          { "label": "Guardian Consent Form (under 18)", "status": "If applicable" }
+        ]
+      },
+      {
+        "title": "Language Certificates",
+        "items": [
+          { "label": "English Language Certificate (IELTS / TOEFL)", "status": "Required" },
+          { "label": "Arabic Language Certificate (non-native speakers)", "status": "Required" },
+          { "label": "Additional Language Certificates (French, German...)", "status": "Optional" }
+        ]
+      },
+      {
+        "title": "Health Documents",
+        "items": [
+          { "label": "Comprehensive Medical Examination Certificate", "status": "Required" },
+          { "label": "Mandatory Vaccination Record", "status": "Required" },
+          { "label": "Medical Report for Special Conditions (if applicable)", "status": "Optional" }
+        ]
+      }
+    ]
+  },
+
+  "dates": {
+    "badge": "KEY DATES",
+    "title": "Admission Dates 2026",
+    "subtitle": "Ensure you adhere to the following dates to guarantee your application is processed in time.",
+    "events": [
+      { "event": "Admissions Portal Opens — Semester 1", "date": "01 Jun 2026", "semester": "Semester 1", "status": "Open" },
+      { "event": "Application Submission Deadline", "date": "30 Jun 2026", "semester": "Semester 1", "status": "Soon" },
+      { "event": "Preliminary Admission Results Announced", "date": "15 Jul 2026", "semester": "Semester 1", "status": "Upcoming" },
+      { "event": "Acceptance Confirmation Deadline", "date": "25 Jul 2026", "semester": "Semester 1", "status": "Upcoming" },
+      { "event": "New Student Orientation Week", "date": "24–28 Aug 2026", "semester": "Semester 1", "status": "Upcoming" },
+      { "event": "Semester 1 Classes Begin", "date": "01 Sep 2026", "semester": "Semester 1", "status": "Upcoming" },
+      { "event": "Admissions Portal Opens — Semester 2", "date": "01 Nov 2026", "semester": "Semester 2", "status": "Upcoming" },
+      { "event": "Semester 2 Application Deadline", "date": "30 Nov 2026", "semester": "Semester 2", "status": "Upcoming" }
+    ]
+  },
+
+  "scholarships": {
+    "badge": "FINANCIAL AID",
+    "title": "Scholarships & Financial Aid",
+    "subtitle": "We believe academic excellence should never be limited by finances. SRU offers a comprehensive package of scholarships and financial support.",
+    "items": [
+      {
+        "title": "Academic Excellence Scholarship",
+        "coverage": "Coverage: 100% of tuition fees",
+        "description": "Awarded to outstanding students with excellent high school GPA and distinguished scores on admission tests.",
+        "criteria": ["GPA 95%+", "Qiyas 90+", "Saudi National"]
+      },
+      {
+        "title": "Financial Need Grant",
+        "coverage": "Coverage: up to 75% of tuition",
+        "description": "A grant dedicated to outstanding students facing financial hardship, ensuring merit-worthy students can access higher education.",
+        "criteria": ["Low-income family", "GPA 80%+", "Special request"]
+      },
+      {
+        "title": "Community Service Award",
+        "coverage": "Coverage: 50% of tuition fees",
+        "description": "Honours students who embody a spirit of giving and volunteering, contributing actively to serving their communities.",
+        "criteria": ["200+ volunteer hours", "Community recommendation"]
+      }
+    ],
+    "button": "View All Scholarships"
+  },
+
+  "cta": {
+    "title": "Ready to Achieve Your Academic Dream?",
+    "subtitle": "Submit your application now through our secure online portal and begin your academic journey with SRU. The process is easy and fast — apply in under 30 minutes.",
+    "buttons": [
+      { "label": "Apply via Portal →", "type": "primary" },
+      { "label": "Explore Student Journey", "type": "secondary" }
+    ],
+    "badges": [
+      "SSL Secured & Encrypted",
+      "Response within 14 business days",
+      "24/7 Support Available"
+    ]
+  },
+
+  "footer": {
+    "tagline": "Building tomorrow's leaders with academic excellence and deep Islamic values.",
+    "columns": [
+      {
+        "title": "QUICK LINKS",
+        "links": ["Home", "Student Journey", "Admissions", "Academic Programs"]
+      },
+      {
+        "title": "ADMISSIONS OFFICE",
+        "links": ["How to Apply", "Required Documents", "Key Dates", "Scholarships", "Apply Now"]
+      },
+      {
+        "title": "CONTACT ADMISSIONS",
+        "items": [
+          "admissions@sru.edu.sa",
+          "Hotline: +966 16 583 0100",
+          "Hours: Sun–Thu, 8am–4pm"
+        ]
+      }
+    ],
+    "copyright": "© 2026 Sulaiman Al-Rajhi University. All rights reserved."
+  }
+}

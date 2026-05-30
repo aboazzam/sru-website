@@ -1,0 +1,208 @@
+page: campus-life
+
+hero:
+  breadcrumb: "Home > Campus Life"
+  title: "Life at SRU — Beyond the Classroom"
+  description: "Discover a vibrant campus community where academic excellence meets personal growth, cultural enrichment, and lifelong friendships."
+  button_primary:
+    label: "Explore Campus"
+    style: primary
+  button_secondary:
+    label: "Student Clubs"
+    style: outline
+
+navigation_tabs:
+  - label: "Campus Overview"
+    active: true
+  - label: "Student Clubs"
+  - label: "Sports & Wellness"
+  - label: "Dining & Facilities"
+  - label: "Events Calendar"
+
+stats:
+  - value: "50+"
+    label: "Student Clubs"
+  - value: "20+"
+    label: "Sports Facilities"
+  - value: "15,000+"
+    label: "Students on Campus"
+  - value: "300+"
+    label: "Annual Events"
+
+campus_overview:
+  section_label: "CAMPUS OVERVIEW"
+  title: "A World-Class Campus in the Heart of Al-Qassim"
+  description: "Spread across a modern, fully equipped campus in Al-Bukayriyah, SRU offers state-of-the-art facilities designed to support every aspect of student life — academic, social, spiritual, and recreational."
+  highlights:
+    - icon: "building"
+      title: "Modern Facilities"
+      description: "Cutting-edge labs, lecture halls, and research centres built to international standards."
+    - icon: "wifi"
+      title: "Smart Campus"
+      description: "Full campus Wi-Fi coverage, smart classrooms, and a fully integrated digital infrastructure."
+    - icon: "mosque"
+      title: "Spiritual Environment"
+      description: "Multiple mosques and prayer facilities fostering a strong Islamic campus culture."
+    - icon: "tree"
+      title: "Green Spaces"
+      description: "Landscaped gardens and open spaces providing a calm and inspiring environment."
+
+student_clubs:
+  section_label: "STUDENT CLUBS & ACTIVITIES"
+  title: "Find Your Community"
+  description: "With over 50 active student clubs, there is a place for every interest — from technology and entrepreneurship to arts, culture, and community service."
+  categories:
+    - category: "Academic & Professional"
+      clubs:
+        - "Engineering Society"
+        - "Medical Students Association"
+        - "Business & Entrepreneurship Club"
+        - "Computer Science Society"
+        - "Debate & Public Speaking Club"
+    - category: "Culture & Arts"
+      clubs:
+        - "Photography Club"
+        - "Creative Writing Society"
+        - "Heritage & Culture Club"
+        - "Drama & Theatre Group"
+        - "Music & Nasheed Club"
+    - category: "Community & Volunteering"
+      clubs:
+        - "Community Service Club"
+        - "Environmental Awareness Society"
+        - "Blood Donation Initiative"
+        - "Peer Mentoring Program"
+        - "International Students Society"
+    - category: "Sports & Wellness"
+      clubs:
+        - "Football Club"
+        - "Basketball Team"
+        - "Swimming Club"
+        - "Martial Arts Society"
+        - "Fitness & Wellness Club"
+  cta:
+    label: "Join a Club"
+    style: primary
+
+sports_wellness:
+  section_label: "SPORTS & WELLNESS"
+  title: "Stay Active, Stay Balanced"
+  description: "SRU's world-class sports facilities are open to all students, supporting physical health and mental wellbeing throughout the academic year."
+  facilities:
+    - icon: "football"
+      title: "Football Stadium"
+      description: "Full-size FIFA-standard pitch with floodlights and spectator seating."
+    - icon: "swimming"
+      title: "Olympic Swimming Pool"
+      description: "Indoor heated pool available for recreational swimming and competitive training."
+    - icon: "gym"
+      title: "Fitness Centre"
+      description: "Fully equipped gym with modern cardio and strength training equipment."
+    - icon: "basketball"
+      title: "Indoor Sports Hall"
+      description: "Multi-purpose hall for basketball, volleyball, badminton, and indoor football."
+    - icon: "track"
+      title: "Athletics Track"
+      description: "400m all-weather running track surrounding the main football pitch."
+    - icon: "wellness"
+      title: "Wellness & Counselling Centre"
+      description: "Professional mental health support and wellness programs for all students."
+
+dining_facilities:
+  section_label: "DINING & FACILITIES"
+  title: "Everything You Need, Right on Campus"
+  description: "From dining halls and cafés to libraries and innovation labs — SRU's campus has everything to make your university experience comfortable and productive."
+  facilities:
+    - icon: "dining"
+      title: "Main Dining Hall"
+      description: "Serving hundreds of students daily with a diverse menu of nutritious, halal meals."
+      hours: "7:00 AM – 10:00 PM"
+    - icon: "cafe"
+      title: "Campus Cafés"
+      description: "Multiple café outlets across campus offering light meals, snacks, and beverages."
+      hours: "8:00 AM – 11:00 PM"
+    - icon: "library"
+      title: "Central Library"
+      description: "A vast resource centre with over 100,000 physical volumes and digital access to 500,000+ resources."
+      hours: "Open 24/7"
+    - icon: "lab"
+      title: "Innovation & Maker Lab"
+      description: "Equipped with 3D printers, electronics workstations, and prototyping tools for student projects."
+      hours: "8:00 AM – 10:00 PM"
+    - icon: "medical"
+      title: "Student Health Clinic"
+      description: "On-campus medical clinic providing primary healthcare services to all students free of charge."
+      hours: "8:00 AM – 8:00 PM"
+    - icon: "store"
+      title: "Campus Store"
+      description: "Stationery, university merchandise, electronics accessories, and daily essentials."
+      hours: "9:00 AM – 9:00 PM"
+
+events_calendar:
+  section_label: "EVENTS CALENDAR"
+  title: "Always Something Happening at SRU"
+  description: "From academic conferences and cultural festivals to sports tournaments and career fairs — campus life at SRU is never dull."
+  featured_events:
+    - month: "Sep"
+      title: "Welcome Week"
+      description: "Orientation activities, club fairs, and social events welcoming new and returning students."
+      type: "Social"
+    - month: "Nov"
+      title: "SRU Innovation Summit"
+      description: "Annual showcase of student research, startups, and technology projects."
+      type: "Academic"
+    - month: "Jan"
+      title: "Inter-College Sports Championship"
+      description: "Competitive sports tournament across all colleges with prizes and recognition."
+      type: "Sports"
+    - month: "Mar"
+      title: "Cultural Heritage Week"
+      description: "Celebrating Saudi and Islamic heritage through exhibitions, performances, and workshops."
+      type: "Culture"
+    - month: "May"
+      title: "Career & Internship Fair"
+      description: "Connecting students with top employers, internship providers, and graduate recruiters."
+      type: "Career"
+    - month: "Jun"
+      title: "Graduation Ceremony"
+      description: "The annual celebration honouring graduating students and their families."
+      type: "Ceremony"
+
+cta:
+  title: "Experience Campus Life at SRU"
+  description: "Visit our campus, meet our students, and see for yourself why SRU is the destination of choice for ambitious learners."
+  buttons:
+    - label: "Book a Campus Tour"
+      style: primary
+    - label: "Apply Now"
+      style: outline
+
+footer:
+  logo: "SRU"
+  tagline: "Building tomorrow's leaders with academic excellence and deep Islamic values."
+  social_links:
+    - "X"
+    - "LinkedIn"
+    - "YouTube"
+    - "Instagram"
+  columns:
+    - title: "CAMPUS LIFE"
+      links:
+        - "Campus Overview"
+        - "Student Clubs"
+        - "Sports & Wellness"
+        - "Dining & Facilities"
+        - "Events Calendar"
+    - title: "QUICK LINKS"
+      links:
+        - "Home"
+        - "Admissions"
+        - "Services"
+        - "Digital Experience"
+    - title: "CONTACT US"
+      email: "campuslife@sru.edu.sa"
+      phone: "+966 16 583 0400"
+  copyright: "© 2026 Sulaiman Al-Rajhi University. All rights reserved."
+  legal_links:
+    - "Privacy Policy"
+    - "Terms of Use"

@@ -1,0 +1,73 @@
+site:
+  name: Sulaiman Al-Rajhi University
+  short_name: SRU
+  url: https://www.sru.edu.sa
+  language: en
+  direction: ltr
+  email: info@sru.edu.sa
+  phone: "+966 16 583 0000"
+  address: Al-Bukayriyah, Al-Qassim, Saudi Arabia
+
+theme:
+  primary_color: "#1a5c3a"
+  secondary_color: "#c9a84c"
+  font_primary: "Inter"
+  font_arabic: "Tajawal"
+
+social:
+  twitter: https://twitter.com/SRU
+  linkedin: https://linkedin.com/school/SRU
+  youtube: https://youtube.com/@SRU
+  instagram: https://instagram.com/SRU
+
+data_path: admin/data/
+
+pages:
+  - id: home
+    file: home.yml
+    path: /
+    title: Home
+
+  - id: admissions
+    file: admissions.yml
+    path: /admissions
+    title: Admissions
+
+  - id: student-journey
+    file: student-journey.yml
+    path: /student-journey
+    title: Student Journey
+
+  - id: campus-life
+    file: campus-life.yml
+    path: /campus-life
+    title: Campus Life
+
+  - id: services
+    file: services.yml
+    path: /services
+    title: Student Services
+
+  - id: digital-experience
+    file: digital-experience.yml
+    path: /digital-experience
+    title: Digital Experience
+
+  - id: community
+    file: community.yml
+    path: /community
+    title: Community
+
+  - id: alumni
+    file: alumni.yml
+    path: /alumni
+    title: Alumni
+
+footer:
+  logo: SRU
+  tagline: "Building tomorrow's leaders with academic excellence and deep Islamic values."
+  copyright: "© 2026 Sulaiman Al-Rajhi University. All rights reserved."
+  legal_links:
+    - Privacy Policy
+    - Terms of Use
+    - Accessibility

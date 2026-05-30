@@ -1,0 +1,257 @@
+{
+  "page": "alumni",
+  "hero": {
+    "breadcrumb": ["Home", "Alumni"],
+    "title": "SRU Alumni — Leaders Changing the World",
+    "description": "Your studies are complete and your impact journey begins — the SRU alumni network spans more than 40 countries, and every graduate is an ambassador of the excellence and values you were equipped with at your university.",
+    "buttons": [
+      { "label": "Log In to Portal", "variant": "outline", "action": "login" },
+      { "label": "Explore Network", "variant": "primary", "action": "explore" }
+    ],
+    "background": "gradient-purple"
+  },
+  "navigation_tabs": [
+    { "label": "Network", "anchor": "network", "active": true },
+    { "label": "Career Services", "anchor": "career-services" },
+    { "label": "Continuing Ed.", "anchor": "continuing-education" },
+    { "label": "Benefits", "anchor": "benefits" },
+    { "label": "Success Stories", "anchor": "success-stories" },
+    { "label": "Alumni Portal", "anchor": "alumni-portal" }
+  ],
+  "network": {
+    "section_id": "network",
+    "tag": "ALUMNI NETWORK",
+    "title": "More Than 15,000 Graduates Worldwide",
+    "description": "SRU graduates leave their mark in medicine, engineering, business, education, and technology across Saudi Arabia and beyond. Join this powerful network and be part of a community that makes a difference.",
+    "stats": [
+      { "value": "15,000+", "label": "Graduates Worldwide" },
+      { "value": "40+", "label": "Countries" },
+      { "value": "92%", "label": "Employed within 6 months" },
+      { "value": "500+", "label": "Partner Employers" }
+    ],
+    "cta_banner": {
+      "title": "Your relationship with SRU doesn't end — it begins again",
+      "description": "Join the alumni network, access the latest career opportunities, and stay connected with your university and peers.",
+      "buttons": [
+        { "label": "Join Now", "variant": "primary" },
+        { "label": "Contact Us", "variant": "outline" }
+      ]
+    }
+  },
+  "career_services": {
+    "section_id": "career-services",
+    "tag": "CAREER SERVICES",
+    "title": "We Support Your Professional Journey",
+    "description": "SRU's Career Services Centre continues to support you after graduation through an extensive partner network and specialised development programmes.",
+    "services": [
+      {
+        "icon": "briefcase",
+        "title": "Direct Job Placement",
+        "description": "SRU graduates' exclusive jobs portal provides direct vacancies from top companies and government bodies across the Kingdom.",
+        "stats": [
+          { "value": "500+", "label": "Partner Companies" },
+          { "value": "2,000+", "label": "Posted Jobs" }
+        ]
+      },
+      {
+        "icon": "users",
+        "title": "Personal Career Coaching",
+        "description": "Book one-on-one coaching sessions with career development specialists to review your CV, prepare for interviews, and design your career path.",
+        "stats": [
+          { "value": "20+", "label": "Career Coaches" },
+          { "value": "Free", "label": "For all alumni" }
+        ]
+      },
+      {
+        "icon": "star",
+        "title": "Annual Career Fair",
+        "description": "The annual fair brings together 80+ employers in a single day with opportunities for on-the-spot interviews, professional networking, and development workshops.",
+        "stats": [
+          { "value": "80+", "label": "Employers" },
+          { "value": "Aug", "label": "Every year" }
+        ]
+      }
+    ],
+    "top_hiring_partners": {
+      "label": "AMONG OUR TOP HIRING PARTNERS",
+      "partners": ["ARAMCO", "STC", "SABIC", "NEOM", "PIF", "MOH", "NCBE", "KAUST", "STCPAY", "ACWA"]
+    }
+  },
+  "continuing_education": {
+    "section_id": "continuing-education",
+    "tag": "CONTINUING EDUCATION",
+    "title": "Never Stop Growing — Exclusive Learning for SRU Alumni",
+    "description": "As an SRU graduate, you receive preferential access to continuing education programmes, postgraduate studies, and professional certifications at discounted rates.",
+    "programmes": [
+      {
+        "category": "POSTGRADUATE",
+        "icon": "graduation-cap",
+        "color": "purple",
+        "title": "Masters & PhD for SRU Graduates",
+        "description": "Apply easily to SRU postgraduate programmes with admission priority and a 20% tuition discount for university graduates.",
+        "details": [
+          { "icon": "clock", "text": "Duration: 2–4 years" },
+          { "icon": "dollar", "text": "20% discount" }
+        ]
+      },
+      {
+        "category": "PROFESSIONAL CERTIFICATIONS",
+        "icon": "briefcase",
+        "color": "teal",
+        "title": "Accredited Professional Development",
+        "description": "Earn recognised professional certificates in management, data analytics, digital marketing, and project management.",
+        "details": [
+          { "icon": "clock", "text": "3–12 months" },
+          { "icon": "globe", "text": "On-site & Online" }
+        ]
+      },
+      {
+        "category": "SHORT INTENSIVE COURSES",
+        "icon": "code",
+        "color": "green",
+        "title": "Intensive Workshops & Bootcamps",
+        "description": "Intensive sessions ranging from two days to two weeks in AI skills, entrepreneurship, leadership, and public speaking.",
+        "details": [
+          { "icon": "clock", "text": "2 days – 2 weeks" },
+          { "icon": "dollar", "text": "30% alumni discount" }
+        ]
+      }
+    ],
+    "cta_button": { "label": "Explore All Programmes", "variant": "primary" }
+  },
+  "benefits": {
+    "section_id": "benefits",
+    "tag": "ALUMNI BENEFITS",
+    "title": "Your SRU Badge — Lifelong Privileges",
+    "description": "Graduating from SRU isn't the end of your relationship with the university — it's the start of a series of exclusive privileges designed to support you for life.",
+    "items": [
+      {
+        "icon": "book",
+        "title": "Lifetime Digital Library Access",
+        "description": "Retain full access to over 500,000 resources in the university's digital library for life as an alumnus."
+      },
+      {
+        "icon": "briefcase",
+        "title": "20% Postgraduate Tuition Discount",
+        "description": "Apply to any Masters or PhD programme at SRU and enjoy a 20% tuition discount exclusively for alumni."
+      },
+      {
+        "icon": "users",
+        "title": "Exclusive Professional Network",
+        "description": "Connect with 15,000+ alumni through SRU's exclusive professional networking platform and benefit from partnership and collaboration opportunities."
+      },
+      {
+        "icon": "clock",
+        "title": "Free Lifelong Career Coaching",
+        "description": "Book free career coaching sessions with our specialists at any point in your journey, even years after graduation."
+      },
+      {
+        "icon": "calendar",
+        "title": "Priority Access to University Events",
+        "description": "Receive early invitations and booking priority for all university events, conferences, and graduation ceremonies."
+      },
+      {
+        "icon": "home",
+        "title": "Campus Facilities Access",
+        "description": "Enjoy access to university facilities — library, labs, and sports courts — after graduation at discounted rates for network members."
+      },
+      {
+        "icon": "file",
+        "title": "Exclusive Alumni Newsletter",
+        "description": "Receive a monthly dedicated newsletter with the latest university news, job opportunities, and highlights from top alumni worldwide."
+      },
+      {
+        "icon": "star",
+        "title": "Annual Alumni Excellence Awards",
+        "description": "An annual award honouring distinguished SRU graduates in professional excellence, entrepreneurship, and community responsibility."
+      }
+    ]
+  },
+  "success_stories": {
+    "section_id": "success-stories",
+    "tag": "SUCCESS STORIES",
+    "title": "Our Graduates — Inspiration Beyond Campus Walls",
+    "description": "Real stories from graduates who changed their trajectories and impacted their communities — each story carries a spark of excellence that began at SRU.",
+    "stories": [
+      {
+        "name": "Abdulrahman Al-Sulaiman",
+        "role": "Tech Startup Founder",
+        "major": "Software Engineering 2021",
+        "quote": "SRU دفعني",
+        "avatar_color": "purple"
+      },
+      {
+        "name": "Noura Al-Mutairi",
+        "role": "Energy Engineer at Aramco",
+        "major": "Chemical Engineering 2020",
+        "quote": "The education I received at SRU qualified me to work at Aramco and participate in giant energy projects serving millions of people.",
+        "avatar_color": "teal"
+      },
+      {
+        "name": "Mohammed Al-Omari",
+        "role": "Saudi Youth Council Member",
+        "major": "Business Administration 2019",
+        "quote": "The SRU alumni network opened doors I never expected — through it I joined the Saudi Youth Council and built truly impactful projects.",
+        "avatar_color": "gold"
+      }
+    ],
+    "cta_button": { "label": "Share Your Story", "variant": "outline" }
+  },
+  "alumni_portal": {
+    "section_id": "alumni-portal",
+    "left": {
+      "title": "Alumni Portal — Stay Connected with Your University",
+      "description": "Log in to the alumni portal to access all your privileges — job opportunities, development programmes, the alumni network, and all services available to SRU graduates.",
+      "features": [
+        "Exclusive SRU graduates jobs portal",
+        "Lifetime digital library access",
+        "Connect with the global alumni network",
+        "Enrol in continuing education programmes",
+        "Share your success story with the SRU community"
+      ]
+    },
+    "right": {
+      "form_title": "Sign In",
+      "form_subtitle": "Use your university email or previous student ID to sign in.",
+      "fields": [
+        { "type": "email", "placeholder": "alumni@sru.edu.sa" },
+        { "type": "password", "placeholder": "••••••••" }
+      ],
+      "forgot_password": true,
+      "primary_button": "Access Alumni Portal",
+      "divider": "New to the network?",
+      "register_fields": [
+        { "type": "text", "placeholder": "Student ID" },
+        { "type": "text", "placeholder": "Grad. Year" }
+      ],
+      "register_button": "Create Alumni Account",
+      "support_link": "Need help? Contact alumni support"
+    }
+  },
+  "cta": {
+    "title": "Your Journey Started at SRU — Continue It With Us",
+    "description": "Join the alumni network and unlock all your privileges, or start your university journey with us today if you haven't yet enrolled.",
+    "buttons": [
+      { "label": "Join Alumni Network", "variant": "primary" },
+      { "label": "Apply Now", "variant": "outline" }
+    ],
+    "background": "gradient-purple"
+  },
+  "footer": {
+    "logo": "SRU",
+    "columns": [
+      {
+        "heading": "ALUMNI",
+        "links": ["Alumni Network", "Career Services", "Continuing Education", "Alumni Benefits", "Success Stories", "Alumni Portal"]
+      },
+      {
+        "heading": "QUICK LINKS",
+        "links": ["Home", "About SRU", "Admissions", "Campus Life", "Financial Aid", "Community"]
+      },
+      {
+        "heading": "CONTACT US",
+        "links": ["alumni@sru.edu.sa"]
+      }
+    ]
+  }
+}

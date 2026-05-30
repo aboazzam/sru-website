@@ -1,0 +1,201 @@
+page: digital-experience
+
+hero:
+  breadcrumb: "Home > Digital Experience"
+  title: "Your University, Fully Digital at SRU"
+  description: "Everything you need — from registration and grades to services and support — available at your fingertips through a fully integrated digital ecosystem designed for an exceptional student experience."
+  buttons:
+    - label: "Student Portal"
+      style: outline
+    - label: "Download App"
+      style: primary
+
+navigation_tabs:
+  - label: "Portal Features"
+  - label: "Academic Systems"
+  - label: "Connected Services"
+  - label: "Mobile App"
+  - label: "IT Support"
+
+stats:
+  - value: "20,000+"
+    label: "Daily Active Users"
+  - value: "99.9%"
+    label: "System Uptime"
+  - value: "15+"
+    label: "Integrated Systems"
+  - value: "<2 min"
+    label: "Avg. Support Response"
+
+student_portal:
+  section_label: "STUDENT PORTAL"
+  title: "Your Complete Digital Control Centre"
+  description: "SRU's student portal is your gateway to everything — designed with a clean interface and seamless experience that makes managing your academic life effortless."
+  features:
+    - title: "Personal Dashboard"
+      description: "A full view of your schedule, grades, notifications, and everything personal — all on one customised page."
+      tags:
+        - "Personalised"
+        - "Real-Time"
+    - title: "Course Registration"
+      description: "Register your courses easily, view your study plan, and manage add/drop within the adjustment window."
+      tags:
+        - "Study Plan"
+        - "Add/Drop"
+    - title: "Grades & Performance Tracking"
+      description: "View your grades instantly once recorded, track your GPA, and see your progress across all semesters."
+      tags:
+        - "Live GPA"
+        - "Charts"
+    - title: "Electronic Payments"
+      description: "Pay tuition and service fees securely through the payment gateway, with a full record of all your financial transactions."
+      tags:
+        - "Mada / Visa"
+        - "Instant Receipts"
+    - title: "Notifications & Messaging"
+      description: "Receive instant notifications from faculty and administration, and communicate through the integrated internal messaging system."
+      tags:
+        - "Push Alerts"
+        - "Internal Mail"
+    - title: "Digital Requests & Transactions"
+      description: "Submit administrative requests electronically — certificates, official documents, leave, and graduation requests — without visiting the admin office."
+      tags:
+        - "Paperless"
+        - "Track Status"
+
+academic_systems:
+  title: "Integrated Systems for Every Academic Need"
+  description: "A sophisticated suite of interconnected academic systems delivering a seamless and complete digital learning experience."
+  systems:
+    - title: "Learning Management System (LMS)"
+      description: "Full access to lectures, materials, assignments, and online exams through Blackboard, fully integrated with the student portal."
+      cta: "Access LMS →"
+    - title: "Registration & Scheduling System"
+      description: "Course registration, weekly schedule view, and intelligent conflict management with recommendations tailored to your study plan."
+      cta: "Register Now →"
+    - title: "Grades & GPA System"
+      description: "View grades instantly after recording, calculate cumulative and semester GPA, and track graduation status and remaining requirements."
+      cta: "View Grades →"
+    - title: "Digital Library"
+      description: "Access to over 500,000 digital resources — books, scientific journals, research papers, and global academic databases."
+      cta: "Explore Library →"
+    - title: "Academic Advising System"
+      description: "Book advising sessions with your academic advisor and receive intelligent recommendations for course and career pathway selection."
+      cta: "Book Session →"
+    - title: "Assessment & E-Exam System"
+      description: "Take your electronic exams securely via an anti-cheat-resistant platform, with automated scheduling and instant result display."
+      cta: "Access Exams →"
+
+connected_services:
+  section_label: "ALL CONNECTED"
+  title: "One Account — Everything Connected"
+  description: "Your unified university account is the key to every system and service. One login gives you seamless access to more than 15 platforms and systems."
+  services:
+    - name: "LMS / Blackboard"
+      status: "Connected"
+    - name: "Registration"
+      status: "Connected"
+    - name: "Payments"
+      status: "Connected"
+    - name: "Housing"
+      status: "Connected"
+    - name: "Transportation"
+      status: "Connected"
+    - name: "Digital Library"
+      status: "Connected"
+    - name: "Academic Advising"
+      status: "Connected"
+    - name: "Hajj Programme"
+      status: "Connected"
+    - name: "Financial Aid"
+      status: "Connected"
+    - name: "Counselling"
+      status: "Connected"
+    - name: "Student Clubs"
+      status: "Connected"
+    - name: "Jobs & Internships"
+      status: "Connected"
+
+mobile_app:
+  section_label: "SRU MOBILE APP"
+  title: "Your University in Your Pocket — Anywhere"
+  description: "The SRU mobile app gives you quick access to everything you need, anywhere and anytime, with a smooth design and exceptional user experience."
+  features:
+    - title: "Schedule & Timetable"
+      description: "View your daily and weekly timetable with smart alerts before every lecture."
+    - title: "Live Grades & GPA"
+      description: "Grades appear the moment they're recorded, with an interactive cumulative GPA indicator."
+    - title: "Push Notifications"
+      description: "Never miss a message from faculty or administration — customisable instant push notifications."
+    - title: "Mobile Payments"
+      description: "Pay your fees and requests directly from the app securely via Mada and credit cards."
+    - title: "Campus Map & Navigation"
+      description: "An interactive campus map with smart navigation to find lecture halls, offices, and facilities."
+  download_buttons:
+    - store: "App Store"
+      platform: "iOS"
+    - store: "Google Play"
+      platform: "Android"
+
+it_support:
+  section_label: "IT SUPPORT"
+  title: "Round-the-Clock Technical Support Team"
+  description: "Whatever technical issues you face, SRU's support team is ready to help through multiple channels, ensuring your issue is resolved in the shortest possible time."
+  channels:
+    - title: "Help Desk"
+      description: "Connect directly with the technical support team by phone or in person at the Support Desk inside campus."
+      details:
+        - "+966 16 583 0300"
+        - "24/7, 7 days a week"
+      cta: "Call Now"
+    - title: "Live Chat"
+      description: "Chat with a technical support agent in real time through the integrated chat system in the portal or app."
+      details:
+        - "Avg. wait under 2 minutes"
+        - "it-chat@sru.edu.sa"
+      cta: "Start Chat"
+    - title: "Knowledge Base"
+      description: "Over 500 articles and detailed guides for self-resolving common issues — available 24/7 without any waiting."
+      details:
+        - "500+ Articles"
+        - "Smart Search"
+      cta: "Browse Knowledge Base"
+
+cta:
+  title: "Start Your SRU Digital Experience Today"
+  description: "Log in to your student portal or download the app and take control of every aspect of your academic journey at the touch of a button."
+  buttons:
+    - label: "Access Portal"
+      style: primary
+    - label: "Download App"
+      style: outline
+
+footer:
+  logo: "SRU"
+  tagline: "Building tomorrow's leaders with academic excellence and deep Islamic values."
+  social_links:
+    - "X"
+    - "LinkedIn"
+    - "YouTube"
+    - "Instagram"
+  columns:
+    - title: "DIGITAL EXPERIENCE"
+      links:
+        - "Portal Features"
+        - "Academic Systems"
+        - "Mobile App"
+        - "IT Support"
+    - title: "QUICK LINKS"
+      links:
+        - "Home"
+        - "Admissions"
+        - "Services"
+        - "Campus Life"
+        - "Alumni"
+    - title: "CONTACT US"
+      email: "it-support@sru.edu.sa"
+      phone: "+966 16 583 0300"
+  copyright: "© 2026 Sulaiman Al-Rajhi University. All rights reserved."
+  legal_links:
+    - "Privacy Policy"
+    - "Terms of Use"

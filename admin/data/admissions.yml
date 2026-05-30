@@ -1,0 +1,210 @@
+page: admissions
+
+hero:
+  breadcrumb: "Home > Admissions"
+  title: "Begin Your Journey at SRU"
+  description: "Join a leading academic institution that combines world-class education with authentic Islamic values. Your future starts here."
+  button_primary:
+    label: "Apply Now"
+    style: primary
+  button_secondary:
+    label: "Explore Programs"
+    style: outline
+
+navigation_tabs:
+  - label: "Admission Requirements"
+    active: true
+  - label: "How to Apply"
+  - label: "Programs & Colleges"
+  - label: "Tuition & Fees"
+  - label: "FAQs"
+
+stats:
+  - value: "80+"
+    label: "Academic Programs"
+  - value: "15,000+"
+    label: "Enrolled Students"
+  - value: "Top 5"
+    label: "Saudi University Ranking"
+  - value: "98%"
+    label: "Graduate Employment Rate"
+
+admission_requirements:
+  section_label: "ADMISSION REQUIREMENTS"
+  title: "Your Path to Joining SRU"
+  description: "We welcome ambitious students who meet our academic standards. Review the requirements for your chosen program below."
+  tracks:
+    - title: "Saudi High School Graduates"
+      icon: "graduation"
+      requirements:
+        - "General Secondary Certificate (or equivalent)"
+        - "Minimum GPA: 80% or above"
+        - "Valid Qudurat / Tahsili test scores"
+        - "Passing the university entrance interview (selected programs)"
+        - "Meeting health requirements for medical programs"
+    - title: "International Students"
+      icon: "globe"
+      requirements:
+        - "Equivalent secondary certificate (attested)"
+        - "Arabic or English language proficiency proof"
+        - "Valid residence permit or student visa"
+        - "Equivalency certificate from Ministry of Education"
+        - "Passing any required placement tests"
+    - title: "Transfer Students"
+      icon: "transfer"
+      requirements:
+        - "Minimum 30 credit hours completed at previous institution"
+        - "Minimum GPA: 2.5 out of 5 (or equivalent)"
+        - "Good standing — no disciplinary record"
+        - "Program compatibility assessment by academic department"
+        - "Official transcript from previous university"
+
+how_to_apply:
+  section_label: "HOW TO APPLY"
+  title: "Four Simple Steps to Your SRU Offer"
+  steps:
+    - number: "01"
+      title: "Create Your Account"
+      description: "Register on the SRU admissions portal using your national ID or passport number."
+    - number: "02"
+      title: "Complete Your Application"
+      description: "Fill in your personal details, choose your program, and upload all required documents."
+    - number: "03"
+      title: "Track Your Application"
+      description: "Monitor your application status in real time through the portal and respond to any requests promptly."
+    - number: "04"
+      title: "Receive Your Offer"
+      description: "Once accepted, confirm your place, pay the registration fee, and begin your SRU journey."
+  buttons:
+    - label: "Start Application"
+      style: primary
+    - label: "Download Checklist"
+      style: outline
+
+programs:
+  section_label: "PROGRAMS & COLLEGES"
+  title: "Find Your Perfect Program"
+  description: "SRU offers over 80 undergraduate and postgraduate programs across 8 colleges."
+  colleges:
+    - name: "College of Medicine"
+      programs_count: "6 Programs"
+      degree_types: ["MBBS", "Postgraduate"]
+      icon: "medicine"
+    - name: "College of Engineering"
+      programs_count: "12 Programs"
+      degree_types: ["BSc", "MSc"]
+      icon: "engineering"
+    - name: "College of Business Administration"
+      programs_count: "10 Programs"
+      degree_types: ["BBA", "MBA"]
+      icon: "business"
+    - name: "College of Computer Science & IT"
+      programs_count: "8 Programs"
+      degree_types: ["BSc", "MSc"]
+      icon: "computer"
+    - name: "College of Pharmacy"
+      programs_count: "4 Programs"
+      degree_types: ["PharmD", "Postgraduate"]
+      icon: "pharmacy"
+    - name: "College of Education"
+      programs_count: "9 Programs"
+      degree_types: ["BEd", "MEd"]
+      icon: "education"
+    - name: "College of Islamic Studies"
+      programs_count: "7 Programs"
+      degree_types: ["BA", "MA", "PhD"]
+      icon: "islamic"
+    - name: "College of Applied Medical Sciences"
+      programs_count: "8 Programs"
+      degree_types: ["BSc", "Postgraduate"]
+      icon: "medical"
+
+tuition_fees:
+  section_label: "TUITION & FEES"
+  title: "Transparent & Competitive Fees"
+  description: "SRU offers competitive tuition with a range of scholarships and financial aid options to support every student."
+  note: "Fees listed are per academic year. Scholarships may cover 25%–100% of tuition."
+  fee_table:
+    - college: "College of Medicine"
+      annual_fee: "45,000 SAR"
+      scholarship_available: true
+    - college: "College of Engineering"
+      annual_fee: "28,000 SAR"
+      scholarship_available: true
+    - college: "College of Business Administration"
+      annual_fee: "22,000 SAR"
+      scholarship_available: true
+    - college: "College of Computer Science & IT"
+      annual_fee: "25,000 SAR"
+      scholarship_available: true
+    - college: "College of Pharmacy"
+      annual_fee: "38,000 SAR"
+      scholarship_available: true
+    - college: "College of Education"
+      annual_fee: "18,000 SAR"
+      scholarship_available: true
+    - college: "College of Islamic Studies"
+      annual_fee: "15,000 SAR"
+      scholarship_available: true
+    - college: "College of Applied Medical Sciences"
+      annual_fee: "30,000 SAR"
+      scholarship_available: true
+  buttons:
+    - label: "Apply for Financial Aid"
+      style: primary
+    - label: "Scholarship Info"
+      style: outline
+
+faqs:
+  section_label: "FREQUENTLY ASKED QUESTIONS"
+  title: "Got Questions? We Have Answers."
+  items:
+    - question: "When does the admissions portal open?"
+      answer: "The portal opens each year in Muharram for the following academic year. Check the academic calendar for exact dates."
+    - question: "Can I apply to more than one program?"
+      answer: "Yes, you may apply to up to three programs in order of preference. Admission is granted to the highest-priority program you qualify for."
+    - question: "Is there an entrance exam?"
+      answer: "Most programs require valid Qudurat and Tahsili scores. Some programs (e.g., Medicine) also require an interview."
+    - question: "How long does the application review take?"
+      answer: "Applications are typically reviewed within 10–15 working days. You will be notified via the portal and email."
+    - question: "Are scholarships available for new students?"
+      answer: "Yes. Merit-based and need-based scholarships are available. Apply through the Financial Aid Office after receiving your offer."
+
+cta:
+  title: "Ready to Join SRU?"
+  description: "Applications are now open for the 2026–2027 academic year. Take the first step toward your future today."
+  buttons:
+    - label: "Apply Now"
+      style: primary
+    - label: "Contact Admissions"
+      style: outline
+
+footer:
+  logo: "SRU"
+  tagline: "Building tomorrow's leaders with academic excellence and deep Islamic values."
+  social_links:
+    - "X"
+    - "LinkedIn"
+    - "YouTube"
+    - "Instagram"
+  columns:
+    - title: "ADMISSIONS"
+      links:
+        - "Requirements"
+        - "How to Apply"
+        - "Programs"
+        - "Tuition & Fees"
+        - "FAQs"
+    - title: "QUICK LINKS"
+      links:
+        - "Home"
+        - "Student Journey"
+        - "Campus Life"
+        - "Services"
+    - title: "CONTACT US"
+      email: "admissions@sru.edu.sa"
+      phone: "+966 16 583 0100"
+  copyright: "© 2026 Sulaiman Al-Rajhi University. All rights reserved."
+  legal_links:
+    - "Privacy Policy"
+    - "Terms of Use"

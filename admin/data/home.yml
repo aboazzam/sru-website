@@ -1,0 +1,25 @@
+page: home
+
+hero:
+  badge: "A Leading Academic Institution"
+  title_line1: "Building Leaders"
+  title_line2: "for Tomorrow"
+  description: "Sulaiman Al-Rajhi University is committed to delivering world-class education that blends academic excellence with authentic Islamic values."
+  button_primary:
+    label: "Apply Now"
+    url: "/admissions"
+  button_secondary:
+    label: "Explore Programs"
+    url: "/programs"
+
+hero_ar:
+  badge: "مؤسسة أكاديمية رائدة"
+  title_line1: "نبني قادة"
+  title_line2: "المستقبل"
+  description: "جامعة سليمان الراجحي ملتزمة بتقديم تعليم عالمي المستوى يجمع بين التميز الأكاديمي والقيم الإسلامية الأصيلة."
+  button_primary:
+    label: "قدّم الآن"
+    url: "/admissions"
+  button_secondary:
+    label: "استكشف البرامج"
+    url: "/programs"
