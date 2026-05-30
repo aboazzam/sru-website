@@ -116,8 +116,8 @@ function handleLogin(e) {
 }
 
 // لو المستخدم مسجّل دخول فعلاً لا نعيده لصفحة الدخول
-if (sessionStorage.getItem('news_auth') === '1') {
-  window.location.href = '/news-editor';
+if (sessionStorage.getItem('news_auth') !== '1') {
+  window.location.href = '/news-login';
 }
   </script>
 
