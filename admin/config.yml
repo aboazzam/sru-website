@@ -1,73 +1,27 @@
-site:
-  name: Sulaiman Al-Rajhi University
-  short_name: SRU
-  url: https://www.sru.edu.sa
-  language: en
-  direction: ltr
-  email: info@sru.edu.sa
-  phone: "+966 16 583 0000"
-  address: Al-Bukayriyah, Al-Qassim, Saudi Arabia
+backend:
+  name: git-gateway
+  branch: main
 
-theme:
-  primary_color: "#1a5c3a"
-  secondary_color: "#c9a84c"
-  font_primary: "Inter"
-  font_arabic: "Tajawal"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
-social:
-  twitter: https://twitter.com/SRU
-  linkedin: https://linkedin.com/school/SRU
-  youtube: https://youtube.com/@SRU
-  instagram: https://instagram.com/SRU
-
-data_path: admin/data/
-
-pages:
-  - id: home
-    file: home.yml
-    path: /
-    title: Home
-
-  - id: admissions
-    file: admissions.yml
-    path: /admissions
-    title: Admissions
-
-  - id: student-journey
-    file: student-journey.yml
-    path: /student-journey
-    title: Student Journey
-
-  - id: campus-life
-    file: campus-life.yml
-    path: /campus-life
-    title: Campus Life
-
-  - id: services
-    file: services.yml
-    path: /services
-    title: Student Services
-
-  - id: digital-experience
-    file: digital-experience.yml
-    path: /digital-experience
-    title: Digital Experience
-
-  - id: community
-    file: community.yml
-    path: /community
-    title: Community
-
-  - id: alumni
-    file: alumni.yml
-    path: /alumni
-    title: Alumni
-
-footer:
-  logo: SRU
-  tagline: "Building tomorrow's leaders with academic excellence and deep Islamic values."
-  copyright: "© 2026 Sulaiman Al-Rajhi University. All rights reserved."
-  legal_links:
-    - Privacy Policy
-    - Terms of Use
-    - Accessibility
+collections:
+  - name: "home"
+    label: "الصفحة الرئيسية"
+    files:
+      - name: "home"
+        label: "بيانات الصفحة الرئيسية"
+        file: "admin/data/home.json"
+        fields:
+          - label: "الأخبار"
+            name: "news"
+            widget: "list"
+            fields:
+              - { label: "العنوان بالعربي", name: "title_ar", widget: "string" }
+              - { label: "العنوان بالإنجليزي", name: "title_en", widget: "string" }
+              - { label: "النص بالعربي", name: "body_ar", widget: "text" }
+              - { label: "النص بالإنجليزي", name: "body_en", widget: "text" }
+              - { label: "الصورة", name: "image", widget: "image", required: false }
+              - { label: "النوع", name: "type", widget: "select", options: ["news", "event", "announcement"] }
+              - { label: "التاريخ", name: "date", widget: "datetime" }
+              - { label: "اللون", name: "color", widget: "color", default: "#003366" }
