@@ -109,6 +109,7 @@ function handleLogin(e) {
   if (u === CREDENTIALS.username && p === CREDENTIALS.password) {
     // حفظ حالة الدخول ثم الانتقال للمحرّر
     sessionStorage.setItem('news_auth', '1');
+    console.log('AUTH SET TO:', sessionStorage.getItem('news_auth'));
     window.location.href = '/news-editor';
   } else {
     alert('اسم المستخدم أو كلمة المرور غير صحيحة');
