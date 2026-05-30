@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دخول مزود الأخبار | SRU</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Noto Kufi Arabic', sans-serif; }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-[#3D1F6E] to-[#1a0a33] flex items-center justify-center p-4">
+
+  <div class="w-full max-w-md">
+
+    <!-- Logo -->
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 mb-4">
+        <svg width="36" height="36" viewBox="0 0 44 44" fill="none">
+          <circle cx="22" cy="22" r="22" fill="#3D1F6E"/>
+          <path d="M10 30 L22 10 L34 30 Z" fill="none" stroke="#00B4C8" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M14 30 L22 16 L30 30" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="22" cy="10" r="2.5" fill="#00B4C8"/>
+        </svg>
+      </div>
+      <h1 class="text-white text-2xl font-bold">جامعة سليمان الراجحي</h1>
+      <p class="text-white/60 text-sm mt-1">بوابة مزود الأخبار</p>
+    </div>
+
+    <!-- Card -->
+    <div class="bg-white rounded-2xl shadow-2xl p-8">
+
+      <h2 class="text-[#3D1F6E] text-xl font-bold mb-6 text-center">تسجيل الدخول</h2>
+
+      <!-- Error message -->
+      <div id="error-msg" class="hidden bg-red-50 border border-red-200 text-red-600 text-sm rounded-lg p-3 mb-4 text-center">
+        اسم المستخدم أو كلمة المرور غير صحيحة
+      </div>
+
+      <form id="login-form" class="space-y-5">
+
+        <!-- Username -->
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">اسم المستخدم</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="أدخل اسم المستخدم"
+            class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-[#3D1F6E] focus:ring-2 focus:ring-[#3D1F6E]/10 transition"
+            required
+          />
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-2">كلمة المرور</label>
+          <div class="relative">
+            <input
+              type="password"
+              id="password"
+              placeholder="أدخل كلمة المرور"
+              class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-[#3D1F6E] focus:ring-2 focus:ring-[#3D1F6E]/10 transition"
+              required
+            />
+            <button type="button" id="toggle-pass" class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
+              <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          id="submit-btn"
+          class="w-full bg-[#3D1F6E] hover:bg-[#2d1752] text-white font-semibold py-3 rounded-xl transition text-sm"
+        >
+          دخول
+        </button>
+
+      </form>
+
+    </div>
+
+    <p class="text-center text-white/40 text-xs mt-6">
+      © 2026 جامعة سليمان الراجحي — للاستخدام الداخلي فقط
+    </p>
+
+  </div>
+
+  <script>
+    // ─── بيانات الدخول ───────────────────────────────────
+    // غيّر هذه القيم حسب الحاجة
+    const CREDENTIALS = {
+      username: "news_provider",
+      password: "SRU@2026news"
+    };
+    // ─────────────────────────────────────────────────────
+
+    // إظهار/إخفاء كلمة المرور
+    document.getElementById('toggle-pass').addEventListener('click', () => {
+      const input = document.getElementById('password');
+      const icon  = document.getElementById('eye-icon');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.innerHTML = `
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M13.875 18.825A10.05 10.05 0 0112 19c-4.477 0-8.268-2.943-9.542-7
+               a9.956 9.956 0 012.293-3.95M6.938 6.938A9.956 9.956 0 0112 5
+               c4.477 0 8.268 2.943 9.542 7a9.956 9.956 0 01-1.476 2.898
+               M6.938 6.938L3 3m3.938 3.938l10.124 10.124"/>`;
+      } else {
+        input.type = 'password';
+        icon.innerHTML = `
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943
+               9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>`;
+      }
+    });
+
+    // تسجيل الدخول
+    document.getElementById('login-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+      const errorMsg = document.getElementById('error-msg');
+      const btn      = document.getElementById('submit-btn');
+
+      if (username === CREDENTIALS.username && password === CREDENTIALS.password) {
+        btn.textContent = '...جارٍ الدخول';
+        btn.disabled = true;
+        // حفظ جلسة الدخول
+        sessionStorage.setItem('news_auth', 'true');
+        // الانتقال للوحة تحرير الأخبار
+        setTimeout(() => { window.location.href = 'news-editor.html'; }, 800);
+      } else {
+        errorMsg.classList.remove('hidden');
+        document.getElementById('password').value = '';
+        setTimeout(() => errorMsg.classList.add('hidden'), 3000);
+      }
+    });
+  </script>
+
+</body>
+</html>
