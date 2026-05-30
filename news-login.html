@@ -92,74 +92,33 @@
   </div>
 
   <script>
-    // ─── بيانات الدخول ───────────────────────────────────
-    // غيّر هذه القيم حسب الحاجة
-    const CREDENTIALS = {
+  / بيانات الدخول ____________________________________________
+// غيّر هذه القيم حسب الحاجة
+const CREDENTIALS = {
   username: "news_provider",
   password: "SRU@2026news"
 };
 
+// دالة تنفيذ تسجيل الدخول
 function handleLogin(e) {
-  e.preventDefault();
+  e.preventDefault(); // منع إعادة تحميل الصفحة
 
   const u = document.getElementById('username').value.trim();
   const p = document.getElementById('password').value.trim();
 
   if (u === CREDENTIALS.username && p === CREDENTIALS.password) {
-    // هنا يوضع التخزين + التحويل
+    // حفظ حالة الدخول ثم الانتقال للمحرّر
     sessionStorage.setItem('news_auth', '1');
     window.location.href = '/news-editor';
   } else {
-    // عرض رسالة خطأ
     alert('اسم المستخدم أو كلمة المرور غير صحيحة');
   }
 }
-    // ─────────────────────────────────────────────────────
 
-    // إظهار/إخفاء كلمة المرور
-    document.getElementById('toggle-pass').addEventListener('click', () => {
-      const input = document.getElementById('password');
-      const icon  = document.getElementById('eye-icon');
-      if (input.type === 'password') {
-        input.type = 'text';
-        icon.innerHTML = `
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M13.875 18.825A10.05 10.05 0 0112 19c-4.477 0-8.268-2.943-9.542-7
-               a9.956 9.956 0 012.293-3.95M6.938 6.938A9.956 9.956 0 0112 5
-               c4.477 0 8.268 2.943 9.542 7a9.956 9.956 0 01-1.476 2.898
-               M6.938 6.938L3 3m3.938 3.938l10.124 10.124"/>`;
-      } else {
-        input.type = 'password';
-        icon.innerHTML = `
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943
-               9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>`;
-      }
-    });
-
-    // تسجيل الدخول
-    document.getElementById('login-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const username = document.getElementById('username').value.trim();
-      const password = document.getElementById('password').value;
-      const errorMsg = document.getElementById('error-msg');
-      const btn      = document.getElementById('submit-btn');
-
-      if (username === CREDENTIALS.username && password === CREDENTIALS.password) {
-        btn.textContent = '...جارٍ الدخول';
-        btn.disabled = true;
-        // حفظ جلسة الدخول
-        sessionStorage.setItem('news_auth', 'true');
-        // الانتقال للوحة تحرير الأخبار
-        setTimeout(() => { window.location.href = 'news-editor.html'; }, 800);
-      } else {
-        errorMsg.classList.remove('hidden');
-        document.getElementById('password').value = '';
-        setTimeout(() => errorMsg.classList.add('hidden'), 3000);
-      }
-    });
+// لو المستخدم مسجّل دخول فعلاً لا نعيده لصفحة الدخول
+if (sessionStorage.getItem('news_auth') === '1') {
+  window.location.href = '/news-editor';
+}
   </script>
 
 </body>
