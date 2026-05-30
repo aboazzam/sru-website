@@ -95,11 +95,25 @@
     // ─── بيانات الدخول ───────────────────────────────────
     // غيّر هذه القيم حسب الحاجة
     const CREDENTIALS = {
-      username: "news_provider",
-      password: "SRU@2026news"
-      sessionStorage.setItem('news_auth', '1');
-window.location.href = '/news-editor';
-    };
+  username: "news_provider",
+  password: "SRU@2026news"
+};
+
+function handleLogin(e) {
+  e.preventDefault();
+
+  const u = document.getElementById('username').value.trim();
+  const p = document.getElementById('password').value.trim();
+
+  if (u === CREDENTIALS.username && p === CREDENTIALS.password) {
+    // هنا يوضع التخزين + التحويل
+    sessionStorage.setItem('news_auth', '1');
+    window.location.href = '/news-editor';
+  } else {
+    // عرض رسالة خطأ
+    alert('اسم المستخدم أو كلمة المرور غير صحيحة');
+  }
+};
     // ─────────────────────────────────────────────────────
 
     // إظهار/إخفاء كلمة المرور
