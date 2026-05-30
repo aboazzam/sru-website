@@ -158,9 +158,9 @@ textarea{resize:vertical;min-height:85px}
 
 <script>
 // Auth check (comment out for preview)
-if (sessionStorage.getItem('news_auth') !== '1') location.href = '/news-login.html';
-// أو
-// location.href = '/news-login';
+if (sessionStorage.getItem('news_auth') !== '1') {
+  window.location.href = '/news-login.html';   // أو '/news-login'
+}
 
 var newsList = [];
 try { newsList = JSON.parse(localStorage.getItem('sru_news') || '[]'); } catch(e) { newsList = []; }
