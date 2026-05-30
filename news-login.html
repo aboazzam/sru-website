@@ -64,7 +64,7 @@
   </div>
 
   <script>
-  // بيانات الدخول ____________________________________________
+// بيانات الدخول ____________________________________________
 // غيّر هذه القيم حسب الحاجة
 const CREDENTIALS = {
   username: "news_provider",
@@ -81,7 +81,6 @@ function handleLogin(e) {
   if (u === CREDENTIALS.username && p === CREDENTIALS.password) {
     // حفظ حالة الدخول ثم الانتقال للمحرّر
     sessionStorage.setItem('news_auth', '1');
-    console.log('AUTH SET TO:', sessionStorage.getItem('news_auth'));
     window.location.href = '/news-editor';
   } else {
     alert('اسم المستخدم أو كلمة المرور غير صحيحة');
@@ -92,7 +91,6 @@ function handleLogin(e) {
 if (sessionStorage.getItem('news_auth') === '1') {
   window.location.href = '/news-editor';
 }
-  </script>
-
+</script>
 </body>
 </html>
