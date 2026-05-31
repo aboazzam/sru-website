@@ -228,14 +228,41 @@ function saveNews() {
     }
     editingId = null;
     document.getElementById('form-title').textContent = 'إضافة خبر جديد';
-    showAlert('add','✅ تم تحديث الخبر بنجاح','success');
   } else {
-    newsList.unshift({ id: Date.now(), titleAr:tAr, titleEn:tEn, bodyAr:bAr, bodyEn:bEn, date:dt, cat:cat, image:currentImg||null });
-    showAlert('add','✅ تم حفظ الخبر بنجاح','success');
+    newsList.unshift({
+      id: Date.now(),
+      titleAr: tAr,
+      titleEn: tEn,
+      bodyAr:  bAr,
+      bodyEn:  bEn,
+      date:    dt,
+      cat:     cat,
+      image:   currentImg || null
+    });
   }
 
+  // نحفظ أيضًا في localStorage (اختياري)
   localStorage.setItem('sru_news', JSON.stringify(newsList));
-  clearForm();
+
+  // نرسل المصفوفة كاملة إلى save-news.php ليكتبها في news.json
+  fetch('save-news.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json;charset=utf-8' },
+    body: JSON.stringify({ news: newsList })
+  })
+  .then(function(res){ return res.json(); })
+  .then(function(res){
+    if (res.status === 'ok') {
+      showAlert('add','✅ تم حفظ الخبر في news.json','success');
+      clearForm();
+    } else {
+      showAlert('add','حدث خطأ في حفظ news.json','error');
+    }
+  })
+  .catch(function(err){
+    console.error(err);
+    showAlert('add','تعذّر الاتصال بالسيرفر لحفظ news.json','error');
+  });
 }
 
 function clearForm() {
