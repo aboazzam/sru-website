@@ -1,90 +1,81 @@
-  /* ═══════════════════════════════════════════════════════════════
-     11. HOME NEWS — load from home.json
-  ═══════════════════════════════════════════════════════════════ */
+// js/home-news.js
 
-  // اين يوجد ملف البيانات (عدّلي المسار إذا لزم)
-  const HOME_DATA_URL = 'assets/data/home.json';
+// دالة للحصول على اللغة الحالية من الـ <html>
+function getLang() {
+  return document.documentElement.lang === 'ar' ? 'ar' : 'en';
+}
 
-  let homeData = null;
+// تحميل بيانات الصفحة الرئيسية من home.json واستخدام جزء الأخبار منها
+async function loadHomeNews() {
+  const grid = document.getElementById('news-grid');
+  if (!grid) return;
 
-  function getLang() {
-    return state.lang === 'ar' ? 'ar' : 'en';
+  try {
+    const res = await fetch('data/home.json'); // عدّلي المسار حسب مكان الملف الحقيقي
+    if (!res.ok) throw new Error('Failed to load home.json');
+
+    const homeData = await res.json();
+    const newsItems = homeData.news || [];
+
+    // خزن البيانات في global لإعادة البناء عند تغيير اللغة (إن رغبتِ)
+    window.homeNewsData = newsItems;
+
+    renderNewsGrid(newsItems);
+  } catch (err) {
+    console.error('Error loading news:', err);
   }
+}
 
-  function t(obj, key) {
-    const lang = getLang();
-    const value = obj[key];
-    if (!value) return '';
-    if (typeof value === 'object') {
-      return value[lang] || value.en || '';
-    }
-    return value;
-  }
+// تحويل عنصر خبر من home.json إلى كرت HTML
+function buildNewsCard(item) {
+  const lang = getLang();
 
-  // يبني بطاقة خبر واحدة
-  function buildNewsCard(item) {
-    const lang = getLang();
-    const imgContent = item.image
-      ? `<img src="${item.image}" alt="${t(item,'title')}" style="width:100%;height:100%;object-fit:cover;" />`
-      : `<span class="news-type">${t(item,'type')}</span>`;
+  const type    = lang === 'ar' ? item.type_ar    : item.type_en;
+  const month   = lang === 'ar' ? item.month_ar   : item.month_en;
+  const title   = lang === 'ar' ? item.title_ar   : item.title_en;
+  const excerpt = lang === 'ar' ? item.excerpt_ar : item.excerpt_en;
 
-    return `
-      <article class="news-card reveal">
-        <div class="news-img" style="background:${item.color || '#EAE2FF'};">
-          ${imgContent}
+  const imgContent = item.image
+    ? `<img src="${item.image}" alt="${title}"
+            style="width:100%;height:100%;object-fit:cover;" />`
+    : `<span class="news-type">${type}</span>`;
+
+  return `
+    <article class="news-card reveal">
+      <div class="news-img" style="background:${item.color};">
+        ${imgContent}
+      </div>
+      <div class="news-body">
+        <div class="news-date">
+          <span class="date-day">${item.day}</span>
+          <span class="date-month">${month}</span>
         </div>
-        <div class="news-body">
-          <div class="news-date">
-            <span class="date-day">${item.day}</span>
-            <span class="date-month">${t(item,'month')}</span>
-          </div>
-          <h3 class="news-title">${t(item,'title')}</h3>
-          <p class="news-excerpt">${t(item,'excerpt')}</p>
-          <a href="${item.url || '#'}" class="news-link">
-            ${lang === 'ar' ? 'اقرأ المزيد ←' : 'Read More →'}
-          </a>
-        </div>
-      </article>`;
-  }
+        <h3 class="news-title">${title}</h3>
+        <p class="news-excerpt">${excerpt}</p>
+        <a href="${item.url || '#'}" class="news-link">
+          ${lang === 'ar' ? 'اقرأ المزيد ←' : 'Read More →'}
+        </a>
+      </div>
+    </article>
+  `;
+}
 
-  function renderNews() {
-    const grid = document.getElementById('news-grid');
-    if (!grid || !homeData || !homeData.news) return;
+// رسم الشبكة داخل #news-grid
+function renderNewsGrid(newsItems) {
+  const grid = document.getElementById('news-grid');
+  if (!grid) return;
 
-    grid.innerHTML = homeData.news.map(buildNewsCard).join('');
+  grid.innerHTML = newsItems.map(buildNewsCard).join('');
+}
 
-    // إعادة تفعيل الـ reveal على البطاقات الجديدة
-    if ('IntersectionObserver' in window) {
-      document.querySelectorAll('.news-card.reveal').forEach(function (el) {
-        el.classList.remove('visible');
-      });
-    } else {
-      document.querySelectorAll('.news-card.reveal').forEach(function (el) {
-        el.classList.add('visible');
-      });
-    }
-  }
+// إعادة بناء الأخبار عند تغيير اللغة (اختياري)
+// استدعي هذه من applyLanguage(lang) إن أحببت أن تتغيّر الأخبار فوراً
+function rebuildNewsGrid() {
+  if (!window.homeNewsData) return;
+  renderNewsGrid(window.homeNewsData);
+}
 
-  function loadHomeData() {
-    if (!document.getElementById('news-grid')) return; // الصفحة ليست الرئيسية
-
-    fetch(HOME_DATA_URL)
-      .then(function (res) { return res.json(); })
-      .then(function (data) {
-        homeData = data;
-        renderNews();
-      })
-      .catch(function (err) {
-        console.error('Failed to load home.json', err);
-      });
-  }
-
-  // حمّل الأخبار عند تحميل الصفحة
-  window.addEventListener('DOMContentLoaded', loadHomeData);
-
-  // أعد بناء الأخبار عند تغيير اللغة
-  const _applyLanguage = applyLanguage;
-  applyLanguage = function (lang) {
-    _applyLanguage(lang);
-    renderNews();
-  };
+// تحميل الأخبار عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', () => {
+  loadHomeNews();
+});
