@@ -1,28 +1,21 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
 
-// ملف الأخبار في نفس المجلد: main/admin/data/news.json
+// news.json بجانب هذا الملف
 $file = __DIR__ . '/news.json';
 
-// قراءة JSON القادم من جافاسكربت
+// قراءة JSON القادم
 $input = file_get_contents('php://input');
-$newItem = json_decode($input, true);
+$data = json_decode($input, true);
 
-// تحميل الأخبار الحالية
-if (file_exists($file)) {
-    $currentJson = file_get_contents($file);
-    $current = json_decode($currentJson, true);
-    if (!is_array($current)) {
-        $current = [];
-    }
-} else {
-    $current = [];
+// نتوقع أن يكون بالشكل: { news: [...] }
+if (!isset($data['news']) || !is_array($data['news'])) {
+    echo json_encode(['status' => 'error', 'message' => 'invalid format']);
+    exit;
 }
 
-// إضافة الخبر الجديد
-$current[] = $newItem;
+$current = $data['news']; // المصفوفة نفسها
 
-// حفظ الملف (كمصفوفة فقط)
 file_put_contents(
     $file,
     json_encode($current, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT)
