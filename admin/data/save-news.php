@@ -31,6 +31,5 @@ if (isset($data['news']) && is_array($data['news'])) {
 }
 
 // كتابة الملف
-file_put_contents($file, json_encode($current, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
-
+file_put_contents($file, json_encode(['news' => $current], JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
 echo json_encode(['status' => 'ok']);
