@@ -1,21 +1,14 @@
 {
-  "hero": 
-  const lang = getLang();
-
-// نختار الكائن حسب اللغة
-const h = lang === 'ar' ? data.hero_ar : data.hero;
-
-if (h) {
-  const badgeEl   = document.getElementById('hero-badge');
-  const title1El  = document.getElementById('hero-title');
-  const title2El  = document.getElementById('hero-title-accent');
-  const subEl     = document.getElementById('hero-sub');
-
-  if (badgeEl)  badgeEl.textContent  = h.badge || '';
-  if (title1El) title1El.textContent = h.title_line1 || '';
-  if (title2El) title2El.textContent = h.title_line2 || '';
-  if (subEl)    subEl.textContent    = h.description || '';
-},
+  "hero": {
+    "badge_en": "A Leading Academic Institution",
+    "badge_ar": "مؤسسة أكاديمية رائدة",
+    "title_en": "Building Leaders",
+    "title_ar": "بناء القادة",
+    "title_accent_en": "for Tomorrow",
+    "title_accent_ar": "لمستقبل أفضل",
+    "subtitle_en": "Sulaiman Al-Rajhi University is committed to delivering world-class education that blends academic excellence with authentic Islamic values.",
+    "subtitle_ar": "جامعة سليمان الراجحي تلتزم بتقديم تعليم عالي الجودة يجمع بين التميز الأكاديمي والقيم الإسلامية الأصيلة."
+  },
   "stats": [
     { "value": 2300, "suffix": "+", "label_en": "Students",          "label_ar": "طالب وطالبة" },
     { "value": 12,    "suffix": "+", "label_en": "Academic Programs", "label_ar": "برنامج أكاديمي" },
