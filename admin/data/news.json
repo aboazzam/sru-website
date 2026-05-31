@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "badge_en": "A Leading Academic Institution",
+    "badge_ar": "مؤسسة أكاديمية رائدة",
+    "title_en": "Building Leaders",
+    "title_ar": "بناء القادة",
+    "title_accent_en": "for Tomorrow",
+    "title_accent_ar": "لمستقبل أفضل",
+    "subtitle_en": "Sulaiman Al-Rajhi University is committed to delivering world-class education that blends academic excellence with authentic Islamic values.",
+    "subtitle_ar": "جامعة سليمان الراجحي تلتزم بتقديم تعليم عالي الجودة يجمع بين التميز الأكاديمي والقيم الإسلامية الأصيلة."
+  },
+  "stats": [
+    { "value": 2300, "suffix": "+", "label_en": "Students",          "label_ar": "طالب وطالبة" },
+    { "value": 12,    "suffix": "+", "label_en": "Academic Programs", "label_ar": "برنامج أكاديمي" },
+    { "value": 15,    "suffix": "+", "label_en": "Years of Excellence","label_ar": "سنة من التميز" }
+  ],
+  "about": {
+    "eyebrow_en": "Who We Are",
+    "eyebrow_ar": "من نحن",
+    "title_en": "A Comprehensive Vision for Higher Education",
+    "title_ar": "رؤية شاملة للتعليم العالي",
+    "body_en": "Founded to be a distinguished academic institution in Saudi Arabia, SRU bridges scientific advancement with authentic Islamic identity, preparing qualified graduates who lead national development.",
+    "body_ar": "تأسست جامعة سليمان الراجحي لتكون صرحًا أكاديميًا متميزًا في المملكة العربية السعودية، تجمع بين التقدم العلمي والهوية الإسلامية الأصيلة."
+  },
+  "news": [
+    {
+      "id": "news-1",
+      "type_en": "News",
+      "type_ar": "أخبار",
+      "day": "15",
+      "month_en": "May",
+      "month_ar": "مايو",
+      "title_en": "SRU Achieves International Accreditation for Five Academic Programs",
+      "title_ar": "جامعة سليمان الراجحي تحصل على اعتماد أكاديمي دولي في خمسة برامج",
+      "excerpt_en": "The university announced achieving international academic accreditation from prestigious global bodies for five academic programs.",
+      "excerpt_ar": "أعلنت الجامعة حصولها على اعتماد أكاديمي دولي معتمد من هيئات دولية مرموقة لخمسة برامج أكاديمية.",
+      "image": "",
+      "color": "linear-gradient(135deg, #3D1F6E 0%, #6B46C1 100%)"
+    },
+    {
+      "id": "news-2",
+      "type_en": "Event",
+      "type_ar": "فعالية",
+      "day": "28",
+      "month_en": "May",
+      "month_ar": "مايو",
+      "title_en": "Third Innovation & Entrepreneurship Conference Opens at SRU",
+      "title_ar": "مؤتمر الابتكار وريادة الأعمال الثالث يفتح أبوابه في الجامعة",
+      "excerpt_en": "The third annual Innovation & Entrepreneurship conference convenes with leading entrepreneurs and academics in attendance.",
+      "excerpt_ar": "ينعقد المؤتمر السنوي الثالث للابتكار وريادة الأعمال بمشاركة نخبة من رواد الأعمال والأكاديميين.",
+      "image": "",
+      "color": "linear-gradient(135deg, #00B4C8 0%, #0077A8 100%)"
+    },
+    {
+      "id": "news-3",
+      "type_en": "Achievement",
+      "type_ar": "إنجاز",
+      "day": "03",
+      "month_en": "Jun",
+      "month_ar": "يونيو",
+      "title_en": "Engineering Students Win Excellence Award at GCC Engineering Competition",
+      "title_ar": "طلاب كلية الهندسة يفوزون بجائزة التميز في مسابقة هندسية خليجية",
+      "excerpt_en": "Engineering faculty students claimed first place in the Creative Engineering Competition at the GCC level.",
+      "excerpt_ar": "حقق طلاب كلية الهندسة المركز الأول في مسابقة الهندسة الإبداعية على مستوى دول الخليج العربي.",
+      "image": "",
+      "color": "linear-gradient(135deg, #38A169 0%, #276749 100%)"
+    }
+  ],
+  "research": {
+    "title_en": "Leading Scientific Research Toward New Horizons",
+    "title_ar": "نقود البحث العلمي نحو آفاق جديدة",
+    "body_en": "SRU's Research & Development Center houses elite researchers working on pioneering projects across scientific disciplines.",
+    "body_ar": "يضم مركز البحث والتطوير في جامعة سليمان الراجحي نخبة من الباحثين المتميزين الذين يعملون على مشاريع بحثية رائدة.",
+    "stats": [
+      { "value": "350+", "label_en": "Published Papers", "label_ar": "بحث منشور" },
+      { "value": "40+",  "label_en": "Research Centers", "label_ar": "مركز بحثي" },
+      { "value": "120+", "label_en": "Global Partnerships","label_ar": "شراكة دولية" }
+    ]
+  }
+}
