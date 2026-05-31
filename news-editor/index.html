@@ -245,7 +245,7 @@ function saveNews() {
   localStorage.setItem('sru_news', JSON.stringify(newsList));
 
   // نرسل المصفوفة كاملة إلى save-news.php ليكتبها في news.json
-  fetch('save-news.php', {
+  fetch('admin/data/save-news.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
     body: JSON.stringify({ news: newsList })
