@@ -1,35 +1,31 @@
 <?php
-// مسار ملف JSON
+header('Content-Type: application/json; charset=utf-8');
+
+// ملف الأخبار في نفس المجلد: main/admin/data/news.json
 $file = __DIR__ . '/news.json';
 
-// قراءة البودي القادم من JavaScript
+// قراءة JSON القادم من جافاسكربت
 $input = file_get_contents('php://input');
-$data  = json_decode($input, true);
+$newItem = json_decode($input, true);
 
-if (!is_array($data)) {
-    http_response_code(400);
-    echo json_encode(['status' => 'error', 'message' => 'invalid json']);
-    exit;
-}
-
-// إذا كان الملف موجودًا نقرأه، وإلا نبدأ بمصفوفة جديدة
+// تحميل الأخبار الحالية
 if (file_exists($file)) {
-    $current = json_decode(file_get_contents($file), true);
+    $currentJson = file_get_contents($file);
+    $current = json_decode($currentJson, true);
     if (!is_array($current)) {
-        $current = ['news' => []];
+        $current = [];
     }
 } else {
-    $current = ['news' => []];
+    $current = [];
 }
 
-// نتوقّع أن يأتينا حقل "news" كمصفوفة كاملة
-if (isset($data['news']) && is_array($data['news'])) {
-    $current['news'] = $data['news'];
-} else {
-    // أو نضيف خبرًا واحدًا
-    $current['news'][] = $data;
-}
+// إضافة الخبر الجديد
+$current[] = $newItem;
 
-// كتابة الملف
-file_put_contents($file, json_encode(['news' => $current], JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
+// حفظ الملف (كمصفوفة فقط)
+file_put_contents(
+    $file,
+    json_encode($current, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT)
+);
+
 echo json_encode(['status' => 'ok']);
