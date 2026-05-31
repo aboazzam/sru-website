@@ -1,28 +1,5 @@
 {
-  "hero": {
-    "badge_en": "A Leading Academic Institution",
-    "badge_ar": "مؤسسة أكاديمية رائدة",
-    "title_en": "Building Leaders",
-    "title_ar": "بناء القادة",
-    "title_accent_en": "for Tomorrow",
-    "title_accent_ar": "لمستقبل أفضل",
-    "subtitle_en": "Sulaiman Al-Rajhi University is committed to delivering world-class education that blends academic excellence with authentic Islamic values.",
-    "subtitle_ar": "جامعة سليمان الراجحي تلتزم بتقديم تعليم عالي الجودة يجمع بين التميز الأكاديمي والقيم الإسلامية الأصيلة."
-  },
-  "stats": [
-    { "value": 2300, "suffix": "+", "label_en": "Students",          "label_ar": "طالب وطالبة" },
-    { "value": 12,    "suffix": "+", "label_en": "Academic Programs", "label_ar": "برنامج أكاديمي" },
-    { "value": 15,    "suffix": "+", "label_en": "Years of Excellence","label_ar": "سنة من التميز" }
-  ],
-  "about": {
-    "eyebrow_en": "Who We Are",
-    "eyebrow_ar": "من نحن",
-    "title_en": "A Comprehensive Vision for Higher Education",
-    "title_ar": "رؤية شاملة للتعليم العالي",
-    "body_en": "Founded to be a distinguished academic institution in Saudi Arabia, SRU bridges scientific advancement with authentic Islamic identity, preparing qualified graduates who lead national development.",
-    "body_ar": "تأسست جامعة سليمان الراجحي لتكون صرحًا أكاديميًا متميزًا في المملكة العربية السعودية، تجمع بين التقدم العلمي والهوية الإسلامية الأصيلة."
-  },
-  "news": [
+    "news": [
     {
       "id": "news-1",
       "type_en": "News",
@@ -66,15 +43,4 @@
       "color": "linear-gradient(135deg, #38A169 0%, #276749 100%)"
     }
   ],
-  "research": {
-    "title_en": "Leading Scientific Research Toward New Horizons",
-    "title_ar": "نقود البحث العلمي نحو آفاق جديدة",
-    "body_en": "SRU's Research & Development Center houses elite researchers working on pioneering projects across scientific disciplines.",
-    "body_ar": "يضم مركز البحث والتطوير في جامعة سليمان الراجحي نخبة من الباحثين المتميزين الذين يعملون على مشاريع بحثية رائدة.",
-    "stats": [
-      { "value": "350+", "label_en": "Published Papers", "label_ar": "بحث منشور" },
-      { "value": "40+",  "label_en": "Research Centers", "label_ar": "مركز بحثي" },
-      { "value": "120+", "label_en": "Global Partnerships","label_ar": "شراكة دولية" }
-    ]
   }
-}
