@@ -11,7 +11,7 @@ async function loadHomeNews() {
   if (!grid) return;
 
   try {
-    const res = await fetch('data/news.json'); // عدّلي المسار حسب مكان الملف الحقيقي
+    const res = await fetch('admin/data/news.json');
     if (!res.ok) throw new Error('Failed to load news.json');
 
     const homeData = await res.json();
