@@ -1,18 +1,18 @@
-// js/home-news.js
+// js/news.js
 
 // دالة للحصول على اللغة الحالية من الـ <html>
 function getLang() {
   return document.documentElement.lang === 'ar' ? 'ar' : 'en';
 }
 
-// تحميل بيانات الصفحة الرئيسية من home.json واستخدام جزء الأخبار منها
+// تحميل بيانات الصفحة الرئيسية من news.json واستخدام جزء الأخبار منها
 async function loadHomeNews() {
   const grid = document.getElementById('news-grid');
   if (!grid) return;
 
   try {
-    const res = await fetch('data/home.json'); // عدّلي المسار حسب مكان الملف الحقيقي
-    if (!res.ok) throw new Error('Failed to load home.json');
+    const res = await fetch('data/news.json'); // عدّلي المسار حسب مكان الملف الحقيقي
+    if (!res.ok) throw new Error('Failed to load news.json');
 
     const homeData = await res.json();
     const newsItems = homeData.news || [];
@@ -26,7 +26,7 @@ async function loadHomeNews() {
   }
 }
 
-// تحويل عنصر خبر من home.json إلى كرت HTML
+// تحويل عنصر خبر من news.json إلى كرت HTML
 function buildNewsCard(item) {
   const lang = getLang();
 
