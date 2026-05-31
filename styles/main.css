@@ -220,6 +220,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .section-header .section-sub { margin-inline: auto; }
 
+
 /* ─── Scroll Reveal ───────────────────────────────────────────── */
 .reveal {
   opacity: 0;
@@ -397,6 +398,17 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   border-radius: var(--radius-full);
   background: var(--color-purple);
   transition: transform var(--duration) var(--ease), opacity var(--duration) var(--ease);
+}
+/* ترتيب عناصر الهيدر حسب اللغة */
+
+/* إنجليزي: الشعار يسار، ثم القائمة، ثم الأزرار */
+html[dir="ltr"] .header-inner {
+  flex-direction: row;
+}
+
+/* عربي: الشعار يمين، ثم القائمة، ثم الأزرار */
+html[dir="rtl"] .header-inner {
+  flex-direction: row-reverse;
 }
 
 /* Mobile overlay */
