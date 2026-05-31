@@ -276,6 +276,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .logo-mark { flex-shrink: 0; }
+.logo-mark img {
+  height: 44px;   
+  width: auto;
+  display: block;
+}
 
 .logo-text {
   display: flex;
