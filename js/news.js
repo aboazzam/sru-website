@@ -65,6 +65,11 @@ function renderNewsGrid(newsItems) {
   const grid = document.getElementById('news-grid');
   if (!grid) return;
 
+  if (!Array.isArray(newsItems) || !newsItems.length) {
+    grid.innerHTML = '<p class="empty-msg">لا توجد أخبار حالياً.</p>';
+    return;
+  }
+
   grid.innerHTML = newsItems.map(buildNewsCard).join('');
 }
 
@@ -76,6 +81,6 @@ function rebuildNewsGrid() {
 }
 
 // تحميل الأخبار عند تحميل الصفحة
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   loadHomeNews();
 });
