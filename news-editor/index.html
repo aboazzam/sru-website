@@ -145,7 +145,7 @@ textarea{resize:vertical;min-height:85px}
   <div class="panel" id="tab-export">
     <div class="card">
       <h2>تصدير بيانات الأخبار</h2>
-      <p style="color:#666;margin-bottom:14px;font-size:.93rem">انسخ هذا JSON وارفعه في <code>admin/data/home.json</code> لتحديث الموقع.</p>
+      <p style="color:#666;margin-bottom:14px;font-size:.93rem">انسخ هذا JSON وارفعه في <code>admin/data/news.json</code> لتحديث الموقع.</p>
       <div class="json-box" id="json-output"></div>
       <div class="copy-row">
         <button class="btn btn-export" onclick="copyJSON()">📋 نسخ JSON</button>
@@ -219,9 +219,12 @@ function saveNews() {
   if (editingId !== null) {
     for (var i=0; i<newsList.length; i++) {
       if (newsList[i].id === editingId) {
-        newsList[i].titleAr = tAr; newsList[i].titleEn = tEn;
-        newsList[i].bodyAr = bAr; newsList[i].bodyEn = bEn;
-        newsList[i].date = dt; newsList[i].cat = cat;
+        newsList[i].titleAr = tAr;
+        newsList[i].titleEn = tEn;
+        newsList[i].bodyAr  = bAr;
+        newsList[i].bodyEn  = bEn;
+        newsList[i].date    = dt;
+        newsList[i].cat     = cat;
         if (currentImg) newsList[i].image = currentImg;
         break;
       }
@@ -230,7 +233,7 @@ function saveNews() {
     document.getElementById('form-title').textContent = 'إضافة خبر جديد';
   } else {
     newsList.unshift({
-      id: Date.now(),
+      id:      Date.now(),
       titleAr: tAr,
       titleEn: tEn,
       bodyAr:  bAr,
@@ -241,10 +244,8 @@ function saveNews() {
     });
   }
 
-  // نحفظ أيضًا في localStorage (اختياري)
   localStorage.setItem('sru_news', JSON.stringify(newsList));
 
-  // نرسل المصفوفة كاملة إلى save-news.php ليكتبها في news.json
   fetch('admin/data/save-news.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
@@ -253,15 +254,15 @@ function saveNews() {
   .then(function(res){ return res.json(); })
   .then(function(res){
     if (res.status === 'ok') {
-      showAlert('add','✅ تم حفظ الخبر في news.json','success');
+      showAlert('add','✅ تم حفظ الخبر في admin/data/news.json','success');
       clearForm();
     } else {
-      showAlert('add','حدث خطأ في حفظ news.json','error');
+      showAlert('add','حدث خطأ في حفظ admin/data/news.json','error');
     }
   })
   .catch(function(err){
     console.error(err);
-    showAlert('add','تعذّر الاتصال بالسيرفر لحفظ news.json','error');
+    showAlert('add','تعذّر الاتصال بالسيرفر لحفظ admin/data/news.json','error');
   });
 }
 
@@ -279,7 +280,10 @@ function clearForm() {
 function renderList() {
   var c = document.getElementById('news-list-container');
   document.getElementById('news-count').textContent = '(' + newsList.length + ' خبر)';
-  if (!newsList.length) { c.innerHTML = '<div class="empty-msg">لا توجد أخبار بعد. أضف أول خبر!</div>'; return; }
+  if (!newsList.length) {
+    c.innerHTML = '<div class="empty-msg">لا توجد أخبار بعد. أضف أول خبر!</div>';
+    return;
+  }
   c.innerHTML = newsList.map(function(n){
     var img = n.image
       ? '<img src="'+n.image+'" alt="">'
@@ -287,7 +291,7 @@ function renderList() {
     return '<div class="news-item">'
       + img
       + '<div class="news-info">'
-      +   '<div class="ni-title-ar">'+n.titleAr+'</div>'
+      +   '<div class="ni-title-ar">'+(n.titleAr||'')+'</div>'
       +   '<div class="ni-title-en">'+(n.titleEn||'')+'</div>'
       +   '<div class="ni-meta">📅 '+(n.date||'—')+' &nbsp;|&nbsp; 🏷️ '+catLabel(n.cat)+'</div>'
       + '</div>'
@@ -315,35 +319,46 @@ function editNews(id) {
   for (var i=0;i<newsList.length;i++) if (newsList[i].id===id){ n=newsList[i]; break; }
   if (!n) return;
   editingId = id;
-  document.getElementById('title-ar').value = n.titleAr||'';
-  document.getElementById('title-en').value = n.titleEn||'';
-  document.getElementById('body-ar').value  = n.bodyAr||'';
-  document.getElementById('body-en').value  = n.bodyEn||'';
-  document.getElementById('news-date').value = n.date||'';
-  document.getElementById('news-cat').value  = n.cat||'general';
+  document.getElementById('title-ar').value = n.titleAr || '';
+  document.getElementById('title-en').value = n.titleEn || '';
+  document.getElementById('body-ar').value  = n.bodyAr  || '';
+  document.getElementById('body-en').value  = n.bodyEn  || '';
+  document.getElementById('news-date').value = n.date || '';
+  document.getElementById('news-cat').value  = n.cat  || 'general';
   if (n.image) {
     currentImg = n.image;
     document.getElementById('img-preview').src = n.image;
     document.getElementById('img-preview').style.display = 'block';
     document.getElementById('img-name').textContent = '📎 صورة محفوظة';
+  } else {
+    currentImg = null;
+    document.getElementById('img-preview').style.display = 'none';
+    document.getElementById('img-name').textContent = '';
   }
   document.getElementById('form-title').textContent = '✏️ تعديل الخبر';
-  // Switch to add tab
   document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
   document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active'); });
   document.getElementById('tab-add').classList.add('active');
   document.querySelector('[data-tab="add"]').classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
 }
-
 // EXPORT
 function renderJSON() {
   var data = newsList.map(function(n){
-    return { id:n.id, titleAr:n.titleAr, titleEn:n.titleEn, bodyAr:n.bodyAr, bodyEn:n.bodyEn, date:n.date, cat:n.cat, hasImage:!!n.image };
+    return {
+      id:       n.id,
+      title_ar: n.titleAr,
+      title_en: n.titleEn,
+      body_ar:  n.bodyAr,
+      body_en:  n.bodyEn,
+      date:     n.date,
+      cat:      n.cat,
+      hasImage: !!n.image
+    };
   });
-  document.getElementById('json-output').textContent = JSON.stringify({news:data},null,2);
+  document.getElementById('json-output').textContent =
+    JSON.stringify({ news: data }, null, 2);
 }
-
 function copyJSON() {
   var txt = document.getElementById('json-output').textContent;
   if (navigator.clipboard) {
