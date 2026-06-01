@@ -498,13 +498,7 @@
       document.getElementById('about-title').textContent   = t(a, 'title');
       document.getElementById('about-body').textContent    = t(a, 'body');
 
-      // ── News ──
-      const ng = document.getElementById('news-grid');
-      if (ng && data.news) {
-        ng.innerHTML = data.news.map(buildNewsCard).join('');
-      }
-
-      // ── Research ──
+        // ── Research ──
       const r = data.research;
       document.getElementById('research-title').textContent = t(r, 'title');
       document.getElementById('research-body').textContent  = t(r, 'body');
