@@ -71,6 +71,14 @@ function renderNewsGrid(newsItems) {
   }
 
   grid.innerHTML = newsItems.map(buildNewsCard).join('');
+
+  // ── تفعيل الظهور مباشرة بدون IntersectionObserver ──
+  grid.querySelectorAll('.reveal').forEach(el => {
+    el.classList.add('revealed');
+  });
+}
+
+  grid.innerHTML = newsItems.map(buildNewsCard).join('');
 }
 
 // إعادة تفعيل المراقب للعناصر الجديدة
