@@ -84,3 +84,13 @@ function rebuildNewsGrid() {
 document.addEventListener('DOMContentLoaded', function () {
   loadHomeNews();
 });
+
+// تحميل الأخبار عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', function () {
+  loadHomeNews();
+});
+
+// استدعاء فوري في حال DOMContentLoaded انتهى مسبقاً
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  loadHomeNews();
+}
