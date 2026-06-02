@@ -73,6 +73,9 @@ function renderNewsGrid(newsItems) {
   grid.innerHTML = newsItems.map(buildNewsCard).join('');
 }
 
+// إعادة تفعيل المراقب للعناصر الجديدة
+if (window.reObserveReveal) window.reObserveReveal();
+
 // إعادة بناء الأخبار عند تغيير اللغة (اختياري)
 // استدعي هذه من applyLanguage(lang) إن أحببت أن تتغيّر الأخبار فوراً
 function rebuildNewsGrid() {
