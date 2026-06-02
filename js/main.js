@@ -158,6 +158,12 @@
     });
   }
 
+  function reObserveReveal() {
+  document.querySelectorAll('.reveal:not(.revealed)').forEach(el => {
+    revealObserver.observe(el);
+  });
+}
+window.reObserveReveal = reObserveReveal;
   /* ═══════════════════════════════════════════════════════════════
      5. COUNTER ANIMATION
   ═══════════════════════════════════════════════════════════════ */
