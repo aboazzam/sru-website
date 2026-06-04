@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -11,29 +11,36 @@ body{font-family:'Segoe UI',Tahoma,Arial,sans-serif;background:#f0f2f5;color:#22
 .header h1{font-size:1.25rem}
 .logout-btn{background:#e74c3c;color:#fff;border:none;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:0.95rem}
 .logout-btn:hover{background:#c0392b}
-.tabs{display:flex;background:#fff;border-bottom:2px solid #ddd;padding:0 32px}
+.tabs{display:flex;background:#fff;border-bottom:2px solid #ddd;padding:0 32px;flex-wrap:wrap}
 .tab{padding:14px 22px;cursor:pointer;font-size:0.97rem;border-bottom:3px solid transparent;margin-bottom:-2px;color:#666;transition:all .2s}
 .tab.active{border-bottom-color:#1a3a5c;color:#1a3a5c;font-weight:700}
 .tab:hover{color:#1a3a5c}
-.content{max-width:880px;margin:28px auto;padding:0 14px}
+.content{max-width:920px;margin:28px auto;padding:0 14px}
 .panel{display:none}
 .panel.active{display:block}
 .card{background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:26px;margin-bottom:22px}
 .card h2{font-size:1.1rem;margin-bottom:18px;color:#1a3a5c;border-bottom:1px solid #eee;padding-bottom:11px}
-.form-group{margin-bottom:16px}
+.section-label{font-size:.8rem;font-weight:700;color:#1a3a5c;background:#eef4ff;padding:6px 12px;border-radius:4px;margin:18px 0 12px;display:block}
+.form-group{margin-bottom:14px}
 label{display:block;font-size:0.88rem;font-weight:600;margin-bottom:5px;color:#444}
-input[type=text],input[type=date],textarea,select{width:100%;padding:9px 13px;border:1px solid #ccc;border-radius:6px;font-size:0.96rem;font-family:inherit;background:#fafafa;transition:border .2s}
-input[type=text]:focus,textarea:focus,select:focus{border-color:#1a3a5c;outline:none;background:#fff}
-textarea{resize:vertical;min-height:85px}
+label span.req{color:#e53e3e}
+label span.hint{font-weight:400;color:#999;font-size:.8rem}
+input[type=text],input[type=date],input[type=url],textarea,select{width:100%;padding:9px 13px;border:1px solid #ccc;border-radius:6px;font-size:0.96rem;font-family:inherit;background:#fafafa;transition:border .2s}
+input[type=text]:focus,input[type=url]:focus,textarea:focus,select:focus,input[type=date]:focus{border-color:#1a3a5c;outline:none;background:#fff}
+textarea{resize:vertical;min-height:75px}
 .form-row{display:flex;gap:14px}
 .form-row .form-group{flex:1}
-.drop-zone{border:2px dashed #aac;border-radius:8px;padding:28px;text-align:center;cursor:pointer;background:#f7f9ff;transition:border .2s,background .2s}
+.drop-zone{border:2px dashed #aac;border-radius:8px;padding:22px;text-align:center;cursor:pointer;background:#f7f9ff;transition:border .2s,background .2s;margin-bottom:8px}
 .drop-zone:hover,.drop-zone.drag-over{border-color:#1a3a5c;background:#eef2ff}
-.drop-zone p{color:#888;font-size:0.9rem;margin-bottom:6px}
-.drop-zone .uico{font-size:2.2rem;margin-bottom:6px}
+.drop-zone p{color:#888;font-size:0.88rem;margin-bottom:4px}
+.drop-zone .uico{font-size:2rem;margin-bottom:4px}
 .drop-zone input[type=file]{display:none}
-#img-preview{max-width:100%;max-height:190px;border-radius:6px;margin-top:10px;display:none}
-#img-name{font-size:0.82rem;color:#555;margin-top:5px}
+#img-preview{max-width:100%;max-height:160px;border-radius:6px;margin-top:8px;display:none}
+#img-name{font-size:0.82rem;color:#555;margin-top:4px}
+.img-or{text-align:center;color:#aaa;font-size:.82rem;margin:6px 0}
+.color-swatches{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.swatch{width:32px;height:32px;border-radius:6px;cursor:pointer;border:3px solid transparent;transition:border .15s}
+.swatch.selected{border-color:#1a3a5c}
 .btn{padding:10px 22px;border:none;border-radius:6px;cursor:pointer;font-size:0.95rem;font-family:inherit;transition:background .2s}
 .btn-primary{background:#1a3a5c;color:#fff}
 .btn-primary:hover{background:#15304e}
@@ -43,20 +50,29 @@ textarea{resize:vertical;min-height:85px}
 .btn-edit:hover{background:#d68910}
 .btn-export{background:#8e44ad;color:#fff}
 .btn-export:hover{background:#7d3c98}
+.btn-secondary{background:#eee;color:#333}
+.btn-secondary:hover{background:#ddd}
 .news-item{background:#fff;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.07);padding:14px 18px;margin-bottom:12px;display:flex;align-items:flex-start;gap:14px}
-.news-item img{width:78px;height:58px;object-fit:cover;border-radius:6px;flex-shrink:0}
-.no-img{width:78px;height:58px;background:#e8e8e8;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:0.72rem;flex-shrink:0}
-.news-info{flex:1}
-.ni-title-ar{font-weight:700;font-size:0.98rem}
-.ni-title-en{font-size:0.85rem;color:#777;direction:ltr;text-align:right;margin-top:2px}
+.news-item-thumb{width:78px;height:58px;border-radius:6px;flex-shrink:0;object-fit:cover}
+.no-img{width:78px;height:58px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.72rem;flex-shrink:0;text-align:center;padding:4px}
+.news-info{flex:1;min-width:0}
+.ni-title-ar{font-weight:700;font-size:0.98rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ni-title-en{font-size:0.85rem;color:#777;direction:ltr;text-align:right;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ni-meta{font-size:0.8rem;color:#bbb;margin-top:4px}
+.ni-excerpt{font-size:0.82rem;color:#888;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .news-actions{display:flex;gap:7px;flex-shrink:0}
 .empty-msg{text-align:center;color:#bbb;padding:38px;font-size:0.97rem}
-.json-box{background:#1e1e2e;color:#a8ff78;font-family:monospace;font-size:0.8rem;padding:14px;border-radius:8px;max-height:300px;overflow:auto;white-space:pre-wrap;word-break:break-all;direction:ltr}
-.copy-row{display:flex;justify-content:flex-end;margin-top:10px}
+.json-box{background:#1e1e2e;color:#a8ff78;font-family:monospace;font-size:0.78rem;padding:14px;border-radius:8px;max-height:380px;overflow:auto;white-space:pre-wrap;word-break:break-all;direction:ltr}
+.copy-row{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
 .alert{padding:11px 16px;border-radius:6px;margin-bottom:14px;font-size:0.93rem;display:none}
 .alert-success{background:#d4edda;color:#155724;border:1px solid #c3e6cb}
 .alert-error{background:#f8d7da;color:#721c24;border:1px solid #f5c6cb}
+.preview-card{border:1px solid #e2e8f0;border-radius:10px;overflow:hidden;max-width:320px;margin-top:16px}
+.preview-card .pc-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff;font-weight:600}
+.preview-card .pc-body{padding:14px}
+.preview-card .pc-date{font-size:.75rem;color:#aaa;margin-bottom:6px}
+.preview-card .pc-title{font-weight:700;font-size:.95rem;margin-bottom:6px;line-height:1.4}
+.preview-card .pc-excerpt{font-size:.83rem;color:#666;line-height:1.5}
 </style>
 </head>
 <body>
@@ -67,22 +83,24 @@ textarea{resize:vertical;min-height:85px}
 </div>
 
 <div class="tabs" id="tabs-bar">
-  <div class="tab active" data-tab="add" onclick="showTab('add',this)">➕ إضافة خبر</div>
-  <div class="tab" data-tab="list" onclick="showTab('list',this)">📋 قائمة الأخبار</div>
-  <div class="tab" data-tab="export" onclick="showTab('export',this)">📤 تصدير JSON</div>
+  <div class="tab active" data-tab="add"    onclick="showTab('add',this)">➕ إضافة خبر</div>
+  <div class="tab"        data-tab="list"   onclick="showTab('list',this)">📋 قائمة الأخبار</div>
+  <div class="tab"        data-tab="export" onclick="showTab('export',this)">📤 تصدير JSON</div>
 </div>
 
 <div class="content">
 
-  <!-- ADD -->
+  <!-- ═══ ADD / EDIT ═══ -->
   <div class="panel active" id="tab-add">
     <div class="card">
       <h2 id="form-title">إضافة خبر جديد</h2>
       <div id="alert-add" class="alert"></div>
 
+      <!-- العناوين -->
+      <span class="section-label">📝 العناوين</span>
       <div class="form-row">
         <div class="form-group">
-          <label>العنوان (عربي) *</label>
+          <label>العنوان (عربي) <span class="req">*</span></label>
           <input type="text" id="title-ar" placeholder="أدخل عنوان الخبر بالعربي">
         </div>
         <div class="form-group">
@@ -91,49 +109,79 @@ textarea{resize:vertical;min-height:85px}
         </div>
       </div>
 
-      <div class="form-group">
-        <label>النص (عربي) *</label>
-        <textarea id="body-ar" placeholder="اكتب نص الخبر بالعربي..."></textarea>
-      </div>
-      <div class="form-group">
-        <label>Body (English)</label>
-        <textarea id="body-en" placeholder="Write news body in English..." style="direction:ltr"></textarea>
-      </div>
-
+      <!-- المقتطف -->
+      <span class="section-label">📄 المقتطف <span style="font-weight:400;color:#888">(يظهر في البطاقة على الصفحة الرئيسية)</span></span>
       <div class="form-row">
         <div class="form-group">
-          <label>التاريخ</label>
+          <label>المقتطف (عربي) <span class="req">*</span> <span class="hint">— جملة أو جملتان</span></label>
+          <textarea id="excerpt-ar" placeholder="اكتب ملخصاً قصيراً للخبر بالعربي..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Excerpt (English) <span class="hint">— 1–2 sentences</span></label>
+          <textarea id="excerpt-en" placeholder="Write a short summary in English..." style="direction:ltr"></textarea>
+        </div>
+      </div>
+
+      <!-- التفاصيل -->
+      <span class="section-label">🗂️ التفاصيل</span>
+      <div class="form-row">
+        <div class="form-group">
+          <label>التاريخ <span class="req">*</span></label>
           <input type="date" id="news-date">
         </div>
         <div class="form-group">
           <label>الفئة</label>
-          <select id="news-cat">
-            <option value="general">عام</option>
+          <select id="news-cat" onchange="onCatChange()">
+            <option value="general">عام / أخبار</option>
             <option value="academic">أكاديمي</option>
             <option value="research">بحثي</option>
             <option value="events">فعاليات</option>
             <option value="announcement">إعلان</option>
           </select>
         </div>
+        <div class="form-group">
+          <label>رابط الخبر <span class="hint">(اختياري)</span></label>
+          <input type="url" id="news-url" placeholder="https://..." style="direction:ltr">
+        </div>
       </div>
 
+      <!-- اللون -->
       <div class="form-group">
-        <label>الصورة</label>
+        <label>لون خلفية البطاقة <span class="hint">(يُختار تلقائياً حسب الفئة)</span></label>
+        <div class="color-swatches" id="color-swatches">
+          <div class="swatch selected" data-color="linear-gradient(135deg,#3D1F6E 0%,#6B46C1 100%)" style="background:linear-gradient(135deg,#3D1F6E 0%,#6B46C1 100%)" onclick="selectColor(this)" title="بنفسجي"></div>
+          <div class="swatch" data-color="linear-gradient(135deg,#00B4C8 0%,#0077A8 100%)" style="background:linear-gradient(135deg,#00B4C8 0%,#0077A8 100%)" onclick="selectColor(this)" title="أزرق"></div>
+          <div class="swatch" data-color="linear-gradient(135deg,#38A169 0%,#276749 100%)" style="background:linear-gradient(135deg,#38A169 0%,#276749 100%)" onclick="selectColor(this)" title="أخضر"></div>
+          <div class="swatch" data-color="linear-gradient(135deg,#E53E3E 0%,#C53030 100%)" style="background:linear-gradient(135deg,#E53E3E 0%,#C53030 100%)" onclick="selectColor(this)" title="أحمر"></div>
+          <div class="swatch" data-color="linear-gradient(135deg,#DD6B20 0%,#C05621 100%)" style="background:linear-gradient(135deg,#DD6B20 0%,#C05621 100%)" onclick="selectColor(this)" title="برتقالي"></div>
+          <div class="swatch" data-color="linear-gradient(135deg,#2B6CB0 0%,#1A365D 100%)" style="background:linear-gradient(135deg,#2B6CB0 0%,#1A365D 100%)" onclick="selectColor(this)" title="كحلي"></div>
+        </div>
+      </div>
+
+      <!-- الصورة -->
+      <span class="section-label">🖼️ الصورة</span>
+      <div class="form-group">
+        <label>رفع صورة <span class="hint">(PNG · JPG · WEBP — بحد أقصى 5MB)</span></label>
         <div class="drop-zone" id="drop-zone" onclick="document.getElementById('img-input').click()">
           <div class="uico">🖼️</div>
           <p>انقر أو اسحب الصورة هنا</p>
-          <p style="font-size:.78rem">PNG · JPG · WEBP — بحد أقصى 5MB</p>
           <input type="file" id="img-input" accept="image/*" onchange="handleImgSelect(this)">
           <img id="img-preview" alt="معاينة">
           <div id="img-name"></div>
         </div>
+        <div class="img-or">— أو —</div>
+        <label>مسار الصورة على الموقع <span class="hint">(مثال: images/uploads/photo.jpg)</span></label>
+        <input type="text" id="img-path" placeholder="images/uploads/اسم-الصورة.jpg" style="direction:ltr" oninput="onImgPathInput()">
       </div>
 
-      <button class="btn btn-primary" onclick="saveNews()">💾 حفظ الخبر</button>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:6px">
+        <button class="btn btn-primary" onclick="saveNews()">💾 حفظ الخبر</button>
+        <button class="btn btn-secondary" onclick="resetForm()">↺ مسح النموذج</button>
+      </div>
     </div>
   </div>
 
-  <!-- LIST -->
+  <!-- ═══ LIST ═══ -->
   <div class="panel" id="tab-list">
     <div class="card">
       <h2>قائمة الأخبار <span id="news-count" style="font-size:.83rem;color:#aaa;font-weight:normal"></span></h2>
@@ -141,129 +189,210 @@ textarea{resize:vertical;min-height:85px}
     </div>
   </div>
 
-  <!-- EXPORT -->
+  <!-- ═══ EXPORT ═══ -->
   <div class="panel" id="tab-export">
     <div class="card">
       <h2>تصدير بيانات الأخبار</h2>
-      <p style="color:#666;margin-bottom:14px;font-size:.93rem">انسخ هذا JSON وارفعه في <code>admin/data/news.json</code> لتحديث الموقع.</p>
+      <p style="color:#555;margin-bottom:6px;font-size:.93rem">
+        انسخ هذا JSON والصقه في الملف
+        <code style="background:#f0f0f0;padding:2px 6px;border-radius:3px">admin/data/news.json</code>
+        ثم ارفعه على GitHub لتحديث الموقع.
+      </p>
+      <p style="color:#e07b00;font-size:.83rem;margin-bottom:14px">
+        ⚠️ تأكد من استبدال المحتوى الكامل للملف بهذا JSON.
+      </p>
       <div class="json-box" id="json-output"></div>
       <div class="copy-row">
+        <div id="copy-msg" style="color:#27ae60;display:none">✅ تم النسخ!</div>
         <button class="btn btn-export" onclick="copyJSON()">📋 نسخ JSON</button>
       </div>
-      <div id="copy-msg" style="text-align:center;margin-top:8px;color:#27ae60;display:none">✅ تم النسخ!</div>
     </div>
   </div>
 
 </div>
 
 <script>
-// Auth check (comment out for preview)
-console.log('AUTH IN EDITOR:', sessionStorage.getItem('news_auth'));
-  if (sessionStorage.getItem('news_auth') !== '1') {
-  window.location.href = '/news-login.html';   // أو '/news-login'
+// ── Auth ──────────────────────────────────────────────────────
+if (sessionStorage.getItem('news_auth') !== '1') {
+  window.location.href = '/news-login.html';
 }
 
+// ── البيانات الثابتة ──────────────────────────────────────────
+var MONTHS_AR = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+var MONTHS_EN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+var CAT_TYPE = {
+  general:      { en:'News',         ar:'أخبار'   },
+  academic:     { en:'Academic',     ar:'أكاديمي' },
+  research:     { en:'Research',     ar:'بحث'     },
+  events:       { en:'Event',        ar:'فعالية'  },
+  announcement: { en:'Announcement', ar:'إعلان'   }
+};
+
+var CAT_COLOR = {
+  general:      'linear-gradient(135deg,#3D1F6E 0%,#6B46C1 100%)',
+  academic:     'linear-gradient(135deg,#00B4C8 0%,#0077A8 100%)',
+  research:     'linear-gradient(135deg,#38A169 0%,#276749 100%)',
+  events:       'linear-gradient(135deg,#E53E3E 0%,#C53030 100%)',
+  announcement: 'linear-gradient(135deg,#DD6B20 0%,#C05621 100%)'
+};
+
+// ── حالة التطبيق ──────────────────────────────────────────────
 var newsList = [];
 try { newsList = JSON.parse(localStorage.getItem('sru_news') || '[]'); } catch(e) { newsList = []; }
-var editingId = null;
-var currentImg = null;
+var editingId  = null;
+var currentImg = null;   // base64
+var selectedColor = 'linear-gradient(135deg,#3D1F6E 0%,#6B46C1 100%)';
 
 document.getElementById('news-date').valueAsDate = new Date();
 
-// TABS
+// ── تبديل التبويبات ───────────────────────────────────────────
 function showTab(name, el) {
   document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
   document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active'); });
   document.getElementById('tab-' + name).classList.add('active');
   el.classList.add('active');
-  if (name === 'list') renderList();
+  if (name === 'list')   renderList();
   if (name === 'export') renderJSON();
 }
 
-// IMAGE
+// ── اختيار اللون ─────────────────────────────────────────────
+function selectColor(el) {
+  document.querySelectorAll('.swatch').forEach(function(s){ s.classList.remove('selected'); });
+  el.classList.add('selected');
+  selectedColor = el.dataset.color;
+}
+
+function setColorFromCat(cat) {
+  var color = CAT_COLOR[cat] || CAT_COLOR.general;
+  var swatches = document.querySelectorAll('.swatch');
+  var matched = false;
+  swatches.forEach(function(s) {
+    s.classList.remove('selected');
+    if (s.dataset.color === color) { s.classList.add('selected'); matched = true; }
+  });
+  if (matched) selectedColor = color;
+}
+
+function onCatChange() {
+  setColorFromCat(document.getElementById('news-cat').value);
+}
+
+// ── الصورة ────────────────────────────────────────────────────
 var dz = document.getElementById('drop-zone');
 dz.addEventListener('dragover', function(e){ e.preventDefault(); dz.classList.add('drag-over'); });
 dz.addEventListener('dragleave', function(){ dz.classList.remove('drag-over'); });
 dz.addEventListener('drop', function(e){
   e.preventDefault(); dz.classList.remove('drag-over');
   var f = e.dataTransfer.files[0];
-  if (f && f.type.startsWith('image/')) loadImg(f);
+  if (f && f.type.startsWith('image/')) loadImgFile(f);
 });
 
-function handleImgSelect(inp) { if (inp.files && inp.files[0]) loadImg(inp.files[0]); }
+function handleImgSelect(inp) { if (inp.files && inp.files[0]) loadImgFile(inp.files[0]); }
 
-function loadImg(file) {
+function loadImgFile(file) {
   if (file.size > 5*1024*1024) { showAlert('add','حجم الصورة يتجاوز 5MB','error'); return; }
   var r = new FileReader();
   r.onload = function(e) {
-    currentImg = e.target.result;
+    currentImg = e.target.result;  // base64
     document.getElementById('img-preview').src = currentImg;
     document.getElementById('img-preview').style.display = 'block';
     document.getElementById('img-name').textContent = '📎 ' + file.name;
+    document.getElementById('img-path').value = '';  // clear path field
   };
   r.readAsDataURL(file);
 }
 
-// SAVE
-function saveNews() {
-  var tAr = document.getElementById('title-ar').value.trim();
-  var tEn = document.getElementById('title-en').value.trim();
-  var bAr = document.getElementById('body-ar').value.trim();
-  var bEn = document.getElementById('body-en').value.trim();
-  var dt  = document.getElementById('news-date').value;
-  var cat = document.getElementById('news-cat').value;
+function onImgPathInput() {
+  var val = document.getElementById('img-path').value.trim();
+  if (val) {
+    currentImg = null;
+    document.getElementById('img-preview').style.display = 'none';
+    document.getElementById('img-name').textContent = '';
+    document.getElementById('img-input').value = '';
+  }
+}
 
-  if (!tAr) { showAlert('add','العنوان بالعربي مطلوب','error'); return; }
-  if (!bAr) { showAlert('add','نص الخبر بالعربي مطلوب','error'); return; }
+// ── حفظ الخبر ────────────────────────────────────────────────
+function saveNews() {
+  var tAr  = document.getElementById('title-ar').value.trim();
+  var tEn  = document.getElementById('title-en').value.trim();
+  var exAr = document.getElementById('excerpt-ar').value.trim();
+  var exEn = document.getElementById('excerpt-en').value.trim();
+  var dt   = document.getElementById('news-date').value;
+  var cat  = document.getElementById('news-cat').value;
+  var url  = document.getElementById('news-url').value.trim();
+  var imgPath = document.getElementById('img-path').value.trim();
+
+  if (!tAr)  { showAlert('add','العنوان بالعربي مطلوب','error'); return; }
+  if (!exAr) { showAlert('add','المقتطف بالعربي مطلوب','error'); return; }
+  if (!dt)   { showAlert('add','التاريخ مطلوب','error'); return; }
+
+  // تحليل التاريخ
+  var dateObj   = new Date(dt + 'T00:00:00');
+  var day       = String(dateObj.getDate()).padStart(2, '0');
+  var month_en  = MONTHS_EN[dateObj.getMonth()];
+  var month_ar  = MONTHS_AR[dateObj.getMonth()];
+
+  // نوع الخبر حسب الفئة
+  var type = CAT_TYPE[cat] || CAT_TYPE.general;
+
+  // الصورة: base64 أو مسار
+  var imageVal = currentImg || imgPath || '';
+
+  var newsItem = {
+    id:        editingId !== null ? editingId : Date.now(),
+    type_en:   type.en,
+    type_ar:   type.ar,
+    day:       day,
+    month_en:  month_en,
+    month_ar:  month_ar,
+    title_ar:  tAr,
+    title_en:  tEn,
+    excerpt_ar: exAr,
+    excerpt_en: exEn,
+    image:     imageVal,
+    color:     selectedColor,
+    url:       url || '#',
+    cat:       cat,
+    date:      dt
+  };
 
   if (editingId !== null) {
-    for (var i=0; i<newsList.length; i++) {
-      if (newsList[i].id === editingId) {
-        newsList[i].titleAr = tAr;
-        newsList[i].titleEn = tEn;
-        newsList[i].bodyAr  = bAr;
-        newsList[i].bodyEn  = bEn;
-        newsList[i].date    = dt;
-        newsList[i].cat     = cat;
-        if (currentImg) newsList[i].image = currentImg;
-        break;
-      }
+    for (var i = 0; i < newsList.length; i++) {
+      if (newsList[i].id === editingId) { newsList[i] = newsItem; break; }
     }
     editingId = null;
     document.getElementById('form-title').textContent = 'إضافة خبر جديد';
+    showAlert('add','✅ تم تحديث الخبر. انتقل إلى «تصدير JSON» لتحديث الموقع.','success');
   } else {
-    newsList.unshift({
-      id:      Date.now(),
-      titleAr: tAr,
-      titleEn: tEn,
-      bodyAr:  bAr,
-      bodyEn:  bEn,
-      date:    dt,
-      cat:     cat,
-      image:   currentImg || null
-    });
+    newsList.unshift(newsItem);
+    showAlert('add','✅ تم حفظ الخبر. انتقل إلى «تصدير JSON» لتحديث الموقع.','success');
   }
 
   localStorage.setItem('sru_news', JSON.stringify(newsList));
-
-  var msg = editingId === null
-    ? '✅ تم حفظ الخبر. انتقل إلى تبويب «تصدير JSON» لتحديث الموقع.'
-    : '✅ تم تحديث الخبر. انتقل إلى تبويب «تصدير JSON» لتحديث الموقع.';
-  showAlert('add', msg, 'success');
-  clearForm();
+  resetForm();
 }
 
-function clearForm() {
-  ['title-ar','title-en','body-ar','body-en'].forEach(function(id){ document.getElementById(id).value=''; });
+function resetForm() {
+  editingId = null;
+  currentImg = null;
+  document.getElementById('title-ar').value  = '';
+  document.getElementById('title-en').value  = '';
+  document.getElementById('excerpt-ar').value = '';
+  document.getElementById('excerpt-en').value = '';
   document.getElementById('news-date').valueAsDate = new Date();
-  document.getElementById('news-cat').value = 'general';
+  document.getElementById('news-cat').value   = 'general';
+  document.getElementById('news-url').value   = '';
+  document.getElementById('img-path').value   = '';
   document.getElementById('img-preview').style.display = 'none';
   document.getElementById('img-name').textContent = '';
   document.getElementById('img-input').value = '';
-  currentImg = null;
+  document.getElementById('form-title').textContent = 'إضافة خبر جديد';
+  setColorFromCat('general');
 }
 
-// LIST
+// ── عرض القائمة ───────────────────────────────────────────────
 function renderList() {
   var c = document.getElementById('news-list-container');
   document.getElementById('news-count').textContent = '(' + newsList.length + ' خبر)';
@@ -272,15 +401,17 @@ function renderList() {
     return;
   }
   c.innerHTML = newsList.map(function(n){
-    var img = n.image
-      ? '<img src="'+n.image+'" alt="">'
-      : '<div class="no-img">لا صورة</div>';
+    var thumb = n.image
+      ? '<img class="news-item-thumb" src="'+n.image+'" alt="">'
+      : '<div class="no-img" style="background:'+n.color+'">'+( n.type_ar||'خبر')+'</div>';
+    var dateLabel = n.date ? n.date : (n.day && n.month_en ? n.day+' '+n.month_en : '—');
     return '<div class="news-item">'
-      + img
+      + thumb
       + '<div class="news-info">'
-      +   '<div class="ni-title-ar">'+(n.titleAr||'')+'</div>'
-      +   '<div class="ni-title-en">'+(n.titleEn||'')+'</div>'
-      +   '<div class="ni-meta">📅 '+(n.date||'—')+' &nbsp;|&nbsp; 🏷️ '+catLabel(n.cat)+'</div>'
+      +   '<div class="ni-title-ar">'+(n.title_ar||n.titleAr||'')+'</div>'
+      +   '<div class="ni-title-en">'+(n.title_en||n.titleEn||'')+'</div>'
+      +   '<div class="ni-excerpt">'+(n.excerpt_ar||n.bodyAr||'')+'</div>'
+      +   '<div class="ni-meta">📅 '+dateLabel+' &nbsp;|&nbsp; 🏷️ '+catLabel(n.cat)+'</div>'
       + '</div>'
       + '<div class="news-actions">'
       +   '<button class="btn btn-edit" onclick="editNews('+n.id+')">✏️ تعديل</button>'
@@ -291,7 +422,7 @@ function renderList() {
 }
 
 function catLabel(c) {
-  return {general:'عام',academic:'أكاديمي',research:'بحثي',events:'فعاليات',announcement:'إعلان'}[c]||c;
+  return {general:'عام',academic:'أكاديمي',research:'بحثي',events:'فعاليات',announcement:'إعلان'}[c]||c||'—';
 }
 
 function deleteNews(id) {
@@ -302,54 +433,85 @@ function deleteNews(id) {
 }
 
 function editNews(id) {
-  var n = null;
-  for (var i=0;i<newsList.length;i++) if (newsList[i].id===id){ n=newsList[i]; break; }
+  var n = newsList.find(function(x){ return x.id === id; });
   if (!n) return;
   editingId = id;
-  document.getElementById('title-ar').value = n.titleAr || '';
-  document.getElementById('title-en').value = n.titleEn || '';
-  document.getElementById('body-ar').value  = n.bodyAr  || '';
-  document.getElementById('body-en').value  = n.bodyEn  || '';
-  document.getElementById('news-date').value = n.date || '';
-  document.getElementById('news-cat').value  = n.cat  || 'general';
-  if (n.image) {
+
+  document.getElementById('title-ar').value   = n.title_ar  || n.titleAr  || '';
+  document.getElementById('title-en').value   = n.title_en  || n.titleEn  || '';
+  document.getElementById('excerpt-ar').value = n.excerpt_ar || n.bodyAr  || '';
+  document.getElementById('excerpt-en').value = n.excerpt_en || n.bodyEn  || '';
+  document.getElementById('news-date').value  = n.date || '';
+  document.getElementById('news-cat').value   = n.cat  || 'general';
+  document.getElementById('news-url').value   = (n.url && n.url !== '#') ? n.url : '';
+
+  // الصورة
+  if (n.image && n.image.startsWith('data:')) {
     currentImg = n.image;
-    document.getElementById('img-preview').src = n.image;
+    document.getElementById('img-preview').src = currentImg;
     document.getElementById('img-preview').style.display = 'block';
     document.getElementById('img-name').textContent = '📎 صورة محفوظة';
+    document.getElementById('img-path').value = '';
+  } else if (n.image) {
+    currentImg = null;
+    document.getElementById('img-path').value = n.image;
+    document.getElementById('img-preview').style.display = 'none';
+    document.getElementById('img-name').textContent = '';
   } else {
     currentImg = null;
+    document.getElementById('img-path').value = '';
     document.getElementById('img-preview').style.display = 'none';
     document.getElementById('img-name').textContent = '';
   }
+
+  // اللون
+  selectedColor = n.color || CAT_COLOR[n.cat] || CAT_COLOR.general;
+  document.querySelectorAll('.swatch').forEach(function(s){
+    s.classList.toggle('selected', s.dataset.color === selectedColor);
+  });
+
   document.getElementById('form-title').textContent = '✏️ تعديل الخبر';
-  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
-  document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active'); });
-  document.getElementById('tab-add').classList.add('active');
-  document.querySelector('[data-tab="add"]').classList.add('active');
+  showTab('add', document.querySelector('[data-tab="add"]'));
   window.scrollTo({top:0,behavior:'smooth'});
 }
-// EXPORT
+
+// ── تصدير JSON ────────────────────────────────────────────────
 function renderJSON() {
   var data = newsList.map(function(n){
+    // دعم الأخبار القديمة المحفوظة بالشكل القديم
+    var dateObj  = n.date ? new Date(n.date + 'T00:00:00') : null;
+    var day      = n.day      || (dateObj ? String(dateObj.getDate()).padStart(2,'0')      : '01');
+    var month_en = n.month_en || (dateObj ? MONTHS_EN[dateObj.getMonth()]                  : 'Jan');
+    var month_ar = n.month_ar || (dateObj ? MONTHS_AR[dateObj.getMonth()]                  : 'يناير');
+    var type     = CAT_TYPE[n.cat] || CAT_TYPE.general;
+    var color    = n.color || CAT_COLOR[n.cat] || CAT_COLOR.general;
+
     return {
-      id:       n.id,
-      title_ar: n.titleAr,
-      title_en: n.titleEn,
-      body_ar:  n.bodyAr,
-      body_en:  n.bodyEn,
-      date:     n.date,
-      cat:      n.cat,
-      hasImage: !!n.image
+      id:         n.id,
+      type_en:    n.type_en    || type.en,
+      type_ar:    n.type_ar    || type.ar,
+      day:        day,
+      month_en:   month_en,
+      month_ar:   month_ar,
+      title_ar:   n.title_ar  || n.titleAr  || '',
+      title_en:   n.title_en  || n.titleEn  || '',
+      excerpt_ar: n.excerpt_ar || n.bodyAr  || '',
+      excerpt_en: n.excerpt_en || n.bodyEn  || '',
+      image:      n.image || '',
+      color:      color,
+      url:        n.url || '#',
+      cat:        n.cat || 'general',
+      date:       n.date || ''
     };
   });
   document.getElementById('json-output').textContent =
     JSON.stringify({ news: data }, null, 2);
 }
+
 function copyJSON() {
   var txt = document.getElementById('json-output').textContent;
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(txt).then(function(){ flashCopy(); });
+    navigator.clipboard.writeText(txt).then(flashCopy);
   } else {
     var ta = document.createElement('textarea');
     ta.value = txt; document.body.appendChild(ta); ta.select();
@@ -364,16 +526,16 @@ function flashCopy() {
   setTimeout(function(){ m.style.display='none'; }, 2500);
 }
 
-// ALERT
+// ── تنبيهات ───────────────────────────────────────────────────
 function showAlert(panel, msg, type) {
   var el = document.getElementById('alert-'+panel);
   el.textContent = msg;
   el.className = 'alert alert-'+type;
   el.style.display = 'block';
-  setTimeout(function(){ el.style.display='none'; }, 3500);
+  setTimeout(function(){ el.style.display='none'; }, 4000);
 }
 
-// LOGOUT
+// ── تسجيل الخروج ─────────────────────────────────────────────
 function logout() {
   sessionStorage.removeItem('news_auth');
   window.location.href = '/news-login.html';
