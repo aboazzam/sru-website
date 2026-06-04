@@ -135,8 +135,10 @@
      4. SCROLL REVEAL (IntersectionObserver)
   ═══════════════════════════════════════════════════════════════ */
 
+  let revealObserver = null;
+
   if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver(
+    revealObserver = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
@@ -159,11 +161,15 @@
   }
 
   function reObserveReveal() {
-  document.querySelectorAll('.reveal:not(.revealed)').forEach(el => {
-    revealObserver.observe(el);
-  });
-}
-window.reObserveReveal = reObserveReveal;
+    document.querySelectorAll('.reveal:not(.visible)').forEach(function (el) {
+      if (revealObserver) {
+        revealObserver.observe(el);
+      } else {
+        el.classList.add('visible');
+      }
+    });
+  }
+  window.reObserveReveal = reObserveReveal;
   /* ═══════════════════════════════════════════════════════════════
      5. COUNTER ANIMATION
   ═══════════════════════════════════════════════════════════════ */
