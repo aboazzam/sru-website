@@ -1,5 +1,5 @@
-{
-    "news": [
+﻿{
+  "news": [
     {
       "id": "news-1",
       "type_en": "News",
@@ -41,28 +41,13 @@
       "excerpt_ar": "حقق طلاب كلية الهندسة المركز الأول في مسابقة الهندسة الإبداعية على مستوى دول الخليج العربي.",
       "image": "",
       "color": "linear-gradient(135deg, #38A169 0%, #276749 100%)"
-    }
-  ]
-  }
-     
-    {
-      "id": 1780183071940,
-      "title_ar": "أداء فريضة الحج",
-      "title_en": "Alhajj perform",
-      "body_ar": "أدى مجموع طلاب 90 طالب وطالبة فريضة الحج لعام 1447",
-      "body_en": "90 students perform Alhajj",
-      "date": "2026-05-30",
-      "cat": "general",
-      "hasImage": true
-    }
-  ]
-}و
+    },
     {
       "id": 1780611339753,
       "title_ar": "كلية الأعمال تنظم النسخة الثالثة من ملتقى المشاريع الريادية والابتكارية",
       "title_en": "The College of Business organizes the third edition of the Entrepreneurial and Innovative Projects Forum",
-      "body_ar": "نظّمت كلية الأعمال النسخة الثالثة من ملتقى المشاريع الريادية والابتكارية، بمشاركة 19 مشروعاً لطلاب وطالبات الكلية، شملت تطبيقات ذكية مدعومة بتقنيات الذكاء الاصطناعي ومشاريع ريادة أعمال تقدم حلولاً مبتكرة تخدم المجتمع في مجالات متنوعة، ضمن جهود الكلية لتعزيز الابتكار وتمكين الطلبة\nكما استعرض المجلس ​عدداً من المبادرات التي من شأنها تعزيز مسيرة الجامعة والإسهام في تحقيق رسالتها.",
-      "body_en": "The College of Business organized the third edition of the Entrepreneurial and Innovative Projects Forum, with the participation of 19 projects by the college's students. These projects included smart applications supported by artificial intelligence technologies and entrepreneurial projects that offer innovative solutions serving the community in various fields, as part of the college's efforts to promote innovation and empower students.",
+      "body_ar": "نظّمت كلية الأعمال النسخة الثالثة من ملتقى المشاريع الريادية والابتكارية، بمشاركة 19 مشروعاً لطلاب وطالبات الكلية.",
+      "body_en": "The College of Business organized the third edition of the Entrepreneurial and Innovative Projects Forum, with the participation of 19 projects by the college's students.",
       "date": "2026-06-03",
       "cat": "academic",
       "hasImage": true
@@ -70,20 +55,30 @@
     {
       "id": 1780611105234,
       "title_ar": "الجامعة تقيم حفل المعايدة لمنسوبيها",
-      "title_en": "The university holds a greeting ceremony for its staff.",
-      "body_ar": "أقامت الجامعة حفل معايدة لمنسوبيها بمناسبة عيد الأضحى المبارك، في أجواء سادتها الألفة والمودة، جسّدت قيم التواصل والتآخي. وشهد الحفل تبادل التهاني والتبريكات، وسط دعوات صادقة بأن يعيد الله تعالى هذه الأيام المباركة على الجميع بالخير والمسرات.\n\nكما استعرض المجلس ​عدداً من المبادرات التي من شأنها تعزيز مسيرة الجامعة والإسهام في تحقيق رسالتها.",
-      "body_en": "The university held a celebratory gathering for its staff on the occasion of Eid al-Adha, in an atmosphere of warmth and camaraderie, embodying the values ​​of communication and brotherhood. The event was marked by the exchange of greetings and well wishes, along with sincere prayers that God Almighty would bring back these blessed days to everyone with goodness and joy.",
+      "title_en": "The university holds a greeting ceremony for its staff",
+      "body_ar": "أقامت الجامعة حفل معايدة لمنسوبيها بمناسبة عيد الأضحى المبارك، في أجواء سادتها الألفة والمودة.",
+      "body_en": "The university held a celebratory gathering for its staff on the occasion of Eid al-Adha.",
       "date": "2026-06-02",
       "cat": "events",
       "hasImage": true
     },
     {
       "id": 1780610883291,
-      "title_ar": "مجلس الجامعة يعقد اجتماعه السايع لعام 1447هـ",
+      "title_ar": "مجلس الجامعة يعقد اجتماعه السابع لعام 1447هـ",
       "title_en": "The University Council holds its seventh meeting for the year 1447 AH",
-      "body_ar": "عقد مجلس الجامعة اجتماعه السابع للعام الجامعي 1447هـ، برئاسة سعادة رئيس الجامعة، حيث ناقش عدداً من الموضوعات الأكاديمية والتنظيمية، من أبرزها التوجهات الاستراتيجية للجامعة، وبعض اللوائح التنظيمية، والرسوم الدراسية لبعض برامج الجامعة.\n\nكما استعرض المجلس ​عدداً من المبادرات التي من شأنها تعزيز مسيرة الجامعة والإسهام في تحقيق رسالتها.",
-      "body_en": "The University Council held its seventh meeting for the academic year 1447 AH, chaired by the University President. The Council discussed several academic and organizational matters, most notably the University's strategic directions, certain regulations, and tuition fees for some of its programs.\n\nThe Council also reviewed a number of initiatives aimed at strengthening the University's progress and contributing to the fulfillment of its mission.",
+      "body_ar": "عقد مجلس الجامعة اجتماعه السابع للعام الجامعي 1447هـ، برئاسة سعادة رئيس الجامعة.",
+      "body_en": "The University Council held its seventh meeting for the academic year 1447 AH, chaired by the University President.",
       "date": "2026-06-04",
+      "cat": "general",
+      "hasImage": true
+    },
+    {
+      "id": 1780183071940,
+      "title_ar": "أداء فريضة الحج",
+      "title_en": "Performing the Hajj Pilgrimage",
+      "body_ar": "أدى مجموع 90 طالباً وطالبةً فريضة الحج لعام 1447هـ.",
+      "body_en": "90 students performed the Hajj pilgrimage for the year 1447 AH.",
+      "date": "2026-05-30",
       "cat": "general",
       "hasImage": true
     }
