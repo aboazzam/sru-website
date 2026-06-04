@@ -20,6 +20,12 @@ async function loadHomeNews() {
 
   } catch (err) {
     console.error('Error loading news:', err);
+    // Fallback: أخبار افتراضية عند فشل fetch (مثلاً عند الفتح المحلي)
+    const fallback = window._sruNewsData || [];
+    if (fallback.length) {
+      window.homeNewsData = fallback;
+      renderNewsGrid(fallback);
+    }
   }
 }
 
@@ -67,13 +73,13 @@ function renderNewsGrid(newsItems) {
 
   grid.innerHTML = newsItems.map(buildNewsCard).join('');
 
-  // تفعيل الظهور
+  // تفعيل الظهور — إضافة visible مباشرةً أولاً لضمان الظهور
+  grid.querySelectorAll('.reveal').forEach(function (el) {
+    el.classList.add('visible');
+  });
+  // إعادة تسجيل المراقب للعناصر الجديدة كذلك (للتأثيرات الإضافية)
   if (window.reObserveReveal) {
     window.reObserveReveal();
-  } else {
-    grid.querySelectorAll('.reveal').forEach(el => {
-      el.classList.add('visible');
-    });
   }
 }
 

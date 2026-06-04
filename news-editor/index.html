@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -246,24 +246,11 @@ function saveNews() {
 
   localStorage.setItem('sru_news', JSON.stringify(newsList));
 
-  fetch('admin/data/save-news.php', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json;charset=utf-8' },
-    body: JSON.stringify({ news: newsList })
-  })
-  .then(function(res){ return res.json(); })
-  .then(function(res){
-    if (res.status === 'ok') {
-      showAlert('add','✅ تم حفظ الخبر في admin/data/news.json','success');
-      clearForm();
-    } else {
-      showAlert('add','حدث خطأ في حفظ admin/data/news.json','error');
-    }
-  })
-  .catch(function(err){
-    console.error(err);
-    showAlert('add','تعذّر الاتصال بالسيرفر لحفظ admin/data/news.json','error');
-  });
+  var msg = editingId === null
+    ? '✅ تم حفظ الخبر. انتقل إلى تبويب «تصدير JSON» لتحديث الموقع.'
+    : '✅ تم تحديث الخبر. انتقل إلى تبويب «تصدير JSON» لتحديث الموقع.';
+  showAlert('add', msg, 'success');
+  clearForm();
 }
 
 function clearForm() {
