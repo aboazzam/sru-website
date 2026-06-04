@@ -122,6 +122,19 @@ textarea{resize:vertical;min-height:75px}
         </div>
       </div>
 
+      <!-- نص الخبر الكامل -->
+      <span class="section-label">📰 نص الخبر الكامل <span style="font-weight:400;color:#888">(يظهر في صفحة تفاصيل الخبر)</span></span>
+      <div class="form-row">
+        <div class="form-group">
+          <label>النص الكامل (عربي)</label>
+          <textarea id="body-ar" placeholder="اكتب نص الخبر الكامل بالعربي..." style="min-height:110px"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Full Body (English)</label>
+          <textarea id="body-en" placeholder="Write the full article in English..." style="direction:ltr;min-height:110px"></textarea>
+        </div>
+      </div>
+
       <!-- التفاصيل -->
       <span class="section-label">🗂️ التفاصيل</span>
       <div class="form-row">
@@ -319,6 +332,8 @@ function saveNews() {
   var tEn  = document.getElementById('title-en').value.trim();
   var exAr = document.getElementById('excerpt-ar').value.trim();
   var exEn = document.getElementById('excerpt-en').value.trim();
+  var bAr  = document.getElementById('body-ar').value.trim();
+  var bEn  = document.getElementById('body-en').value.trim();
   var dt   = document.getElementById('news-date').value;
   var cat  = document.getElementById('news-cat').value;
   var url  = document.getElementById('news-url').value.trim();
@@ -351,6 +366,8 @@ function saveNews() {
     title_en:  tEn,
     excerpt_ar: exAr,
     excerpt_en: exEn,
+    body_ar:   bAr,
+    body_en:   bEn,
     image:     imageVal,
     color:     selectedColor,
     url:       url || '#',
@@ -381,6 +398,8 @@ function resetForm() {
   document.getElementById('title-en').value  = '';
   document.getElementById('excerpt-ar').value = '';
   document.getElementById('excerpt-en').value = '';
+  document.getElementById('body-ar').value    = '';
+  document.getElementById('body-en').value    = '';
   document.getElementById('news-date').valueAsDate = new Date();
   document.getElementById('news-cat').value   = 'general';
   document.getElementById('news-url').value   = '';
@@ -439,8 +458,10 @@ function editNews(id) {
 
   document.getElementById('title-ar').value   = n.title_ar  || n.titleAr  || '';
   document.getElementById('title-en').value   = n.title_en  || n.titleEn  || '';
-  document.getElementById('excerpt-ar').value = n.excerpt_ar || n.bodyAr  || '';
-  document.getElementById('excerpt-en').value = n.excerpt_en || n.bodyEn  || '';
+  document.getElementById('excerpt-ar').value = n.excerpt_ar || '';
+  document.getElementById('excerpt-en').value = n.excerpt_en || '';
+  document.getElementById('body-ar').value    = n.body_ar    || n.bodyAr  || '';
+  document.getElementById('body-en').value    = n.body_en    || n.bodyEn  || '';
   document.getElementById('news-date').value  = n.date || '';
   document.getElementById('news-cat').value   = n.cat  || 'general';
   document.getElementById('news-url').value   = (n.url && n.url !== '#') ? n.url : '';
@@ -495,8 +516,10 @@ function renderJSON() {
       month_ar:   month_ar,
       title_ar:   n.title_ar  || n.titleAr  || '',
       title_en:   n.title_en  || n.titleEn  || '',
-      excerpt_ar: n.excerpt_ar || n.bodyAr  || '',
-      excerpt_en: n.excerpt_en || n.bodyEn  || '',
+      excerpt_ar: n.excerpt_ar || '',
+      excerpt_en: n.excerpt_en || '',
+      body_ar:    n.body_ar    || n.bodyAr  || '',
+      body_en:    n.body_en    || n.bodyEn  || '',
       image:      n.image || '',
       color:      color,
       url:        n.url || '#',

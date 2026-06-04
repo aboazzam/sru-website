@@ -4,6 +4,14 @@ function getLang() {
   return document.documentElement.lang === 'ar' ? 'ar' : 'en';
 }
 
+// يُرجع رابط الخبر: رابط خارجي إن وُجد، وإلا صفحة التفاصيل
+function resolveUrl(item) {
+  if (item.url && item.url !== '#' && item.url.trim() !== '') {
+    return item.url;
+  }
+  return 'news-detail.html?id=' + encodeURIComponent(item.id);
+}
+
 async function loadHomeNews() {
   const grid = document.getElementById('news-grid');
   if (!grid) return;
@@ -54,7 +62,7 @@ function buildNewsCard(item) {
         </div>
         <h3 class="news-title">${title}</h3>
         <p class="news-excerpt">${excerpt}</p>
-        <a href="${item.url || '#'}" class="news-link">
+        <a href="${resolveUrl(item)}" class="news-link">
           ${lang === 'ar' ? 'اقرأ المزيد ←' : 'Read More →'}
         </a>
       </div>
