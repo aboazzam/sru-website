@@ -1,11 +1,9 @@
 // js/news.js
 
-// دالة للحصول على اللغة الحالية من الـ <html>
 function getLang() {
   return document.documentElement.lang === 'ar' ? 'ar' : 'en';
 }
 
-// تحميل بيانات الصفحة الرئيسية من news.json واستخدام جزء الأخبار منها
 async function loadHomeNews() {
   const grid = document.getElementById('news-grid');
   if (!grid) return;
@@ -17,16 +15,14 @@ async function loadHomeNews() {
     const homeData = await res.json();
     const newsItems = homeData.news || [];
 
-    // خزن البيانات في global لإعادة البناء عند تغيير اللغة (إن رغبتِ)
     window.homeNewsData = newsItems;
-
     renderNewsGrid(newsItems);
+
   } catch (err) {
     console.error('Error loading news:', err);
   }
 }
 
-// تحويل عنصر خبر من news.json إلى كرت HTML
 function buildNewsCard(item) {
   const lang = getLang();
 
@@ -60,7 +56,6 @@ function buildNewsCard(item) {
   `;
 }
 
-// رسم الشبكة داخل #news-grid
 function renderNewsGrid(newsItems) {
   const grid = document.getElementById('news-grid');
   if (!grid) return;
@@ -72,36 +67,22 @@ function renderNewsGrid(newsItems) {
 
   grid.innerHTML = newsItems.map(buildNewsCard).join('');
 
-  // ── تفعيل الظهور مباشرة بدون IntersectionObserver ──
-  grid.querySelectorAll('.reveal').forEach(el => {
-    el.classList.add('revealed');
-  });
+  // تفعيل الظهور
+  if (window.reObserveReveal) {
+    window.reObserveReveal();
+  } else {
+    grid.querySelectorAll('.reveal').forEach(el => {
+      el.classList.add('visible');
+    });
+  }
 }
 
-  grid.innerHTML = newsItems.map(buildNewsCard).join('');
-}
-
-// إعادة تفعيل المراقب للعناصر الجديدة
-if (window.reObserveReveal) window.reObserveReveal();
-
-// إعادة بناء الأخبار عند تغيير اللغة (اختياري)
-// استدعي هذه من applyLanguage(lang) إن أحببت أن تتغيّر الأخبار فوراً
 function rebuildNewsGrid() {
   if (!window.homeNewsData) return;
   renderNewsGrid(window.homeNewsData);
 }
 
-// تحميل الأخبار عند تحميل الصفحة
+// تحميل الأخبار مرة واحدة فقط
 document.addEventListener('DOMContentLoaded', function () {
   loadHomeNews();
 });
-
-// تحميل الأخبار عند تحميل الصفحة
-document.addEventListener('DOMContentLoaded', function () {
-  loadHomeNews();
-});
-
-// استدعاء فوري في حال DOMContentLoaded انتهى مسبقاً
-if (document.readyState === 'complete' || document.readyState === 'interactive') {
-  loadHomeNews();
-}
