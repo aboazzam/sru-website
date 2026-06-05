@@ -6,7 +6,29 @@
 (function (global) {
   'use strict';
 
-  var NEWS_JSON = 'news/data/news.json';
+  var NEWS_JSON       = 'news/data/news.json';
+  var LS_KEY          = 'sru_news_v2';        // editor localStorage key
+  var LS_PUBLISHED    = 'sru_news_published'; // published snapshot key
+
+  // ── Merge helper: localStorage items override JSON items by id ──
+  function mergeNews(jsonItems, lsItems) {
+    if (!lsItems || !lsItems.length) return jsonItems;
+
+    // Build a map of JSON items
+    var map = {};
+    jsonItems.forEach(function (n) { map[String(n.id)] = n; });
+
+    // Add/override with localStorage items
+    lsItems.forEach(function (n) {
+      map[String(n.id)] = n;
+    });
+
+    // Sort by date descending
+    return Object.values(map).sort(function (a, b) {
+      return (b.date || '') > (a.date || '') ? 1 : -1;
+    });
+  }
+
 
   // ── Helpers ──────────────────────────────────────────────
   function getLang() {
@@ -91,22 +113,34 @@
     if (global.reObserveReveal) global.reObserveReveal();
   }
 
+  // ── Read localStorage news (from editor) ─────────────────
+  function getLSNews() {
+    try {
+      return JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+    } catch (e) { return []; }
+  }
+
   // ── Load and cache ────────────────────────────────────────
   function loadNews(callback) {
     if (global._sruNewsCache) { callback(null, global._sruNewsCache); return; }
 
+    var lsItems = getLSNews();
+
     fetch(NEWS_JSON)
       .then(function (r) { return r.json(); })
       .then(function (data) {
-        var items = data.news || [];
-        global._sruNewsCache = items;
-        callback(null, items);
+        var jsonItems = data.news || [];
+        // Merge: localStorage items (editor drafts) override JSON items
+        var merged = mergeNews(jsonItems, lsItems);
+        global._sruNewsCache = merged;
+        callback(null, merged);
       })
       .catch(function (err) {
-        // Fallback to inline data if available
+        // fetch failed (local file:// or network error) — use localStorage + fallback
         var fallback = global._sruNewsData || [];
-        global._sruNewsCache = fallback;
-        callback(err, fallback);
+        var merged   = mergeNews(fallback, lsItems);
+        global._sruNewsCache = merged;
+        callback(err, merged);
       });
   }
 
@@ -160,12 +194,20 @@
     renderGrid(global.homeNewsData, grid);
   }
 
+  /**
+   * Clear cache (call after editor saves new items)
+   */
+  function clearCache() {
+    global._sruNewsCache = null;
+  }
+
   // Expose API
   global.SRUNews = {
     load:        loadHomeNews,
     loadCollege: loadCollegeNews,
     rebuild:     rebuildNewsGrid,
-    getLabel:    getCollegeLabel
+    getLabel:    getCollegeLabel,
+    clearCache:  clearCache
   };
 
   // Auto-init on DOMContentLoaded

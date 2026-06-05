@@ -239,16 +239,34 @@
 
   if (!id) { showNotFound(); return; }
 
+  // دالة للبحث في قائمة بالـ ID
+  function findById(items, id) {
+    return items.find(function(n) { return String(n.id) === String(id); });
+  }
+
+  // قراءة أخبار localStorage أولاً (من المحرر)
+  function getLSNews() {
+    try { return JSON.parse(localStorage.getItem('sru_news_v2') || '[]'); } catch(e){ return []; }
+  }
+
+  var lsItems = getLSNews();
+  var lsItem  = findById(lsItems, id);
+  if (lsItem) { render(lsItem); return; }  // وُجد في localStorage — عرضه فوراً
+
+  // لم يوجد في localStorage — ابحث في JSON
   fetch('news/data/news.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
-      var items = data.news || [];
-      // مقارنة بـ string وبـ number (بعض الـ id أرقام وبعضها نصوص)
-      var item = items.find(function(n) { return String(n.id) === String(id); });
+      var items = (data.news || []).concat(lsItems); // دمج الاثنين
+      var item  = findById(items, id);
       if (item) render(item);
       else showNotFound();
     })
-    .catch(showNotFound);
+    .catch(function() {
+      // حتى عند فشل fetch — ابحث في localStorage
+      var item = findById(lsItems, id);
+      if (item) render(item); else showNotFound();
+    });
 })();
 </script>
 </body>
