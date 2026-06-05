@@ -14,11 +14,7 @@ html[dir="rtl"] {
 }
 
 /* ─── Header ──────────────────────────────────────────────────── */
-
-/* Flip the header inner layout */
-html[dir="rtl"] .header-inner {
-  direction: rtl;
-}
+/* flex-direction: row-reverse مضبوط في main.css — لا نضيف direction هنا لأنه يُلغي التأثير */
 
 /* Logo mark stays visually the same, text flips naturally */
 html[dir="rtl"] .logo {
