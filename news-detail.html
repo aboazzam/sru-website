@@ -239,7 +239,7 @@
 
   if (!id) { showNotFound(); return; }
 
-  fetch('admin/data/news.json')
+  fetch('news/data/news.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
       var items = data.news || [];

@@ -1,0 +1,174 @@
+/* ═══════════════════════════════════════════════════════════════
+   SRU News Module — news/news.css
+   Styles for news cards across homepage and college pages
+═══════════════════════════════════════════════════════════════ */
+
+/* ─── Grid ───────────────────────────────────────────────── */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) { .news-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 580px) { .news-grid { grid-template-columns: 1fr; } }
+
+/* ─── Card ───────────────────────────────────────────────── */
+.news-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,.07);
+  display: flex;
+  flex-direction: column;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(61,31,110,.13);
+}
+
+/* ─── Card Image ─────────────────────────────────────────── */
+.news-img {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.news-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.news-type {
+  font-size: .75rem;
+  font-weight: 800;
+  color: rgba(255,255,255,.9);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background: rgba(0,0,0,.25);
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+/* ─── Card Body ──────────────────────────────────────────── */
+.news-body {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+/* Meta row: date + college tag */
+.news-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.news-date {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.date-day {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-purple, #3D1F6E);
+  line-height: 1;
+}
+
+.date-month {
+  font-size: .75rem;
+  font-weight: 600;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+/* College tag badge */
+.news-college-tag {
+  font-size: .7rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.news-college-tag[data-college="medicine"]  { background: #FEE2E2; color: #B91C1C; }
+.news-college-tag[data-college="nursing"]   { background: #EDE9FE; color: #5B21B6; }
+.news-college-tag[data-college="business"]  { background: #CFFAFE; color: #0E7490; }
+.news-college-tag[data-college="sciences"]  { background: #DCFCE7; color: #166534; }
+
+/* ─── Card Text ──────────────────────────────────────────── */
+.news-title {
+  font-size: .97rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-excerpt {
+  font-size: .86rem;
+  color: #6B7280;
+  line-height: 1.65;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-link {
+  font-size: .84rem;
+  font-weight: 700;
+  color: var(--color-purple, #3D1F6E);
+  text-decoration: none;
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap .18s ease;
+}
+
+.news-link:hover { gap: 8px; text-decoration: underline; }
+
+/* ─── Empty state ────────────────────────────────────────── */
+.empty-msg {
+  text-align: center;
+  color: #9CA3AF;
+  padding: 48px 24px;
+  font-size: .97rem;
+  grid-column: 1 / -1;
+}
+
+/* ─── College news grid (3-col on college pages) ─────────── */
+.college-news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) { .college-news-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 580px) { .college-news-grid { grid-template-columns: 1fr; } }
+
+/* ─── RTL adjustments ────────────────────────────────────── */
+html[dir="rtl"] .news-meta    { flex-direction: row-reverse; }
+html[dir="rtl"] .news-date    { flex-direction: row-reverse; }
+html[dir="rtl"] .news-body    { text-align: right; }
+html[dir="rtl"] .news-link    { flex-direction: row-reverse; }

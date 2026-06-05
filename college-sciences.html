@@ -190,26 +190,12 @@
 </footer>
 
 <script src="js/main.js"></script>
+<link rel="stylesheet" href="news/news.css">
+<script src="news/news.js"></script>
 <script>
-// عرض أخبار الكلية من news.json
-fetch('admin/data/news.json')
-  .then(function(r){ return r.json(); })
-  .then(function(data){
-    var lang  = document.documentElement.lang === 'ar' ? 'ar' : 'en';
-    var items = (data.news || []).filter(function(n){
-      return (n.cat === 'academic' || n.cat === 'general') ;
-    }).slice(0,3);
-    var grid = document.getElementById('college-news-grid');
-    if (!items.length) { grid.innerHTML = '<p class="empty-msg" data-ar="لا توجد أخبار حالياً." data-en="No news at the moment.">No news at the moment.</p>'; return; }
-    grid.innerHTML = items.map(function(n){
-      var title = lang==='ar' ? (n.title_ar||'') : (n.title_en||'');
-      var excerpt = lang==='ar' ? (n.excerpt_ar||'') : (n.excerpt_en||'');
-      var date = n.day && n.month_ar ? (lang==='ar' ? n.day+' '+n.month_ar : n.day+' '+n.month_en) : (n.date||'');
-      var img = n.image ? '<img src="'+n.image+'" alt="'+title+'">' : '<div class="cn-img-placeholder" style="background:'+n.color+'"></div>';
-      return '<article class="cn-card reveal">'+img+'<div class="cn-body"><span class="cn-date">'+date+'</span><h3>'+title+'</h3><p>'+excerpt+'</p><a href="news-detail.html?id='+n.id+'" data-ar="اقرأ المزيد ←" data-en="Read More →">Read More →</a></div></article>';
-    }).join('');
-    grid.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
-  }).catch(function(){});
+document.addEventListener('DOMContentLoaded', function(){
+  SRUNews.loadCollege('sciences', 'college-news-grid', 3);
+});
 </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -81,7 +81,7 @@ function handleLogin(e) {
   if (u === CREDENTIALS.username && p === CREDENTIALS.password) {
     // حفظ حالة الدخول ثم الانتقال للمحرّر
     sessionStorage.setItem('news_auth', '1');
-    window.location.href = '/news-editor';
+    window.location.href = '/news/editor/';
   } else {
     alert('اسم المستخدم أو كلمة المرور غير صحيحة');
   }
@@ -89,7 +89,7 @@ function handleLogin(e) {
 
 // لو المستخدم مسجّل دخول فعلاً لا نعيده لصفحة الدخول
 if (sessionStorage.getItem('news_auth') === '1') {
-  window.location.href = '/news-editor';
+  window.location.href = '/news/editor/';
 }
 </script>
 </body>

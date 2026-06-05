@@ -1,0 +1,1056 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محرر الأخبار — جامعة سليمان الراجحي</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ─── Reset & Base ─────────────────────────────────────── */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --purple:#3D1F6E; --purple-d:#2C1650; --purple-l:#6B46C1; --purple-f:#F5F3FF;
+  --cyan:#00B4C8; --cyan-d:#0097AA;
+  --sidebar:#1E1B2E; --sidebar-l:#2A2744;
+  --text:#111827; --gray:#6B7280; --border:#E5E7EB;
+  --bg:#F8F9FC; --white:#fff;
+  --radius:10px; --shadow:0 2px 12px rgba(0,0,0,.08);
+}
+body{font-family:'Noto Kufi Arabic','Inter',sans-serif;background:var(--bg);color:var(--text);height:100vh;display:flex;flex-direction:column;overflow:hidden}
+
+/* ─── Top Bar ──────────────────────────────────────────── */
+.topbar{
+  display:flex;align-items:center;gap:14px;
+  background:var(--purple-d);color:#fff;
+  padding:0 24px;height:56px;flex-shrink:0;
+  position:relative;z-index:10;
+}
+.topbar::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--purple-l),var(--cyan))}
+.topbar-logo{display:flex;align-items:center;gap:10px;font-size:.95rem;font-weight:700}
+.topbar-logo svg{opacity:.8}
+.topbar-title{font-size:1rem;font-weight:700;flex:1;text-align:center;opacity:.9}
+.topbar-badge{
+  background:rgba(0,180,200,.2);border:1px solid rgba(0,180,200,.4);
+  color:var(--cyan);font-size:.7rem;font-weight:700;
+  padding:3px 10px;border-radius:20px;letter-spacing:.06em;
+}
+
+/* ─── App Shell ────────────────────────────────────────── */
+.app{display:flex;flex:1;overflow:hidden}
+
+/* ─── Sidebar ──────────────────────────────────────────── */
+.sidebar{
+  width:220px;background:var(--sidebar);
+  display:flex;flex-direction:column;
+  flex-shrink:0;overflow-y:auto;
+}
+.sidebar-section{padding:20px 16px 8px;font-size:.68rem;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.35);text-transform:uppercase}
+.sidebar-item{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 16px;margin:2px 8px;
+  border-radius:8px;cursor:pointer;
+  font-size:.88rem;font-weight:500;color:rgba(255,255,255,.7);
+  transition:all .18s ease;
+}
+.sidebar-item:hover{background:rgba(255,255,255,.08);color:#fff}
+.sidebar-item.active{background:var(--purple);color:#fff;font-weight:700}
+.sidebar-item .si-icon{width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.sidebar-item .si-badge{
+  margin-right:auto;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);
+  font-size:.65rem;font-weight:700;padding:2px 7px;border-radius:10px;
+}
+.sidebar-divider{height:1px;background:rgba(255,255,255,.07);margin:10px 16px}
+
+/* College tags in sidebar */
+.college-tag-sidebar{
+  display:flex;align-items:center;gap:8px;
+  padding:7px 16px;margin:1px 8px;
+  border-radius:8px;cursor:pointer;
+  font-size:.82rem;color:rgba(255,255,255,.6);
+  transition:background .18s;
+}
+.college-tag-sidebar:hover{background:rgba(255,255,255,.06);color:#fff}
+.college-tag-sidebar.active{color:#fff;font-weight:600}
+.ct-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+/* ─── Main Area ────────────────────────────────────────── */
+.main{flex:1;overflow:hidden;display:flex;flex-direction:column}
+
+/* Toolbar */
+.toolbar{
+  display:flex;align-items:center;gap:10px;
+  padding:12px 24px;background:var(--white);
+  border-bottom:1px solid var(--border);flex-shrink:0;
+}
+.toolbar-title{font-size:1rem;font-weight:700;color:var(--purple);flex:1}
+.toolbar-actions{display:flex;gap:8px;align-items:center}
+
+/* ─── Panels ───────────────────────────────────────────── */
+.panel{flex:1;overflow-y:auto;padding:24px;display:none}
+.panel.active{display:block}
+
+/* ─── Cards Grid (list view) ───────────────────────────── */
+.news-list{display:flex;flex-direction:column;gap:12px}
+.ni{
+  background:var(--white);border-radius:12px;
+  box-shadow:var(--shadow);
+  display:grid;grid-template-columns:80px 1fr auto;gap:14px;
+  align-items:center;padding:14px 18px;
+  transition:box-shadow .18s;
+}
+.ni:hover{box-shadow:0 4px 20px rgba(61,31,110,.12)}
+.ni-img{width:80px;height:60px;border-radius:8px;object-fit:cover;display:block}
+.ni-img-ph{width:80px;height:60px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#fff;font-weight:700;text-align:center;padding:4px}
+.ni-body{min-width:0}
+.ni-title{font-size:.97rem;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:4px}
+.ni-meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.ni-date{font-size:.75rem;color:var(--gray)}
+.ni-cat{font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:10px;background:var(--purple-f);color:var(--purple)}
+.ni-college{font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:10px}
+.ni-college[data-c="medicine"]  {background:#FEE2E2;color:#B91C1C}
+.ni-college[data-c="nursing"]   {background:#EDE9FE;color:#5B21B6}
+.ni-college[data-c="business"]  {background:#CFFAFE;color:#0E7490}
+.ni-college[data-c="sciences"]  {background:#DCFCE7;color:#166534}
+.ni-actions{display:flex;gap:6px;flex-shrink:0}
+
+/* ─── Buttons ──────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:none;border-radius:8px;cursor:pointer;font-size:.88rem;font-weight:700;font-family:inherit;transition:all .18s ease;white-space:nowrap}
+.btn-primary{background:var(--purple);color:#fff}
+.btn-primary:hover{background:var(--purple-l);transform:translateY(-1px);box-shadow:0 4px 12px rgba(61,31,110,.3)}
+.btn-secondary{background:var(--bg);color:var(--text);border:1px solid var(--border)}
+.btn-secondary:hover{background:var(--border)}
+.btn-danger{background:#FEE2E2;color:#B91C1C;border:1px solid #FECACA}
+.btn-danger:hover{background:#FECACA}
+.btn-edit{background:#FEF3C7;color:#92400E;border:1px solid #FDE68A}
+.btn-edit:hover{background:#FDE68A}
+.btn-export{background:linear-gradient(135deg,var(--purple),var(--cyan));color:#fff}
+.btn-export:hover{opacity:.9;transform:translateY(-1px)}
+.btn-sm{padding:5px 12px;font-size:.8rem}
+.btn-icon{padding:6px;border-radius:8px;width:34px;height:34px;justify-content:center}
+
+/* ─── Form Layout ──────────────────────────────────────── */
+.form-layout{display:grid;grid-template-columns:1fr 340px;gap:24px}
+.form-col{display:flex;flex-direction:column;gap:16px}
+
+.form-card{background:var(--white);border-radius:14px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:16px}
+.form-card-title{font-size:.82rem;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:.08em;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+
+.form-group{display:flex;flex-direction:column;gap:5px}
+.form-group label{font-size:.83rem;font-weight:600;color:#374151}
+.form-group label span.req{color:#EF4444}
+.form-group label span.hint{font-weight:400;color:#9CA3AF;font-size:.76rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+input[type=text],input[type=date],input[type=url],textarea,select{
+  width:100%;padding:9px 12px;border:1.5px solid var(--border);
+  border-radius:8px;font-size:.9rem;font-family:inherit;
+  background:#FAFAFA;color:var(--text);transition:border .18s,background .18s;
+}
+input:focus,textarea:focus,select:focus{border-color:var(--purple);outline:none;background:var(--white)}
+textarea{resize:vertical;min-height:80px;line-height:1.6}
+input[style*="ltr"],textarea[style*="ltr"]{direction:ltr;text-align:left}
+
+/* ─── College selector ─────────────────────────────────── */
+.college-selector{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.col-option{
+  display:flex;align-items:center;gap:8px;
+  padding:10px 12px;border-radius:10px;
+  border:2px solid var(--border);cursor:pointer;
+  transition:all .18s;background:var(--bg);
+}
+.col-option:hover{border-color:var(--purple);background:var(--purple-f)}
+.col-option.selected{border-color:var(--purple);background:var(--purple-f)}
+.col-option input[type=radio]{display:none}
+.col-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.col-option span{font-size:.83rem;font-weight:600;color:var(--text)}
+.col-option.selected span{color:var(--purple)}
+/* None option */
+.col-option.col-none .col-dot{background:#E5E7EB}
+.col-option[data-c="medicine"]  .col-dot{background:#EF4444}
+.col-option[data-c="nursing"]   .col-dot{background:#7C3AED}
+.col-option[data-c="business"]  .col-dot{background:#0891B2}
+.col-option[data-c="sciences"]  .col-dot{background:#16A34A}
+
+/* ─── Color swatches ───────────────────────────────────── */
+.swatches{display:flex;gap:8px;flex-wrap:wrap}
+.swatch{width:28px;height:28px;border-radius:8px;cursor:pointer;border:3px solid transparent;transition:border .15s,transform .15s}
+.swatch:hover{transform:scale(1.1)}
+.swatch.selected{border-color:var(--text)}
+
+/* ─── Image Upload ─────────────────────────────────────── */
+.drop-zone{
+  border:2px dashed #CBD5E0;border-radius:10px;
+  padding:22px;text-align:center;cursor:pointer;
+  background:#F9FAFB;transition:all .2s;
+}
+.drop-zone:hover,.drop-zone.drag-over{border-color:var(--purple);background:var(--purple-f)}
+.drop-zone input[type=file]{display:none}
+.dz-icon{font-size:2rem;margin-bottom:6px;opacity:.5}
+.dz-text{font-size:.82rem;color:var(--gray)}
+#img-preview{width:100%;max-height:150px;object-fit:cover;border-radius:8px;margin-top:10px;display:none}
+#img-filename{font-size:.76rem;color:var(--gray);margin-top:4px}
+
+/* ─── Preview card ─────────────────────────────────────── */
+.preview-wrap{position:sticky;top:24px}
+.preview-label{font-size:.75rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.preview-card{background:var(--white);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.preview-img{height:150px;display:flex;align-items:center;justify-content:center;font-size:.8rem;color:#fff;font-weight:700;overflow:hidden}
+.preview-img img{width:100%;height:100%;object-fit:cover}
+.preview-body{padding:14px 16px;display:flex;flex-direction:column;gap:7px}
+.preview-meta{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.preview-date{font-size:.8rem;font-weight:700;color:var(--purple)}
+.preview-college-badge{font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:10px}
+.preview-title{font-size:.93rem;font-weight:700;color:var(--text);line-height:1.4}
+.preview-excerpt{font-size:.8rem;color:var(--gray);line-height:1.6}
+.preview-link{font-size:.8rem;font-weight:700;color:var(--purple)}
+
+/* ─── Alert ────────────────────────────────────────────── */
+.alert{padding:10px 14px;border-radius:8px;font-size:.88rem;display:none;margin-bottom:12px}
+.alert-success{background:#DCFCE7;color:#166534;border:1px solid #BBF7D0}
+.alert-error  {background:#FEE2E2;color:#B91C1C;border:1px solid #FECACA}
+
+/* ─── Export ───────────────────────────────────────────── */
+.export-info{background:var(--white);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow);margin-bottom:20px;display:flex;gap:16px;align-items:flex-start}
+.export-info-icon{font-size:1.5rem;flex-shrink:0}
+.export-info h3{font-size:.93rem;font-weight:700;color:var(--text);margin-bottom:4px}
+.export-info p{font-size:.82rem;color:var(--gray);line-height:1.6}
+.export-info code{background:#F3F4F6;padding:2px 6px;border-radius:4px;font-size:.8rem;direction:ltr}
+
+.json-box{
+  background:#1E1E2E;color:#A8FF78;
+  font-family:monospace;font-size:.78rem;
+  padding:16px;border-radius:10px;
+  max-height:400px;overflow:auto;
+  white-space:pre-wrap;word-break:break-all;
+  direction:ltr;line-height:1.5;
+}
+.export-actions{display:flex;gap:10px;margin-top:14px;align-items:center;flex-wrap:wrap}
+.copy-success{font-size:.82rem;color:#16A34A;font-weight:600;display:none}
+
+/* ─── Stats bar ────────────────────────────────────────── */
+.stats-bar{
+  display:flex;gap:1px;background:var(--border);
+  border-radius:10px;overflow:hidden;margin-bottom:20px;
+}
+.stat-box{
+  flex:1;background:var(--white);padding:12px 16px;
+  text-align:center;
+}
+.stat-box .sv{font-size:1.5rem;font-weight:800;color:var(--purple);line-height:1}
+.stat-box .sl{font-size:.72rem;color:var(--gray);margin-top:2px}
+.stat-box[data-c="medicine"] .sv{color:#EF4444}
+.stat-box[data-c="nursing"]  .sv{color:#7C3AED}
+.stat-box[data-c="business"] .sv{color:#0891B2}
+.stat-box[data-c="sciences"] .sv{color:#16A34A}
+
+/* ─── Empty ────────────────────────────────────────────── */
+.empty-state{text-align:center;padding:60px 24px;color:var(--gray)}
+.empty-state .es-icon{font-size:3rem;margin-bottom:12px;opacity:.4}
+.empty-state h3{font-size:1rem;font-weight:700;margin-bottom:6px;color:var(--text)}
+
+/* ─── Search & Filter bar ──────────────────────────────── */
+.filter-bar{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.filter-bar input{flex:1;min-width:200px;padding:8px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:inherit;font-size:.88rem}
+.filter-btn{padding:8px 14px;border-radius:8px;border:1.5px solid var(--border);background:var(--white);font-family:inherit;font-size:.82rem;font-weight:600;cursor:pointer;color:var(--gray);transition:all .18s}
+.filter-btn.active{border-color:var(--purple);color:var(--purple);background:var(--purple-f)}
+
+/* ─── Toast ────────────────────────────────────────────── */
+.toast{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(60px);
+  background:var(--purple-d);color:#fff;
+  padding:10px 20px;border-radius:10px;
+  font-size:.88rem;font-weight:600;
+  box-shadow:0 4px 20px rgba(0,0,0,.25);
+  transition:transform .3s ease,opacity .3s ease;
+  opacity:0;z-index:9999;white-space:nowrap;
+}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* ─── Scrollbar ────────────────────────────────────────── */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(61,31,110,.2);border-radius:3px}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ TOP BAR ═══════════ -->
+<div class="topbar">
+  <div class="topbar-logo">
+    <svg width="28" height="28" viewBox="0 0 44 44" fill="none">
+      <circle cx="22" cy="22" r="22" fill="#3D1F6E"/>
+      <path d="M10 30 L22 10 L34 30 Z" fill="none" stroke="#00B4C8" stroke-width="2.5" stroke-linejoin="round"/>
+      <circle cx="22" cy="10" r="2.5" fill="#00B4C8"/>
+    </svg>
+    <span>SRU</span>
+  </div>
+  <div class="topbar-title">🗞️ محرر الأخبار الاحترافي</div>
+  <div class="topbar-badge">News Editor v2</div>
+</div>
+
+<!-- ═══════════ APP SHELL ═══════════ -->
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-section">القائمة الرئيسية</div>
+    <div class="sidebar-item active" onclick="showPanel('list',this)" id="si-list">
+      <span class="si-icon">📋</span> قائمة الأخبار
+      <span class="si-badge" id="sb-count">0</span>
+    </div>
+    <div class="sidebar-item" onclick="showPanel('add',this)" id="si-add">
+      <span class="si-icon">✏️</span> إضافة / تعديل
+    </div>
+    <div class="sidebar-item" onclick="showPanel('export',this)" id="si-export">
+      <span class="si-icon">📤</span> تصدير JSON
+    </div>
+
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">تصفية بالكلية</div>
+
+    <div class="college-tag-sidebar active" onclick="filterByCollege(null,this)" id="cf-all">
+      <div class="ct-dot" style="background:#9CA3AF"></div> الكل
+    </div>
+    <div class="college-tag-sidebar" onclick="filterByCollege('medicine',this)" id="cf-medicine">
+      <div class="ct-dot" style="background:#EF4444"></div> كلية الطب
+    </div>
+    <div class="college-tag-sidebar" onclick="filterByCollege('nursing',this)" id="cf-nursing">
+      <div class="ct-dot" style="background:#7C3AED"></div> كلية التمريض
+    </div>
+    <div class="college-tag-sidebar" onclick="filterByCollege('business',this)" id="cf-business">
+      <div class="ct-dot" style="background:#0891B2"></div> كلية الأعمال
+    </div>
+    <div class="college-tag-sidebar" onclick="filterByCollege('sciences',this)" id="cf-sciences">
+      <div class="ct-dot" style="background:#16A34A"></div> كلية العلوم
+    </div>
+  </aside>
+
+  <!-- MAIN AREA -->
+  <div class="main">
+
+    <!-- LIST PANEL -->
+    <div class="panel active" id="panel-list">
+      <div class="toolbar">
+        <div class="toolbar-title">قائمة الأخبار</div>
+        <div class="toolbar-actions">
+          <button class="btn btn-primary" onclick="showPanel('add', document.getElementById('si-add'))">
+            ➕ خبر جديد
+          </button>
+        </div>
+      </div>
+      <div style="padding:20px">
+        <!-- Stats -->
+        <div class="stats-bar" id="stats-bar"></div>
+        <!-- Filter -->
+        <div class="filter-bar">
+          <input type="text" id="search-input" placeholder="🔍 ابحث عن خبر..." oninput="renderList()">
+          <button class="filter-btn active" onclick="setFilter('all',this)">الكل</button>
+          <button class="filter-btn" onclick="setFilter('general',this)">عام</button>
+          <button class="filter-btn" onclick="setFilter('academic',this)">أكاديمي</button>
+          <button class="filter-btn" onclick="setFilter('events',this)">فعاليات</button>
+        </div>
+        <!-- List -->
+        <div class="news-list" id="news-list"></div>
+      </div>
+    </div>
+
+    <!-- ADD/EDIT PANEL -->
+    <div class="panel" id="panel-add">
+      <div class="toolbar">
+        <div class="toolbar-title" id="form-toolbar-title">إضافة خبر جديد</div>
+        <div class="toolbar-actions">
+          <button class="btn btn-secondary btn-sm" onclick="resetForm()">↺ مسح</button>
+          <button class="btn btn-primary" onclick="saveNews()">💾 حفظ الخبر</button>
+        </div>
+      </div>
+      <div style="padding:20px">
+        <div id="alert-add" class="alert"></div>
+        <div class="form-layout">
+
+          <!-- Left col: form -->
+          <div class="form-col">
+
+            <!-- Titles -->
+            <div class="form-card">
+              <div class="form-card-title">📝 العناوين</div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>العنوان (عربي) <span class="req">*</span></label>
+                  <input type="text" id="f-title-ar" placeholder="عنوان الخبر بالعربي">
+                </div>
+                <div class="form-group">
+                  <label>Title (English)</label>
+                  <input type="text" id="f-title-en" placeholder="News title in English" style="direction:ltr">
+                </div>
+              </div>
+            </div>
+
+            <!-- Excerpt -->
+            <div class="form-card">
+              <div class="form-card-title">📄 المقتطف <span style="font-weight:400;color:#9CA3AF;text-transform:none;letter-spacing:0">(يظهر في البطاقة)</span></div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>المقتطف (عربي) <span class="req">*</span></label>
+                  <textarea id="f-excerpt-ar" placeholder="ملخص قصير بالعربي..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Excerpt (English)</label>
+                  <textarea id="f-excerpt-en" placeholder="Short summary in English..." style="direction:ltr"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Body -->
+            <div class="form-card">
+              <div class="form-card-title">📰 نص الخبر الكامل <span style="font-weight:400;color:#9CA3AF;text-transform:none;letter-spacing:0">(يظهر في صفحة الخبر)</span></div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>النص الكامل (عربي)</label>
+                  <textarea id="f-body-ar" style="min-height:120px" placeholder="النص الكامل للخبر بالعربي..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Full Body (English)</label>
+                  <textarea id="f-body-en" style="min-height:120px;direction:ltr" placeholder="Full article text in English..."></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Details -->
+            <div class="form-card">
+              <div class="form-card-title">🗂️ التفاصيل</div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>التاريخ <span class="req">*</span></label>
+                  <input type="date" id="f-date">
+                </div>
+                <div class="form-group">
+                  <label>الفئة</label>
+                  <select id="f-cat" onchange="onCatChange()">
+                    <option value="general">عام / أخبار</option>
+                    <option value="academic">أكاديمي</option>
+                    <option value="research">بحثي</option>
+                    <option value="events">فعاليات</option>
+                    <option value="announcement">إعلان</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>رابط الخبر <span class="hint">(اختياري — يُستخدم بدل صفحة التفاصيل)</span></label>
+                <input type="url" id="f-url" placeholder="https://..." style="direction:ltr">
+              </div>
+            </div>
+
+            <!-- College Tag -->
+            <div class="form-card">
+              <div class="form-card-title">🏛️ تاق الكلية <span style="font-weight:400;color:#9CA3AF;text-transform:none;letter-spacing:0">(يُنشر في صفحة الكلية تلقائياً)</span></div>
+              <div class="college-selector" id="college-selector">
+                <label class="col-option col-none selected" data-c="">
+                  <input type="radio" name="college" value="" checked onchange="onCollegeChange(this)">
+                  <div class="col-dot"></div>
+                  <span>بدون كلية</span>
+                </label>
+                <label class="col-option" data-c="medicine">
+                  <input type="radio" name="college" value="medicine" onchange="onCollegeChange(this)">
+                  <div class="col-dot"></div>
+                  <span>كلية الطب</span>
+                </label>
+                <label class="col-option" data-c="nursing">
+                  <input type="radio" name="college" value="nursing" onchange="onCollegeChange(this)">
+                  <div class="col-dot"></div>
+                  <span>كلية التمريض</span>
+                </label>
+                <label class="col-option" data-c="business">
+                  <input type="radio" name="college" value="business" onchange="onCollegeChange(this)">
+                  <div class="col-dot"></div>
+                  <span>كلية الأعمال</span>
+                </label>
+                <label class="col-option" data-c="sciences">
+                  <input type="radio" name="college" value="sciences" onchange="onCollegeChange(this)">
+                  <div class="col-dot"></div>
+                  <span>كلية العلوم التطبيقية</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="form-card">
+              <div class="form-card-title">🖼️ الصورة</div>
+              <div class="drop-zone" id="drop-zone" onclick="document.getElementById('f-img-file').click()">
+                <div class="dz-icon">🖼️</div>
+                <div class="dz-text">انقر أو اسحب صورة هنا · PNG · JPG · WEBP (حد 5MB)</div>
+                <input type="file" id="f-img-file" accept="image/*" onchange="handleImgSelect(this)">
+                <img id="img-preview" alt="معاينة">
+                <div id="img-filename"></div>
+              </div>
+              <div style="margin-top:10px">
+                <label style="font-size:.83rem;font-weight:600;color:#374151;display:block;margin-bottom:5px">
+                  أو مسار الصورة <span style="font-weight:400;color:#9CA3AF">(مثال: news/images/photo.jpg)</span>
+                </label>
+                <input type="text" id="f-img-path" placeholder="news/images/..." style="direction:ltr" oninput="onImgPathInput()">
+              </div>
+              <!-- Color -->
+              <div style="margin-top:12px">
+                <label style="font-size:.83rem;font-weight:600;color:#374151;display:block;margin-bottom:8px">لون خلفية البطاقة</label>
+                <div class="swatches" id="swatches">
+                  <div class="swatch selected" data-color="linear-gradient(135deg,#3D1F6E,#6B46C1)" style="background:linear-gradient(135deg,#3D1F6E,#6B46C1)" onclick="selectColor(this)" title="بنفسجي"></div>
+                  <div class="swatch" data-color="linear-gradient(135deg,#00B4C8,#0077A8)" style="background:linear-gradient(135deg,#00B4C8,#0077A8)" onclick="selectColor(this)" title="أزرق"></div>
+                  <div class="swatch" data-color="linear-gradient(135deg,#38A169,#276749)" style="background:linear-gradient(135deg,#38A169,#276749)" onclick="selectColor(this)" title="أخضر"></div>
+                  <div class="swatch" data-color="linear-gradient(135deg,#E53E3E,#C53030)" style="background:linear-gradient(135deg,#E53E3E,#C53030)" onclick="selectColor(this)" title="أحمر"></div>
+                  <div class="swatch" data-color="linear-gradient(135deg,#DD6B20,#C05621)" style="background:linear-gradient(135deg,#DD6B20,#C05621)" onclick="selectColor(this)" title="برتقالي"></div>
+                  <div class="swatch" data-color="linear-gradient(135deg,#D4AF37,#B8860B)" style="background:linear-gradient(135deg,#D4AF37,#B8860B)" onclick="selectColor(this)" title="ذهبي"></div>
+                  <div class="swatch" data-color="linear-gradient(135deg,#2B6CB0,#1A365D)" style="background:linear-gradient(135deg,#2B6CB0,#1A365D)" onclick="selectColor(this)" title="كحلي"></div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /form-col -->
+
+          <!-- Right col: preview -->
+          <div class="form-col">
+            <div class="preview-wrap">
+              <div class="preview-label">معاينة البطاقة</div>
+              <div class="preview-card">
+                <div class="preview-img" id="prev-img" style="background:linear-gradient(135deg,#3D1F6E,#6B46C1)"></div>
+                <div class="preview-body">
+                  <div class="preview-meta">
+                    <div class="preview-date" id="prev-date">اليوم</div>
+                    <div class="preview-college-badge" id="prev-college" style="display:none"></div>
+                  </div>
+                  <div class="preview-title" id="prev-title">عنوان الخبر يظهر هنا</div>
+                  <div class="preview-excerpt" id="prev-excerpt">المقتطف القصير للخبر يظهر هنا في بطاقة الأخبار بالصفحة الرئيسية...</div>
+                  <div class="preview-link">اقرأ المزيد ←</div>
+                </div>
+              </div>
+
+              <!-- College info box -->
+              <div id="college-info-box" style="display:none;margin-top:16px;background:#fff;border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)">
+                <div style="font-size:.78rem;font-weight:700;color:var(--purple);margin-bottom:8px">📢 ينشر أيضاً في:</div>
+                <div id="college-info-text" style="font-size:.85rem;color:#374151"></div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /form-layout -->
+      </div>
+    </div><!-- /panel-add -->
+
+    <!-- EXPORT PANEL -->
+    <div class="panel" id="panel-export">
+      <div class="toolbar">
+        <div class="toolbar-title">تصدير JSON</div>
+        <div class="toolbar-actions">
+          <button class="btn btn-export" onclick="copyJSON()">📋 نسخ JSON</button>
+        </div>
+      </div>
+      <div style="padding:20px">
+        <div class="export-info">
+          <div class="export-info-icon">ℹ️</div>
+          <div>
+            <h3>كيفية تحديث الموقع</h3>
+            <p>انسخ هذا JSON والصقه في ملف <code>news/data/news.json</code> ثم ارفعه على GitHub — سيتحدث الموقع تلقائياً على Netlify.</p>
+          </div>
+        </div>
+        <div class="json-box" id="json-output"></div>
+        <div class="export-actions">
+          <button class="btn btn-export" onclick="copyJSON()">📋 نسخ JSON</button>
+          <span class="copy-success" id="copy-msg">✅ تم النسخ!</span>
+          <span style="flex:1"></span>
+          <span style="font-size:.8rem;color:var(--gray)" id="export-count"></span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /main -->
+</div><!-- /app -->
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  State
+// ═══════════════════════════════════════════════════════
+var newsList = [];
+try { newsList = JSON.parse(localStorage.getItem('sru_news_v2') || '[]'); } catch(e){ newsList = []; }
+
+var editingId    = null;
+var currentImg   = null;   // base64 data URL
+var selectedColor = 'linear-gradient(135deg,#3D1F6E,#6B46C1)';
+var activeFilter  = 'all';
+var collegeFilter = null;
+
+var MONTHS_AR = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+var MONTHS_EN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+var CAT_TYPES = {
+  general:      {en:'News',         ar:'أخبار'},
+  academic:     {en:'Academic',     ar:'أكاديمي'},
+  research:     {en:'Research',     ar:'بحث'},
+  events:       {en:'Event',        ar:'فعالية'},
+  announcement: {en:'Announcement', ar:'إعلان'}
+};
+var CAT_COLORS = {
+  general:      'linear-gradient(135deg,#3D1F6E,#6B46C1)',
+  academic:     'linear-gradient(135deg,#00B4C8,#0077A8)',
+  research:     'linear-gradient(135deg,#38A169,#276749)',
+  events:       'linear-gradient(135deg,#DD6B20,#C05621)',
+  announcement: 'linear-gradient(135deg,#E53E3E,#C53030)'
+};
+var COLLEGE_LABELS = {
+  medicine: {ar:'كلية الطب',           en:'Medicine'},
+  nursing:  {ar:'كلية التمريض',        en:'Nursing'},
+  business: {ar:'كلية الأعمال',        en:'Business'},
+  sciences: {ar:'كلية العلوم التطبيقية',en:'Sciences'}
+};
+var COLLEGE_COLORS = {
+  medicine:'#EF4444', nursing:'#7C3AED', business:'#0891B2', sciences:'#16A34A'
+};
+
+// Init date
+document.getElementById('f-date').valueAsDate = new Date();
+
+// ═══════════════════════════════════════════════════════
+//  Navigation
+// ═══════════════════════════════════════════════════════
+function showPanel(name, el) {
+  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.sidebar-item').forEach(function(s){ s.classList.remove('active'); });
+  document.getElementById('panel-' + name).classList.add('active');
+  if (el) el.classList.add('active');
+  if (name === 'list')   { renderStats(); renderList(); }
+  if (name === 'export') renderJSON();
+}
+
+function filterByCollege(col, el) {
+  collegeFilter = col;
+  document.querySelectorAll('.college-tag-sidebar').forEach(function(c){ c.classList.remove('active'); });
+  if (el) el.classList.add('active');
+  renderList();
+}
+
+function setFilter(f, el) {
+  activeFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+  if (el) el.classList.add('active');
+  renderList();
+}
+
+// ═══════════════════════════════════════════════════════
+//  Stats
+// ═══════════════════════════════════════════════════════
+function renderStats() {
+  var counts = { total: newsList.length, medicine:0, nursing:0, business:0, sciences:0 };
+  newsList.forEach(function(n){ if(n.college && counts[n.college] !== undefined) counts[n.college]++; });
+
+  document.getElementById('sb-count').textContent = counts.total;
+  document.getElementById('stats-bar').innerHTML = [
+    '<div class="stat-box"><div class="sv">'+counts.total+'</div><div class="sl">إجمالي الأخبار</div></div>',
+    '<div class="stat-box" data-c="medicine"><div class="sv">'+counts.medicine+'</div><div class="sl">كلية الطب</div></div>',
+    '<div class="stat-box" data-c="nursing"><div class="sv">'+counts.nursing+'</div><div class="sl">التمريض</div></div>',
+    '<div class="stat-box" data-c="business"><div class="sv">'+counts.business+'</div><div class="sl">الأعمال</div></div>',
+    '<div class="stat-box" data-c="sciences"><div class="sv">'+counts.sciences+'</div><div class="sl">العلوم</div></div>'
+  ].join('');
+}
+
+// ═══════════════════════════════════════════════════════
+//  List
+// ═══════════════════════════════════════════════════════
+function renderList() {
+  var q = (document.getElementById('search-input').value || '').trim().toLowerCase();
+  var items = newsList.filter(function(n){
+    if (collegeFilter && n.college !== collegeFilter) return false;
+    if (activeFilter !== 'all' && n.cat !== activeFilter) return false;
+    if (q) {
+      var hay = ((n.title_ar||'')+(n.title_en||'')+(n.excerpt_ar||'')).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  var el = document.getElementById('news-list');
+  if (!items.length) {
+    el.innerHTML = '<div class="empty-state"><div class="es-icon">📭</div><h3>لا توجد أخبار مطابقة</h3><p>جرّب تغيير خيارات التصفية</p></div>';
+    return;
+  }
+
+  el.innerHTML = items.map(function(n){
+    var img = n.image
+      ? '<img class="ni-img" src="../../'+n.image+'" alt="" onerror="this.style.display=\'none\'">'
+      : '<div class="ni-img-ph" style="background:'+(n.color||'#3D1F6E')+';">'+(CAT_TYPES[n.cat]||{ar:'خبر'}).ar+'</div>';
+    var collegeBadge = n.college
+      ? '<span class="ni-college" data-c="'+n.college+'">'+COLLEGE_LABELS[n.college].ar+'</span>'
+      : '';
+    return '<div class="ni">'
+      + img
+      + '<div class="ni-body">'
+      +   '<div class="ni-title">'+(n.title_ar||n.titleAr||'')+'</div>'
+      +   '<div class="ni-meta">'
+      +     '<span class="ni-date">📅 '+(n.date||'—')+'</span>'
+      +     '<span class="ni-cat">'+(CAT_TYPES[n.cat]||{ar:'عام'}).ar+'</span>'
+      +     collegeBadge
+      +   '</div>'
+      + '</div>'
+      + '<div class="ni-actions">'
+      +   '<button class="btn btn-edit btn-sm btn-icon" onclick="editNews(\''+n.id+'\')" title="تعديل">✏️</button>'
+      +   '<button class="btn btn-danger btn-sm btn-icon" onclick="deleteNews(\''+n.id+'\')" title="حذف">🗑️</button>'
+      + '</div>'
+      + '</div>';
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════
+//  Form helpers
+// ═══════════════════════════════════════════════════════
+function onCatChange() {
+  var cat = document.getElementById('f-cat').value;
+  var color = CAT_COLORS[cat] || CAT_COLORS.general;
+  // Only update color if no swatch already selected
+  setColorSwatch(color);
+  updatePreview();
+}
+
+function onCollegeChange(radio) {
+  document.querySelectorAll('.col-option').forEach(function(o){ o.classList.remove('selected'); });
+  radio.closest('.col-option').classList.add('selected');
+  updatePreview();
+  updateCollegeInfoBox(radio.value);
+}
+
+function updateCollegeInfoBox(col) {
+  var box = document.getElementById('college-info-box');
+  var txt = document.getElementById('college-info-text');
+  if (!col) { box.style.display='none'; return; }
+  box.style.display = 'block';
+  txt.textContent = 'هذا الخبر سيظهر في صفحة ' + (COLLEGE_LABELS[col]||{ar:col}).ar + ' تلقائياً عند نشره.';
+}
+
+function selectColor(el) {
+  document.querySelectorAll('.swatch').forEach(function(s){ s.classList.remove('selected'); });
+  el.classList.add('selected');
+  selectedColor = el.dataset.color;
+  updatePreview();
+}
+
+function setColorSwatch(color) {
+  var swatches = document.querySelectorAll('.swatch');
+  var matched = false;
+  swatches.forEach(function(s){
+    s.classList.remove('selected');
+    if (s.dataset.color === color) { s.classList.add('selected'); matched = true; }
+  });
+  if (matched) selectedColor = color;
+}
+
+// Image
+var dz = document.getElementById('drop-zone');
+dz.addEventListener('dragover', function(e){ e.preventDefault(); dz.classList.add('drag-over'); });
+dz.addEventListener('dragleave', function(){ dz.classList.remove('drag-over'); });
+dz.addEventListener('drop', function(e){
+  e.preventDefault(); dz.classList.remove('drag-over');
+  var f = e.dataTransfer.files[0];
+  if (f && f.type.startsWith('image/')) loadImgFile(f);
+});
+
+function handleImgSelect(inp) { if (inp.files && inp.files[0]) loadImgFile(inp.files[0]); }
+
+function loadImgFile(file) {
+  if (file.size > 5*1024*1024) { showAlert('حجم الصورة يتجاوز 5MB','error'); return; }
+  var r = new FileReader();
+  r.onload = function(e) {
+    currentImg = e.target.result;
+    document.getElementById('img-preview').src = currentImg;
+    document.getElementById('img-preview').style.display = 'block';
+    document.getElementById('img-filename').textContent = '📎 ' + file.name;
+    document.getElementById('f-img-path').value = '';
+    updatePreview();
+  };
+  r.readAsDataURL(file);
+}
+
+function onImgPathInput() {
+  var v = document.getElementById('f-img-path').value.trim();
+  if (v) {
+    currentImg = null;
+    document.getElementById('img-preview').style.display = 'none';
+    document.getElementById('img-filename').textContent = '';
+    document.getElementById('f-img-file').value = '';
+  }
+  updatePreview();
+}
+
+// ─── Live Preview ──────────────────────────────────────
+function updatePreview() {
+  var titleAr  = document.getElementById('f-title-ar').value || 'عنوان الخبر يظهر هنا';
+  var excerptAr= document.getElementById('f-excerpt-ar').value || 'المقتطف القصير للخبر...';
+  var dateVal  = document.getElementById('f-date').value;
+  var imgPath  = document.getElementById('f-img-path').value.trim();
+  var college  = document.querySelector('input[name=college]:checked')?.value || '';
+
+  // Date
+  var dateLabel = 'اليوم';
+  if (dateVal) {
+    var d = new Date(dateVal + 'T00:00:00');
+    dateLabel = d.getDate() + ' ' + MONTHS_AR[d.getMonth()];
+  }
+  document.getElementById('prev-date').textContent = dateLabel;
+  document.getElementById('prev-title').textContent = titleAr;
+  document.getElementById('prev-excerpt').textContent = excerptAr;
+
+  // Image
+  var prevImg = document.getElementById('prev-img');
+  if (currentImg) {
+    prevImg.innerHTML = '<img src="'+currentImg+'" style="width:100%;height:100%;object-fit:cover">';
+  } else if (imgPath) {
+    prevImg.innerHTML = '<img src="../../'+imgPath+'" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display=\'none\'">';
+  } else {
+    prevImg.innerHTML = '';
+    prevImg.style.background = selectedColor;
+  }
+
+  // College badge
+  var badge = document.getElementById('prev-college');
+  if (college && COLLEGE_LABELS[college]) {
+    badge.style.display = 'inline-block';
+    badge.textContent = COLLEGE_LABELS[college].ar;
+    badge.style.background = hexToLightBg(COLLEGE_COLORS[college]);
+    badge.style.color       = COLLEGE_COLORS[college];
+  } else {
+    badge.style.display = 'none';
+  }
+}
+
+function hexToLightBg(hex) {
+  // Simple approximation: add transparency via a static light bg
+  var map = {'#EF4444':'#FEE2E2','#7C3AED':'#EDE9FE','#0891B2':'#CFFAFE','#16A34A':'#DCFCE7'};
+  return map[hex] || '#F3F4F6';
+}
+
+// Bind live preview events
+['f-title-ar','f-excerpt-ar','f-date','f-img-path'].forEach(function(id){
+  var el = document.getElementById(id);
+  if (el) el.addEventListener('input', updatePreview);
+});
+
+// ═══════════════════════════════════════════════════════
+//  Save
+// ═══════════════════════════════════════════════════════
+function saveNews() {
+  var tAr  = document.getElementById('f-title-ar').value.trim();
+  var tEn  = document.getElementById('f-title-en').value.trim();
+  var exAr = document.getElementById('f-excerpt-ar').value.trim();
+  var exEn = document.getElementById('f-excerpt-en').value.trim();
+  var bAr  = document.getElementById('f-body-ar').value.trim();
+  var bEn  = document.getElementById('f-body-en').value.trim();
+  var dt   = document.getElementById('f-date').value;
+  var cat  = document.getElementById('f-cat').value;
+  var url  = document.getElementById('f-url').value.trim();
+  var imgPath = document.getElementById('f-img-path').value.trim();
+  var college = (document.querySelector('input[name=college]:checked') || {}).value || null;
+
+  if (!tAr)  { showAlert('العنوان بالعربي مطلوب','error'); return; }
+  if (!exAr) { showAlert('المقتطف بالعربي مطلوب','error'); return; }
+  if (!dt)   { showAlert('التاريخ مطلوب','error'); return; }
+
+  var dateObj  = new Date(dt + 'T00:00:00');
+  var type     = CAT_TYPES[cat] || CAT_TYPES.general;
+
+  var item = {
+    id:         editingId !== null ? editingId : Date.now(),
+    type_en:    type.en,
+    type_ar:    type.ar,
+    day:        String(dateObj.getDate()).padStart(2,'0'),
+    month_en:   MONTHS_EN[dateObj.getMonth()],
+    month_ar:   MONTHS_AR[dateObj.getMonth()],
+    title_ar:   tAr,
+    title_en:   tEn,
+    excerpt_ar: exAr,
+    excerpt_en: exEn,
+    body_ar:    bAr,
+    body_en:    bEn,
+    image:      currentImg || imgPath || '',
+    color:      selectedColor,
+    url:        url || '#',
+    cat:        cat,
+    college:    college || null,
+    date:       dt
+  };
+
+  if (editingId !== null) {
+    var idx = newsList.findIndex(function(n){ return String(n.id) === String(editingId); });
+    if (idx > -1) newsList[idx] = item;
+    showToast('✅ تم تحديث الخبر');
+  } else {
+    newsList.unshift(item);
+    showToast('✅ تم حفظ الخبر');
+  }
+
+  localStorage.setItem('sru_news_v2', JSON.stringify(newsList));
+  editingId = null;
+  resetForm();
+  renderStats();
+  showPanel('list', document.getElementById('si-list'));
+}
+
+// ═══════════════════════════════════════════════════════
+//  Edit / Delete
+// ═══════════════════════════════════════════════════════
+function editNews(id) {
+  var n = newsList.find(function(x){ return String(x.id) === String(id); });
+  if (!n) return;
+  editingId = n.id;
+
+  document.getElementById('f-title-ar').value  = n.title_ar  || n.titleAr  || '';
+  document.getElementById('f-title-en').value  = n.title_en  || n.titleEn  || '';
+  document.getElementById('f-excerpt-ar').value= n.excerpt_ar|| n.bodyAr   || '';
+  document.getElementById('f-excerpt-en').value= n.excerpt_en|| n.bodyEn   || '';
+  document.getElementById('f-body-ar').value   = n.body_ar   || n.bodyAr   || '';
+  document.getElementById('f-body-en').value   = n.body_en   || n.bodyEn   || '';
+  document.getElementById('f-date').value      = n.date      || '';
+  document.getElementById('f-cat').value       = n.cat       || 'general';
+  document.getElementById('f-url').value       = (n.url && n.url !== '#') ? n.url : '';
+
+  // College
+  document.querySelectorAll('input[name=college]').forEach(function(r){
+    r.checked = (r.value === (n.college || ''));
+    r.closest('.col-option').classList.toggle('selected', r.checked);
+  });
+  updateCollegeInfoBox(n.college || '');
+
+  // Image
+  if (n.image && n.image.startsWith('data:')) {
+    currentImg = n.image;
+    document.getElementById('img-preview').src = currentImg;
+    document.getElementById('img-preview').style.display = 'block';
+    document.getElementById('img-filename').textContent = '📎 صورة محفوظة';
+    document.getElementById('f-img-path').value = '';
+  } else if (n.image) {
+    currentImg = null;
+    document.getElementById('f-img-path').value = n.image;
+    document.getElementById('img-preview').style.display = 'none';
+    document.getElementById('img-filename').textContent = '';
+  } else {
+    currentImg = null;
+    document.getElementById('f-img-path').value = '';
+    document.getElementById('img-preview').style.display = 'none';
+  }
+
+  // Color
+  selectedColor = n.color || CAT_COLORS[n.cat] || CAT_COLORS.general;
+  document.querySelectorAll('.swatch').forEach(function(s){
+    s.classList.toggle('selected', s.dataset.color === selectedColor);
+  });
+
+  document.getElementById('form-toolbar-title').textContent = '✏️ تعديل الخبر';
+  updatePreview();
+  showPanel('add', document.getElementById('si-add'));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function deleteNews(id) {
+  if (!confirm('هل تريد حذف هذا الخبر نهائياً؟')) return;
+  newsList = newsList.filter(function(n){ return String(n.id) !== String(id); });
+  localStorage.setItem('sru_news_v2', JSON.stringify(newsList));
+  renderStats();
+  renderList();
+  showToast('🗑️ تم حذف الخبر');
+}
+
+function resetForm() {
+  editingId = null;
+  currentImg = null;
+  ['f-title-ar','f-title-en','f-excerpt-ar','f-excerpt-en','f-body-ar','f-body-en','f-url','f-img-path'].forEach(function(id){
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('f-date').valueAsDate = new Date();
+  document.getElementById('f-cat').value = 'general';
+  document.getElementById('f-img-file').value = '';
+  document.getElementById('img-preview').style.display = 'none';
+  document.getElementById('img-filename').textContent = '';
+  // College
+  document.querySelectorAll('input[name=college]').forEach(function(r){
+    r.checked = r.value === '';
+    r.closest('.col-option').classList.toggle('selected', r.value === '');
+  });
+  document.getElementById('college-info-box').style.display = 'none';
+  // Color
+  setColorSwatch(CAT_COLORS.general);
+  selectedColor = CAT_COLORS.general;
+  document.getElementById('form-toolbar-title').textContent = 'إضافة خبر جديد';
+  updatePreview();
+}
+
+// ═══════════════════════════════════════════════════════
+//  Export
+// ═══════════════════════════════════════════════════════
+function renderJSON() {
+  var data = newsList.map(function(n){
+    var dateObj = n.date ? new Date(n.date + 'T00:00:00') : null;
+    return {
+      id:         n.id,
+      type_en:    n.type_en || (CAT_TYPES[n.cat]||CAT_TYPES.general).en,
+      type_ar:    n.type_ar || (CAT_TYPES[n.cat]||CAT_TYPES.general).ar,
+      day:        n.day      || (dateObj ? String(dateObj.getDate()).padStart(2,'0') : '01'),
+      month_en:   n.month_en || (dateObj ? MONTHS_EN[dateObj.getMonth()] : 'Jan'),
+      month_ar:   n.month_ar || (dateObj ? MONTHS_AR[dateObj.getMonth()] : 'يناير'),
+      title_ar:   n.title_ar  || n.titleAr  || '',
+      title_en:   n.title_en  || n.titleEn  || '',
+      excerpt_ar: n.excerpt_ar|| n.bodyAr   || '',
+      excerpt_en: n.excerpt_en|| n.bodyEn   || '',
+      body_ar:    n.body_ar   || n.bodyAr   || '',
+      body_en:    n.body_en   || n.bodyEn   || '',
+      image:      n.image     || '',
+      color:      n.color     || CAT_COLORS.general,
+      url:        n.url       || '#',
+      cat:        n.cat       || 'general',
+      college:    n.college   || null,
+      date:       n.date      || ''
+    };
+  });
+  var json = JSON.stringify({news: data}, null, 2);
+  document.getElementById('json-output').textContent = json;
+  document.getElementById('export-count').textContent = newsList.length + ' خبر';
+}
+
+function copyJSON() {
+  var txt = document.getElementById('json-output').textContent;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(txt).then(function(){ showCopyMsg(); });
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = txt; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+    showCopyMsg();
+  }
+}
+
+function showCopyMsg() {
+  var m = document.getElementById('copy-msg');
+  m.style.display = 'inline-block';
+  setTimeout(function(){ m.style.display = 'none'; }, 2500);
+}
+
+// ═══════════════════════════════════════════════════════
+//  Toast & Alert
+// ═══════════════════════════════════════════════════════
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(function(){ t.classList.remove('show'); }, 2500);
+}
+
+function showAlert(msg, type) {
+  var el = document.getElementById('alert-add');
+  el.textContent = msg;
+  el.className = 'alert alert-' + type;
+  el.style.display = 'block';
+  setTimeout(function(){ el.style.display = 'none'; }, 3500);
+}
+
+// ═══════════════════════════════════════════════════════
+//  Init
+// ═══════════════════════════════════════════════════════
+renderStats();
+renderList();
+updatePreview();
+</script>
+</body>
+</html>
