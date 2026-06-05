@@ -14,31 +14,41 @@ html[dir="rtl"] {
 }
 
 /* ─── Header ──────────────────────────────────────────────────── */
-/* flex-direction: row-reverse مضبوط في main.css — لا نضيف direction هنا لأنه يُلغي التأثير */
+/* flex-direction: row-reverse مضبوط في main.css للـ header-inner */
 
-/* Logo mark stays visually the same, text flips naturally */
-html[dir="rtl"] .logo {
-  flex-direction: row-reverse;
-}
+/* شعار RTL: الصورة على اليمين، الاسم على اليسار */
+html[dir="rtl"] .logo { flex-direction: row; }
 
-/* Nav items: right to left */
-html[dir="rtl"] .nav-list {
-  flex-direction: row-reverse;
-}
+/* اسم الجامعة: يمين في العربية */
+html[dir="rtl"] .logo-names { text-align: right; }
+html[dir="rtl"] .logo-name-ar { font-size: 14px; }
 
-/* Underline accent mirrors to RTL */
-html[dir="rtl"] .nav-link::after {
-  left: auto;
-  right: 50%;
-  transform: translateX(50%) scaleX(0);
-}
+/* إخفاء الاسم الإنجليزي في وضع العربي */
+html[dir="rtl"] .logo-name-en { display: none; }
 
-html[dir="rtl"] .nav-link:hover::after,
+/* إخفاء الاسم العربي في وضع الإنجليزي */
+html[dir="ltr"] .logo-name-ar { display: none; }
+
+/* Nav: direction:rtl المورّثة تُرتّب العناصر من اليمين تلقائياً — لا نضيف row-reverse */
+
+/* Active dot — يبقى في المنتصف */
 html[dir="rtl"] .nav-link.active::after {
-  transform: translateX(50%) scaleX(1);
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
 }
 
-/* Header actions reverse order */
+/* Hover underline — يبقى في المنتصف */
+html[dir="rtl"] .nav-link:not(.active)::before {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%) scaleX(0);
+}
+html[dir="rtl"] .nav-link:not(.active):hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Header actions: الأزرار تبدأ من اليسار في RTL */
 html[dir="rtl"] .header-actions {
   flex-direction: row-reverse;
 }
