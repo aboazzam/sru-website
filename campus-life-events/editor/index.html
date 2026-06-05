@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محرر فعاليات الحياة الجامعية — SRU</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#276749;--green-d:#1B5E20;--green-l:#38A169;--green-f:#F0FFF4;
+  --sidebar:#1A2E1F;--sidebar-l:#253A29;
+  --text:#111827;--gray:#6B7280;--border:#E5E7EB;
+  --bg:#F8F9FC;--white:#fff;
+  --radius:10px;--shadow:0 2px 12px rgba(0,0,0,.08);
+}
+body{font-family:'Noto Kufi Arabic','Inter',sans-serif;background:var(--bg);color:var(--text);height:100vh;display:flex;flex-direction:column;overflow:hidden}
+
+/* Top Bar */
+.topbar{display:flex;align-items:center;gap:14px;background:var(--green-d);color:#fff;padding:0 24px;height:56px;flex-shrink:0;position:relative;z-index:10}
+.topbar::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--green-l),#00B4C8)}
+.topbar-title{font-size:.97rem;font-weight:700;flex:1;text-align:center;opacity:.9}
+.topbar-badge{background:rgba(56,161,105,.25);border:1px solid rgba(56,161,105,.5);color:#68D391;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:20px}
+
+/* App */
+.app{display:flex;flex:1;overflow:hidden}
+
+/* Sidebar */
+.sidebar{width:210px;background:var(--sidebar);display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto}
+.sidebar-section{padding:20px 16px 8px;font-size:.68rem;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.3);text-transform:uppercase}
+.sidebar-item{display:flex;align-items:center;gap:10px;padding:10px 16px;margin:2px 8px;border-radius:8px;cursor:pointer;font-size:.88rem;font-weight:500;color:rgba(255,255,255,.65);transition:all .18s}
+.sidebar-item:hover{background:rgba(255,255,255,.08);color:#fff}
+.sidebar-item.active{background:var(--green);color:#fff;font-weight:700}
+.sidebar-item .si-badge{margin-right:auto;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);font-size:.65rem;font-weight:700;padding:2px 7px;border-radius:10px}
+.sidebar-divider{height:1px;background:rgba(255,255,255,.07);margin:10px 16px}
+.cat-filter{display:flex;align-items:center;gap:8px;padding:7px 16px;margin:1px 8px;border-radius:8px;cursor:pointer;font-size:.82rem;color:rgba(255,255,255,.55);transition:background .18s}
+.cat-filter:hover{background:rgba(255,255,255,.06);color:#fff}
+.cat-filter.active{color:#fff;font-weight:600}
+.cat-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+/* Main */
+.main{flex:1;overflow:hidden;display:flex;flex-direction:column}
+.toolbar{display:flex;align-items:center;gap:10px;padding:12px 24px;background:var(--white);border-bottom:1px solid var(--border);flex-shrink:0}
+.toolbar-title{font-size:1rem;font-weight:700;color:var(--green);flex:1}
+
+/* Panels */
+.panel{flex:1;overflow-y:auto;padding:24px;display:none}
+.panel.active{display:block}
+
+/* Event List */
+.ev-list{display:flex;flex-direction:column;gap:12px}
+.ev-item{background:var(--white);border-radius:12px;box-shadow:var(--shadow);display:grid;grid-template-columns:70px 1fr auto;gap:14px;align-items:center;padding:14px 18px;transition:box-shadow .18s}
+.ev-item:hover{box-shadow:0 4px 20px rgba(39,103,73,.12)}
+.ev-date-block{width:70px;height:55px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
+.ev-date-day{font-size:1.3rem;font-weight:900;line-height:1}
+.ev-date-mon{font-size:.7rem;font-weight:600;opacity:.85}
+.ev-body{min-width:0}
+.ev-title{font-size:.95rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:4px}
+.ev-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.ev-tag{font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:10px;background:var(--green-f);color:var(--green)}
+.ev-loc{font-size:.75rem;color:var(--gray);display:flex;align-items:center;gap:3px}
+.ev-actions{display:flex;gap:6px;flex-shrink:0}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:none;border-radius:8px;cursor:pointer;font-size:.88rem;font-weight:700;font-family:inherit;transition:all .18s;white-space:nowrap}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-l);transform:translateY(-1px)}
+.btn-secondary{background:var(--bg);color:var(--text);border:1px solid var(--border)}
+.btn-danger{background:#FEE2E2;color:#B91C1C;border:1px solid #FECACA}
+.btn-danger:hover{background:#FECACA}
+.btn-edit{background:#FEF3C7;color:#92400E;border:1px solid #FDE68A}
+.btn-export{background:linear-gradient(135deg,var(--green),#00B4C8);color:#fff}
+.btn-sm{padding:5px 12px;font-size:.8rem}
+.btn-icon{padding:6px;border-radius:8px;width:34px;height:34px;justify-content:center}
+.btn-publish{background:rgba(0,180,200,.15);color:#0891B2;border:1px solid rgba(0,180,200,.35);margin-top:4px}
+.btn-publish:hover{background:rgba(0,180,200,.25)}
+
+/* Form */
+.form-layout{display:grid;grid-template-columns:1fr 320px;gap:24px}
+.form-col{display:flex;flex-direction:column;gap:16px}
+.form-card{background:var(--white);border-radius:14px;box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:14px}
+.form-card-title{font-size:.8rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.08em;padding-bottom:10px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.form-group{display:flex;flex-direction:column;gap:5px}
+.form-group label{font-size:.83rem;font-weight:600;color:#374151}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+input,textarea,select{width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:.9rem;font-family:inherit;background:#FAFAFA;color:var(--text);transition:border .18s,background .18s}
+input:focus,textarea:focus,select:focus{border-color:var(--green);outline:none;background:var(--white)}
+textarea{resize:vertical;min-height:72px;line-height:1.6}
+
+/* Category selector */
+.cat-selector{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.cat-option{display:flex;flex-direction:column;align-items:center;gap:5px;padding:12px 8px;border-radius:10px;border:2px solid var(--border);cursor:pointer;transition:all .18s;background:var(--bg)}
+.cat-option:hover{border-color:var(--green);background:var(--green-f)}
+.cat-option.selected{border-color:var(--green);background:var(--green-f)}
+.cat-option input{display:none}
+.cat-icon{font-size:1.4rem}
+.cat-label{font-size:.78rem;font-weight:700;color:var(--text)}
+.cat-option.selected .cat-label{color:var(--green)}
+
+/* Color swatches */
+.swatches{display:flex;gap:8px;flex-wrap:wrap}
+.swatch{width:28px;height:28px;border-radius:8px;cursor:pointer;border:3px solid transparent;transition:border .15s,transform .15s}
+.swatch:hover{transform:scale(1.1)}
+.swatch.selected{border-color:#111}
+
+/* Image upload */
+.drop-zone{border:2px dashed #CBD5E0;border-radius:10px;padding:20px;text-align:center;cursor:pointer;background:#F9FAFB;transition:all .2s}
+.drop-zone:hover,.drop-zone.drag-over{border-color:var(--green);background:var(--green-f)}
+.drop-zone input{display:none}
+.dz-icon{font-size:1.8rem;opacity:.4;margin-bottom:4px}
+.dz-text{font-size:.8rem;color:var(--gray)}
+#img-preview{width:100%;max-height:120px;object-fit:cover;border-radius:8px;margin-top:8px;display:none}
+
+/* Preview */
+.preview-wrap{position:sticky;top:24px}
+.preview-label{font-size:.75rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
+.preview-card{background:var(--white);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.prev-header{display:flex;align-items:center;gap:14px;padding:14px 16px}
+.prev-date{width:56px;height:52px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
+.prev-day{font-size:1.2rem;font-weight:900;line-height:1}
+.prev-mon{font-size:.65rem;font-weight:600;opacity:.85}
+.prev-meta{flex:1}
+.prev-type{font-size:.72rem;font-weight:700;margin-bottom:3px}
+.prev-title{font-size:.93rem;font-weight:700;line-height:1.35}
+.prev-body{padding:0 16px 14px}
+.prev-desc{font-size:.82rem;color:var(--gray);line-height:1.6;margin-bottom:10px}
+.prev-info{font-size:.78rem;color:var(--gray);display:flex;flex-direction:column;gap:4px}
+.prev-footer{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-top:1px solid var(--border)}
+.prev-spots{font-size:.78rem;color:var(--gray)}
+.prev-reg{background:var(--green);color:#fff;font-size:.78rem;font-weight:700;padding:5px 12px;border-radius:8px}
+
+/* Stats */
+.stats-bar{display:flex;gap:1px;background:var(--border);border-radius:10px;overflow:hidden;margin-bottom:20px}
+.stat-box{flex:1;background:var(--white);padding:12px 16px;text-align:center}
+.stat-box .sv{font-size:1.4rem;font-weight:800;color:var(--green);line-height:1}
+.stat-box .sl{font-size:.7rem;color:var(--gray);margin-top:2px}
+
+/* Filter bar */
+.filter-bar{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.filter-bar input{flex:1;min-width:160px;padding:8px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:inherit;font-size:.88rem}
+.filter-btn{padding:7px 13px;border-radius:8px;border:1.5px solid var(--border);background:var(--white);font-family:inherit;font-size:.8rem;font-weight:600;cursor:pointer;color:var(--gray);transition:all .18s}
+.filter-btn.active{border-color:var(--green);color:var(--green);background:var(--green-f)}
+
+/* Export */
+.export-info{background:var(--white);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow);margin-bottom:20px;display:flex;gap:14px}
+.export-info-icon{font-size:1.4rem;flex-shrink:0}
+.export-info h3{font-size:.9rem;font-weight:700;margin-bottom:4px}
+.export-info p{font-size:.8rem;color:var(--gray);line-height:1.6}
+.export-info code{background:#F3F4F6;padding:2px 6px;border-radius:4px;font-size:.78rem;direction:ltr}
+.json-box{background:#1E1E2E;color:#A8FF78;font-family:monospace;font-size:.77rem;padding:16px;border-radius:10px;max-height:380px;overflow:auto;white-space:pre-wrap;word-break:break-all;direction:ltr;line-height:1.5}
+
+/* Alert & Toast */
+.alert{padding:10px 14px;border-radius:8px;font-size:.88rem;display:none;margin-bottom:12px}
+.alert-success{background:#DCFCE7;color:#166534;border:1px solid #BBF7D0}
+.alert-error{background:#FEE2E2;color:#B91C1C;border:1px solid #FECACA}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(60px);background:var(--green-d);color:#fff;padding:10px 20px;border-radius:10px;font-size:.88rem;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:transform .3s,opacity .3s;opacity:0;z-index:9999;white-space:nowrap}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* Empty */
+.empty-state{text-align:center;padding:50px 24px;color:var(--gray)}
+.empty-state .es-icon{font-size:2.5rem;opacity:.35;margin-bottom:10px}
+
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-thumb{background:rgba(39,103,73,.2);border-radius:3px}
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+  <div style="display:flex;align-items:center;gap:8px;font-size:.9rem;font-weight:700">🎓 الحياة الجامعية</div>
+  <div class="topbar-title">محرر فعاليات الحياة الجامعية</div>
+  <div class="topbar-badge">Campus Life</div>
+</div>
+
+<div class="app">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-section">القائمة</div>
+    <div class="sidebar-item active" onclick="showPanel('list',this)" id="si-list">
+      <span>📋</span> قائمة الفعاليات
+      <span class="si-badge" id="sb-count">0</span>
+    </div>
+    <div class="sidebar-item" onclick="showPanel('add',this)" id="si-add">
+      <span>✏️</span> إضافة / تعديل
+    </div>
+    <div class="sidebar-item" onclick="showPanel('export',this)" id="si-export">
+      <span>📤</span> تصدير JSON
+    </div>
+    <div class="sidebar-item btn-publish" onclick="publishToSite()">
+      <span>🚀</span> نشر للموقع
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">التصنيف</div>
+    <div class="cat-filter active" onclick="setCatFilter(null,this)">
+      <div class="cat-dot" style="background:#9CA3AF"></div> الكل
+    </div>
+    <div class="cat-filter" onclick="setCatFilter('sports',this)">
+      <div class="cat-dot" style="background:#276749"></div> رياضي
+    </div>
+    <div class="cat-filter" onclick="setCatFilter('cultural',this)">
+      <div class="cat-dot" style="background:#744210"></div> ثقافي
+    </div>
+    <div class="cat-filter" onclick="setCatFilter('academic',this)">
+      <div class="cat-dot" style="background:#1A365D"></div> أكاديمي
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-item" onclick="doLogout()" style="color:rgba(255,100,100,.7);margin-top:auto">
+      <span>🚪</span> تسجيل الخروج
+    </div>
+  </aside>
+
+  <div class="main">
+    <!-- LIST -->
+    <div class="panel active" id="panel-list">
+      <div class="toolbar">
+        <div class="toolbar-title">قائمة الفعاليات</div>
+        <button class="btn btn-primary btn-sm" onclick="showPanel('add',document.getElementById('si-add'))">➕ فعالية جديدة</button>
+      </div>
+      <div style="padding:20px">
+        <div class="stats-bar" id="stats-bar"></div>
+        <div class="filter-bar">
+          <input type="text" id="search-input" placeholder="🔍 ابحث..." oninput="renderList()">
+          <button class="filter-btn active" onclick="setCatFilter(null,this);setActiveFBtn(this)">الكل</button>
+          <button class="filter-btn" onclick="setCatFilter('sports',this);setActiveFBtn(this)">رياضي</button>
+          <button class="filter-btn" onclick="setCatFilter('cultural',this);setActiveFBtn(this)">ثقافي</button>
+          <button class="filter-btn" onclick="setCatFilter('academic',this);setActiveFBtn(this)">أكاديمي</button>
+        </div>
+        <div class="ev-list" id="ev-list"></div>
+      </div>
+    </div>
+
+    <!-- ADD -->
+    <div class="panel" id="panel-add">
+      <div class="toolbar">
+        <div class="toolbar-title" id="form-title">إضافة فعالية جديدة</div>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-secondary btn-sm" onclick="resetForm()">↺ مسح</button>
+          <button class="btn btn-primary" onclick="saveEvent()">💾 حفظ الفعالية</button>
+        </div>
+      </div>
+      <div style="padding:20px">
+        <div id="alert-add" class="alert"></div>
+        <div class="form-layout">
+          <div class="form-col">
+
+            <!-- Titles -->
+            <div class="form-card">
+              <div class="form-card-title">📝 العنوان</div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>العنوان (عربي) *</label>
+                  <input type="text" id="f-title-ar" placeholder="عنوان الفعالية بالعربي">
+                </div>
+                <div class="form-group">
+                  <label>Title (English)</label>
+                  <input type="text" id="f-title-en" placeholder="Event title" style="direction:ltr">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>الوصف (عربي)</label>
+                  <textarea id="f-desc-ar" placeholder="وصف مختصر..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Description (English)</label>
+                  <textarea id="f-desc-en" style="direction:ltr" placeholder="Short description..."></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Details -->
+            <div class="form-card">
+              <div class="form-card-title">📅 التفاصيل</div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>التاريخ *</label>
+                  <input type="date" id="f-date">
+                </div>
+                <div class="form-group">
+                  <label>رابط التسجيل</label>
+                  <input type="text" id="f-reg-url" value="services.html#portal" style="direction:ltr">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>الموقع (عربي)</label>
+                  <input type="text" id="f-loc-ar" placeholder="مثال: الملعب المركزي">
+                </div>
+                <div class="form-group">
+                  <label>Location (English)</label>
+                  <input type="text" id="f-loc-en" style="direction:ltr" placeholder="e.g. Main Stadium">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>المدة (عربي)</label>
+                  <input type="text" id="f-dur-ar" placeholder="مثال: يوم كامل">
+                </div>
+                <div class="form-group">
+                  <label>Duration (English)</label>
+                  <input type="text" id="f-dur-en" style="direction:ltr" placeholder="e.g. Full day">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>المقاعد المتبقية (عربي)</label>
+                  <input type="text" id="f-spots-ar" placeholder="مثال: 100 مقعد متبقٍ">
+                </div>
+                <div class="form-group">
+                  <label>Spots (English)</label>
+                  <input type="text" id="f-spots-en" style="direction:ltr" placeholder="e.g. 100 spots left">
+                </div>
+              </div>
+            </div>
+
+            <!-- Category -->
+            <div class="form-card">
+              <div class="form-card-title">🏷️ التصنيف</div>
+              <div class="cat-selector" id="cat-selector">
+                <label class="cat-option selected" data-cat="sports">
+                  <input type="radio" name="ev-cat" value="sports" checked onchange="onCatChange(this)">
+                  <div class="cat-icon">⚽</div>
+                  <div class="cat-label">رياضي</div>
+                </label>
+                <label class="cat-option" data-cat="cultural">
+                  <input type="radio" name="ev-cat" value="cultural" onchange="onCatChange(this)">
+                  <div class="cat-icon">🎭</div>
+                  <div class="cat-label">ثقافي</div>
+                </label>
+                <label class="cat-option" data-cat="academic">
+                  <input type="radio" name="ev-cat" value="academic" onchange="onCatChange(this)">
+                  <div class="cat-icon">🎓</div>
+                  <div class="cat-label">أكاديمي</div>
+                </label>
+              </div>
+              <div style="margin-top:12px">
+                <label style="font-size:.83rem;font-weight:600;color:#374151;display:block;margin-bottom:8px">لون بطاقة التاريخ</label>
+                <div class="swatches" id="swatches">
+                  <div class="swatch selected" data-c="#276749" style="background:#276749" onclick="pickColor(this)"></div>
+                  <div class="swatch" data-c="#3D1F6E" style="background:#3D1F6E" onclick="pickColor(this)"></div>
+                  <div class="swatch" data-c="#C05621" style="background:#C05621" onclick="pickColor(this)"></div>
+                  <div class="swatch" data-c="#1A365D" style="background:#1A365D" onclick="pickColor(this)"></div>
+                  <div class="swatch" data-c="#744210" style="background:#744210" onclick="pickColor(this)"></div>
+                  <div class="swatch" data-c="#0891B2" style="background:#0891B2" onclick="pickColor(this)"></div>
+                  <div class="swatch" data-c="#B91C1C" style="background:#B91C1C" onclick="pickColor(this)"></div>
+                  <div class="swatch" data-c="#6D28D9" style="background:#6D28D9" onclick="pickColor(this)"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div class="form-card">
+              <div class="form-card-title">🖼️ صورة الفعالية (اختياري)</div>
+              <div class="drop-zone" id="drop-zone" onclick="document.getElementById('f-img-file').click()">
+                <div class="dz-icon">🖼️</div>
+                <div class="dz-text">انقر أو اسحب صورة · حد 5MB</div>
+                <input type="file" id="f-img-file" accept="image/*" onchange="handleImg(this)">
+                <img id="img-preview" alt="">
+              </div>
+              <div style="margin-top:8px">
+                <label style="font-size:.8rem;font-weight:600;color:#374151;display:block;margin-bottom:4px">أو مسار الصورة</label>
+                <input type="text" id="f-img-path" style="direction:ltr" placeholder="campus-life-events/images/..." oninput="onPathInput()">
+              </div>
+            </div>
+
+          </div><!-- /form-col -->
+
+          <!-- Preview -->
+          <div class="form-col">
+            <div class="preview-wrap">
+              <div class="preview-label">معاينة الفعالية</div>
+              <div class="preview-card">
+                <div class="prev-header">
+                  <div class="prev-date" id="prev-date" style="background:#276749">
+                    <div class="prev-day" id="prev-day">1</div>
+                    <div class="prev-mon" id="prev-mon">يون</div>
+                  </div>
+                  <div class="prev-meta">
+                    <div class="prev-type" id="prev-type" style="color:#276749">رياضي</div>
+                    <div class="prev-title" id="prev-title">عنوان الفعالية</div>
+                  </div>
+                </div>
+                <div class="prev-body">
+                  <div class="prev-desc" id="prev-desc">وصف الفعالية يظهر هنا...</div>
+                  <div class="prev-info">
+                    <span id="prev-loc">📍 الموقع</span>
+                    <span id="prev-dur">🕐 المدة</span>
+                  </div>
+                </div>
+                <div class="prev-footer">
+                  <span class="prev-spots" id="prev-spots">المقاعد المتبقية</span>
+                  <span class="prev-reg">سجّل</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- /panel-add -->
+
+    <!-- EXPORT -->
+    <div class="panel" id="panel-export">
+      <div class="toolbar">
+        <div class="toolbar-title">تصدير JSON</div>
+        <button class="btn btn-export" onclick="copyJSON()">📋 نسخ</button>
+      </div>
+      <div style="padding:20px">
+        <div class="export-info">
+          <div class="export-info-icon">ℹ️</div>
+          <div>
+            <h3>تحديث فعاليات الحياة الجامعية</h3>
+            <p>انسخ هذا JSON وضعه في <code>campus-life-events/data/events.json</code> ثم ارفعه على GitHub.</p>
+          </div>
+        </div>
+        <div class="json-box" id="json-output"></div>
+        <div style="display:flex;gap:10px;margin-top:12px;align-items:center">
+          <button class="btn btn-export" onclick="copyJSON()">📋 نسخ JSON</button>
+          <span id="copy-msg" style="color:#166534;font-weight:600;display:none">✅ تم النسخ!</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── Auth ──
+if (sessionStorage.getItem('sru_campuslife_auth') !== '1') {
+  window.location.href = '../login.html';
+}
+
+var LS_KEY = 'sru_campuslife_events_v1';
+var events = [];
+try { events = JSON.parse(localStorage.getItem(LS_KEY) || '[]'); } catch(e){ events = []; }
+
+var editingId    = null;
+var currentImg   = null;
+var selectedColor= '#276749';
+var catFilter    = null;
+
+var MONTHS_AR = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+var MONTHS_EN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var MONTHS_AR_SHORT = ['يناير','فبراير','مارس','أبريل','مايو','يون','يول','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+var MONTHS_EN_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+var CAT_META = {
+  sports:   {ar:'رياضي',   en:'Sports',   color:'#276749', icon:'⚽'},
+  cultural: {ar:'ثقافي',   en:'Cultural', color:'#744210', icon:'🎭'},
+  academic: {ar:'أكاديمي', en:'Academic', color:'#1A365D', icon:'🎓'}
+};
+
+document.getElementById('f-date').valueAsDate = new Date();
+
+// ── Navigation ──
+function showPanel(name, el) {
+  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.sidebar-item').forEach(function(s){ s.classList.remove('active'); });
+  document.getElementById('panel-' + name).classList.add('active');
+  if (el) el.classList.add('active');
+  if (name === 'list')   { renderStats(); renderList(); }
+  if (name === 'export') renderJSON();
+}
+
+function setCatFilter(cat, el) {
+  catFilter = cat;
+  document.querySelectorAll('.cat-filter').forEach(function(c){ c.classList.remove('active'); });
+  if (el && el.classList.contains('cat-filter')) el.classList.add('active');
+  renderList();
+}
+
+function setActiveFBtn(el) {
+  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+  el.classList.add('active');
+}
+
+// ── Stats ──
+function renderStats() {
+  document.getElementById('sb-count').textContent = events.length;
+  var counts = {sports:0,cultural:0,academic:0};
+  events.forEach(function(e){ if(counts[e.category]!==undefined) counts[e.category]++; });
+  document.getElementById('stats-bar').innerHTML =
+    '<div class="stat-box"><div class="sv">'+events.length+'</div><div class="sl">إجمالي</div></div>' +
+    '<div class="stat-box"><div class="sv" style="color:#276749">'+counts.sports+'</div><div class="sl">رياضي</div></div>' +
+    '<div class="stat-box"><div class="sv" style="color:#744210">'+counts.cultural+'</div><div class="sl">ثقافي</div></div>' +
+    '<div class="stat-box"><div class="sv" style="color:#1A365D">'+counts.academic+'</div><div class="sl">أكاديمي</div></div>';
+}
+
+// ── List ──
+function renderList() {
+  var q = (document.getElementById('search-input').value||'').toLowerCase();
+  var items = events.filter(function(e){
+    if (catFilter && e.category !== catFilter) return false;
+    if (q) {
+      var hay = ((e.title_ar||'')+(e.title_en||'')).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  var el = document.getElementById('ev-list');
+  if (!items.length) {
+    el.innerHTML = '<div class="empty-state"><div class="es-icon">📭</div><h3>لا توجد فعاليات</h3></div>';
+    return;
+  }
+  el.innerHTML = items.map(function(e){
+    var cat = CAT_META[e.category] || CAT_META.sports;
+    return '<div class="ev-item">' +
+      '<div class="ev-date-block" style="background:'+(e.color||cat.color)+'"><div class="ev-date-day">'+(e.day||'1')+'</div><div class="ev-date-mon">'+(e.month_ar||'')+'</div></div>' +
+      '<div class="ev-body">' +
+        '<div class="ev-title">'+(e.title_ar||'')+'</div>' +
+        '<div class="ev-meta">' +
+          '<span class="ev-tag">'+cat.icon+' '+cat.ar+'</span>' +
+          '<span class="ev-loc">📍 '+(e.location_ar||'')+'</span>' +
+          '<span class="ev-loc">📅 '+(e.date||'')+'</span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="ev-actions">' +
+        '<button class="btn btn-edit btn-sm btn-icon" onclick="editEvent(\''+e.id+'\')" title="تعديل">✏️</button>' +
+        '<button class="btn btn-danger btn-sm btn-icon" onclick="deleteEvent(\''+e.id+'\')" title="حذف">🗑️</button>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
+// ── Category Change ──
+function onCatChange(radio) {
+  document.querySelectorAll('.cat-option').forEach(function(o){ o.classList.remove('selected'); });
+  radio.closest('.cat-option').classList.add('selected');
+  var cat = CAT_META[radio.value] || CAT_META.sports;
+  // Auto-set matching color swatch
+  var swatches = document.querySelectorAll('.swatch');
+  var matched = false;
+  swatches.forEach(function(s){ s.classList.remove('selected'); if(s.dataset.c===cat.color){s.classList.add('selected');matched=true;} });
+  if (matched) selectedColor = cat.color;
+  updatePreview();
+}
+
+function pickColor(el) {
+  document.querySelectorAll('.swatch').forEach(function(s){ s.classList.remove('selected'); });
+  el.classList.add('selected');
+  selectedColor = el.dataset.c;
+  updatePreview();
+}
+
+// ── Image ──
+var dz = document.getElementById('drop-zone');
+dz.addEventListener('dragover', function(e){ e.preventDefault(); dz.classList.add('drag-over'); });
+dz.addEventListener('dragleave', function(){ dz.classList.remove('drag-over'); });
+dz.addEventListener('drop', function(e){ e.preventDefault(); dz.classList.remove('drag-over'); var f=e.dataTransfer.files[0]; if(f&&f.type.startsWith('image/')) loadImg(f); });
+function handleImg(inp){ if(inp.files&&inp.files[0]) loadImg(inp.files[0]); }
+function loadImg(file) {
+  if (file.size>5*1024*1024){ showAlert('حجم الصورة يتجاوز 5MB','error'); return; }
+  var r = new FileReader();
+  r.onload = function(e){ currentImg=e.target.result; document.getElementById('img-preview').src=currentImg; document.getElementById('img-preview').style.display='block'; document.getElementById('f-img-path').value=''; updatePreview(); };
+  r.readAsDataURL(file);
+}
+function onPathInput(){ if(document.getElementById('f-img-path').value.trim()){ currentImg=null; document.getElementById('img-preview').style.display='none'; document.getElementById('f-img-file').value=''; } updatePreview(); }
+
+// ── Preview ──
+function updatePreview() {
+  var dateVal = document.getElementById('f-date').value;
+  var cat = (document.querySelector('input[name=ev-cat]:checked')||{}).value || 'sports';
+  var catMeta = CAT_META[cat] || CAT_META.sports;
+  var color = selectedColor || catMeta.color;
+
+  if (dateVal) {
+    var d = new Date(dateVal+'T00:00:00');
+    document.getElementById('prev-day').textContent = d.getDate();
+    document.getElementById('prev-mon').textContent = MONTHS_AR_SHORT[d.getMonth()];
+  }
+  document.getElementById('prev-date').style.background = color;
+  document.getElementById('prev-type').textContent = catMeta.ar;
+  document.getElementById('prev-type').style.color   = color;
+  document.getElementById('prev-title').textContent = document.getElementById('f-title-ar').value || 'عنوان الفعالية';
+  document.getElementById('prev-desc').textContent  = document.getElementById('f-desc-ar').value  || 'وصف الفعالية...';
+  document.getElementById('prev-loc').textContent   = '📍 ' + (document.getElementById('f-loc-ar').value || 'الموقع');
+  document.getElementById('prev-dur').textContent   = '🕐 ' + (document.getElementById('f-dur-ar').value || 'المدة');
+  document.getElementById('prev-spots').textContent = document.getElementById('f-spots-ar').value || 'المقاعد';
+}
+
+// Bind preview inputs
+['f-title-ar','f-desc-ar','f-date','f-loc-ar','f-dur-ar','f-spots-ar'].forEach(function(id){
+  var el = document.getElementById(id);
+  if (el) el.addEventListener('input', updatePreview);
+});
+
+// ── Save ──
+function saveEvent() {
+  var tAr   = document.getElementById('f-title-ar').value.trim();
+  var tEn   = document.getElementById('f-title-en').value.trim();
+  var dAr   = document.getElementById('f-desc-ar').value.trim();
+  var dEn   = document.getElementById('f-desc-en').value.trim();
+  var dt    = document.getElementById('f-date').value;
+  var reg   = document.getElementById('f-reg-url').value.trim();
+  var locAr = document.getElementById('f-loc-ar').value.trim();
+  var locEn = document.getElementById('f-loc-en').value.trim();
+  var durAr = document.getElementById('f-dur-ar').value.trim();
+  var durEn = document.getElementById('f-dur-en').value.trim();
+  var spAr  = document.getElementById('f-spots-ar').value.trim();
+  var spEn  = document.getElementById('f-spots-en').value.trim();
+  var imgPath = document.getElementById('f-img-path').value.trim();
+  var cat   = (document.querySelector('input[name=ev-cat]:checked')||{}).value || 'sports';
+
+  if (!tAr) { showAlert('العنوان بالعربي مطلوب','error'); return; }
+  if (!dt)  { showAlert('التاريخ مطلوب','error'); return; }
+
+  var d = new Date(dt+'T00:00:00');
+  var catMeta = CAT_META[cat] || CAT_META.sports;
+
+  var item = {
+    id:          editingId !== null ? editingId : Date.now(),
+    category:    cat,
+    type_ar:     catMeta.ar,
+    type_en:     catMeta.en,
+    day:         String(d.getDate()).padStart(2,'0'),
+    month_ar:    MONTHS_AR_SHORT[d.getMonth()],
+    month_en:    MONTHS_EN_SHORT[d.getMonth()],
+    date:        dt,
+    title_ar:    tAr,  title_en:   tEn,
+    desc_ar:     dAr,  desc_en:    dEn,
+    location_ar: locAr,location_en:locEn,
+    duration_ar: durAr,duration_en:durEn,
+    spots_ar:    spAr, spots_en:   spEn,
+    register_url:reg || 'services.html#portal',
+    color:       selectedColor,
+    image:       currentImg || imgPath || ''
+  };
+
+  if (editingId !== null) {
+    var idx = events.findIndex(function(e){ return String(e.id)===String(editingId); });
+    if (idx > -1) events[idx] = item;
+    showToast('✅ تم تحديث الفعالية');
+  } else {
+    events.push(item);
+    events.sort(function(a,b){ return (a.date||'')<(b.date||'')?-1:1; });
+    showToast('✅ تم حفظ الفعالية');
+  }
+
+  localStorage.setItem(LS_KEY, JSON.stringify(events));
+  editingId = null;
+  resetForm();
+  renderStats();
+  showPanel('list', document.getElementById('si-list'));
+}
+
+// ── Edit / Delete ──
+function editEvent(id) {
+  var e = events.find(function(x){ return String(x.id)===String(id); });
+  if (!e) return;
+  editingId = e.id;
+  document.getElementById('f-title-ar').value  = e.title_ar    || '';
+  document.getElementById('f-title-en').value  = e.title_en    || '';
+  document.getElementById('f-desc-ar').value   = e.desc_ar     || '';
+  document.getElementById('f-desc-en').value   = e.desc_en     || '';
+  document.getElementById('f-date').value      = e.date        || '';
+  document.getElementById('f-reg-url').value   = e.register_url|| 'services.html#portal';
+  document.getElementById('f-loc-ar').value    = e.location_ar || '';
+  document.getElementById('f-loc-en').value    = e.location_en || '';
+  document.getElementById('f-dur-ar').value    = e.duration_ar || '';
+  document.getElementById('f-dur-en').value    = e.duration_en || '';
+  document.getElementById('f-spots-ar').value  = e.spots_ar    || '';
+  document.getElementById('f-spots-en').value  = e.spots_en    || '';
+  document.querySelectorAll('input[name=ev-cat]').forEach(function(r){
+    r.checked = r.value === e.category;
+    r.closest('.cat-option').classList.toggle('selected', r.checked);
+  });
+  if (e.image && e.image.startsWith('data:')) {
+    currentImg = e.image; document.getElementById('img-preview').src=currentImg; document.getElementById('img-preview').style.display='block';
+  } else { currentImg=null; document.getElementById('f-img-path').value=e.image||''; document.getElementById('img-preview').style.display='none'; }
+  selectedColor = e.color || '#276749';
+  document.querySelectorAll('.swatch').forEach(function(s){ s.classList.toggle('selected',s.dataset.c===selectedColor); });
+  document.getElementById('form-title').textContent = '✏️ تعديل الفعالية';
+  updatePreview();
+  showPanel('add', document.getElementById('si-add'));
+}
+
+function deleteEvent(id) {
+  if (!confirm('حذف الفعالية نهائياً؟')) return;
+  events = events.filter(function(e){ return String(e.id)!==String(id); });
+  localStorage.setItem(LS_KEY, JSON.stringify(events));
+  renderStats(); renderList(); showToast('🗑️ تم الحذف');
+}
+
+function resetForm() {
+  editingId=null; currentImg=null;
+  ['f-title-ar','f-title-en','f-desc-ar','f-desc-en','f-loc-ar','f-loc-en','f-dur-ar','f-dur-en','f-spots-ar','f-spots-en','f-img-path'].forEach(function(id){ document.getElementById(id).value=''; });
+  document.getElementById('f-date').valueAsDate = new Date();
+  document.getElementById('f-reg-url').value = 'services.html#portal';
+  document.getElementById('f-img-file').value='';
+  document.getElementById('img-preview').style.display='none';
+  document.querySelectorAll('input[name=ev-cat]').forEach(function(r){ r.checked=r.value==='sports'; r.closest('.cat-option').classList.toggle('selected',r.value==='sports'); });
+  selectedColor='#276749'; document.querySelectorAll('.swatch').forEach(function(s){ s.classList.toggle('selected',s.dataset.c==='#276749'); });
+  document.getElementById('form-title').textContent='إضافة فعالية جديدة';
+  updatePreview();
+}
+
+// ── Export ──
+function renderJSON() {
+  document.getElementById('json-output').textContent = JSON.stringify({events:events},null,2);
+}
+function copyJSON() {
+  var txt = document.getElementById('json-output').textContent;
+  if (navigator.clipboard) navigator.clipboard.writeText(txt).then(showCopyMsg);
+  else { var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showCopyMsg(); }
+}
+function showCopyMsg(){ var m=document.getElementById('copy-msg');m.style.display='inline-block';setTimeout(function(){m.style.display='none';},2500); }
+
+// ── Publish ──
+function publishToSite() {
+  if (!events.length){ showToast('⚠️ لا توجد فعاليات للنشر'); return; }
+  localStorage.setItem(LS_KEY, JSON.stringify(events));
+  showToast('✅ تم النشر — الفعاليات ستظهر في الموقع');
+  setTimeout(function(){ window.open('../../campus-life.html#events','_blank'); },800);
+}
+
+// ── Toast/Alert ──
+function showToast(msg){ var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2500); }
+function showAlert(msg,type){ var el=document.getElementById('alert-add');el.textContent=msg;el.className='alert alert-'+type;el.style.display='block';setTimeout(function(){el.style.display='none';},3000); }
+function doLogout(){ sessionStorage.removeItem('sru_campuslife_auth');window.location.href='../login.html'; }
+
+// Init
+renderStats(); renderList(); updatePreview();
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تسجيل الدخول — محرر الحياة الجامعية</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Kufi Arabic',sans-serif;background:linear-gradient(135deg,#1B5E20 0%,#276749 50%,#1a3a5c 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{background:#fff;border-radius:20px;padding:40px;width:100%;max-width:400px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.logo-wrap{text-align:center;margin-bottom:28px}
+.logo-icon{width:64px;height:64px;background:linear-gradient(135deg,#276749,#38A169);border-radius:18px;display:inline-flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:12px}
+.logo-wrap h1{font-size:1.1rem;font-weight:800;color:#1B5E20;margin-bottom:4px}
+.logo-wrap p{font-size:.82rem;color:#6B7280}
+.form-group{margin-bottom:16px}
+label{display:block;font-size:.83rem;font-weight:700;color:#374151;margin-bottom:6px}
+input{width:100%;padding:11px 14px;border:1.5px solid #E5E7EB;border-radius:10px;font-family:inherit;font-size:.9rem;background:#FAFAFA;transition:border .2s}
+input:focus{border-color:#276749;outline:none;background:#fff}
+.btn{width:100%;padding:12px;background:linear-gradient(135deg,#276749,#38A169);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:.97rem;font-weight:700;cursor:pointer;transition:opacity .2s;margin-top:8px}
+.btn:hover{opacity:.9}
+.error{background:#FEE2E2;color:#B91C1C;border:1px solid #FECACA;border-radius:8px;padding:10px 14px;font-size:.85rem;margin-bottom:14px;display:none}
+.back-link{text-align:center;margin-top:20px}
+.back-link a{font-size:.82rem;color:#6B7280;text-decoration:none}
+.back-link a:hover{color:#276749}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo-wrap">
+    <div class="logo-icon">🎓</div>
+    <h1>محرر فعاليات الحياة الجامعية</h1>
+    <p>جامعة سليمان الراجحي</p>
+  </div>
+  <div class="error" id="err">اسم المستخدم أو كلمة المرور غير صحيحة</div>
+  <form onsubmit="doLogin(event)">
+    <div class="form-group">
+      <label>اسم المستخدم</label>
+      <input type="text" id="username" autocomplete="username" placeholder="أدخل اسم المستخدم">
+    </div>
+    <div class="form-group">
+      <label>كلمة المرور</label>
+      <input type="password" id="password" autocomplete="current-password" placeholder="أدخل كلمة المرور">
+    </div>
+    <button type="submit" class="btn">دخول</button>
+  </form>
+  <div class="back-link"><a href="../index.html">← العودة للموقع</a></div>
+</div>
+<script>
+// Credentials for Campus Life module
+var USERS = { 'campuslife': 'SRU@Campus2026' };
+
+function doLogin(e) {
+  e.preventDefault();
+  var u = document.getElementById('username').value.trim();
+  var p = document.getElementById('password').value;
+  if (USERS[u] && USERS[u] === p) {
+    sessionStorage.setItem('sru_campuslife_auth', '1');
+    window.location.href = 'editor/index.html';
+  } else {
+    document.getElementById('err').style.display = 'block';
+  }
+}
+// Auto-redirect if already logged in
+if (sessionStorage.getItem('sru_campuslife_auth') === '1') {
+  window.location.href = 'editor/index.html';
+}
+</script>
+</body>
+</html>
