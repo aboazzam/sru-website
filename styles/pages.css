@@ -1224,8 +1224,8 @@ html[dir="rtl"] .story-body { text-align: right; }
 /* Admissions CTA RTL */
 html[dir="rtl"] .admissions-cta-btns { flex-direction: row-reverse; }
 
-/* Stage pills RTL */
-html[dir="rtl"] .journey-stages-nav { flex-direction: row-reverse; }
+/* Stage pills RTL — direction:rtl المورّثة من html تُرتّب العناصر من اليمين تلقائياً */
+/* لا نضيف flex-direction:row-reverse لأنها تتعارض مع direction:rtl وتُلغي التأثير */
 
 /* ═══════════════════════════════════════════════════════════════
    RESPONSIVE — Page-level
