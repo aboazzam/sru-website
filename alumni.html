@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/pages.css" />
   <link rel="stylesheet" id="rtl-stylesheet" href="styles/rtl.css" disabled />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css" />
 </head>
 <body>
 
@@ -25,16 +26,6 @@
   <div class="container header-inner">
     <a href="index.html" class="logo" aria-label="SRU Home">
       <div class="logo-mark"><img src="assets/sru-logo.png" alt="SRU"></div>
-      <div class="logo-divider" aria-hidden="true"></div>
-      <div class="logo-names">
-        <span class="logo-name-ar">جامعة سليمان الراجحي</span>
-        <span class="logo-name-en">Sulaiman Al-Rajhi University</span>
-      </div>
-      <div class="logo-text">
-        <span class="logo-en">Sulaiman Al-Rajhi University</span>
-        <span class="logo-ar">جامعة سليمان الراجحي</span>
-        <span class="logo-abbr">SRU</span>
-      </div>
     </a>
     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
       <ul class="nav-list">
@@ -49,10 +40,17 @@
       </ul>
     </nav>
     <div class="header-actions">
-      <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
-        <span class="lang-label" id="lang-label">العربية</span>
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch to Arabic">
+        <span class="fi fi-gb fis" id="lang-flag"></span>
       </button>
-      <a href="#alumni-portal" class="btn btn-primary btn-sm" data-ar="بوابة الخريجين" data-en="Alumni Portal">Alumni Portal</a>
+      <a href="https://sru-portal.aboazzam.art"
+         class="btn btn-primary btn-sm"
+         data-ar="الدخول إلى البوابة"
+         data-en="Sign in to University Portal"
+         target="_blank"
+         rel="noopener noreferrer">
+        Sign in to University Portal
+      </a>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
       </button>
@@ -72,7 +70,7 @@
       <span class="page-breadcrumb-current" data-ar="الخريجون" data-en="Alumni">Alumni</span>
     </div>
     <h1 class="page-hero-title reveal">
-      <span data-ar="خريجو SRU —" data-en="SRU Alumni —">SRU Alumni —</span><br />
+      <span data-ar="خريجو جامعة سليمان الراجحي" data-en="SRU Alumni —">SRU Alumni —</span><br />
       <span><span data-ar="قادة يُغيّرون العالم" data-en="Leaders Changing the World">Leaders <span>Changing the World</span></span></span>
     </h1>
     <p class="page-hero-sub reveal" data-ar="انتهت مرحلة الدراسة وبدأت رحلة التأثير — شبكة خريجي SRU تمتد عبر أكثر من 40 دولة، وكل خريج هو سفير للتميز والقيم الراسخة التي تزوّد بها في جامعتك." data-en="Your studies are complete and your impact journey begins — the SRU alumni network spans more than 40 countries, and every graduate is an ambassador of the excellence and values you were equipped with at your university.">
@@ -108,7 +106,7 @@
 
     <div class="section-header reveal">
       <span class="eyebrow" data-ar="شبكة الخريجين" data-en="Alumni Network">Alumni Network</span>
-      <h2 class="section-title" data-ar="أكثر من 15,000 خريج حول العالم" data-en="More Than 15,000 Graduates Worldwide">More Than 15,000 Graduates Worldwide</h2>
+      <h2 class="section-title" data-ar="أكثر من 1,000 خريج حول العالم" data-en="More Than 15,000 Graduates Worldwide">More Than 15,000 Graduates Worldwide</h2>
       <p class="section-sub" data-ar="خريجو SRU يتركون بصمتهم في قطاعات الطب، الهندسة، الأعمال، التعليم، والتقنية في المملكة العربية السعودية وخارجها. انضم إلى هذه الشبكة القوية وكن جزءاً من مجتمع يصنع الفارق." data-en="SRU graduates leave their mark in medicine, engineering, business, education, and technology across Saudi Arabia and beyond. Join this powerful network and be part of a community that makes a difference.">
         SRU graduates leave their mark in medicine, engineering, business, education, and technology across Saudi Arabia and beyond. Join this powerful network and be part of a community that makes a difference.
       </p>
@@ -117,7 +115,7 @@
     <!-- Network stats -->
     <div class="journey-stats reveal" style="margin-top:var(--space-12);border-radius:var(--radius-xl);overflow:hidden;">
       <div class="journey-stat">
-        <div class="j-stat-num">15,000+</div>
+        <div class="j-stat-num">1,000+</div>
         <div class="j-stat-label" data-ar="خريج حول العالم" data-en="Graduates Worldwide">Graduates Worldwide</div>
       </div>
       <div class="journey-stat">
@@ -129,7 +127,7 @@
         <div class="j-stat-label" data-ar="معدل التوظيف خلال 6 أشهر" data-en="Employed within 6 months">Employed within 6 months</div>
       </div>
       <div class="journey-stat">
-        <div class="j-stat-num">500+</div>
+        <div class="j-stat-num">100+</div>
         <div class="j-stat-label" data-ar="شركة شريكة توظيف" data-en="Partner Employers">Partner Employers</div>
       </div>
     </div>

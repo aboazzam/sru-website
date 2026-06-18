@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/pages.css" />
   <link rel="stylesheet" id="rtl-stylesheet" href="styles/rtl.css" disabled />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css" />
 </head>
 <body>
 
@@ -25,16 +26,6 @@
   <div class="container header-inner">
     <a href="index.html" class="logo" aria-label="SRU Home">
       <div class="logo-mark"><img src="assets/sru-logo.png" alt="SRU"></div>
-      <div class="logo-divider" aria-hidden="true"></div>
-      <div class="logo-names">
-        <span class="logo-name-ar">جامعة سليمان الراجحي</span>
-        <span class="logo-name-en">Sulaiman Al-Rajhi University</span>
-      </div>
-      <div class="logo-text">
-        <span class="logo-en">Sulaiman Al-Rajhi University</span>
-        <span class="logo-ar">جامعة سليمان الراجحي</span>
-        <span class="logo-abbr">SRU</span>
-      </div>
     </a>
     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
       <ul class="nav-list">
@@ -49,10 +40,17 @@
       </ul>
     </nav>
     <div class="header-actions">
-      <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
-        <span class="lang-label" id="lang-label">العربية</span>
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch to Arabic">
+        <span class="fi fi-gb fis" id="lang-flag"></span>
       </button>
-      <a href="admissions.html#apply" class="btn btn-primary btn-sm" data-ar="قدّم الآن" data-en="Apply Now">Apply Now</a>
+      <a href="https://sru-portal.aboazzam.art"
+         class="btn btn-primary btn-sm"
+         data-ar="الدخول إلى البوابة"
+         data-en="Sign in to University Portal"
+         target="_blank"
+         rel="noopener noreferrer">
+        Sign in to University Portal
+      </a>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
       </button>
@@ -74,7 +72,7 @@
     <h1 class="page-hero-title reveal">
       <span data-ar="خدمات جامعية" data-en="Student Services">Student Services</span>
       <br />
-      <span><span data-ar="تُيسّر حياتك في SRU" data-en="Designed for Your Success">Designed for Your <span>Success</span></span></span>
+      <span><span data-ar="تُيسّر حياتك في [جامعة سليمان الراجحي]" data-en="Designed for Your Success">Designed for Your <span>Success</span></span></span>
     </h1>
     <p class="page-hero-sub reveal" data-ar="من السكن والمواصلات إلى المنح الدراسية ورحلة الحج — جامعة سليمان الراجحي توفّر كل ما تحتاجه، وكل الخدمات في متناول يدك عبر بوابتك الإلكترونية." data-en="From housing and transportation to scholarships and the Hajj programme — SRU provides everything you need, all accessible through your personal student portal.">
       From housing and transportation to scholarships and the Hajj programme — SRU provides everything you need, all accessible through your personal student portal.
@@ -701,7 +699,7 @@
       The student portal is your complete control centre — housing applications, transport subscriptions, Hajj registration, and scholarship applications, all at the click of a button.
     </p>
     <div class="portal-band-btns">
-      <a href="https://student.sru.edu.sa" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-ar="الدخول إلى البوابة" data-en="Access Student Portal">Access Student Portal</a>
+      <a href="https://sis.sr.edu.sa/ereg/apply/admission-gate/gate.xhtml" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-ar="الدخول إلى البوابة" data-en="Access Student Portal">Access Student Portal</a>
       <a href="admissions.html" class="btn btn-outline-purple btn-lg" data-ar="سجّل الآن" data-en="Register Now">Register Now</a>
     </div>
     <!-- Feature chips -->

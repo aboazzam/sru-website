@@ -48,9 +48,9 @@ html[dir="rtl"] .nav-link:not(.active):hover::before {
   transform: translateX(-50%) scaleX(1);
 }
 
-/* Header actions: الأزرار تبدأ من اليسار في RTL */
+/* Header actions stay in natural flex order; RTL direction handles positioning */
 html[dir="rtl"] .header-actions {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 /* Mobile nav drawer: open from left instead of right */

@@ -69,6 +69,7 @@ tr:hover td{background:#FAFAFA}
   <div class="tabs">
     <button class="tab active" onclick="showTab('list',this)">📋 قائمة الفعاليات</button>
     <button class="tab" onclick="showTab('add',this)">✏️ إضافة / تعديل</button>
+    <button class="tab" onclick="showTab('vol',this)">🤝 فرص تطوعية</button>
     <button class="tab" onclick="showTab('export',this)">📤 تصدير JSON</button>
     <button class="tab" onclick="publishSite()" style="background:rgba(39,103,73,.15);color:var(--p)">🚀 نشر للموقع</button>
   </div>
@@ -143,6 +144,51 @@ tr:hover td{background:#FAFAFA}
     </div>
   </div>
 
+  <!-- VOLUNTEER OPPORTUNITIES -->
+  <div class="panel" id="tab-vol">
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <div class="card-title" style="margin-bottom:0;border-bottom:none;padding-bottom:0">🤝 الفرص التطوعية</div>
+        <button class="btn btn-primary btn-sm" onclick="showVolForm()">➕ فرصة جديدة</button>
+      </div>
+      <table><thead><tr><th>العنوان</th><th>التصنيف</th><th>عدد المتطوعين</th><th>الفترة</th><th>إجراءات</th></tr></thead>
+      <tbody id="vol-list-body"></tbody></table>
+    </div>
+    <div id="vol-form-wrap" style="display:none">
+      <div class="alert" id="vol-form-alert"></div>
+      <div class="card">
+        <div class="card-title" id="vol-form-label">إضافة فرصة تطوعية</div>
+        <div class="form-grid">
+          <div class="fg"><label>العنوان (عربي) *</label><input type="text" id="vf-tar" placeholder="عنوان الفرصة بالعربي"></div>
+          <div class="fg"><label>Title (English)</label><input type="text" id="vf-ten" placeholder="Opportunity title" style="direction:ltr"></div>
+        </div>
+        <div class="form-grid">
+          <div class="fg"><label>الوصف (عربي) *</label><textarea id="vf-dar" placeholder="وصف الفرصة..."></textarea></div>
+          <div class="fg"><label>Description (English)</label><textarea id="vf-den" placeholder="Description..." style="direction:ltr"></textarea></div>
+        </div>
+        <div class="form-grid">
+          <div class="fg"><label>عدد المتطوعين</label><input type="text" id="vf-count" placeholder="مثال: 500+ متطوع"></div>
+          <div class="fg"><label>الفترة الزمنية</label><input type="text" id="vf-period" placeholder="مثال: طوال العام"></div>
+        </div>
+        <div class="fg" style="margin-bottom:14px"><label>التصنيف</label>
+          <select id="vf-cat">
+            <option value="social">🤝 اجتماعي</option>
+            <option value="education">📚 تعليم</option>
+            <option value="health">❤️ صحة</option>
+            <option value="environment">🌿 بيئة</option>
+            <option value="technology">💻 تقنية</option>
+            <option value="sports">⭐ رياضة</option>
+            <option value="other">📌 أخرى</option>
+          </select>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;margin-bottom:24px">
+        <button class="btn btn-primary" onclick="saveVol()">💾 حفظ الفرصة</button>
+        <button class="btn btn-sec" onclick="cancelVolForm()">↺ إلغاء</button>
+      </div>
+    </div>
+  </div>
+
   <!-- EXPORT -->
   <div class="panel" id="tab-export">
     <div class="export-note">💡 انسخ هذا JSON والصقه في ملف <code>community-events/data/events.json</code> ثم ارفعه على GitHub لتحديث صفحة الحياة الجامعية.</div>
@@ -212,7 +258,7 @@ function saveEvent(){
 
 function renderList(){
   var CA={social:'اجتماعي',environment:'بيئة',education:'تعليم'};
-  var sports=events.filter(function(e){return e.category==='social'}).length;var cultural=events.filter(function(e){return e.category==='environment'}).length;var academic=events.filter(function(e){return e.category==='education'}).length'}).length;
+  var sports=events.filter(function(e){return e.category==='social'}).length;var cultural=events.filter(function(e){return e.category==='environment'}).length;var academic=events.filter(function(e){return e.category==='education'}).length;
   document.getElementById('stats-bar').innerHTML=
     '<div class="stat" style="border-color:#276749"><div class="stat-v">'+events.length+'</div><div class="stat-l">إجمالي الفعاليات</div></div>'+
     '<div class="stat" style="border-color:#276749"><div class="stat-v" style="color:#276749">'+sports+'</div><div class="stat-l">رياضي</div></div>'+
@@ -260,12 +306,104 @@ function resetForm(){
   document.getElementById('form-title-label').textContent='إضافة فعالية جديدة';
 }
 
-function renderJSON(){document.getElementById('json-out').textContent=JSON.stringify({events:events},null,2);}
+function renderJSON(){document.getElementById('json-out').textContent=JSON.stringify({events:events,volunteer_opportunities:volItems},null,2);}
 function copyJSON(){var t=document.getElementById('json-out').textContent;if(navigator.clipboard)navigator.clipboard.writeText(t).then(showCopyMsg);else{var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showCopyMsg();}}
 function showCopyMsg(){var m=document.getElementById('copy-msg');m.style.display='inline';setTimeout(function(){m.style.display='none'},2500);}
-function publishSite(){localStorage.setItem(LS,JSON.stringify(events));showToast('✅ تم النشر — الفعاليات ستظهر في صفحة الحياة الجامعية');setTimeout(function(){window.open('../../community.html','_blank')},800);}
+function publishSite(){localStorage.setItem(LS,JSON.stringify(events));localStorage.setItem(LS_VOL,JSON.stringify(volItems));showToast('✅ تم النشر — الفعاليات والفرص التطوعية ستظهر في صفحة المجتمع');setTimeout(function(){window.open('../../community.html','_blank')},800);}
 function showAlert(msg){var el=document.getElementById('form-alert');el.textContent='⚠️ '+msg;el.style.cssText='display:block;background:#FEE2E2;color:#B91C1C;border:1px solid #FECACA;padding:10px 14px;border-radius:8px;margin-bottom:12px;font-size:.87rem';setTimeout(function(){el.style.display='none'},3500);}
 function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2500);}
+
+/* ─── Volunteer Opportunities ─────────────────────────── */
+var LS_VOL='sru_community_vol_v1';
+var volItems=[];try{volItems=JSON.parse(localStorage.getItem(LS_VOL)||'[]');}catch(e){}
+var volEditId=null;
+
+var VOL_CAT_LABELS={social:'اجتماعي',education:'تعليم',health:'صحة',environment:'بيئة',technology:'تقنية',sports:'رياضة',other:'أخرى'};
+
+function showVolForm(id){
+  volEditId=id||null;
+  var wrap=document.getElementById('vol-form-wrap');
+  wrap.style.display='block';
+  if(id){
+    var v=volItems.find(function(x){return String(x.id)===String(id)});
+    if(!v)return;
+    document.getElementById('vf-tar').value=v.title_ar||'';
+    document.getElementById('vf-ten').value=v.title_en||'';
+    document.getElementById('vf-dar').value=v.desc_ar||'';
+    document.getElementById('vf-den').value=v.desc_en||'';
+    document.getElementById('vf-count').value=v.volunteers||'';
+    document.getElementById('vf-period').value=v.period||'';
+    document.getElementById('vf-cat').value=v.category||'social';
+    document.getElementById('vol-form-label').textContent='✏️ تعديل الفرصة';
+  } else {
+    ['vf-tar','vf-ten','vf-dar','vf-den','vf-count','vf-period'].forEach(function(id){document.getElementById(id).value=''});
+    document.getElementById('vf-cat').value='social';
+    document.getElementById('vol-form-label').textContent='إضافة فرصة تطوعية';
+  }
+  wrap.scrollIntoView({behavior:'smooth'});
+}
+
+function cancelVolForm(){
+  volEditId=null;
+  document.getElementById('vol-form-wrap').style.display='none';
+}
+
+function saveVol(){
+  var tar=document.getElementById('vf-tar').value.trim();
+  var dar=document.getElementById('vf-dar').value.trim();
+  if(!tar||!dar){showVolAlert('العنوان والوصف مطلوبان');return;}
+  var item={
+    id:volEditId!==null?volEditId:Date.now()+'',
+    title_ar:tar,title_en:document.getElementById('vf-ten').value.trim(),
+    desc_ar:dar,desc_en:document.getElementById('vf-den').value.trim(),
+    volunteers:document.getElementById('vf-count').value.trim(),
+    period:document.getElementById('vf-period').value.trim(),
+    category:document.getElementById('vf-cat').value
+  };
+  if(volEditId!==null){var idx=volItems.findIndex(function(v){return String(v.id)===String(volEditId)});if(idx>-1)volItems[idx]=item;volEditId=null;}
+  else volItems.unshift(item);
+  localStorage.setItem(LS_VOL,JSON.stringify(volItems));
+  cancelVolForm();
+  renderVolList();
+  showToast('✅ تم حفظ الفرصة التطوعية');
+}
+
+function delVol(id){
+  if(!confirm('حذف هذه الفرصة؟'))return;
+  volItems=volItems.filter(function(v){return String(v.id)!==String(id)});
+  localStorage.setItem(LS_VOL,JSON.stringify(volItems));
+  renderVolList();
+  showToast('🗑️ تم الحذف');
+}
+
+function renderVolList(){
+  var tbody=document.getElementById('vol-list-body');
+  if(!tbody)return;
+  if(!volItems.length){
+    tbody.innerHTML='<tr><td colspan="5" style="text-align:center;padding:28px;color:var(--gray)">لا توجد فرص تطوعية بعد — اضغط إضافة فرصة جديدة</td></tr>';
+    return;
+  }
+  tbody.innerHTML=volItems.map(function(v){
+    return '<tr>'+
+      '<td style="font-weight:600">'+(v.title_ar||'—')+'</td>'+
+      '<td>'+(VOL_CAT_LABELS[v.category]||'—')+'</td>'+
+      '<td>'+(v.volunteers||'—')+'</td>'+
+      '<td>'+(v.period||'—')+'</td>'+
+      '<td style="display:flex;gap:6px">'+
+        '<button class="btn btn-edit btn-sm" onclick="showVolForm(\''+v.id+'\')">✏️</button>'+
+        '<button class="btn btn-danger btn-sm" onclick="delVol(\''+v.id+'\')">🗑️</button>'+
+      '</td></tr>';
+  }).join('');
+}
+
+function showVolAlert(msg){var el=document.getElementById('vol-form-alert');el.textContent='⚠️ '+msg;el.style.cssText='display:block;background:#FEE2E2;color:#B91C1C;border:1px solid #FECACA;padding:10px 14px;border-radius:8px;margin-bottom:12px;font-size:.87rem';setTimeout(function(){el.style.display='none'},3500);}
+
+/* override showTab to render vol list */
+var _origShowTab=showTab;
+showTab=function(name,el){
+  _origShowTab(name,el);
+  if(name==='vol')renderVolList();
+};
 
 renderList();
 </script>

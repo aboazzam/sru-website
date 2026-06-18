@@ -6,6 +6,7 @@
 
   var EVENTS_JSON = 'community-events/data/events.json';
   var LS_KEY      = 'sru_community_events_v1';
+  var LS_VOL_KEY  = 'sru_community_vol_v1';
 
   var MONTHS_AR = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
   var MONTHS_EN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -94,6 +95,58 @@
       });
   }
 
+  /* ─── Volunteer Opportunities ─────────────────────────────── */
+
+  var VOL_ICONS = {
+    health:      '#E53E3E',
+    education:   '#1A237E',
+    environment: '#276749',
+    social:      '#E65100',
+    technology:  '#4A148C',
+    sports:      '#DD6B20',
+    other:       '#263238'
+  };
+
+  function getLSVol() {
+    try { return JSON.parse(localStorage.getItem(LS_VOL_KEY) || '[]'); } catch(e) { return []; }
+  }
+
+  function buildVolCard(item) {
+    var lang   = getLang();
+    var title  = t(item, 'title');
+    var desc   = t(item, 'desc');
+    var color  = VOL_ICONS[item.category] || '#263238';
+    var period = item.period || (lang === 'ar' ? 'طوال العام' : 'Year-round');
+    var count  = item.volunteers || '';
+
+    return [
+      '<div class="vol-card reveal visible" style="opacity:1;transform:none">',
+      '  <div class="vol-icon" style="background:' + color + '22">',
+      '    <svg viewBox="0 0 24 24" fill="none" stroke="' + color + '" stroke-width="2" stroke-linecap="round">',
+      '      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>',
+      '      <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+      '    </svg>',
+      '  </div>',
+      '  <h3 class="vol-title">' + title + '</h3>',
+      '  <p class="vol-desc">' + desc + '</p>',
+      '  <div class="vol-meta">',
+      count ? '    <span class="vol-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span>' + count + '</span></span>' : '',
+      '    <span class="vol-meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg><span>' + period + '</span></span>',
+      '  </div>',
+      '</div>'
+    ].join('\n');
+  }
+
+  function loadAndRenderVol() {
+    var gridEl = document.getElementById('vol-opps-grid');
+    if (!gridEl) return;
+    var items = getLSVol();
+    if (!items.length) { gridEl.style.display = 'none'; return; }
+    gridEl.style.display = 'grid';
+    gridEl.className = 'vol-grid';
+    gridEl.innerHTML = items.map(buildVolCard).join('');
+  }
+
   global.CommunityEvents = {
     load:       loadAndRender,
     clearCache: function(){}
@@ -101,6 +154,7 @@
 
   document.addEventListener('DOMContentLoaded', function(){
     if (document.getElementById('comm-events-grid')) loadAndRender();
+    loadAndRenderVol();
   });
 
 }(window));

@@ -21,7 +21,7 @@
   const primaryNav   = document.getElementById('primary-nav');
   const navOverlay   = document.getElementById('nav-overlay');
   const langToggle   = document.getElementById('lang-toggle');
-  const langLabel    = document.getElementById('lang-label');
+  const langFlag     = document.getElementById('lang-flag');
   const rtlLink      = document.getElementById('rtl-stylesheet');
   const body         = document.body;
 
@@ -46,9 +46,10 @@
       rtlLink.disabled = !isAr;
     }
 
-    // Update lang toggle button label
-    if (langLabel) {
-      langLabel.textContent = isAr ? 'English' : 'العربية';
+    // Swap flag icon: SA flag when Arabic (current), GB flag when English (current)
+    if (langFlag) {
+      langFlag.className = isAr ? 'fi fi-sa fis' : 'fi fi-gb fis';
+      langToggle && langToggle.setAttribute('aria-label', isAr ? 'Switch to English' : 'التبديل إلى العربية');
     }
 
     // Swap all elements with data-ar / data-en attributes
@@ -63,8 +64,7 @@
 
   if (langToggle) {
     langToggle.addEventListener('click', function () {
-      const next = state.lang === 'en' ? 'ar' : 'en';
-      applyLanguage(next);
+      applyLanguage(state.lang === 'en' ? 'ar' : 'en');
     });
   }
 

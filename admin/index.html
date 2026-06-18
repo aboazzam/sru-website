@@ -822,24 +822,31 @@ function updateMetrics() {
   var campus   = getCampus();
   var comm     = getCommunity();
   var users    = getUsers();
-  var activeU  = users.filter(function(u){return u.active;}).length + 1; // +1 for superadmin
+  var activeU  = users.filter(function(u){return u.active;}).length + 1;
+  var today    = new Date().toISOString().split('T')[0];
+
+  // Show/hide metric cards based on permissions
+  var grid = document.getElementById('metrics-grid');
+  var cards = grid.querySelectorAll('.metric-card');
+  // cards order: news, campus, community, users
+  var cardPerms = ['news', 'campus_events', 'community_events', 'superadmin'];
+  cards.forEach(function(card, i){
+    var perm = cardPerms[i];
+    card.style.display = hasPerm(perm) ? '' : 'none';
+  });
 
   document.getElementById('m-news').textContent      = news.length;
   document.getElementById('m-campus').textContent    = campus.length;
   document.getElementById('m-community').textContent = comm.length;
   document.getElementById('m-users').textContent     = activeU;
 
-  // College-tagged news
   var collegeNews = news.filter(function(n){return !!n.college;}).length;
   document.getElementById('m-news-d').textContent = collegeNews + ' مرتبط بكلية';
 
-  // Upcoming events (future dates)
-  var today = new Date().toISOString().split('T')[0];
   var upcoming = campus.filter(function(e){return e.date>=today;}).length;
   document.getElementById('m-campus-d').textContent = upcoming + ' قادم';
   document.getElementById('m-community-d').textContent = comm.filter(function(e){return e.date>=today;}).length + ' قادم';
 
-  // Update nav badges
   document.getElementById('nb-news').textContent      = news.length;
   document.getElementById('nb-campus').textContent    = campus.length;
   document.getElementById('nb-community').textContent = comm.length;
@@ -893,16 +900,20 @@ var MODULE_DEFS = [
 
 function buildModuleCards() {
   var grid = document.getElementById('modules-grid');
-  grid.innerHTML = MODULE_DEFS.map(function(m){
-    var allowed = hasPerm(m.perm);
-    return '<div class="module-card'+(allowed?'':' locked')+'" '+
-      'style="border-top-color:'+m.color+'" '+
-      'onclick="'+(allowed?'showView(\''+m.view+'\',document.getElementById(\'nav-'+m.view.replace('campus','campus').replace('community','community')+'\'))':'showToast(\'⛔ ليس لديك صلاحية\')')+'">' +
+  var allowed = MODULE_DEFS.filter(function(m){ return hasPerm(m.perm); });
+  if (!allowed.length) {
+    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="es-icon">🔒</div><h3>لا توجد وحدات متاحة لهذا الحساب</h3></div>';
+    return;
+  }
+  grid.innerHTML = allowed.map(function(m){
+    var navId = 'nav-' + (m.view === 'stats' ? 'stats' : m.view === 'news' ? 'news' : m.view === 'campus' ? 'campus' : m.view === 'community' ? 'community' : m.view === 'archive' ? 'archive' : m.view === 'reports' ? 'reports' : 'users');
+    return '<div class="module-card" style="border-top-color:'+m.color+'" ' +
+      'onclick="showView(\''+m.view+'\',document.getElementById(\''+navId+'\'))">' +
       '<div class="module-card-icon" style="background:'+m.bg+'">'+m.icon+'</div>' +
       '<h3>'+m.title+'</h3>' +
       '<p>'+m.desc+'</p>' +
       '<div class="module-card-footer">' +
-        '<span class="module-card-count">'+(!allowed?'🔒 محظور':'متاح ✓')+'</span>' +
+        '<span class="module-card-count">متاح ✓</span>' +
         '<button class="module-card-btn" style="background:'+m.bg+';color:'+m.color+'">فتح ←</button>' +
       '</div>' +
     '</div>';
@@ -923,6 +934,10 @@ function logActivity(type, title, sub) {
 function renderActivity() {
   var log = [];
   try { log = JSON.parse(localStorage.getItem(LS_ACTIVITY)||'[]'); } catch(e){}
+  // superadmin sees all; others see only their own activity
+  if (currentUser && currentUser.role !== 'superadmin') {
+    log = log.filter(function(a){ return a.user === currentUser.name; });
+  }
   var icons = { login:'👤', save:'💾', delete:'🗑️', export:'📤', default:'📝' };
   var colors = { login:'#EEF2FF', save:'#F0FFF4', delete:'#FFF5F5', export:'#FFFBEB', default:'#F5F3FF' };
   var feed = document.getElementById('activity-feed');
@@ -1152,7 +1167,8 @@ function generateReport() {
       '<div><div class="status-text">أخبار مرتبطة بكليات</div><div class="status-sub">'+newsCollege+' خبر من '+news.length+'</div></div></div>' +
     '</div></div>' +
 
-  '<div class="report-card">' +
+  (currentUser && currentUser.role === 'superadmin' ?
+    '<div class="report-card">' +
     '<h3>👥 حالة المستخدمين</h3>' +
     '<div class="status-list">' +
     '<div class="status-item"><div class="status-dot status-ok"></div><div><div class="status-text">مدير النظام</div><div class="status-sub">نشط — صلاحيات كاملة</div></div></div>' +
@@ -1160,7 +1176,8 @@ function generateReport() {
       return '<div class="status-item"><div class="status-dot '+(u.active?'status-ok':'status-err')+'"></div>' +
         '<div><div class="status-text">'+u.name+'</div><div class="status-sub">'+u.permissions.length+' صلاحية</div></div></div>';
     }).join('') +
-    '</div></div>' +
+    '</div></div>'
+  : '') +
 
   '<div class="report-card">' +
     '<h3>🌐 حالة الموقع</h3>' +

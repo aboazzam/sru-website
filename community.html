@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/pages.css" />
   <link rel="stylesheet" id="rtl-stylesheet" href="styles/rtl.css" disabled />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css" />
 </head>
 <body>
 
@@ -30,16 +31,6 @@
 
     <a href="index.html" class="logo" aria-label="SRU Home">
       <div class="logo-mark"><img src="assets/sru-logo.png" alt="SRU"></div>
-      <div class="logo-divider" aria-hidden="true"></div>
-      <div class="logo-names">
-        <span class="logo-name-ar">جامعة سليمان الراجحي</span>
-        <span class="logo-name-en">Sulaiman Al-Rajhi University</span>
-      </div>
-      <div class="logo-text">
-        <span class="logo-en">Sulaiman Al-Rajhi University</span>
-        <span class="logo-ar">جامعة سليمان الراجحي</span>
-        <span class="logo-abbr">SRU</span>
-      </div>
     </a>
 
     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
@@ -56,10 +47,17 @@
     </nav>
 
     <div class="header-actions">
-      <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
-        <span class="lang-label" id="lang-label">العربية</span>
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch to Arabic">
+        <span class="fi fi-gb fis" id="lang-flag"></span>
       </button>
-      <a href="admissions.html#apply" class="btn btn-primary btn-sm" data-ar="قدّم الآن" data-en="Apply Now">Apply Now</a>
+      <a href="https://sru-portal.aboazzam.art"
+         class="btn btn-primary btn-sm"
+         data-ar="الدخول إلى البوابة"
+         data-en="Sign in to University Portal"
+         target="_blank"
+         rel="noopener noreferrer">
+        Sign in to University Portal
+      </a>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
       </button>
@@ -286,7 +284,7 @@
     </div>
 
     <!-- Events Grid -->
-    <div class="comm-events-grid">
+    <div class="comm-events-grid" id="comm-events-grid">
 
       <!-- Event 1 -->
       <article class="comm-event-card reveal">
@@ -563,6 +561,9 @@
       </div>
 
     </div><!-- /.vol-grid -->
+
+    <!-- Dynamic Volunteer Opportunities (fed from editor) -->
+    <div id="vol-opps-grid" class="vol-opps-grid" style="display:none;margin-top:var(--space-12)"></div>
 
     <div style="text-align:center; margin-top: var(--space-12);" class="reveal">
       <a href="mailto:volunteer@sru.edu.sa" class="btn btn-primary" data-ar="سجّل كمتطوع" data-en="Register as Volunteer">Register as Volunteer</a>
