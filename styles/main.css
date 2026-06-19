@@ -186,7 +186,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* ─── Utility: Eyebrow / Section Label ───────────────────────── */
 .eyebrow {
   display: inline-block;
-  font-size: var(--text-xs);
+  font-size: var(--text-2xl);
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -751,7 +751,7 @@ html[dir="rtl"] .header-inner { flex-direction: row-reverse; }
 .about-text p {
   color: var(--color-gray);
   margin-bottom: var(--space-8);
-  font-size: var(--text-lg);
+  font-size: var(--text-1g);
   line-height: 1.75;
 }
 
